@@ -1,0 +1,2641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Style Guide</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link href="./css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./css/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
+    <link rel="stylesheet" href="./css/css-style.css" />
+  </head>
+
+  <body>
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody">
+      <div class="container-fluid">
+        <!-- ********** Component :: Modal **********  -->
+        <div class="row mb-20">
+          <div class="col-12 mb-20">
+            <div class="p-1 bg-warning text-dark font-weight-bold">
+              Dashboard Page :: All Modals
+            </div>
+          </div>
+          <div class="col-12 mb-20">
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Visitor Details Modal
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#visitorDocuments"
+            >
+              Identifying Documents Modal
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#visitorPhoto"
+            >
+              Upload Photo Modal
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#visitorAppointment"
+            >
+              Visit Appointment
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#newVisitor"
+            >
+              New Visitor
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#advSearch"
+            >
+              Advance Search
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#exitRollcall"
+            >
+              Exit Roll call
+            </button>
+
+            <div class="mb-20">
+              <div class="p-1 bg-warning text-dark font-weight-bold">
+                Visitor Profile Page :: All Modals
+              </div>
+            </div>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#badgePreview"
+            >
+              Badge Preview
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#alertMessage"
+            >
+              Alert Message
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#visitorRequestCOnfirm"
+            >
+              Visitor Request Confirm
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#visitorCheckout"
+            >
+              Visitor Check Out
+            </button>
+            <button
+              class="c-btn mb-20"
+              data-toggle="modal"
+              data-target="#deleteVisitorConfirm"
+            >
+              Delete Visitor Confirmation
+            </button>
+            <button class="c-btn showToast">Toast Alert</button>
+          </div>
+          <div class="col-12"></div>
+        </div>
+        <!-- ********** Component :: Modal End **********  -->
+
+        <!-- ********** Component :: Form Fields **********  -->
+        <div class="row">
+          <div class="col-12">
+            <div class="p-1 bg-warning text-dark font-weight-bold mb-20">
+              Form Fields
+            </div>
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Text Box *** -->
+            <div class="form-group c-form">
+              <label class="formLbl">Text Box</label>
+              <input type="text" class="form-control" />
+            </div>
+            <!-- *** Text Box End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Date Range Picker - With Range *** -->
+            <div class="form-group c-form c-dateRangePicker withRange">
+              <label class="formLbl">Date Range Picker - With Range</label>
+              <div class="dtPickWrapper">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <!-- *** Date Range Picker - With Range End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Date Range Picker - Without range *** -->
+            <div class="form-group c-form c-dateRangePicker">
+              <label class="formLbl">Date Range Picker - Without range</label>
+              <div class="dtPickWrapper">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <!-- *** Date Range Picker - Without range End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Date Picker *** -->
+            <div class="form-group c-form c-dtPicker">
+              <label class="formLbl">Date Picker</label>
+              <div class="dtPickWrapper">
+                <input type="text" class="form-control dtpick" />
+              </div>
+            </div>
+            <!-- *** Date Picker End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Time Picker *** -->
+            <div class="form-group c-form c-timePicker">
+              <label class="formLbl">Time Picker</label>
+              <div class="dtPickWrapper">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <!-- *** Time Picker End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Dropdown *** -->
+            <div class="form-group c-form">
+              <label class="formLbl">Dropdown</label>
+              <div class="dropdown c-dropdown js-selectable">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton3"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="value">United States</span>
+                </button>
+
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton3"
+                >
+                  <button class="dropdown-item" value="option 1">
+                    Option 1
+                  </button>
+                  <button class="dropdown-item" value="option 2">
+                    Option 2
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- *** Dropdown End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Dropdown - Red *** -->
+            <div class="form-group c-form">
+              <label class="formLbl">Dropdown - Red</label>
+              <div class="dropdown c-dropdown col-red js-selectable">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton3"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="value">United States</span>
+                </button>
+
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton3"
+                >
+                  <button class="dropdown-item" value="option 1">
+                    Option 1
+                  </button>
+                  <button class="dropdown-item" value="option 2">
+                    Option 2
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- *** Dropdown - Red End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Dropdown Multiselect *** -->
+            <div class="form-group c-form c-multiSelect">
+              <label class="formLbl">Dropdown Multiselect</label>
+              <select
+                class="js-multiSelect"
+                name="visitors[]"
+                multiple="multiple"
+              >
+                <option value="AL">Christina Mullins</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+            <!-- *** Dropdown Multiselect End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Check Box Switch *** -->
+            <div class="form-group c-form c-dateRangePicker">
+              <label class="formLbl">Check Box Switch</label>
+              <div class="c-switch">
+                <input
+                  type="checkbox"
+                  class="switchChk"
+                  id="switch001"
+                  value="ExitRollCall "
+                  checked
+                />
+                <label class="switchLbl" for="switch001">
+                  <div class="switchTrack"></div>
+                </label>
+              </div>
+            </div>
+            <!-- *** Check Box Switch End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Check Box with label *** -->
+            <div class="form-group c-form c-dateRangePicker">
+              <label class="formLbl">Check Box with label</label>
+              <div class="c-chkBox">
+                <input
+                  type="checkbox"
+                  class="chkBox"
+                  id="chk001"
+                  data-column="1"
+                  checked
+                />
+                <label class="chkLbl" for="chk001">
+                  <i class="icon"></i>
+                  Checkbox with label
+                </label>
+              </div>
+            </div>
+            <!-- *** Check Box with label End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Check Box with label *** -->
+            <div class="form-group c-form c-dateRangePicker">
+              <label class="formLbl">Check Box without label</label>
+              <div class="c-chkBox no-label">
+                <input type="checkbox" class="chkBox" id="chk002" checked />
+                <label class="chkLbl" for="chk002">
+                  <i class="icon"></i>
+                </label>
+              </div>
+            </div>
+            <!-- *** Check Box with label End *** -->
+          </div>
+
+          <div class="col-3 mb-20">
+            <!-- *** Radio Button *** -->
+            <div class="form-group c-form c-dateRangePicker">
+              <label class="formLbl">Radio Button</label>
+              <div class="c-radioBox inline">
+                <input
+                  type="radio"
+                  class="chkBox"
+                  id="chk022"
+                  name="radioForm"
+                />
+                <label class="chkLbl" for="chk022">
+                  <i class="icon"></i>
+                  Option 1
+                </label>
+              </div>
+              <div class="c-radioBox inline">
+                <input
+                  type="radio"
+                  class="chkBox"
+                  id="chk023"
+                  name="radioForm"
+                />
+                <label class="chkLbl" for="chk023">
+                  <i class="icon"></i>
+                  Option 2
+                </label>
+              </div>
+            </div>
+            <!-- *** Radio Button End *** -->
+          </div>
+        </div>
+        <!-- ********** Component :: Form Fields End **********  -->
+
+        <!-- ********** Component :: Tables **********  -->
+        <div class="row">
+          <div class="col-12 mb-20">
+            <div class="p-1 bg-warning text-dark font-weight-bold">
+              Tables
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 mb-20">
+            <div class="p-1 font-weight-bold">
+              Tables Type 1 - Data Table
+            </div>
+            <!-- ***** Table Wrapper ***** -->
+            <div class="c-wrapContainer c-tableWrapper c-rounded">
+              <!-- ***** Table Body ***** -->
+              <div class="c-table type-01 c-rounded">
+                <table class="table testTable">
+                  <thead>
+                    <tr>
+                      <th class="text-center" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk13" />
+                          <label class="chkLbl" for="chk13">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </th>
+                      <th>Status</th>
+                      <th>Host NAme</th>
+                      <th class="">
+                        Site / Building / Entrance
+                      </th>
+                      <th>Visitor Code</th>
+                      <th class="" style="width: 55px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- ** Row 1 ** -->
+                    <tr>
+                      <td class="text-center" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk141" />
+                          <label class="chkLbl" for="chk141">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group c-form inTable">
+                          <div class="dropdown c-dropdown sm js-selectable">
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton4"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton4"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton5"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton5"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 1 End ** -->
+
+                    <!-- ** Row 2 ** -->
+                    <tr>
+                      <td class="text-center" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk142" />
+                          <label class="chkLbl" for="chk142">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 170px;">
+                        <div class="form-group c-form inTable">
+                          <div
+                            class="dropdown c-dropdown sm js-selectable dd-01"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton6"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton6"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton7"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton7"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 2 End ** -->
+
+                    <!-- ** Row 3 ** -->
+                    <tr>
+                      <td class="text-center" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk143" />
+                          <label class="chkLbl" for="chk143">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 170px;">
+                        <div class="form-group c-form inTable">
+                          <div
+                            class="dropdown c-dropdown sm dd-02 js-selectable"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton8"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton8"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton9"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton9"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 3 End ** -->
+
+                    <!-- ** Row 4 ** -->
+                    <tr>
+                      <td class="text-center" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk144" />
+                          <label class="chkLbl" for="chk144">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 170px;">
+                        <div class="form-group c-form inTable">
+                          <div
+                            class="dropdown c-dropdown sm dd-03 js-selectable"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton10"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton10"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton11"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton11"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 4 End ** -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- ***** Table Body End ***** -->
+            </div>
+            <!-- ***** Table Wrapper End ***** -->
+          </div>
+
+          <div class="col-md-6 col-sm-12 mb-20">
+            <div class="p-1 font-weight-bold">
+              Tables Type 2- Data Table
+            </div>
+            <!-- ***** Table Wrapper ***** -->
+            <div class="c-wrapContainer c-tableWrapper">
+              <!-- ***** Table Body ***** -->
+              <div class="c-table type-01">
+                <table class="table js-dataTable02">
+                  <thead>
+                    <tr>
+                      <th class="text-center no-sort" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk13" />
+                          <label class="chkLbl" for="chk13">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </th>
+                      <th>Status</th>
+                      <th>Host NAme</th>
+                      <th class="">
+                        Site / Building / Entrance / Room
+                      </th>
+                      <th>Visitor Code</th>
+                      <th class="no-sort" style="width: 55px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- ** Row 1 ** -->
+                    <tr>
+                      <td class="text-center selectable" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk241" />
+                          <label class="chkLbl" for="chk241">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group c-form inTable">
+                          <div class="dropdown c-dropdown sm js-selectable">
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton4"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton4"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton5"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton5"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 1 End ** -->
+
+                    <!-- ** Row 2 ** -->
+                    <tr>
+                      <td class="text-center selectable" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk242" />
+                          <label class="chkLbl" for="chk242">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 170px;">
+                        <div class="form-group c-form inTable">
+                          <div
+                            class="dropdown c-dropdown sm js-selectable dd-01"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton6"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton6"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton7"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton7"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 2 End ** -->
+
+                    <!-- ** Row 3 ** -->
+                    <tr>
+                      <td class="text-center selectable" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk243" />
+                          <label class="chkLbl" for="chk243">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 170px;">
+                        <div class="form-group c-form inTable">
+                          <div
+                            class="dropdown c-dropdown sm dd-02 js-selectable"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton8"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton8"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Aettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton9"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton9"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 3 End ** -->
+
+                    <!-- ** Row 4 ** -->
+                    <tr>
+                      <td class="text-center selectable" style="width: 55px;">
+                        <div class="c-chkBox no-label">
+                          <input type="checkbox" class="chkBox" id="chk244" />
+                          <label class="chkLbl" for="chk244">
+                            <i class="icon"></i>
+                          </label>
+                        </div>
+                      </td>
+                      <td style="width: 170px;">
+                        <div class="form-group c-form inTable">
+                          <div
+                            class="dropdown c-dropdown sm dd-03 js-selectable"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton10"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <span class="value">Select Status</span>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton10"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Nettie Strickland</td>
+                      <td>5434 Waldo Place</td>
+                      <td>R3VUNE</td>
+                      <td style="width: 55px;">
+                        <div class="form-group c-form">
+                          <div
+                            class="dropdown c-dropdown js-selectable type-btn"
+                          >
+                            <button
+                              class="btn dropdown-toggle default"
+                              type="button"
+                              id="dropdownMenuButton11"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <i class="icon ocr-android-more-horizontal"></i>
+                            </button>
+
+                            <div
+                              class="dropdown-menu"
+                              aria-labelledby="dropdownMenuButton11"
+                            >
+                              <button class="dropdown-item" value="option 1">
+                                Option 1
+                              </button>
+                              <button class="dropdown-item" value="option 2">
+                                Option 2
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- ** Row 4 End ** -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- ***** Table Body End ***** -->
+
+              <!-- ***** Table Footer ***** -->
+              <div class="c-tableFooter">
+                <div class="row">
+                  <div class="col">
+                    <!-- ***** Table Footer Button  ***** -->
+                    <div class="c-settingList">
+                      <ul>
+                        <li>
+                          <span class="selectedCount">2 selected:</span>
+                        </li>
+                        <li>
+                          <button class="c-btn with-icon sm">
+                            <i class="icon ocr-check-in"></i>
+                            Check in
+                          </button>
+                        </li>
+                        <li>
+                          <button class="c-btn col-red with-icon sm">
+                            <i class="icon ocr-check-out"></i>
+                            Check out
+                          </button>
+                        </li>
+                        <li>
+                          <button class="c-btn col-dark with-icon sm">
+                            <i class="icon ocr-printer"></i>
+                            Print Badge
+                          </button>
+                        </li>
+                        <li>
+                          <button class="c-btn col-dark with-icon sm">
+                            <i class="icon ocr-printer-setting"></i>
+                            Print Badge Preview
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- ***** Table Footer Button End ***** -->
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Table Footer End ***** -->
+            </div>
+            <!-- ***** Table Wrapper End ***** -->
+          </div>
+        </div>
+        <!-- ********** Component :: Tables End **********  -->
+      </div>
+    </div>
+    <!-- ********** Page Body End **********  -->
+
+    <!-- **** Toast :: Container **** -->
+    <div aria-live="polite" aria-atomic="true" class="c-toastContainer">
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-success"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="ocr-android-done icon"></i>
+          </div>
+          <span class="toastMsg">Sample of success alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-info"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="ocr-info icon"></i>
+          </div>
+          <span class="toastMsg">Sample of info alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-warning"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="ocr-exclamation icon"></i>
+          </div>
+          <span class="toastMsg">Sample of warning alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-error"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="icon ocr-android-close"></i>
+          </div>
+          <span class="toastMsg">Sample of error alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+    </div>
+    <!-- **** Toast :: Container End **** -->
+
+    <!-- **** Modal :: New Visitor **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Visitor Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">First Name / Last Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Phone Number</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Visitor Category</label>
+                  <div class="dropdown c-dropdown">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Contractor
+                    </button>
+
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Company Affiliation</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Email Address</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Visit Purpose</label>
+                  <div class="dropdown c-dropdown js-selectable">
+                    <button
+                      class="btn dropdown-toggle default"
+                      type="button"
+                      id="dropdownMenuButton2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span class="value">Select Visit Purpose</span>
+                    </button>
+
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton2"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="c-btnIcon col-gray p-left">
+              <i class="icon ocr-angle-left"></i>
+            </button>
+            <button type="button" class="c-btn with-icon s-right p-right">
+              Next
+              <i class="icon ocr-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: New Visitor End **** -->
+
+    <!-- **** Modal ::  Visitor Document **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="visitorDocuments"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="visitorDocumentsLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="visitorDocumentsLabel">
+              Identifying Documents & Vehicle Details
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Citizenship</label>
+                  <div class="dropdown c-dropdown js-selectable">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span class="value">United States</span>
+                    </button>
+
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">ID Number</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Vehicle Make</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">License or Registration Number</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">ID Type</label>
+                  <div class="dropdown c-dropdown js-selectable">
+                    <button
+                      class="btn dropdown-toggle default"
+                      type="button"
+                      id="dropdownMenuButton4"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span class="value">Select ID Type</span>
+                    </button>
+
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton4"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form c-dtPicker">
+                  <label class="formLbl">ID Expiration Date</label>
+                  <div class="dtPickWrapper">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Vehicle Model</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Color</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col-4">
+                <button class="c-btnIcon col-gray p-left">
+                  <i class="icon ocr-angle-left"></i>
+                </button>
+              </div>
+              <div class="col-8 text-right">
+                <button type="button" class="c-btn with-icon s-right">
+                  Next
+                  <i class="icon ocr-angle-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Visitor Document  End **** -->
+
+    <!-- **** Modal :: Visitor Photo **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="visitorPhoto"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="visitorPhotoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="visitorPhotoLabel">Visitor Photo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col text-center">
+                <div class="c-cropImage">
+                  <img
+                    src="images/profile.svg"
+                    alt="profile"
+                    class="cropImage"
+                  />
+                  <video id="video" autoplay class="cropVideo"></video>
+                  <canvas id="canvas" class="cropPhoto"></canvas>
+                </div>
+                <button class="c-btn" class="capturePhoto" id="capturePhoto">
+                  Capture
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col-4">
+                <button class="c-btnIcon col-gray p-left">
+                  <i class="icon ocr-angle-left"></i>
+                </button>
+              </div>
+              <div class="col-8 text-right">
+                <button type="button" class="c-btn with-icon col-dark s-right">
+                  Upload Photo
+                  <i class="icon ocr-user-1"></i>
+                </button>
+                <button
+                  type="button"
+                  class="c-btn with-icon s-right"
+                  id="startCamera"
+                >
+                  Capture Photo
+                  <i class="icon ocr-crop"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Visitor Photo End **** -->
+
+    <!-- **** Modal ::  Visitor Appointment **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="visitorAppointment"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="visitorAppointmentLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="visitorAppointmentLabel">
+              Visit Appointment
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form c-multiSelect">
+                  <label class="formLbl">Visit Host</label>
+                  <select
+                    class="js-multiSelect"
+                    name="visitors[]"
+                    multiple="multiple"
+                  >
+                    <option value="AL">Christina Mullins</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form c-dtPicker">
+                  <label class="formLbl">Visit Dates</label>
+                  <div class="dtPickWrapper">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form c-timePicker">
+                  <label class="formLbl">Visit Schedule</label>
+                  <div class="dtPickWrapper">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form fix-height">
+                  <div class="c-chkBox t-45">
+                    <input type="checkbox" class="chkBox" id="chk12" />
+                    <label class="chkLbl" for="chk12">
+                      <i class="icon"></i>
+                      Recurring Visit
+                    </label>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form c-timePicker">
+                  <label class="formLbl">To</label>
+                  <div class="dtPickWrapper">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col-4">
+                <button class="c-btnIcon col-gray p-left">
+                  <i class="icon ocr-angle-left"></i>
+                </button>
+              </div>
+              <div class="col-8 text-right">
+                <button type="button" class="c-btn with-icon s-right">
+                  Create Visit
+                  <i class="icon ocr-android-done"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Visitor Appointment End **** -->
+
+    <!-- **** Modal ::  Create Visitor **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="newVisitor"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="newVisitorLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newVisitorLabel">
+              Visit Appointment
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Visitor Name</label>
+                  <div class="c-searchBox dropdown c-dropdown type-02">
+                    <input
+                      type="text"
+                      class="form-control dropdown-toggle"
+                      id="ddForSearch"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      placeholder="Enter Visitor Name"
+                    />
+                    <div class="dropdown-menu" aria-labelledby="ddForSearch">
+                      <div class="searchPanel type-02">
+                        <button class="pl">
+                          <i class="icon ocr-person"></i>
+                          <span class="title"><strong>James</strong></span>
+                          <span class="subTitle colored"
+                            >Create New Visitor</span
+                          >
+                        </button>
+                        <button class="pl">
+                          <img src="./images/profile.png" alt="profile" />
+                          <span class="title"
+                            ><strong>James</strong> Hughes</span
+                          >
+                          <span class="subTitle">OCR Services</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col-4">
+                <button class="c-btnIcon col-gray p-left">
+                  <i class="icon ocr-angle-left"></i>
+                </button>
+              </div>
+              <div class="col-8 text-right">
+                <button
+                  type="button"
+                  class="c-btn col-gray"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button type="button" class="c-btn with-icon s-right">
+                  Next
+                  <i class="icon ocr-angle-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Create Visitor End **** -->
+
+    <!-- **** Modal ::  Advance Search **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="advSearch"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="advSearchLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="advSearchLabel">
+              Advanced Search
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <!-- ***** Accordian Container ***** -->
+                <div class="accordion c-accordian" id="visiterAccordian">
+                  <!-- ***** Accordian 1 ***** -->
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn text-left"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          Visit Details
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#visiterAccordian"
+                    >
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-6">
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Business Unit</label>
+                              <input type="text" class="form-control" />
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form c-dtPicker">
+                              <label class="formLbl">Visit Dates</label>
+                              <div class="row">
+                                <div class="col">
+                                  <div class="dtPickWrapper">
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="dtPickWrapper">
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form c-timePicker">
+                              <label class="formLbl">Visit Time</label>
+                              <div class="row">
+                                <div class="col">
+                                  <div class="dtPickWrapper">
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="dtPickWrapper">
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Site</label>
+                              <div class="dropdown c-dropdown">
+                                <button
+                                  class="btn dropdown-toggle default"
+                                  type="button"
+                                  id="dropdownMenuButton5"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  Site
+                                </button>
+
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton5"
+                                >
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                  >
+                                  <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Building Name</label>
+                              <input type="text" class="form-control" />
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Room No/Description</label>
+                              <input type="text" class="form-control" />
+                            </div>
+                            <!-- *** Form Field End *** -->
+                          </div>
+                          <div class="col-6">
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Visitor Request ID</label>
+                              <input type="text" class="form-control" />
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl"
+                                >Visit Request Status</label
+                              >
+                              <div class="dropdown c-dropdown js-selectable">
+                                <button
+                                  class="btn dropdown-toggle default"
+                                  type="button"
+                                  id="dropdownMenuButton6"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <span class="value">All</span>
+                                </button>
+
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton6"
+                                >
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 1"
+                                  >
+                                    Option 1
+                                  </button>
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 2"
+                                  >
+                                    Option 2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">DPL Status</label>
+                              <div class="dropdown c-dropdown js-selectable">
+                                <button
+                                  class="btn dropdown-toggle default"
+                                  type="button"
+                                  id="dropdownMenuButton7"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <span class="value">All</span>
+                                </button>
+
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton7"
+                                >
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 1"
+                                  >
+                                    Option 1
+                                  </button>
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 2"
+                                  >
+                                    Option 2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Visitor For</label>
+                              <div class="dropdown c-dropdown js-selectable">
+                                <button
+                                  class="btn dropdown-toggle default"
+                                  type="button"
+                                  id="dropdownMenuButton11"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <span class="value">All</span>
+                                </button>
+
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton11"
+                                >
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 1"
+                                  >
+                                    Option 1
+                                  </button>
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 2"
+                                  >
+                                    Option 2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Checked In</label>
+                              <div class="dropdown c-dropdown js-selectable">
+                                <button
+                                  class="btn dropdown-toggle default"
+                                  type="button"
+                                  id="dropdownMenuButton12"
+                                  data-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                >
+                                  <span class="value">All</span>
+                                </button>
+
+                                <div
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton12"
+                                >
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 1"
+                                  >
+                                    Option 1
+                                  </button>
+                                  <button
+                                    class="dropdown-item"
+                                    value="option 2"
+                                  >
+                                    Option 2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+
+                            <!-- *** Form Field *** -->
+                            <div class="form-group c-form">
+                              <label class="formLbl">Visit Duration</label>
+                              <div class="row">
+                                <div class="col">
+                                  <div class="c-chkBox mt-20">
+                                    <input
+                                      type="checkbox"
+                                      class="chkBox"
+                                      id="chkE1"
+                                    />
+                                    <label class="chkLbl m0" for="chkE1">
+                                      <i class="icon"></i>
+                                      Short Term
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="c-chkBox mt-20">
+                                    <input
+                                      type="checkbox"
+                                      class="chkBox"
+                                      id="chkE2"
+                                    />
+                                    <label class="chkLbl m0" for="chkE2">
+                                      <i class="icon"></i>
+                                      Long Term
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- *** Form Field End *** -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Accordian 1 End ***** -->
+
+                  <!-- ***** Accordian 2 ***** -->
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn collapsed"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          Host and Visitor Details
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#visiterAccordian"
+                    >
+                      <div class="card-body">
+                        Accordian Data
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Accordian 2 End ***** -->
+                </div>
+                <!-- ***** Accordian Container End ***** -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col-4">
+                <button
+                  type="button"
+                  class="c-btn sm col-dark with-icon s-left"
+                >
+                  Reset
+                  <i class="icon ocr-repeat-redo"></i>
+                </button>
+              </div>
+              <div class="col-8 text-right">
+                <button
+                  type="button"
+                  class="c-btn col-gray s-left"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button type="button" class="c-btn with-icon sm s-left">
+                  Search
+                  <i class="icon ocr-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Advance Search  End **** -->
+
+    <!-- **** Modal ::  Exit Roll Call **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="exitRollcall"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exitRollcallLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exitRollcallLabel">
+              Exit / Roll Call
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Site</label>
+                  <div class="dropdown c-dropdown col-red js-selectable">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span class="value">United States</span>
+                    </button>
+
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Send Alert To</label>
+                  <div class="dropdown c-dropdown js-selectable">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span class="value">Visitors</span>
+                    </button>
+
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Building Name</label>
+                  <div class="dropdown c-dropdown js-selectable">
+                    <button
+                      class="btn dropdown-toggle default"
+                      type="button"
+                      id="dropdownMenuButton4"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span class="value">All</span>
+                    </button>
+
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton4"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-12">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Alert Message</label>
+                  <textarea class="form-control textarea"></textarea>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col text-right">
+                <button
+                  type="button"
+                  class="c-btn col-gray"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button type="button" class="c-btn col-red with-icon s-right">
+                  Send
+                  <i class="icon ocr-send"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Exit Roll Call  End **** -->
+
+    <!-- **** Modal ::  Badge Preview **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="badgePreview"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="badgePreviewLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="badgePreviewLabel">
+              Badge Preview
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row align-items-center">
+              <div class="col">
+                <!-- *** Badge Card *** -->
+                <div class="c-previewBadgeCard">
+                  <div class="badgeLogo">
+                    <img src="images/ocr-logo.png" alt="logo" />
+                  </div>
+                  <div class="badgeUser">
+                    <div class="userPic">
+                      <img src="./images/profile.svg" alt="user" />
+                    </div>
+                    <h3 class="badgeUserName">Irene Ball</h3>
+                    <div class="badgeTags">
+                      <span class="tag">666Q8W</span>
+                      <span class="tag type-01">Dollie Harmon</span>
+                    </div>
+                  </div>
+                  <div class="row badgeInfo">
+                    <div class="col">
+                      <div class="c-infoSect">
+                        <span class="infoLbl">Visit Dates</span>
+                        <span class="infoTxt">Oct 1, 2019 to Oct 5, 2019</span>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="c-infoSect">
+                        <span class="infoLbl">Visit Schedule</span>
+                        <span class="infoTxt">4:00pm to 10:00pm</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col text-right">
+                <button
+                  class="c-btn col-gray"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button type="button" class="c-btn with-icon s-right">
+                  Print Badge
+                  <i class="icon ocr-printer"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Badge Preview  End **** -->
+
+    <!-- **** Modal :: Alert Message **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="alertMessage"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="alertMessageLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="alertMessageLabel">Local Host</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">First Name / Last Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Email Address</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Phone Number</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-12">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <div class="row">
+                    <div class="col">
+                      <div class="c-radioBox">
+                        <input
+                          type="radio"
+                          class="chkBox"
+                          id="chk23"
+                          name="radioForm"
+                        />
+                        <label class="chkLbl" for="chk23">
+                          <i class="icon"></i>
+                          Standard Notification
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="c-radioBox">
+                        <input
+                          type="radio"
+                          class="chkBox"
+                          id="chk24"
+                          name="radioForm"
+                        />
+                        <label class="chkLbl" for="chk24">
+                          <i class="icon"></i>
+                          WLS Notification
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="c-radioBox">
+                        <input
+                          type="radio"
+                          class="chkBox"
+                          id="chk25"
+                          name="radioForm"
+                        />
+                        <label class="chkLbl" for="chk25">
+                          <i class="icon"></i>
+                          Custom
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-12">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Alert Message</label>
+                  <textarea class="form-control textarea"></textarea>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer text-right">
+            <button
+              type="button"
+              class="c-btn col-gray"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Back
+            </button>
+            <button type="button" class="c-btn with-icon s-right p-right">
+              Send
+              <i class="icon ocr-send"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Alert Message End **** -->
+
+    <!-- **** Modal ::  Visitor Request Confirm **** -->
+    <div
+      class="modal fade c-modal w-520"
+      id="visitorRequestCOnfirm"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="visitorRequestCOnfirmLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="closeModal" data-dismiss="modal" aria-label="Close">
+              <i class="icon ocr-android-close"></i>
+            </button>
+            <!-- *** Modal Data *** -->
+            <div class="c-confirmMsg">
+              <div class="confirmIcon">
+                <i class="icon ocr-android-done"></i>
+              </div>
+              <div class="confirmMsg">
+                Thank You. Your Visitor Req ID is
+                <span class="visitorId">VID10951</span>. Your visit requet has
+                been accepted. You may proceed for check-in.
+              </div>
+              <div class="confirmBtn">
+                <button
+                  type="button"
+                  class="c-btn col-gray"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button type="button" class="c-btn with-icon s-right">
+                  Print Badge
+                  <i class="icon ocr-printer"></i>
+                </button>
+              </div>
+            </div>
+            <!-- *** Modal Data End *** -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Visitor Request Confirm End **** -->
+
+    <!-- **** Modal ::  Visitor Request Confirm **** -->
+    <div
+      class="modal fade c-modal w-520"
+      id="visitorCheckout"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="visitorCheckoutLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="closeModal" data-dismiss="modal" aria-label="Close">
+              <i class="icon ocr-android-close"></i>
+            </button>
+            <!-- *** Modal Data *** -->
+            <div class="c-confirmMsg">
+              <div class="confirmIcon">
+                <i class="icon ocr-sign-out"></i>
+              </div>
+              <div class="confirmMsg">
+                Irene Ball have successfully checked out.
+              </div>
+              <div class="confirmBtn">
+                <button
+                  type="button"
+                  class="c-btn col-gray"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Back
+                </button>
+              </div>
+            </div>
+            <!-- *** Modal Data End *** -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Visitor Request Confirm End **** -->
+
+    <!-- **** Modal ::  Visitor Request Confirm **** -->
+    <div
+      class="modal fade c-modal w-520"
+      id="deleteVisitorConfirm"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="deleteVisitorConfirmLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="closeModal" data-dismiss="modal" aria-label="Close">
+              <i class="icon ocr-android-close"></i>
+            </button>
+            <!-- *** Modal Data *** -->
+            <div class="c-confirmMsg">
+              <div class="confirmHeading">Delete Visitor</div>
+              <div class="confirmSubHeading">
+                Do you want to delete this visitor? This cannot be undone.
+              </div>
+              <div class="confirmBtn">
+                <button
+                  type="button"
+                  class="c-btn col-gray"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button type="button" class="c-btn col-red">
+                  Delete
+                </button>
+              </div>
+            </div>
+            <!-- *** Modal Data End *** -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Visitor Request Confirm End **** -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/timepicker.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/datatables.min.js"></script>
+    <script src="./js/daterangepicker.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

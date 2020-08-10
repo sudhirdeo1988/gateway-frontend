@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Custom Filing</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/css-style.css" />
+  </head>
+
+  <body>
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody isCloseSidebar">
+      <!-- ********** Component :: Sidebar **********  -->
+      <div class="c-sidebar">
+        <div class="sidebarHead">
+          <a href="javascript:void(0);" class="sidebarLogo">
+            <img src="images/logo.png" alt="alt" />
+          </a>
+          <button class="closeSidebar"></button>
+          <button class="sidebarHamb">
+            <i class="icon ocr-navicon"></i>
+          </button>
+        </div>
+        <div class="c-pageNav js-customScroll">
+          <ul>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-dashboard"></i>
+                <span class="linkText">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-content-7"></i>
+                <span class="linkText">Filling History</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink active">
+                <i class="icon ocr-tax"></i>
+                <span class="linkText">Custom Filling</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-user-2"></i>
+                <span class="linkText">User Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** Component :: Sidebar End **********  -->
+
+      <!-- ********** Component :: Header **********  -->
+      <div class="c-header">
+        <div class="row no-gutters">
+          <div class="col-7">
+            <div class="headerSect_l">
+              <ul>
+                <li>
+                  <div class="c-dropdown dropdown js-selectable">
+                    <button
+                      class="btnHeadDD dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocr-pin"></i>
+                      <span class="value">All Sites</span>
+                    </button>
+                    <div
+                      class="dropdown-menu sm"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-5 text-right">
+            <div class="c-dropdown dropdown profileSetting">
+              <button
+                class="profileBtn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./images/profile.png" alt="profile" />
+                <span class="profTitle">Nannie Andrews</span>
+                <span class="profSubTitle">Visitor Receptionist</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Header End **********  -->
+
+      <!-- ********** Component :: Wrapper **********  -->
+      <div class="c-wrapper">
+        <div class="container-fluid">
+          <!-- *** First Row *** -->
+          <div class="row align-items-center mb-20">
+            <div class="col">
+              <div class="rowHeading font-h">Custom Filling</div>
+            </div>
+          </div>
+          <!-- *** First Row End *** -->
+
+          <!-- *** Profile Tabs *** -->
+          <div class="row">
+            <div class="col">
+              <div class="c-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="Details-tab"
+                      data-toggle="tab"
+                      href="#Details"
+                      role="tab"
+                      aria-controls="Details"
+                      aria-selected="true"
+                      >Filling Now</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >Gateway Result</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <!-- ***** Tab :: Details ***** -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="Details"
+                    role="tabpanel"
+                    aria-labelledby="Details-tab"
+                  >
+                    <!-- ***** Section 8 ***** -->
+                    <div class="c-grapgContainer">
+                      <div class="profInfo">
+                        <div class="graphHeading">Upload File</div>
+
+                        <div class="row align-items-center">
+                          <div class="col-12">
+                            test
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ***** Section 8 End ***** -->
+                  </div>
+                  <!-- ***** Tab :: Details End ***** -->
+
+                  <!-- ***** Tab :: Access & Activity ***** -->
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    Tab 2
+                  </div>
+                  <!-- ***** Tab :: Access & Activity End ***** -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- *** Profile Tabs End *** -->
+        </div>
+      </div>
+      <!-- ********** Component :: Wrapper End **********  -->
+    </div>
+    <!-- ********** Page Body End **********  -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/daterangepicker.min.js"></script>
+    <script src="./js/datatables.min.js"></script>
+    <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

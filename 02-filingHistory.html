@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Filing History</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/daterangepicker.css" />
+    <link rel="stylesheet" href="./css/css-style.css" />
+  </head>
+
+  <body>
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody isCloseSidebar">
+      <!-- ********** Component :: Sidebar **********  -->
+      <div class="c-sidebar">
+        <div class="sidebarHead">
+          <a href="javascript:void(0);" class="sidebarLogo">
+            <img src="images/logo.png" alt="alt" />
+          </a>
+          <button class="closeSidebar"></button>
+          <button class="sidebarHamb">
+            <i class="icon ocr-navicon"></i>
+          </button>
+        </div>
+        <div class="c-pageNav js-customScroll">
+          <ul>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-dashboard"></i>
+                <span class="linkText">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink active">
+                <i class="icon ocr-content-7"></i>
+                <span class="linkText">Filling History</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-tax"></i>
+                <span class="linkText">Custom Filling</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-user-2"></i>
+                <span class="linkText">User Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** Component :: Sidebar End **********  -->
+
+      <!-- ********** Component :: Header **********  -->
+      <div class="c-header">
+        <div class="row no-gutters">
+          <div class="col-7">
+            <div class="headerSect_l">
+              <ul>
+                <li>
+                  <div class="c-dropdown dropdown js-selectable">
+                    <button
+                      class="btnHeadDD dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocr-pin"></i>
+                      <span class="value">All Sites</span>
+                    </button>
+                    <div
+                      class="dropdown-menu sm"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <button class="dropdown-item" value="option 1">
+                        Option 1
+                      </button>
+                      <button class="dropdown-item" value="option 2">
+                        Option 2
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-5 text-right">
+            <div class="c-dropdown dropdown profileSetting">
+              <button
+                class="profileBtn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./images/profile.png" alt="profile" />
+                <span class="profTitle">Nannie Andrews</span>
+                <span class="profSubTitle">Visitor Receptionist</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Header End **********  -->
+
+      <!-- ********** Component :: Wrapper **********  -->
+      <div class="c-wrapper">
+        <div class="container-fluid">
+          <!-- *** First Row *** -->
+          <div class="row align-items-center mb-20">
+            <div class="col">
+              <div class="rowHeading font-h">Filling History</div>
+            </div>
+          </div>
+          <!-- *** First Row End *** -->
+
+          <!-- *** Profile Tabs *** -->
+          <div class="row">
+            <div class="col">
+              <div class="c-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="Details-tab"
+                      data-toggle="tab"
+                      href="#Details"
+                      role="tab"
+                      aria-controls="Details"
+                      aria-selected="true"
+                      >Custom Filling History</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >Tab 2</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <!-- ***** Tab :: Details ***** -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="Details"
+                    role="tabpanel"
+                    aria-labelledby="Details-tab"
+                  >
+                    <!-- ***** Section 8 ***** -->
+                    <div class="c-grapgContainer">
+                      <div class="profInfo">
+                        <div class="graphHeading">Grant Access</div>
+
+                        <div class="row align-items-center">
+                          <div class="col-12">
+                            <div class="row">
+                              <div class="col-3">
+                                <!-- *** Dropdown *** -->
+                                <div class="form-group c-form">
+                                  <label class="formLbl"
+                                    >Search By: Status</label
+                                  >
+                                  <div
+                                    class="dropdown c-dropdown js-selectable"
+                                  >
+                                    <button
+                                      class="btn dropdown-toggle"
+                                      type="button"
+                                      id="dropdownMenuButton3"
+                                      data-toggle="dropdown"
+                                      aria-haspopup="true"
+                                      aria-expanded="false"
+                                    >
+                                      <span class="value">United States</span>
+                                    </button>
+
+                                    <div
+                                      class="dropdown-menu"
+                                      aria-labelledby="dropdownMenuButton3"
+                                    >
+                                      <button
+                                        class="dropdown-item"
+                                        value="option 1"
+                                      >
+                                        Option 1
+                                      </button>
+                                      <button
+                                        class="dropdown-item"
+                                        value="option 2"
+                                      >
+                                        Option 2
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- *** Dropdown End *** -->
+                              </div>
+                              <div class="col-3">
+                                <!-- *** Text Box *** -->
+                                <div class="form-group c-form">
+                                  <label class="formLbl"
+                                    >Search By : Transaction ID</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Transaction ID"
+                                  />
+                                </div>
+                                <!-- *** Text Box End *** -->
+                              </div>
+                              <div class="col-3">
+                                <!-- *** Date Range Picker - Without range *** -->
+                                <div
+                                  class="form-group c-form c-dateRangePicker"
+                                >
+                                  <label class="formLbl">Search By: Date</label>
+                                  <div class="dtPickWrapper">
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                </div>
+                                <!-- *** Date Range Picker - Without range End *** -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="c-tableWrapper">
+                              <!-- ***** Table Body ***** -->
+                              <div class="c-table type-01 bordered">
+                                <table class="table js-dataTable02">
+                                  <thead>
+                                    <tr>
+                                      <th style="width: 15%;">
+                                        Transaction Id
+                                      </th>
+                                      <th style="width: 15%;">Status</th>
+                                      <th style="width: 10%;">Country</th>
+                                      <th style="width: 15%;">Date</th>
+                                      <th style="width: 20%;">
+                                        Request File Name
+                                      </th>
+                                      <th style="width: 20%;">
+                                        Response File Name
+                                      </th>
+                                      <th
+                                        style="width: 5%;"
+                                        class="text-center no-sort"
+                                      >
+                                        View
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>87K7420500003</td>
+                                      <td>Response processed</td>
+                                      <td>CA</td>
+                                      <td>2020-07-16 11:55:17.0</td>
+                                      <td>CA-Req2020-07-16-11-55-16-633.xml</td>
+                                      <td>rccececpt_edf_0172801957.txt</td>
+                                      <td class="text-center">
+                                        <button
+                                          class="tableBtn"
+                                          data-toggle="modal"
+                                          data-target="#badgePreview"
+                                        >
+                                          <i class="icon ocr-search"></i>
+                                        </button>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>87K7420500003</td>
+                                      <td>Response processed</td>
+                                      <td>CA</td>
+                                      <td>2020-07-16 11:55:17.0</td>
+                                      <td>CA-Req2020-07-16-11-55-16-633.xml</td>
+                                      <td>rccececpt_edf_0172801957.txt</td>
+                                      <td class="text-center">
+                                        <button
+                                          class="tableBtn"
+                                          data-toggle="modal"
+                                          data-target="#badgePreview"
+                                        >
+                                          <i class="icon ocr-search"></i>
+                                        </button>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!-- ***** Table Body ***** -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ***** Section 8 End ***** -->
+                  </div>
+                  <!-- ***** Tab :: Details End ***** -->
+
+                  <!-- ***** Tab :: Access & Activity ***** -->
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    Tab 2
+                  </div>
+                  <!-- ***** Tab :: Access & Activity End ***** -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- *** Profile Tabs End *** -->
+        </div>
+      </div>
+      <!-- ********** Component :: Wrapper End **********  -->
+    </div>
+    <!-- ********** Page Body End **********  -->
+
+    <!-- **** Modal ::  Grant Access **** -->
+    <div
+      class="modal fade c-modal w-950"
+      id="badgePreview"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="badgePreviewLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="badgePreviewLabel">
+              Transaction Id: 87K7420500003
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <!-- *** Badge Card *** -->
+                <div class="c-tableWrapper">
+                  <!-- ***** Table Body ***** -->
+                  <div class="c-table type-01 bordered">
+                    <table class="table">
+                      <tr>
+                        <th style="width: 20%;">Status</th>
+                        <th style="width: 10%;">Country</th>
+                        <th style="width: 20%;">Date</th>
+                        <th style="width: 25%;">
+                          Request File Name
+                        </th>
+                        <th style="width: 25%;">
+                          Response File Name
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>Response processed</td>
+                        <td>CA</td>
+                        <td>2020-07-16 11:55:17.0</td>
+                        <td>CA-Req2020-07-16-11-55-16-633.xml</td>
+                        <td>rccececpt_edf_0172801957.txt</td>
+                      </tr>
+                      <tr>
+                        <td>Response processed</td>
+                        <td>CA</td>
+                        <td>2020-07-16 11:55:17.0</td>
+                        <td>CA-Req2020-07-16-11-55-16-633.xml</td>
+                        <td>rccececpt_edf_0172801957.txt</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- ***** Table Body ***** -->
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Grant Access  End **** -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/daterangepicker.min.js"></script>
+    <script src="./js/datatables.min.js"></script>
+    <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

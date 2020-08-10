@@ -7,7 +7,6 @@
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="./css/datatables.min.css" />
     <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="./css/css-style.css" />
@@ -20,7 +19,7 @@
       <div class="c-sidebar">
         <div class="sidebarHead">
           <a href="javascript:void(0);" class="sidebarLogo">
-            <img src="images/ocr-logo.png" alt="alt" />
+            <img src="images/logo.png" alt="alt" />
           </a>
           <button class="closeSidebar"></button>
           <button class="sidebarHamb">
@@ -31,67 +30,27 @@
           <ul>
             <li>
               <a href="javascript:void(0)" class="navLink active">
+                <i class="icon ocr-dashboard"></i>
+                <span class="linkText">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-content-7"></i>
+                <span class="linkText">Filling History</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-tax"></i>
+                <span class="linkText">Custom Filling</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
                 <i class="icon ocr-user-2"></i>
-                <span class="linkText">Visitor Request</span>
+                <span class="linkText">User Profile</span>
               </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="navLink">
-                <i class="icon ocr-user-plus"></i>
-                <span class="linkText">Rapid Registration</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="navLink">
-                <i class="icon ocr-users-1"></i>
-                <span class="linkText">Work Queue</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="navLink">
-                <i class="icon ocr-pie-chart"></i>
-                <span class="linkText">Analytics / Reports</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="navLink">
-                <i class="icon ocr-bookmark"></i>
-                <span class="linkText">Visitor Address Book</span>
-              </a>
-            </li>
-            <li>
-              <div class="childNav">
-                <a
-                  class="navLink"
-                  data-toggle="collapse"
-                  href="#settingChildNav"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="settingChildNav"
-                >
-                  <i class="icon ocr-cog"></i>
-                  <span class="linkText">Settings</span>
-                </a>
-                <div class="collapse" id="settingChildNav">
-                  <div class="card card-body">
-                    <a href="javascript:void(0)" class="childLink active"
-                      >Home Screen Controls</a
-                    >
-                    <a href="javascript:void(0)" class="childLink"
-                      >Vertical Menu</a
-                    >
-                    <a href="javascript:void(0)" class="childLink"
-                      >Filter Controls</a
-                    >
-                    <a href="javascript:void(0)" class="childLink"
-                      >Exit / Roll Call</a
-                    >
-                    <a href="javascript:void(0)" class="childLink"
-                      >Visitor Alert</a
-                    >
-                  </div>
-                </div>
-              </div>
             </li>
           </ul>
         </div>
@@ -130,12 +89,6 @@
                     </div>
                   </div>
                 </li>
-                <li>
-                  <button class="btnHeadDD type-02">
-                    <i class="icon ocr-alert"></i>
-                    Exit / Roll Call
-                  </button>
-                </li>
               </ul>
             </div>
           </div>
@@ -169,718 +122,181 @@
         <div class="container-fluid">
           <!-- *** First Row *** -->
           <div class="row align-items-center mb-20">
-            <div class="col-3">
-              <div class="rowHeading">16 Visitor</div>
-            </div>
-            <div class="col-9">
-              <div class="c-settingList right">
-                <ul>
-                  <!-- ***** Search List ***** -->
-                  <li>
-                    <div class="c-searchBox dropdown c-dropdown custome">
-                      <input
-                        type="text"
-                        class="searchTxt dropdown-toggle"
-                        id="ddForSearch"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        placeholder="Search visitors, companies, host..."
-                      />
-                      <i class="iconTip"></i>
-                      <div class="dropdown-menu" aria-labelledby="ddForSearch">
-                        <div class="searchHead">
-                          Items with <strong>James</strong>
-                        </div>
-                        <div class="searchPanel">
-                          <span class="ph">Visitor</span>
-                          <button class="pl">
-                            <img src="./images/profile.png" alt="profile" />
-                            <strong>James</strong> Hughes
-                          </button>
-                          <button class="pl">
-                            <img src="./images/profile.png" alt="profile" />
-                            <strong>James</strong> Hughes
-                          </button>
-                        </div>
-                        <div class="searchPanel">
-                          <span class="ph">Host</span>
-                          <button class="pl">
-                            <img src="./images/profile.png" alt="profile" />
-                            <strong>James</strong> Hughes
-                          </button>
-                        </div>
-                        <div class="searchPanel">
-                          <span class="ph">Company</span>
-                          <button class="pl">
-                            <i class="icon ocr-building-o"></i>
-                            The <strong>James</strong> Brand
-                          </button>
-                        </div>
-                        <div class="searchPanel">
-                          <button class="pl colored">
-                            <i class="icon ocr-android-options"></i>
-                            Advanced Search
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- ***** Search List End ***** -->
-
-                  <!-- *** DatePicker Component *** -->
-                  <li>
-                    <div class="form-group c-form c-dateRangePicker sm m0">
-                      <div class="dtPickWrapper">
-                        <input type="text" class="form-control" />
-                      </div>
-                    </div>
-                  </li>
-                  <!-- *** DatePicker Component End *** -->
-
-                  <!-- ***** Setting Checkbox List ***** -->
-                  <li>
-                    <div class="dropdown c-dropdown js-preventClick">
-                      <button
-                        class="btn-dd dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton3"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <i class="icon ocr-edit-tools"></i>
-                      </button>
-                      <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton3"
-                      >
-                        <div class="c-listing c-showTableColums">
-                          <ul>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk1"
-                                  data-column="1"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk1">
-                                  <i class="icon"></i>
-                                  Status
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk2"
-                                  data-column="2"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk2">
-                                  <i class="icon"></i>
-                                  Visit Dates
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk3"
-                                  data-column="3"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk3">
-                                  <i class="icon"></i>
-                                  Visit Times
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk4"
-                                  data-column="4"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk4">
-                                  <i class="icon"></i>
-                                  Visitor Name
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk5"
-                                  data-column="5"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk5">
-                                  <i class="icon"></i>
-                                  Company Name
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk6"
-                                  data-column="6"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk6">
-                                  <i class="icon"></i>
-                                  Host Name
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk7"
-                                  data-column="7"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk7">
-                                  <i class="icon"></i>
-                                  Site / Building / Entrance
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="c-chkBox">
-                                <input
-                                  type="checkbox"
-                                  class="chkBox"
-                                  id="chk8"
-                                  data-column="8"
-                                  checked
-                                />
-                                <label class="chkLbl" for="chk8">
-                                  <i class="icon"></i>
-                                  Visitor Code
-                                </label>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- ***** Setting Checkbox List End ***** -->
-
-                  <!-- ***** Scan Button ***** -->
-                  <li>
-                    <button class="c-btnScan">
-                      <i class="icon ocr-qr-scan"></i>
-                    </button>
-                  </li>
-                  <!-- ***** Scan Button End ***** -->
-
-                  <!-- ***** New Visitor Button ***** -->
-                  <li>
-                    <button class="c-btn with-icon">
-                      <i class="icon ocr-android-add"></i>
-                      New Visitor
-                    </button>
-                  </li>
-                  <!-- ***** New Visitor Button End ***** -->
-                </ul>
-              </div>
+            <div class="col">
+              <div class="rowHeading font-h">Dashboard</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
 
           <!-- *** Second Row *** -->
-          <div class="row align-items-center mb-10">
-            <div class="col">
-              <div class="c-settingList">
-                <ul>
-                  <!-- *** DatePicker Component *** -->
-                  <li>
-                    <div class="c-infoBtn">
-                      <i class="icon ocr-user-2-1"></i>
-                      <span class="title">Anticipated</span>
-                      <span class="subtitle">4</span>
+          <div class="row mb-20">
+            <div class="col mb-20">
+              <div class="c-cardHolder">
+                <div
+                  class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2"
+                >
+                  <!-- ***** Card ***** -->
+                  <div class="col">
+                    <div class="card h-100 type-02">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <i class="icon ocr-line-chart"></i>
+                          Today's Transcations
+                        </h5>
+                        <div class="card-number">
+                          <a href="javascript:void(0);" class="nLink">
+                            10
+                          </a>
+                        </div>
+                        <div class="card-info">Transaction Progress</div>
+                      </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="c-infoBtn">
-                      <i class="icon ocr-check-in"></i>
-                      <span class="title">Checked In</span>
-                      <span class="subtitle">68</span>
+                  </div>
+                  <!-- ***** Card End ***** -->
+
+                  <!-- ***** Card ***** -->
+                  <div class="col">
+                    <div class="card h-100 type-02">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <i class="icon ocr-line-chart"></i>
+                          Last Week
+                        </h5>
+                        <div class="card-number">
+                          <a href="javascript:void(0);" class="nLink">
+                            50
+                          </a>
+                        </div>
+                        <div class="card-info">Transaction Progress</div>
+                      </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="c-infoBtn">
-                      <i class="icon ocr-check-out"></i>
-                      <span class="title">Checked Out</span>
-                      <span class="subtitle">24</span>
+                  </div>
+                  <!-- ***** Card End ***** -->
+
+                  <!-- ***** Card ***** -->
+                  <div class="col">
+                    <div class="card h-100 type-02">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <i class="icon ocr-line-chart"></i>
+                          Last Month
+                        </h5>
+                        <div class="card-number">
+                          <a href="javascript:void(0);" class="nLink">
+                            432
+                          </a>
+                        </div>
+                        <div class="card-info">Transaction Progress</div>
+                      </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="c-infoBtn">
-                      <i class="icon ocr-user"></i>
-                      <span class="title">No Show</span>
-                      <span class="subtitle">0</span>
+                  </div>
+                  <!-- ***** Card End ***** -->
+
+                  <!-- ***** Card ***** -->
+                  <div class="col">
+                    <div class="card h-100 type-02">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <i class="icon ocr-line-chart"></i>
+                          This Year
+                        </h5>
+                        <div class="card-number">
+                          <a href="javascript:void(0);" class="nLink">
+                            2432
+                          </a>
+                        </div>
+                        <div class="card-info">Transaction Progress</div>
+                      </div>
                     </div>
-                  </li>
-                  <li>
-                    <div class="c-infoBtn">
-                      <i class="icon ocr-alert-1"></i>
-                      <span class="title">Screening Alert</span>
-                      <span class="subtitle">1</span>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="c-infoBtn">
-                      <i class="icon ocr-clock-1"></i>
-                      <span class="title">Checked In – Expired</span>
-                      <span class="subtitle">2</span>
-                    </div>
-                  </li>
-                  <!-- *** DatePicker Component End *** -->
-                </ul>
+                  </div>
+                  <!-- ***** Card End ***** -->
+                </div>
               </div>
             </div>
           </div>
           <!-- *** Second Row End *** -->
 
-          <!-- ***** Body ***** -->
+          <!-- ***** Graph Row 2 ***** -->
           <div class="row">
-            <div class="col">
-              <!-- ***** Table Wrapper ***** -->
-              <div class="c-wrapContainer c-tableWrapper c-rounded">
-                <!-- ***** Table Body ***** -->
-                <div class="c-table type-01">
-                  <table class="table js-dataTable02 c-rounded">
-                    <thead>
-                      <tr>
-                        <th class="text-center no-sort" style="width: 55px;">
-                          <div class="c-chkBox no-label">
-                            <input type="checkbox" class="chkBox" id="chk13" />
-                            <label class="chkLbl" for="chk13">
-                              <i class="icon"></i>
-                            </label>
-                          </div>
-                        </th>
-                        <th style="width: 170px;">Status</th>
-                        <th style="width: 170px;">Visit Dated</th>
-                        <th style="width: 170px;">Visit Time</th>
-                        <th style="width: 170px;">Visitor Name</th>
-                        <th style="width: 170px;">Company NAme</th>
-                        <th style="width: 170px;">Host NAme</th>
-                        <th style="width: 170px;" class="">
-                          Site / Building / Entrance / Room
-                        </th>
-                        <th style="width: 170px;">Visitor Code</th>
-                        <th class="no-sort" style="width: 55px;"></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- ** Row 1 ** -->
-                      <tr>
-                        <td class="text-center selectable" style="width: 55px;">
-                          <div class="c-chkBox no-label">
-                            <input type="checkbox" class="chkBox" id="chk141" />
-                            <label class="chkLbl" for="chk141">
-                              <i class="icon"></i>
-                            </label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="form-group c-form inTable">
-                            <div class="dropdown c-dropdown sm js-selectable">
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton4"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <span class="value">Select Status</span>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton4"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td>Oct 1, 2019 to Oct 2, 2019</td>
-                        <td>9:00am to 3:00pm</td>
-                        <td>
-                          <div class="userList">
-                            <img src="./images/profile.svg" alt="user" />
-                            <span class="userName">Floyd Figueroa</span>
-                          </div>
-                        </td>
-                        <td>AXA Group</td>
-                        <td>Nettie Strickland</td>
-                        <td>5434 Waldo Place</td>
-                        <td>R3VUNE</td>
-                        <td style="width: 55px;">
-                          <div class="form-group c-form">
-                            <div
-                              class="dropdown c-dropdown js-selectable type-btn"
-                            >
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton5"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <i class="icon ocr-android-more-horizontal"></i>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton5"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <!-- ** Row 1 End ** -->
-
-                      <!-- ** Row 2 ** -->
-                      <tr>
-                        <td class="text-center selectable" style="width: 55px;">
-                          <div class="c-chkBox no-label">
-                            <input type="checkbox" class="chkBox" id="chk142" />
-                            <label class="chkLbl" for="chk142">
-                              <i class="icon"></i>
-                            </label>
-                          </div>
-                        </td>
-                        <td style="width: 170px;">
-                          <div class="form-group c-form inTable">
-                            <div
-                              class="dropdown c-dropdown sm js-selectable dd-01"
-                            >
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton6"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <span class="value">Select Status</span>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton6"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td>Oct 1, 2019 to Oct 2, 2019</td>
-                        <td>9:00am to 3:00pm</td>
-                        <td>
-                          <div class="userList">
-                            <img src="./images/profile.svg" alt="user" />
-                            <span class="userName">Floyd Figueroa</span>
-                          </div>
-                        </td>
-                        <td>AXA Group</td>
-                        <td>Nettie Strickland</td>
-                        <td>5434 Waldo Place</td>
-                        <td>R3VUNE</td>
-                        <td style="width: 55px;">
-                          <div class="form-group c-form">
-                            <div
-                              class="dropdown c-dropdown js-selectable type-btn"
-                            >
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton7"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <i class="icon ocr-android-more-horizontal"></i>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton7"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <!-- ** Row 2 End ** -->
-
-                      <!-- ** Row 3 ** -->
-                      <tr>
-                        <td class="text-center selectable" style="width: 55px;">
-                          <div class="c-chkBox no-label">
-                            <input type="checkbox" class="chkBox" id="chk143" />
-                            <label class="chkLbl" for="chk143">
-                              <i class="icon"></i>
-                            </label>
-                          </div>
-                        </td>
-                        <td style="width: 170px;">
-                          <div class="form-group c-form inTable">
-                            <div
-                              class="dropdown c-dropdown sm dd-02 js-selectable"
-                            >
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton8"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <span class="value">Select Status</span>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton8"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td>Oct 1, 2019 to Oct 2, 2019</td>
-                        <td>9:00am to 3:00pm</td>
-                        <td>
-                          <div class="userList">
-                            <img src="./images/profile.svg" alt="user" />
-                            <span class="userName">Floyd Figueroa</span>
-                          </div>
-                        </td>
-                        <td>AXA Group</td>
-                        <td>Aettie Strickland</td>
-                        <td>5434 Waldo Place</td>
-                        <td>R3VUNE</td>
-                        <td style="width: 55px;">
-                          <div class="form-group c-form">
-                            <div
-                              class="dropdown c-dropdown js-selectable type-btn"
-                            >
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton9"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <i class="icon ocr-android-more-horizontal"></i>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton9"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <!-- ** Row 3 End ** -->
-
-                      <!-- ** Row 4 ** -->
-                      <tr>
-                        <td class="text-center selectable" style="width: 55px;">
-                          <div class="c-chkBox no-label">
-                            <input type="checkbox" class="chkBox" id="chk144" />
-                            <label class="chkLbl" for="chk144">
-                              <i class="icon"></i>
-                            </label>
-                          </div>
-                        </td>
-                        <td style="width: 170px;">
-                          <div class="form-group c-form inTable">
-                            <div
-                              class="dropdown c-dropdown sm dd-03 js-selectable"
-                            >
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton10"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <span class="value">Select Status</span>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton10"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td>Oct 1, 2019 to Oct 2, 2019</td>
-                        <td>9:00am to 3:00pm</td>
-                        <td>
-                          <div class="userList">
-                            <img src="./images/profile.svg" alt="user" />
-                            <span class="userName">Floyd Figueroa</span>
-                          </div>
-                        </td>
-                        <td>AXA Group</td>
-                        <td>Nettie Strickland</td>
-                        <td>5434 Waldo Place</td>
-                        <td>R3VUNE</td>
-                        <td style="width: 55px;">
-                          <div class="form-group c-form">
-                            <div
-                              class="dropdown c-dropdown js-selectable type-btn"
-                            >
-                              <button
-                                class="btn dropdown-toggle default"
-                                type="button"
-                                id="dropdownMenuButton11"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <i class="icon ocr-android-more-horizontal"></i>
-                              </button>
-
-                              <div
-                                class="dropdown-menu"
-                                aria-labelledby="dropdownMenuButton11"
-                              >
-                                <button class="dropdown-item" value="option 1">
-                                  Option 1
-                                </button>
-                                <button class="dropdown-item" value="option 2">
-                                  Option 2
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <!-- ** Row 4 End ** -->
-                    </tbody>
-                  </table>
-                </div>
-                <!-- ***** Table Body End ***** -->
-
-                <!-- ***** Table Footer ***** -->
-                <div class="c-tableFooter">
-                  <div class="row">
-                    <div class="col-8">
-                      <!-- ***** Table Footer Button  ***** -->
-                      <div class="c-settingList">
-                        <ul>
-                          <li>
-                            <span class="selectedCount">2 selected:</span>
-                          </li>
-                          <li>
-                            <button class="c-btn with-icon sm">
-                              <i class="icon ocr-check-in"></i>
-                              Check in
-                            </button>
-                          </li>
-                          <li>
-                            <button class="c-btn col-red with-icon sm">
-                              <i class="icon ocr-check-out"></i>
-                              Check out
-                            </button>
-                          </li>
-                          <li>
-                            <button class="c-btn col-dark with-icon sm">
-                              <i class="icon ocr-printer"></i>
-                              Print Badge
-                            </button>
-                          </li>
-                          <li>
-                            <button class="c-btn col-dark with-icon sm">
-                              <i class="icon ocr-printer-setting"></i>
-                              Print Badge Preview
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!-- ***** Table Footer Button End ***** -->
-                    </div>
+            <div class="col h-100">
+              <!-- ***** Graph Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="row align-items-center mb-20">
+                  <div class="col">
+                    <div class="graphHeading m0">Statistics</div>
                   </div>
                 </div>
-                <!-- ***** Table Footer End ***** -->
+                <div class="graph type-01">
+                  Graph Here
+                </div>
               </div>
-              <!-- ***** Table Wrapper End ***** -->
+              <!-- ***** Graph Block End***** -->
+            </div>
+
+            <div class="col h-100">
+              <!-- ***** Graph Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="row align-items-center mb-20">
+                  <div class="col">
+                    <div class="graphHeading m0">Recent Transcations</div>
+                  </div>
+                </div>
+                <div class="graph type-02 c-tableWrapper">
+                  <div class="c-table type-01">
+                    <table class="table js-dataTable02">
+                      <thead>
+                        <tr>
+                          <th style="width: 40%;">Transaction Id</th>
+                          <th style="width: 20%;">Country</th>
+                          <th style="width: 40%;">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>87K7420500003</td>
+                          <td>CA</td>
+                          <td>
+                            <span class="notifyTag approved"
+                              >Response processed</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>87K7420500002</td>
+                          <td>CA</td>
+                          <td>
+                            <span class="notifyTag rejected"
+                              >Schema validation failed</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>87K7420500001</td>
+                          <td>CA</td>
+                          <td>
+                            <span class="notifyTag approved"
+                              >Response processed</span
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>87K7420330002</td>
+                          <td>CA</td>
+                          <td>
+                            <span class="notifyTag rejected"
+                              >Schema validation failed</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Graph Block End***** -->
             </div>
           </div>
-          <!-- ***** Body End ***** -->
+          <!-- ***** Graph Row 2 End ***** -->
         </div>
       </div>
       <!-- ********** Component :: Wrapper End **********  -->
@@ -888,11 +304,10 @@
     <!-- ********** Page Body End **********  -->
 
     <!-- ********** Scripts **********  -->
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/jquery-migrate-3.0.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/daterangepicker.min.js"></script>
     <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="./js/datatables.min.js"></script>
     <script src="./js/scripts.js"></script>

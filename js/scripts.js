@@ -53,6 +53,7 @@ $(function () {
 
     // ---- Date Range picker wih custome Range
     $(".c-dateRangePicker.withRange .form-control").daterangepicker({
+      autoUpdateInput: false,
       startDate: moment().subtract(29, "days"),
       endDate: moment(),
       ranges: {
@@ -92,17 +93,12 @@ $(function () {
 
   // ----- Data Table - Type 01 - With all Features
   if ($(".js-dataTable02").length) {
-    var table = $(".js-dataTable02").DataTable({
-      scrollY: "400px",
+    $(".js-dataTable02").DataTable({
+      scrollY: "350px",
       paging: true,
       ordering: true,
       searching: false,
       info: true,
-      scrollX: true,
-      // fixedColumns: {
-      //   leftColumns: 2,
-      //   rightColumns: 0,
-      // },
       dom:
         'rt<"container-fluid c-tableFooter"<"row"<"col-4"i><"col-8 text-right"pl>>>',
       columnDefs: [{ targets: "no-sort", orderable: false }],
@@ -111,91 +107,6 @@ $(function () {
           previous: '<i class="icon ocr-angle-left"></i>',
           next: '<i class="icon ocr-angle-right"></i>',
         },
-      },
-      // fnInitComplete: function () {
-      //   setCustomeScrollerForTable();
-      // },
-      // fnDrawCallback: function (oSettings) {
-      //   setCustomeScrollerForTable();
-      // },
-    });
-    $(".js-dataTable02 th:first-child .chkBox").on("change", function () {
-      var rows, checked;
-      rows = $(".js-dataTable02").find("tr");
-      checked = $(this).prop("checked");
-      $.each(rows, function () {
-        $($(this).find(".selectable")).find(".chkBox").prop("checked", checked);
-      });
-    });
-
-    $(".c-showTableColums .c-chkBox .chkBox").on("change", function (e) {
-      if ($(this).is(":checked")) {
-        console.log($(this).attr("data-column"));
-
-        // Get the column API object
-        var column = table.column($(this).attr("data-column"));
-
-        // Toggle the visibility
-        column.visible(true);
-      } else {
-        var column = table.column($(this).attr("data-column"));
-        column.visible(false);
-      }
-      e.preventDefault();
-    });
-  }
-
-  // ----- Data Table - Type 02
-  if ($(".js-dataTable").length) {
-    var table = $(".js-dataTable").DataTable({
-      scrollY: "400px",
-      paging: false,
-      ordering: true,
-      searching: false,
-      info: false,
-      scrollX: true,
-      fixedColumns: {
-        leftColumns: 4,
-        rightColumns: 0,
-      },
-      columnDefs: [{ targets: "no-sort", orderable: false }],
-      fnInitComplete: function () {
-        // setCustomeScrollerForTable();
-      },
-      fnDrawCallback: function (oSettings) {
-        // setCustomeScrollerForTable();
-      },
-    });
-    $(".c-showTableColums .c-chkBox .chkBox").on("change", function (e) {
-      if ($(this).is(":checked")) {
-        console.log($(this).attr("data-column"));
-
-        // Get the column API object
-        var column = table.column($(this).attr("data-column"));
-
-        // Toggle the visibility
-        column.visible(true);
-      } else {
-        var column = table.column($(this).attr("data-column"));
-        column.visible(false);
-      }
-      e.preventDefault();
-    });
-  }
-
-  // ----- Data Table - For Graph
-  if ($(".graph").length) {
-    $(".graph.type-02 .table").DataTable({
-      scrollY: "200px",
-      paging: false,
-      ordering: false,
-      searching: false,
-      info: false,
-      fnInitComplete: function () {
-        setCustomeScrollerForTable();
-      },
-      fnDrawCallback: function () {
-        setCustomeScrollerForTable();
       },
     });
   }
@@ -217,63 +128,7 @@ $(function () {
     });
   }
 
-  // --- Call Webcam start function
-  if ($(".c-cropImage").length) {
-    startWebcamForCapturePicture();
-  }
-
   $(".daterangepicker .ranges li").on("click", function () {
     $(this).addClass("active").siblings().removeClass("active");
   });
 });
-
-// custome scrollbar for table
-function setCustomeScrollerForTable() {
-  $(".dataTables_scrollBody").mCustomScrollbar({
-    theme: "dark",
-    autoHideScrollbar: true,
-    axis: "y",
-    advanced: { updateOnContentResize: true },
-    mouseWheel: { enable: true },
-    scrollButtons: { enable: true },
-  });
-}
-
-// Function for web cam
-function startWebcamForCapturePicture() {
-  // Grab elements, create settings, etc.
-  const imgDiv = document.querySelector(".cropImage");
-  const video = document.querySelector(".cropVideo");
-  const canvas = document.querySelector(".cropPhoto");
-  const context = canvas.getContext("2d");
-
-  // Trigger photo take
-  document.getElementById("startCamera").addEventListener("click", function () {
-    imgDiv.classList.add("hide");
-    video.classList.add("show");
-    let liveStream;
-
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices
-        .getUserMedia({ video: true, audio: false })
-        .then(function (stream) {
-          video.srcObject = stream;
-          liveStream = stream;
-          video.play();
-        });
-      document
-        .getElementById("capturePhoto")
-        .addEventListener("click", function () {
-          video.classList.add("hide");
-          context.drawImage(video, 0, 0, 640, 480, 0, 0, 320, 240);
-          canvas.classList.add("show");
-          stopStream(liveStream);
-        });
-      function stopStream(stream) {
-        stream.getVideoTracks().forEach(function (track) {
-          track.stop();
-        });
-      }
-    }
-  });
-}

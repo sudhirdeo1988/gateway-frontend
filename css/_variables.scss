@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+/*
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Work Sans', sans-serif;
+*/
 
 /* -------------------------------------
 	Theme Colors
 ------------------------------------- */
-$primary: #284f98;
+$primary: #219ac4;
 $font-color: #171725;
 $fontDark: #181d2c;
 
@@ -26,6 +31,7 @@ $gray-CCC: #ccc;
 ------------------------------------- */
 $primary-font: "Work Sans", sans-serif;
 $icon-font: "ocr-inc";
+$heading-font: "Roboto Condensed", sans-serif;
 
 /* -------------------------------------
 	Mixins

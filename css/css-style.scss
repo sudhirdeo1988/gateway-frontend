@@ -285,6 +285,24 @@ File Type :: SCSS file (For styling)
 .ocr-edit-pen:before {
   content: "\2a";
 }
+.ocr-line-chart:before {
+  content: "\2b";
+}
+.ocr-bar-chart:before {
+  content: "\2c";
+}
+.ocr-graph-1:before {
+  content: "\2d";
+}
+.ocr-tachometer:before {
+  content: "\2e";
+}
+.ocr-dashboard:before {
+  content: "\2f";
+}
+.ocr-tax:before {
+  content: "\3a";
+}
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -340,7 +358,7 @@ a:hover {
   }
 
   &.c-rounded {
-    @include rounded-corners(20px);
+    @include rounded-corners(10px);
   }
 }
 
@@ -758,7 +776,6 @@ a:hover {
     &.type-01 {
       margin: 0;
       table {
-        table-layout: fixed;
         margin: 0;
         width: 100% !important;
         &.no-footer {
@@ -819,8 +836,8 @@ a:hover {
         td {
           box-sizing: border-box;
           border: 0;
-          color: $font-color;
-          padding: 12px;
+          color: $gray-01;
+          padding: 10px;
           vertical-align: middle;
           font-size: 14px;
           font-weight: 500;
@@ -861,6 +878,19 @@ a:hover {
           &::before {
             content: "";
             display: none !important;
+          }
+        }
+      }
+    }
+    &.bordered {
+      .table {
+        tr {
+          td {
+            border-bottom: 1px solid $gray-02 !important;
+            border-right: 1px solid $gray-02 !important;
+            &:last-child {
+              border-right: 0 !important;
+            }
           }
         }
       }
@@ -1261,6 +1291,12 @@ a:hover {
       border-top: 1px solid $gray-02;
     }
   }
+  &.w-950 {
+    .modal-dialog {
+      box-sizing: border-box;
+      max-width: 950px;
+    }
+  }
   &.w-750 {
     .modal-dialog {
       box-sizing: border-box;
@@ -1283,7 +1319,7 @@ a:hover {
 	Component :: Headings
 ------------------------------------- */
 .rowHeading {
-  color: $font-color;
+  color: $gray-01;
   display: block;
   font-size: 24px;
   font-weight: 500;
@@ -1333,7 +1369,7 @@ a:hover {
   background-color: $primary;
   color: $white;
   display: inline-block;
-  padding: 11px 15px;
+  padding: 11px 25px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
@@ -1342,49 +1378,28 @@ a:hover {
   min-width: 100px;
   margin: 0 15px 0 0;
   outline: none !important;
-  @include rounded-corners(10px);
+  @include rounded-corners(50px);
   &:last-child {
     margin-right: 0;
   }
+  &.link {
+    color: $primary;
+    text-decoration: underline;
+    background-color: transparent;
+    padding: 11px;
+  }
   &.with-icon {
-    padding: 11px 22px 11px 42px;
+    padding: 11px 25px 11px 45px;
     text-align: left;
     .icon {
       color: $white;
-      font-size: 28px;
-      line-height: 28px;
+      font-size: 19px;
+      line-height: 20px;
       position: absolute;
-      top: 5px;
-      left: 7px;
+      top: 8px;
+      left: 15px;
       height: 28px;
       width: 28px;
-    }
-    &.s-right {
-      padding: 11px 45px 11px 22px;
-      .icon {
-        left: auto;
-        right: 10px;
-        top: 9px;
-        font-size: 20px;
-        line-height: 20px;
-        height: 20px;
-        width: 20px;
-      }
-    }
-    &.sm {
-      width: auto;
-      min-width: 50px;
-      padding-right: 15px;
-      padding-left: 36px;
-      vertical-align: top;
-      .icon {
-        font-size: 20px;
-        line-height: 20px;
-        top: 9px;
-        left: 9px;
-        height: 22px;
-        width: 22px;
-      }
     }
   }
   &.col-gray {
@@ -1431,7 +1446,7 @@ a:hover {
   text-align: center;
   outline: none !important;
   margin: 0;
-  @include rounded-corners(10px);
+  @include rounded-corners(50px);
   .icon {
     color: $white;
     font-size: 19px;
@@ -1441,70 +1456,6 @@ a:hover {
   &.col-gray {
     background-color: #676c7a;
     color: $font-color;
-  }
-}
-
-.c-btnScan {
-  background-color: #676c7a;
-  border: 0;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: inline-block;
-  height: 38px;
-  width: 38px;
-  padding: 7px;
-  outline: none;
-  @include rounded-corners(10px);
-  .icon {
-    color: $white;
-    display: block;
-    height: 24px;
-    width: 24px;
-    font-size: 23px;
-    line-height: 23px;
-  }
-}
-
-.c-cropImage {
-  margin: 60px auto;
-  position: relative;
-  display: block;
-  height: 400px;
-  width: 400px;
-  @include rounded-corners(50%);
-  @include transition(all ease 0.3s);
-  .cropImage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -160px 0 0 -160px;
-    display: block;
-    height: 320px;
-    width: 320px;
-    opacity: 1;
-    visibility: visible;
-    @include rounded-corners(50%);
-    @include transition(all ease 0.3s);
-    &.hide {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  .cropVideo,
-  .cropPhoto {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    height: 400px;
-    width: 400px;
-    opacity: 0;
-    visibility: hidden;
-    @include transition(all ease 0.3s);
-    &.show {
-      opacity: 1;
-      visibility: visible;
-    }
   }
 }
 
@@ -2395,7 +2346,7 @@ a:hover {
     margin: 0;
     list-style: none;
     padding: 10px 0;
-    @include rounded-corners(10px);
+    @include rounded-corners(5px);
     .nav-item {
       border-right: 1px solid $gray-02;
       background-color: $white;
@@ -2523,10 +2474,10 @@ a:hover {
   .profname {
     color: $font-color;
     display: block;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 600;
-    line-height: 19px;
-    margin-bottom: 14px;
+    line-height: 26px;
+    margin-bottom: 10px;
   }
 }
 .profInfo {
@@ -2583,6 +2534,25 @@ a:hover {
       background-color: rgba(13, 206, 130, 0.1);
       color: #0dce82;
     }
+  }
+}
+
+.notifyTag {
+  background-color: rgba(40, 79, 152, 0.1);
+  color: $primary;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 5px 15px;
+  @include rounded-corners(5px);
+  &.approved {
+    background-color: lighten($green, 50%);
+    color: darken($green, 5%);
+  }
+  &.rejected {
+    background-color: lighten($red, 32%);
+    color: darken($red, 5%);
   }
 }
 
@@ -2865,7 +2835,7 @@ a:hover {
   padding: 21px 25px;
   min-height: 100px;
   margin-bottom: 20px;
-  @include rounded-corners(20px);
+  @include rounded-corners(5px);
   .graphHeading {
     display: block;
     color: $font-color;
@@ -3149,6 +3119,145 @@ a:hover {
 }
 
 /* -------------------------------------
+	Component :: Cards
+------------------------------------- */
+.c-cardHolder {
+  .col {
+    margin-bottom: 20px;
+    .card {
+      border: 0;
+      position: relative;
+      @include box-shadow(0 0 12px $gray);
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 50px;
+        color: rgba(0, 0, 0, 0.05);
+        font-family: $icon-font;
+        content: "\2d";
+      }
+      .card-title {
+        color: rgba(0, 0, 0, 0.3);
+        display: block;
+        position: relative;
+        text-transform: uppercase;
+        font-family: $heading-font;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.7px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        .icon {
+          position: absolute;
+          top: 0;
+          left: 2px;
+          color: rgba(0, 0, 0, 0.2);
+          font-size: 16px;
+          line-height: 20px;
+          display: inline-block;
+        }
+      }
+      .card-number {
+        color: $black;
+        display: block;
+        margin: 10px 0;
+        letter-spacing: 1px;
+        font-family: $heading-font;
+        .nLink {
+          color: $black;
+          border: 0;
+          display: inline-block;
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 42px;
+          outline: none;
+        }
+      }
+      .card-info {
+        color: rgba(0, 0, 0, 0.3);
+        display: block;
+        position: relative;
+        text-transform: uppercase;
+        font-family: $heading-font;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.7px;
+        text-align: right;
+      }
+
+      &.type-01 {
+        background-color: $primary;
+        &::before {
+          color: rgba(255, 255, 255, 0.1);
+        }
+        .card-title {
+          color: rgba(255, 255, 255, 0.7);
+          .icon {
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+        .card-info {
+          color: darken($primary, 15%);
+        }
+        .card-number {
+          .nLink {
+            color: $white;
+          }
+        }
+      }
+
+      &.type-02 {
+        background-color: $primary;
+        background: $primary;
+        background: -moz-linear-gradient(
+          -45deg,
+          lighten($primary, 5%) 0%,
+          lighten($primary, 10%) 47%,
+          darken($primary, 6%) 100%
+        );
+        background: -webkit-linear-gradient(
+          -45deg,
+          lighten($primary, 5%) 0%,
+          lighten($primary, 10%) 47%,
+          darken($primary, 6%) 100%
+        );
+        background: linear-gradient(
+          135deg,
+          lighten($primary, 5%) 0%,
+          lighten($primary, 10%) 47%,
+          darken($primary, 6%) 100%
+        );
+
+        &::before {
+          color: rgba(255, 255, 255, 0.15);
+        }
+        .card-title {
+          color: rgba(255, 255, 255, 0.7);
+          .icon {
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+        .card-info {
+          color: darken($primary, 15%);
+        }
+        .card-number {
+          .nLink {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------------
   Component :: Utility classes
 ------------------------------------- */
 .t-45 {
@@ -3180,6 +3289,12 @@ a:hover {
 }
 .p-right {
   float: right;
+}
+.font-h {
+  font-family: $heading-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
 }
 
 /* -------------------------------------

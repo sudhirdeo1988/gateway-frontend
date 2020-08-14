@@ -7,6 +7,7 @@
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/dropzone.min.css" />
     <link rel="stylesheet" href="./css/css-style.css" />
   </head>
 
@@ -27,25 +28,25 @@
         <div class="c-pageNav js-customScroll">
           <ul>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./01-dashboard.html" class="navLink">
                 <i class="icon ocr-dashboard"></i>
                 <span class="linkText">Dashboard</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./02-filingHistory.html" class="navLink">
                 <i class="icon ocr-content-7"></i>
                 <span class="linkText">Filling History</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink active">
+              <a href="./03-customFiling.html" class="navLink active">
                 <i class="icon ocr-tax"></i>
                 <span class="linkText">Custom Filling</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./04-userProfile.html" class="navLink">
                 <i class="icon ocr-user-2"></i>
                 <span class="linkText">User Profile</span>
               </a>
@@ -60,37 +61,28 @@
         <div class="row no-gutters">
           <div class="col-7">
             <div class="headerSect_l">
-              <ul>
-                <li>
-                  <div class="c-dropdown dropdown js-selectable">
-                    <button
-                      class="btnHeadDD dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <i class="icon ocr-pin"></i>
-                      <span class="value">All Sites</span>
-                    </button>
-                    <div
-                      class="dropdown-menu sm"
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <button class="dropdown-item" value="option 1">
-                        Option 1
-                      </button>
-                      <button class="dropdown-item" value="option 2">
-                        Option 2
-                      </button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <div class="c-pageTitle">Global custom filling gateway</div>
             </div>
           </div>
           <div class="col-5 text-right">
+            <div class="c-dropdown dropdown notifySetting">
+              <button
+                class="profileBtn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton3"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="icon ocr-bell"></i>
+                <span class="count">2</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
             <div class="c-dropdown dropdown profileSetting">
               <button
                 class="profileBtn dropdown-toggle"
@@ -101,8 +93,6 @@
                 aria-expanded="false"
               >
                 <img src="./images/profile.png" alt="profile" />
-                <span class="profTitle">Nannie Andrews</span>
-                <span class="profSubTitle">Visitor Receptionist</span>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                 <a class="dropdown-item" href="#">Action</a>
@@ -167,11 +157,86 @@
                     <!-- ***** Section 8 ***** -->
                     <div class="c-grapgContainer">
                       <div class="profInfo">
-                        <div class="graphHeading">Upload File</div>
-
                         <div class="row align-items-center">
+                          <div class="col-12 mb-30">
+                            <h4 class="c-compHeading sm">
+                              Upload File
+                            </h4>
+                            <div class="c-uploadFileSection">
+                              <form
+                                action="/file-upload"
+                                class="dropzone"
+                                id="upload-file-zone"
+                              ></form>
+                            </div>
+                          </div>
                           <div class="col-12">
-                            test
+                            <div class="c-tableWrapper">
+                              <!-- ***** Table Body ***** -->
+                              <div class="row align-items-center mb-20">
+                                <div class="col">
+                                  <h4 class="c-compHeading sm">
+                                    User Configuration
+                                  </h4>
+                                </div>
+                                <div class="col text-right">
+                                  <button class="c-btn">Refresh</button>
+                                </div>
+                              </div>
+
+                              <div class="c-table type-01 bordered">
+                                <table class="table">
+                                  <tr>
+                                    <th style="width: 10%;">ID</th>
+                                    <th style="width: 15%;">Flyier Code</th>
+                                    <th style="width: 17%;">Queue In</th>
+                                    <th style="width: 18%;">Queue Out</th>
+                                    <th style="width: 15%;">Processing Code</th>
+                                    <th style="width: 15%;">
+                                      Environment Name
+                                    </th>
+                                    <th style="width: 10%;" class="text-center">
+                                      Action
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>S2A</td>
+                                    <td>OCR.TEST.IN</td>
+                                    <td>OCR.TEST.OUT</td>
+                                    <td>S1</td>
+                                    <td>TST</td>
+                                    <td class="text-center">
+                                      <button
+                                        class="tableBtn"
+                                        data-toggle="modal"
+                                        data-target="#editConfig"
+                                      >
+                                        <i class="icon ocr-edit-pen"></i>
+                                      </button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>S2A</td>
+                                    <td>OCR.TEST.IN</td>
+                                    <td>OCR.TEST.OUT</td>
+                                    <td>S1</td>
+                                    <td>TST</td>
+                                    <td class="text-center">
+                                      <button
+                                        class="tableBtn"
+                                        data-toggle="modal"
+                                        data-target="#editConfig"
+                                      >
+                                        <i class="icon ocr-edit-pen"></i>
+                                      </button>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                              <!-- ***** Table Body ***** -->
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -201,6 +266,92 @@
     </div>
     <!-- ********** Page Body End **********  -->
 
+    <!-- **** Modal ::  Edit Profile **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="editConfig"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="editConfigLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editConfigLabel">
+              Edit Configuration
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">User ID</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Email</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-6">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Contact</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+              <div class="col-12">
+                <!-- *** Form Field *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Address</label>
+                  <textarea class="form-control textarea"></textarea>
+                </div>
+                <!-- *** Form Field End *** -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer text-right">
+            <button
+              type="button"
+              class="c-btn col-gray"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Cancel
+            </button>
+            <button type="button" class="c-btn">
+              Update
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Edit Profile  End **** -->
+
     <!-- ********** Scripts **********  -->
     <script src="./js/jquery-3.4.0.min.js"></script>
     <script src="./js/jquery-migrate-3.0.1.min.js"></script>
@@ -209,6 +360,7 @@
     <script src="./js/daterangepicker.min.js"></script>
     <script src="./js/datatables.min.js"></script>
     <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./js/dropzone.min.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

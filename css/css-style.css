@@ -27,10 +27,10 @@ File Type :: SCSS file (For styling)
   - Utility classes
   - Plugin overwrite
 ------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Montserrat:wght@300;400;500;600&display=swap");
 /*
 font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Work Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
 */
 /* -------------------------------------
 	Theme Colors
@@ -392,6 +392,10 @@ font-family: 'Work Sans', sans-serif;
   content: ":";
 }
 
+.ocr-exclamation:before {
+  content: ";";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -402,11 +406,12 @@ html {
 
 body {
   background-color: #ecf0f6;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
   font-display: swap;
   line-height: 20px;
+  letter-spacing: 0.3px;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -495,7 +500,7 @@ a:hover {
   outline: none;
 }
 .c-sidebar .sidebarHead .sidebarHamb .icon {
-  color: #219ac4;
+  color: #057bfe;
   display: block;
   font-weight: 600;
   font-size: 31px;
@@ -530,7 +535,7 @@ a:hover {
 }
 .c-sidebar .sidebarHead .closeSidebar::before {
   content: "o";
-  color: #219ac4;
+  color: #057bfe;
   display: inline-block;
   font-family: "ocr-inc";
   font-size: 22px;
@@ -592,21 +597,21 @@ a:hover {
   -ms-transition: all ease 0.3s;
 }
 .c-sidebar .c-pageNav ul li .navLink:hover::before {
-  background-color: #219ac4;
+  background-color: #057bfe;
 }
 .c-sidebar .c-pageNav ul li .navLink:hover .linkText,
 .c-sidebar .c-pageNav ul li .navLink:hover .icon {
-  color: #219ac4;
+  color: #057bfe;
 }
 .c-sidebar .c-pageNav ul li .navLink.active {
-  color: #219ac4;
+  color: #057bfe;
 }
 .c-sidebar .c-pageNav ul li .navLink.active .linkText,
 .c-sidebar .c-pageNav ul li .navLink.active .icon {
-  color: #219ac4;
+  color: #057bfe;
 }
 .c-sidebar .c-pageNav ul li .navLink.active::before {
-  background-color: #219ac4;
+  background-color: #057bfe;
 }
 .c-sidebar .c-pageNav ul li .navLink .linkText {
   color: #181d2c;
@@ -639,7 +644,7 @@ a:hover {
   -ms-transition: all ease 0.3s;
 }
 .c-sidebar .c-pageNav ul li .childNav.active .navLink::after {
-  color: #219ac4;
+  color: #057bfe;
 }
 .c-sidebar .c-pageNav ul li .childNav .navLink {
   padding-right: 30px;
@@ -653,7 +658,7 @@ a:hover {
   width: 14px;
   font-family: "ocr-inc";
   content: "a";
-  color: #219ac4;
+  color: #057bfe;
   font-size: 16px;
   line-height: 15px;
 }
@@ -675,7 +680,7 @@ a:hover {
   outline: none;
 }
 .c-sidebar .c-pageNav ul li .childNav .card-body .childLink.active {
-  color: #219ac4;
+  color: #057bfe;
 }
 
 /* -------------------------------------
@@ -710,76 +715,22 @@ a:hover {
   text-align: left;
   padding: 5px 0;
 }
-.c-header .headerSect_l ul {
-  display: block;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.c-header .headerSect_l ul li {
-  border-right: 1px solid #ebedf4;
+.c-header .headerSect_l .c-pageTitle {
+  font-family: "Roboto Condensed", sans-serif;
   display: inline-block;
-  margin-right: 20px;
-  padding-right: 20px;
-  float: left;
-}
-.c-header .headerSect_l ul li:last-child {
-  border: 0;
-  margin-right: 0;
-  padding-right: 0;
-}
-.c-header .headerSect_l ul li .btnHeadDD {
-  background-color: #fff;
-  border: 0;
-  box-sizing: border-box;
-  color: #219ac4;
+  color: #676c7a;
   display: block;
-  position: relative;
-  padding: 5px 25px 5px 40px;
-  font-size: 14px;
-  font-weight: 500;
-  height: 32px;
-  line-height: 16px;
-  text-align: left;
-  width: 210px;
-  outline: none;
-}
-.c-header .headerSect_l ul li .btnHeadDD::after {
-  display: none;
-}
-.c-header .headerSect_l ul li .btnHeadDD::before {
-  color: #219ac4;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 10px;
-  color: #219ac4;
-  font-size: 14px;
-  line-height: 14px;
-  font-family: "ocr-inc";
-  content: "D";
-}
-.c-header .headerSect_l ul li .btnHeadDD .icon {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 3px;
-  color: #219ac4;
-  font-size: 24px;
-  line-height: 24px;
-}
-.c-header .headerSect_l ul li .btnHeadDD.type-02 {
-  color: #fe4b4b;
-  padding-right: 0;
-}
-.c-header .headerSect_l ul li .btnHeadDD.type-02 .icon {
-  color: #fe4b4b;
-}
-.c-header .headerSect_l ul li .btnHeadDD.type-02::before {
-  display: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 2px 0 0;
 }
 .c-header .profileSetting {
   display: inline-block;
+  vertical-align: middle;
+  top: -5px;
 }
 .c-header .profileSetting .profileBtn {
   background-color: #fff;
@@ -787,23 +738,13 @@ a:hover {
   border: 0;
   display: block;
   height: 42px;
-  padding: 0 35px 0 57px;
+  padding: 0 0 0 42px;
   margin: 0;
   position: relative;
   outline: none;
 }
 .c-header .profileSetting .profileBtn::after {
-  border: 0;
-  color: #219ac4;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 14px;
-  color: #219ac4;
-  font-size: 14px;
-  line-height: 14px;
-  font-family: "ocr-inc";
-  content: "D";
+  display: none;
 }
 .c-header .profileSetting .profileBtn img {
   position: absolute;
@@ -815,19 +756,59 @@ a:hover {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-.c-header .profileSetting .profileBtn .profTitle {
-  color: #171725;
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 14px;
+.c-header .profileSetting .dropdown-menu {
+  min-width: 250px;
+  right: auto;
+  left: -30px !important;
 }
-.c-header .profileSetting .profileBtn .profSubTitle {
-  color: #676c7a;
+.c-header .notifySetting {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+.c-header .notifySetting .profileBtn {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 0;
   display: block;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 12px;
+  height: 42px;
+  width: 42px;
+  margin: 0;
+  padding: 5px;
+  position: relative;
+  outline: none;
+}
+.c-header .notifySetting .profileBtn .icon {
+  display: inline-block;
+  color: #ccc;
+  font-size: 22px;
+  line-height: 22px;
+  position: relative;
+  top: 2px;
+}
+.c-header .notifySetting .profileBtn .count {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  display: inline-block;
+  padding: 0;
+  background: #057bfe;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  height: 14px;
+  min-width: 15px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 3px;
+}
+.c-header .notifySetting .profileBtn::after {
+  display: none;
+}
+.c-header .notifySetting .dropdown-menu {
+  min-width: 350px;
+  right: auto;
+  left: -30px !important;
 }
 
 /* -------------------------------------
@@ -1038,7 +1019,7 @@ a:hover {
   border-radius: 0;
 }
 .c-tableWrapper .c-tableFooter .c-tabPagination ul li .pageNumer.active {
-  color: #219ac4;
+  color: #057bfe;
   font-weight: 600;
 }
 .c-tableWrapper .c-tableFooter .dataTables_paginate {
@@ -1061,7 +1042,7 @@ a:hover {
   outline: none;
 }
 .c-tableWrapper .c-tableFooter .dataTables_paginate .paginate_button.current {
-  color: #219ac4;
+  color: #057bfe;
   font-weight: 600;
 }
 .c-tableWrapper .c-tableFooter .dataTables_paginate .paginate_button:hover {
@@ -1195,7 +1176,7 @@ a:hover {
   border-radius: 0;
 }
 .c-tableWrapper .c-tableFooter .c-tabPagination ul li .pageNumer.active {
-  color: #219ac4;
+  color: #057bfe;
   font-weight: 600;
 }
 .c-tableWrapper .mCustomScrollBox .mCSB_container {
@@ -1392,6 +1373,19 @@ a:hover {
 /* -------------------------------------
 	Component :: Headings
 ------------------------------------- */
+.c-compHeading {
+  display: block;
+  color: #676c7a;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+.c-compHeading.sm {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .rowHeading {
   color: #676c7a;
   display: block;
@@ -1436,12 +1430,12 @@ a:hover {
   line-height: 24px;
   top: 7px;
   left: 0;
-  color: #219ac4;
+  color: #057bfe;
 }
 
 .c-btn {
   border: 0;
-  background-color: #219ac4;
+  background-color: #057bfe;
   color: #fff;
   display: inline-block;
   padding: 11px 25px;
@@ -1461,7 +1455,7 @@ a:hover {
   margin-right: 0;
 }
 .c-btn.link {
-  color: #219ac4;
+  color: #057bfe;
   text-decoration: underline;
   background-color: transparent;
   padding: 11px;
@@ -1507,13 +1501,13 @@ a:hover {
   outline: none !important;
 }
 .tableBtn .icon {
-  color: #676c7a;
+  color: #057bfe;
   font-size: 20px;
   line-height: 20px;
 }
 
 .c-btnIcon {
-  background-color: #219ac4;
+  background-color: #057bfe;
   border: 0;
   color: #fff;
   display: inline-block;
@@ -1550,7 +1544,7 @@ a:hover {
   opacity: 0;
 }
 .c-switch .switchChk:checked ~ .switchLbl {
-  background-color: #219ac4;
+  background-color: #057bfe;
 }
 .c-switch .switchChk:checked ~ .switchLbl .switchTrack {
   left: auto;
@@ -1590,6 +1584,25 @@ a:hover {
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
+}
+
+.staticBtn {
+  color: #676c7a;
+  background-color: transparent;
+  display: inline-block;
+  padding: 2px;
+  border: 0;
+  outline: none !important;
+  font-size: 15px;
+  line-height: 12px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.staticBtn.download {
+  color: #057bfe;
+}
+.staticBtn.error {
+  color: #fe4b4b;
 }
 
 /* -------------------------------------
@@ -1635,7 +1648,7 @@ a:hover {
   -o-box-shadow: none;
 }
 .c-form .form-control:focus, .c-form .form-control:active {
-  border-color: #219ac4;
+  border-color: #057bfe;
   box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
   -moz-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
   -webkit-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
@@ -1664,7 +1677,7 @@ a:hover {
   width: 100%;
 }
 .c-form .c-dropdown .btn:focus, .c-form .c-dropdown .btn:active {
-  border-color: #219ac4;
+  border-color: #057bfe;
   box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
   -moz-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
   -webkit-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
@@ -1740,7 +1753,7 @@ a:hover {
   height: 80px;
 }
 .c-form.js-focus .formLbl {
-  color: #219ac4;
+  color: #057bfe;
 }
 
 /* ----- Check Box / Radio Btn ----- */
@@ -1798,7 +1811,7 @@ a:hover {
 }
 .c-chkBox .chkBox:checked ~ .chkLbl::before,
 .c-radioBox .chkBox:checked ~ .chkLbl::before {
-  color: #219ac4 !important;
+  color: #057bfe !important;
   content: "M";
 }
 .c-chkBox.c-radioBox .chkLbl,
@@ -1845,7 +1858,7 @@ a:hover {
 }
 .c-chkBox.no-label .chkBox:checked ~ .chkLbl::before,
 .c-radioBox.no-label .chkBox:checked ~ .chkLbl::before {
-  color: #219ac4 !important;
+  color: #057bfe !important;
   content: "M";
 }
 .c-chkBox.inline,
@@ -1956,7 +1969,7 @@ a:hover {
   letter-spacing: normal;
 }
 .c-searchBox .searchPanel .pl.colored {
-  color: #219ac4;
+  color: #057bfe;
   font-weight: 500;
 }
 .c-searchBox .searchPanel .pl:last-child {
@@ -1973,7 +1986,7 @@ a:hover {
   border-radius: 50%;
 }
 .c-searchBox .searchPanel .pl .icon {
-  color: #219ac4;
+  color: #057bfe;
   height: 24px;
   width: 24px;
   position: absolute;
@@ -1999,7 +2012,7 @@ a:hover {
   width: 42px;
 }
 .c-searchBox .searchPanel.type-02 .pl .icon {
-  background-color: #219ac4;
+  background-color: #057bfe;
   color: #fff;
   height: 42px;
   width: 42px;
@@ -2030,7 +2043,7 @@ a:hover {
   margin-bottom: 0;
 }
 .c-searchBox .searchPanel.type-02 .pl .subTitle.colored {
-  color: #219ac4;
+  color: #057bfe;
 }
 .c-searchBox.show .iconTip {
   font-style: normal;
@@ -2134,7 +2147,7 @@ a:hover {
   margin-left: 7px;
 }
 .select2-container.select2-container--focus .select2-selection--multiple {
-  border: 1px solid #219ac4;
+  border: 1px solid #057bfe;
   border-radius: 6px !important;
   transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
@@ -2167,7 +2180,7 @@ a:hover {
   padding: 10px;
 }
 .select2-container .select2-dropdown--below .select2-results__option.select2-results__option--highlighted {
-  background-color: #219ac4;
+  background-color: #057bfe;
   color: #fff;
 }
 .select2-container .select2-dropdown--below .select2-results__option.select2-results__option--selected {
@@ -2424,7 +2437,7 @@ a:hover {
   border-radius: 10px;
 }
 .c-infoBtn .icon {
-  color: #219ac4;
+  color: #057bfe;
   display: block;
   position: absolute;
   top: 9px;
@@ -2489,7 +2502,7 @@ a:hover {
   color: #171725;
 }
 .c-tabs .nav-tabs .nav-item .nav-link.active::before {
-  background: #219ac4;
+  background: #057bfe;
   position: absolute;
   bottom: -10px;
   content: "";
@@ -2640,7 +2653,7 @@ a:hover {
 }
 .c-infoSect .infoTag {
   background-color: rgba(40, 79, 152, 0.1);
-  color: #219ac4;
+  color: #057bfe;
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
@@ -2658,7 +2671,7 @@ a:hover {
 
 .notifyTag {
   background-color: rgba(40, 79, 152, 0.1);
-  color: #219ac4;
+  color: #057bfe;
   display: inline-block;
   font-size: 12px;
   font-weight: 500;
@@ -2689,7 +2702,7 @@ a:hover {
   border-radius: 10px;
 }
 .c-docSect .infoDoc {
-  background-color: #219ac4;
+  background-color: #057bfe;
   color: #fff;
   display: block;
   height: 56px;
@@ -2782,7 +2795,7 @@ a:hover {
   margin: 0 0 8px;
 }
 .c-previewBadgeCard .badgeUser .badgeTags .tag {
-  background-color: #219ac4;
+  background-color: #057bfe;
   color: #fff;
   display: inline-block;
   margin-right: 10px;
@@ -2796,7 +2809,7 @@ a:hover {
 }
 .c-previewBadgeCard .badgeUser .badgeTags .tag.type-01 {
   background-color: rgba(40, 79, 152, 0.1);
-  color: #219ac4;
+  color: #057bfe;
 }
 .c-previewBadgeCard .badgeInfo .c-infoSect .infoLbl {
   font-size: 11px;
@@ -2817,7 +2830,7 @@ a:hover {
   text-align: center;
 }
 .c-confirmMsg .confirmIcon {
-  background-color: #219ac4;
+  background-color: #057bfe;
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
@@ -2832,7 +2845,7 @@ a:hover {
 .c-confirmMsg .confirmIcon .icon {
   display: inline-block;
   background-color: #fff;
-  color: #219ac4;
+  color: #057bfe;
   height: 48px;
   width: 48px;
   font-size: 39px;
@@ -2867,7 +2880,7 @@ a:hover {
   margin-bottom: 20px;
 }
 .c-confirmMsg .confirmMsg .visitorId {
-  color: #219ac4;
+  color: #057bfe;
   display: inline-block;
 }
 
@@ -2895,7 +2908,7 @@ a:hover {
   background-color: #0dce82;
 }
 .c-toastContainer .c-toast.col-info .toast-body .toastIcon {
-  background-color: #219ac4;
+  background-color: #057bfe;
 }
 .c-toastContainer .c-toast.col-error .toast-body .toastIcon {
   background-color: #fe4b4b;
@@ -3068,7 +3081,7 @@ a:hover {
   border-radius: 4px;
 }
 .graph.type-01 .graph-item .gb .g_track .g_progress {
-  background-color: #219ac4;
+  background-color: #057bfe;
   position: absolute;
   top: 0;
   left: 0;
@@ -3122,16 +3135,16 @@ a:hover {
   border-radius: 6px;
 }
 .graph.type-02 .table tr td .g_td.type-01::before {
-  background-color: #219ac4;
+  background-color: #057bfe;
 }
 .graph.type-02 .table tr td .g_td.type-02::before {
-  background-color: #6fc8e7;
+  background-color: #75b6fe;
 }
 .graph.type-02 .table tr td .g_td.type-03::before {
-  background-color: #b9e4f3;
+  background-color: #cbe4ff;
 }
 .graph.type-02 .table tr td .g_td.type-04::before {
-  background-color: #f6fbfd;
+  background-color: white;
 }
 
 /* -------------------------------------
@@ -3234,7 +3247,7 @@ a:hover {
   border-radius: 5px;
 }
 .c-tag.enabled {
-  color: #219ac4;
+  color: #057bfe;
 }
 
 /* -------------------------------------
@@ -3316,7 +3329,7 @@ a:hover {
   text-align: right;
 }
 .c-cardHolder .col .card.type-01 {
-  background-color: #219ac4;
+  background-color: #057bfe;
 }
 .c-cardHolder .col .card.type-01::before {
   color: rgba(255, 255, 255, 0.1);
@@ -3328,17 +3341,17 @@ a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 .c-cardHolder .col .card.type-01 .card-info {
-  color: #166783;
+  color: #0157b6;
 }
 .c-cardHolder .col .card.type-01 .card-number .nLink {
   color: #fff;
 }
 .c-cardHolder .col .card.type-02 {
-  background-color: #219ac4;
-  background: #219ac4;
-  background: -moz-linear-gradient(-45deg, #25abda 0%, #3ab4de 47%, #1d85aa 100%);
-  background: -webkit-linear-gradient(-45deg, #25abda 0%, #3ab4de 47%, #1d85aa 100%);
-  background: linear-gradient(135deg, #25abda 0%, #3ab4de 47%, #1d85aa 100%);
+  background-color: #057bfe;
+  background: #057bfe;
+  background: -moz-linear-gradient(-45deg, #1e88fe 0%, #3896fe 47%, #016ce3 100%);
+  background: -webkit-linear-gradient(-45deg, #1e88fe 0%, #3896fe 47%, #016ce3 100%);
+  background: linear-gradient(135deg, #1e88fe 0%, #3896fe 47%, #016ce3 100%);
 }
 .c-cardHolder .col .card.type-02::before {
   color: rgba(255, 255, 255, 0.15);
@@ -3350,10 +3363,23 @@ a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 .c-cardHolder .col .card.type-02 .card-info {
-  color: #166783;
+  color: #0157b6;
 }
 .c-cardHolder .col .card.type-02 .card-number .nLink {
   color: #fff;
+}
+
+.c-uploadFileSection {
+  position: relative;
+}
+.c-uploadFileSection .dropzone {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border: dashed 2px #ccc;
+  width: 100%;
 }
 
 /* -------------------------------------
@@ -3381,6 +3407,10 @@ a:hover {
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mt-35 {
+  margin-top: 35px;
 }
 
 .mr-15 {
@@ -3443,7 +3473,7 @@ a:hover {
 .daterangepicker {
   background-color: #fff;
   border-color: #ebedf4;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
   -moz-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
   -webkit-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
@@ -3480,11 +3510,11 @@ a:hover {
   -ms-transition: all ease 0.3s;
 }
 .daterangepicker .ranges li.active {
-  background-color: #219ac4;
+  background-color: #057bfe;
   color: #fff;
 }
 .daterangepicker .ranges li.active:hover {
-  background-color: #219ac4;
+  background-color: #057bfe;
 }
 .daterangepicker .ranges li:hover {
   background-color: #ebedf4;
@@ -3520,7 +3550,7 @@ a:hover {
   padding: 12px;
 }
 .daterangepicker .drp-calendar .calendar-table .table-condensed td.start-date, .daterangepicker .drp-calendar .calendar-table .table-condensed td.end-date {
-  background-color: #219ac4 !important;
+  background-color: #057bfe !important;
   color: #fff !important;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -3528,7 +3558,7 @@ a:hover {
 }
 .daterangepicker .drp-calendar .calendar-table .table-condensed td.in-range {
   background-color: transparent;
-  color: #219ac4;
+  color: #057bfe;
 }
 .daterangepicker .drp-calendar .calendar-table .table-condensed td.disabled {
   text-decoration: none;

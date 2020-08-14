@@ -29,25 +29,25 @@
         <div class="c-pageNav js-customScroll">
           <ul>
             <li>
-              <a href="javascript:void(0)" class="navLink active">
+              <a href="./01-dashboard.html" class="navLink active">
                 <i class="icon ocr-dashboard"></i>
                 <span class="linkText">Dashboard</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./02-filingHistory.html" class="navLink">
                 <i class="icon ocr-content-7"></i>
                 <span class="linkText">Filling History</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./03-customFiling.html" class="navLink">
                 <i class="icon ocr-tax"></i>
                 <span class="linkText">Custom Filling</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./04-userProfile.html" class="navLink">
                 <i class="icon ocr-user-2"></i>
                 <span class="linkText">User Profile</span>
               </a>
@@ -62,37 +62,28 @@
         <div class="row no-gutters">
           <div class="col-7">
             <div class="headerSect_l">
-              <ul>
-                <li>
-                  <div class="c-dropdown dropdown js-selectable">
-                    <button
-                      class="btnHeadDD dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <i class="icon ocr-pin"></i>
-                      <span class="value">All Sites</span>
-                    </button>
-                    <div
-                      class="dropdown-menu sm"
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <button class="dropdown-item" value="option 1">
-                        Option 1
-                      </button>
-                      <button class="dropdown-item" value="option 2">
-                        Option 2
-                      </button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <div class="c-pageTitle">Global custom filling gateway</div>
             </div>
           </div>
           <div class="col-5 text-right">
+            <div class="c-dropdown dropdown notifySetting">
+              <button
+                class="profileBtn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton3"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="icon ocr-bell"></i>
+                <span class="count">2</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
             <div class="c-dropdown dropdown profileSetting">
               <button
                 class="profileBtn dropdown-toggle"
@@ -103,8 +94,6 @@
                 aria-expanded="false"
               >
                 <img src="./images/profile.png" alt="profile" />
-                <span class="profTitle">Nannie Andrews</span>
-                <span class="profSubTitle">Visitor Receptionist</span>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                 <a class="dropdown-item" href="#">Action</a>
@@ -246,9 +235,10 @@
                     <table class="table js-dataTable02">
                       <thead>
                         <tr>
-                          <th style="width: 40%;">Transaction Id</th>
-                          <th style="width: 20%;">Country</th>
-                          <th style="width: 40%;">Status</th>
+                          <th style="width: 33%;">Transaction Id</th>
+                          <th style="width: 15%;">Country</th>
+                          <th style="width: 32%;">Status</th>
+                          <th style="width: 20%;">Date</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -260,6 +250,7 @@
                               >Response processed</span
                             >
                           </td>
+                          <td>87K7420500003</td>
                         </tr>
                         <tr>
                           <td>87K7420500002</td>
@@ -269,6 +260,7 @@
                               >Schema validation failed</span
                             >
                           </td>
+                          <td>87K7420500003</td>
                         </tr>
                         <tr>
                           <td>87K7420500001</td>
@@ -278,6 +270,7 @@
                               >Response processed</span
                             >
                           </td>
+                          <td>87K7420500003</td>
                         </tr>
                         <tr>
                           <td>87K7420330002</td>
@@ -287,6 +280,7 @@
                               >Schema validation failed</span
                             >
                           </td>
+                          <td>87K7420500003</td>
                         </tr>
                       </tbody>
                     </table>

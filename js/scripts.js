@@ -131,4 +131,10 @@ $(function () {
   $(".daterangepicker .ranges li").on("click", function () {
     $(this).addClass("active").siblings().removeClass("active");
   });
+
+  Dropzone.options.uploadFileZone = {
+    paramName: "file", // The name that will be used to transfer the file
+    maxFilesize: 2, // MB
+    dictDefaultMessage: "Drop",
+  };
 });

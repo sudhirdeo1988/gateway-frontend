@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>Dashboard</title>
+    <title>User Profile Management</title>
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/dropzone.min.css" />
     <link rel="stylesheet" href="./css/css-style.css" />
   </head>
 
@@ -27,25 +28,25 @@
         <div class="c-pageNav js-customScroll">
           <ul>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./01-dashboard.html" class="navLink">
                 <i class="icon ocr-dashboard"></i>
                 <span class="linkText">Dashboard</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./02-filingHistory.html" class="navLink">
                 <i class="icon ocr-content-7"></i>
                 <span class="linkText">Filling History</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink">
+              <a href="./03-customFiling.html" class="navLink">
                 <i class="icon ocr-tax"></i>
                 <span class="linkText">Custom Filling</span>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)" class="navLink active">
+              <a href="./04-userProfile.html" class="navLink active">
                 <i class="icon ocr-user-2"></i>
                 <span class="linkText">User Profile</span>
               </a>
@@ -60,37 +61,28 @@
         <div class="row no-gutters">
           <div class="col-7">
             <div class="headerSect_l">
-              <ul>
-                <li>
-                  <div class="c-dropdown dropdown js-selectable">
-                    <button
-                      class="btnHeadDD dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <i class="icon ocr-pin"></i>
-                      <span class="value">All Sites</span>
-                    </button>
-                    <div
-                      class="dropdown-menu sm"
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <button class="dropdown-item" value="option 1">
-                        Option 1
-                      </button>
-                      <button class="dropdown-item" value="option 2">
-                        Option 2
-                      </button>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <div class="c-pageTitle">Global custom filling gateway</div>
             </div>
           </div>
           <div class="col-5 text-right">
+            <div class="c-dropdown dropdown notifySetting">
+              <button
+                class="profileBtn dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton3"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i class="icon ocr-bell"></i>
+                <span class="count">2</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
             <div class="c-dropdown dropdown profileSetting">
               <button
                 class="profileBtn dropdown-toggle"
@@ -101,8 +93,6 @@
                 aria-expanded="false"
               >
                 <img src="./images/profile.png" alt="profile" />
-                <span class="profTitle">Nannie Andrews</span>
-                <span class="profSubTitle">Visitor Receptionist</span>
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                 <a class="dropdown-item" href="#">Action</a>
@@ -120,61 +110,174 @@
         <div class="container-fluid">
           <!-- *** First Row *** -->
           <div class="row align-items-center mb-20">
-            <div class="col-12">
-              <div class="col">
-                <div class="rowHeading font-h">User Profile Management</div>
-              </div>
+            <div class="col">
+              <div class="rowHeading font-h">User Profile Management</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
 
-          <!-- *** Profile Card *** -->
-          <div class="row mb-30">
-            <div class="col-12">
-              <div class="c-wrapContainer c-rounded type-01">
-                <div class="c-profCard">
-                  <div class="profImage">
-                    <img src="images/profile.svg" alt="profile" />
+          <!-- *** Profile Tabs *** -->
+          <div class="row">
+            <div class="col">
+              <div class="c-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="Details-tab"
+                      data-toggle="tab"
+                      href="#Details"
+                      role="tab"
+                      aria-controls="Details"
+                      aria-selected="true"
+                      >User Profile</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >User Configuration</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <!-- ***** Tab :: Details ***** -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="Details"
+                    role="tabpanel"
+                    aria-labelledby="Details-tab"
+                  >
+                    <!-- ***** User Details ***** -->
+                    <div class="c-wrapContainer c-rounded type-01">
+                      <div class="c-profCard">
+                        <div class="profImage">
+                          <img src="images/profile.svg" alt="profile" />
+                        </div>
+                        <div class="profname">Irene Ball</div>
+                        <div class="profInfo">
+                          <div class="row align-items-center">
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <span class="infoLbl">User ID</span>
+                                <span class="infoTxt">666Q8W</span>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <span class="infoLbl">Email</span>
+                                <span class="infoTxt"
+                                  >test.email@example.com</span
+                                >
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <span class="infoLbl">Status</span>
+                                <span class="infoTag approved">Active</span>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <button
+                                  class="c-btn"
+                                  data-toggle="modal"
+                                  data-target="#editProfile"
+                                >
+                                  Edit Profile
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ***** User Details End ***** -->
                   </div>
-                  <div class="profname">Irene Ball</div>
-                  <div class="profInfo">
-                    <div class="row align-items-center">
-                      <div class="col">
-                        <div class="c-infoSect">
-                          <span class="infoLbl">User ID</span>
-                          <span class="infoTxt">666Q8W</span>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="c-infoSect">
-                          <span class="infoLbl">Email</span>
-                          <span class="infoTxt">test.email@example.com</span>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="c-infoSect">
-                          <span class="infoLbl">Status</span>
-                          <span class="infoTag approved">Active</span>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="c-infoSect">
-                          <button
-                            class="c-btn"
-                            data-toggle="modal"
-                            data-target="#editProfile"
-                          >
-                            Edit Profile
-                          </button>
+                  <!-- ***** Tab :: Details End ***** -->
+
+                  <!-- ***** Tab :: Access & Activity ***** -->
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <div class="c-grapgContainer">
+                      <div class="row align-items-center">
+                        <div class="col-12">
+                          <div class="c-tableWrapper">
+                            <!-- ***** Table Body ***** -->
+
+                            <div class="c-table type-01 bordered">
+                              <table class="table">
+                                <tr>
+                                  <th style="width: 10%;">ID</th>
+                                  <th style="width: 15%;">Flyier Code</th>
+                                  <th style="width: 17%;">Queue In</th>
+                                  <th style="width: 18%;">Queue Out</th>
+                                  <th style="width: 15%;">Processing Code</th>
+                                  <th style="width: 15%;">
+                                    Environment Name
+                                  </th>
+                                  <th style="width: 10%;" class="text-center">
+                                    Action
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <td>01</td>
+                                  <td>S2A</td>
+                                  <td>OCR.TEST.IN</td>
+                                  <td>OCR.TEST.OUT</td>
+                                  <td>S1</td>
+                                  <td>TST</td>
+                                  <td class="text-center">
+                                    <button
+                                      class="tableBtn"
+                                      data-toggle="modal"
+                                      data-target="#editConfig"
+                                    >
+                                      <i class="icon ocr-edit-pen"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>01</td>
+                                  <td>S2A</td>
+                                  <td>OCR.TEST.IN</td>
+                                  <td>OCR.TEST.OUT</td>
+                                  <td>S1</td>
+                                  <td>TST</td>
+                                  <td class="text-center">
+                                    <button
+                                      class="tableBtn"
+                                      data-toggle="modal"
+                                      data-target="#editConfig"
+                                    >
+                                      <i class="icon ocr-edit-pen"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                            <!-- ***** Table Body ***** -->
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- ***** Tab :: Access & Activity End ***** -->
                 </div>
               </div>
             </div>
           </div>
-          <!-- *** Profile Card End *** -->
+          <!-- *** Profile Tabs End *** -->
         </div>
       </div>
       <!-- ********** Component :: Wrapper End **********  -->
@@ -272,7 +375,10 @@
     <script src="./js/jquery-migrate-3.0.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/daterangepicker.min.js"></script>
+    <script src="./js/datatables.min.js"></script>
     <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./js/dropzone.min.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

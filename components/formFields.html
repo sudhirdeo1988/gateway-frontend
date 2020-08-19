@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>OCR Styleguide:: Form Fields</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select2.min.css" />
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="../css/daterangepicker.css" />
+    <link rel="stylesheet" href="../css/dropzone.min.css" />
+    <link rel="stylesheet" href="../css/css-style.css" />
+  </head>
+
+  <body>
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody">
+      <!-- ********** Component :: Sidebar **********  -->
+      <div class="c-sidebar">
+        <div class="sidebarHead">
+          <a href="javascript:void(0);" class="sidebarLogo">
+            <img src="../images/logo.png" alt="alt" />
+          </a>
+        </div>
+        <div class="c-pageNav js-customScroll">
+          <ul>
+            <li>
+              <a href="./colors.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Colour Theme</span>
+              </a>
+            </li>
+            <li>
+              <a href="./buttons.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Buttons</span>
+              </a>
+            </li>
+            <li>
+              <a href="./formFields.html" class="navLink active">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Form Fields</span>
+              </a>
+            </li>
+            <li>
+              <a href="./table.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Tables</span>
+              </a>
+            </li>
+            <li>
+              <a href="./cards.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Cards</span>
+              </a>
+            </li>
+            <li>
+              <a href="./other.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Other</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** Component :: Sidebar End **********  -->
+
+      <!-- ********** Component :: Header **********  -->
+      <div class="c-header">
+        <div class="row no-gutters">
+          <div class="col-7">
+            <div class="headerSect_l">
+              <div class="c-pageTitle">OCR Frontend Styleguide</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Header End **********  -->
+
+      <!-- ********** Component :: Wrapper **********  -->
+      <div class="c-wrapper">
+        <div class="container-fluid">
+          <!-- *** First Row *** -->
+          <div class="row align-items-center mb-20">
+            <div class="col">
+              <div class="rowHeading font-h">Form Fields</div>
+            </div>
+          </div>
+          <!-- *** First Row End *** -->
+
+          <!-- ***** Graph Row 2 ***** -->
+          <div class="row">
+            <div class="col">
+              <!-- ***** Text Boxes ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">Text Box</div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-group c-form">
+                      <label class="formLbl">Primary Text Box</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Text Boxes Block End***** -->
+
+              <!-- ***** Dropdown Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">Dropdowns</div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Dropdown *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Dropdown</label>
+                      <div class="dropdown c-dropdown js-selectable">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton3"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="value">United States</span>
+                        </button>
+
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton3"
+                        >
+                          <button class="dropdown-item" value="option 1">
+                            Option 1
+                          </button>
+                          <button class="dropdown-item" value="option 2">
+                            Option 2
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- *** Dropdown End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Dropdown - Red *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Dropdown - Red</label>
+                      <div class="dropdown c-dropdown col-red js-selectable">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton3"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <span class="value">United States</span>
+                        </button>
+
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton3"
+                        >
+                          <button class="dropdown-item" value="option 1">
+                            Option 1
+                          </button>
+                          <button class="dropdown-item" value="option 2">
+                            Option 2
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- *** Dropdown - Red End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Dropdown Multiselect *** -->
+                    <div class="form-group c-form c-multiSelect">
+                      <label class="formLbl">Dropdown Multiselect</label>
+                      <select
+                        class="js-multiSelect"
+                        name="visitors[]"
+                        multiple="multiple"
+                      >
+                        <option value="AL">Christina Mullins</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </div>
+                    <!-- *** Dropdown Multiselect End *** -->
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Dropdown Block End***** -->
+
+              <!-- ***** Date / Time pickers Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">Date / Time Picker</div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Date Range Picker - With Range *** -->
+                    <div class="form-group c-form c-dateRangePicker withRange">
+                      <label class="formLbl"
+                        >Date Range Picker - With Range</label
+                      >
+                      <div class="dtPickWrapper">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <!-- *** Date Range Picker - With Range End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Date Range Picker - Without range *** -->
+                    <div class="form-group c-form c-dateRangePicker">
+                      <label class="formLbl"
+                        >Date Range Picker - Without range</label
+                      >
+                      <div class="dtPickWrapper">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <!-- *** Date Range Picker - Without range End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Date Picker *** -->
+                    <div class="form-group c-form c-dtPicker">
+                      <label class="formLbl">Date Picker</label>
+                      <div class="dtPickWrapper">
+                        <input type="text" class="form-control dtpick" />
+                      </div>
+                    </div>
+                    <!-- *** Date Picker End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Time Picker *** -->
+                    <div class="form-group c-form c-timePicker">
+                      <label class="formLbl">Time Picker</label>
+                      <div class="dtPickWrapper">
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <!-- *** Time Picker End *** -->
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Date / Time pickers Block End***** -->
+
+              <!-- ***** Date / Time pickers Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">Check box / Radio buttons</div>
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Check Box Switch *** -->
+                    <div class="form-group c-form c-dateRangePicker">
+                      <label class="formLbl">Check Box Switch</label>
+                      <div class="c-switch">
+                        <input
+                          type="checkbox"
+                          class="switchChk"
+                          id="switch001"
+                          value="ExitRollCall "
+                          checked
+                        />
+                        <label class="switchLbl" for="switch001">
+                          <div class="switchTrack"></div>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- *** Check Box Switch End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Check Box with label *** -->
+                    <div class="form-group c-form c-dateRangePicker">
+                      <label class="formLbl">Check Box with label</label>
+                      <div class="c-chkBox">
+                        <input
+                          type="checkbox"
+                          class="chkBox"
+                          id="chk001"
+                          data-column="1"
+                          checked
+                        />
+                        <label class="chkLbl" for="chk001">
+                          <i class="icon"></i>
+                          Checkbox with label
+                        </label>
+                      </div>
+                    </div>
+                    <!-- *** Check Box with label End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Check Box with label *** -->
+                    <div class="form-group c-form c-dateRangePicker">
+                      <label class="formLbl">Check Box without label</label>
+                      <div class="c-chkBox no-label">
+                        <input
+                          type="checkbox"
+                          class="chkBox"
+                          id="chk002"
+                          checked
+                        />
+                        <label class="chkLbl" for="chk002">
+                          <i class="icon"></i>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- *** Check Box with label End *** -->
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-12">
+                    <!-- *** Radio Button *** -->
+                    <div class="form-group c-form c-dateRangePicker">
+                      <label class="formLbl">Radio Button</label>
+                      <div class="c-radioBox inline">
+                        <input
+                          type="radio"
+                          class="chkBox"
+                          id="chk022"
+                          name="radioForm"
+                        />
+                        <label class="chkLbl" for="chk022">
+                          <i class="icon"></i>
+                          Option 1
+                        </label>
+                      </div>
+                      <div class="c-radioBox inline">
+                        <input
+                          type="radio"
+                          class="chkBox"
+                          id="chk023"
+                          name="radioForm"
+                        />
+                        <label class="chkLbl" for="chk023">
+                          <i class="icon"></i>
+                          Option 2
+                        </label>
+                      </div>
+                    </div>
+                    <!-- *** Radio Button End *** -->
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Date / Time pickers Block End***** -->
+
+              <!-- ***** Date / Time pickers Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">File Upload</div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-12">
+                    <!-- *** Check Box Switch *** -->
+                    <div class="c-uploadFileSection">
+                      <form
+                        action="/file-upload"
+                        class="dropzone"
+                        id="upload-file-zone"
+                      ></form>
+                    </div>
+                    <!-- *** Check Box Switch End *** -->
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Date / Time pickers Block End***** -->
+            </div>
+          </div>
+          <!-- ***** Graph Row 2 End ***** -->
+        </div>
+      </div>
+      <!-- ********** Component :: Wrapper End **********  -->
+    </div>
+    <!-- ********** Page Body End **********  -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/select2.min.js"></script>
+    <script src="../js/daterangepicker.min.js"></script>
+    <script src="../js/timepicker.min.js"></script>
+    <script src="../js/dropzone.min.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

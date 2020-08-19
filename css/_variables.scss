@@ -57,3 +57,11 @@ $heading-font: "Roboto Condensed", sans-serif;
   -o-transition: $property;
   -ms-transition: $property;
 }
+
+@mixin transform($property) {
+  transform: $property;
+  -moz-transform: $property;
+  -webkit-transform: $property;
+  -o-transform: $property;
+  -ms-transform: $property;
+}

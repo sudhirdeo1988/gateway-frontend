@@ -306,6 +306,33 @@ File Type :: SCSS file (For styling)
 .ocr-exclamation:before {
   content: "\3b";
 }
+.ocr-filter:before {
+  content: "\3c";
+}
+.ocr-plus-square:before {
+  content: "\3d";
+}
+.ocr-minus-square:before {
+  content: "\3e";
+}
+.ocr-home:before {
+  content: "\3f";
+}
+.ocr-email-envelope:before {
+  content: "\5b";
+}
+.ocr-help-circled:before {
+  content: "\5e";
+}
+.ocr-star:before {
+  content: "\5d";
+}
+.ocr-book:before {
+  content: "\5f";
+}
+.ocr-trash-o:before {
+  content: "\40";
+}
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -363,6 +390,205 @@ a:hover {
 
   &.c-rounded {
     @include rounded-corners(10px);
+  }
+}
+
+/* -------------------------------------
+	Component :: Main Setting Header
+------------------------------------- */
+.c-settingHeader {
+  background-color: $primary;
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px 20px;
+  height: 51px;
+  .c-shList {
+    display: block;
+    position: relative;
+    ul {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        padding: 0;
+        margin-right: 10px;
+        position: relative;
+
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0;
+          border-right: 0;
+        }
+      }
+    }
+    &.type-03 {
+      ul {
+        li {
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .c-shDropdown {
+        .dropdown-menu {
+          transform: translate3d(-200px, 31px, 0px) !important;
+          -moz-transform: translate3d(-200px, 31px, 0px) !important;
+          -webkit-transform: translate3d(-200px, 31px, 0px) !important;
+        }
+      }
+    }
+  }
+  .sh_linkBtn {
+    cursor: pointer;
+    display: inline-block;
+    height: 31px;
+    width: 31px;
+    padding: 2px;
+    border: 0;
+    background-color: transparent;
+    vertical-align: middle;
+    .icon {
+      display: inline-block;
+      color: $white;
+      font-size: 25px;
+      line-height: 24px;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+      &.lg {
+        font-size: 27px;
+        line-height: 27px;
+      }
+      &.sm {
+        font-size: 22px;
+        line-height: 20px;
+        top: 2px;
+      }
+    }
+  }
+  .c-shDropdown {
+    .btn {
+      color: $white;
+      display: block;
+      padding: 6px 20px 6px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      line-height: 18px;
+      border: 0;
+      &::after {
+        border: 0;
+        font-family: "ocr-inc";
+        content: "D";
+        position: absolute;
+        top: 50%;
+        right: 1px;
+        font-size: 12px;
+        line-height: 13px;
+        margin-top: -5px;
+      }
+
+      &.sh_linkBtn {
+        width: 45px;
+        padding: 2px 20px 2px 0;
+      }
+    }
+    &.type-02 {
+      .btn {
+        background-color: $white;
+        color: $primary;
+        padding: 6px 30px 6px 10px;
+        &::after {
+          right: 6px;
+        }
+      }
+    }
+    .dropdown-menu {
+      width: 250px;
+      padding: 10px 0;
+      border: 0;
+      .dropdown-item-accord {
+        .multi-collapse {
+          .dropdown-item {
+            padding-left: 40px;
+            &::before {
+              left: 20px;
+            }
+          }
+        }
+      }
+      .dropdown-item {
+        color: $gray-01;
+        position: relative;
+        padding: 6px 15px 6px 30px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: 0;
+        outline: none;
+        @include rounded-corners(0);
+        @include transition(all ease 0.2s);
+
+        &::before {
+          color: $gray-01;
+          content: "c";
+          border: 0;
+          font-family: "ocr-inc";
+          position: absolute;
+          top: 8px;
+          left: 10px;
+          font-size: 14px;
+          line-height: 13px;
+        }
+
+        &.type-accord {
+          &::before {
+            content: "\3d";
+            top: 9px;
+            left: 11px;
+            font-size: 12px;
+            line-height: 12px;
+          }
+          &[aria-expanded="true"] {
+            &::before {
+              content: "\3e";
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $primary;
+          color: $white;
+          &::before {
+            color: $white;
+          }
+        }
+      }
+      .dd_search {
+        display: block;
+        margin-bottom: 10px;
+        padding: 0 10px;
+
+        .txt_search {
+          box-sizing: border-box;
+          display: block;
+          padding: 8px;
+          width: 100%;
+          border: 1px solid #ccc;
+          font-size: 14px;
+          line-height: 20px;
+          outline: none;
+          @include rounded-corners(4px);
+          &::placeholder {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -3465,4 +3691,34 @@ a:hover {
       }
     }
   }
+}
+
+/* coloue scheme */
+.colorDemo {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin: 0 0 10px;
+  &.primary {
+    background-color: $primary;
+  }
+  &.font {
+    background-color: $font-color;
+  }
+  &.red {
+    background-color: $red;
+  }
+  &.green {
+    background-color: $green;
+  }
+  &.orange {
+    background-color: $orange;
+  }
+}
+.colorCode {
+  display: block;
+  font-size: 14px;
+  color: $font-color;
+  font-weight: 600;
+  text-transform: uppercase;
 }

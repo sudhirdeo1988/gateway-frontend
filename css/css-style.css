@@ -396,6 +396,42 @@ font-family: 'Montserrat', sans-serif;
   content: ";";
 }
 
+.ocr-filter:before {
+  content: "<";
+}
+
+.ocr-plus-square:before {
+  content: "=";
+}
+
+.ocr-minus-square:before {
+  content: ">";
+}
+
+.ocr-home:before {
+  content: "?";
+}
+
+.ocr-email-envelope:before {
+  content: "[";
+}
+
+.ocr-help-circled:before {
+  content: "^";
+}
+
+.ocr-star:before {
+  content: "]";
+}
+
+.ocr-book:before {
+  content: "_";
+}
+
+.ocr-trash-o:before {
+  content: "@";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -458,6 +494,189 @@ a:hover {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+}
+
+/* -------------------------------------
+	Component :: Main Setting Header
+------------------------------------- */
+.c-settingHeader {
+  background-color: #057bfe;
+  box-sizing: border-box;
+  position: relative;
+  padding: 10px 20px;
+  height: 51px;
+}
+.c-settingHeader .c-shList {
+  display: block;
+  position: relative;
+}
+.c-settingHeader .c-shList ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.c-settingHeader .c-shList ul li {
+  display: inline-block;
+  padding: 0;
+  margin-right: 10px;
+  position: relative;
+}
+.c-settingHeader .c-shList ul li:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: 0;
+}
+.c-settingHeader .c-shList.type-03 ul li {
+  margin-right: 20px;
+}
+.c-settingHeader .c-shList.type-03 ul li:last-child {
+  margin-right: 0;
+}
+.c-settingHeader .c-shList.type-03 .c-shDropdown .dropdown-menu {
+  transform: translate3d(-200px, 31px, 0px) !important;
+  -moz-transform: translate3d(-200px, 31px, 0px) !important;
+  -webkit-transform: translate3d(-200px, 31px, 0px) !important;
+}
+.c-settingHeader .sh_linkBtn {
+  cursor: pointer;
+  display: inline-block;
+  height: 31px;
+  width: 31px;
+  padding: 2px;
+  border: 0;
+  background-color: transparent;
+  vertical-align: middle;
+}
+.c-settingHeader .sh_linkBtn .icon {
+  display: inline-block;
+  color: #fff;
+  font-size: 25px;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+.c-settingHeader .sh_linkBtn .icon.lg {
+  font-size: 27px;
+  line-height: 27px;
+}
+.c-settingHeader .sh_linkBtn .icon.sm {
+  font-size: 22px;
+  line-height: 20px;
+  top: 2px;
+}
+.c-settingHeader .c-shDropdown .btn {
+  color: #fff;
+  display: block;
+  padding: 6px 20px 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 18px;
+  border: 0;
+}
+.c-settingHeader .c-shDropdown .btn::after {
+  border: 0;
+  font-family: "ocr-inc";
+  content: "D";
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  font-size: 12px;
+  line-height: 13px;
+  margin-top: -5px;
+}
+.c-settingHeader .c-shDropdown .btn.sh_linkBtn {
+  width: 45px;
+  padding: 2px 20px 2px 0;
+}
+.c-settingHeader .c-shDropdown.type-02 .btn {
+  background-color: #fff;
+  color: #057bfe;
+  padding: 6px 30px 6px 10px;
+}
+.c-settingHeader .c-shDropdown.type-02 .btn::after {
+  right: 6px;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu {
+  width: 250px;
+  padding: 10px 0;
+  border: 0;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item-accord .multi-collapse .dropdown-item {
+  padding-left: 40px;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item-accord .multi-collapse .dropdown-item::before {
+  left: 20px;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item {
+  color: #676c7a;
+  position: relative;
+  padding: 6px 15px 6px 30px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0;
+  outline: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item::before {
+  color: #676c7a;
+  content: "c";
+  border: 0;
+  font-family: "ocr-inc";
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 14px;
+  line-height: 13px;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item.type-accord::before {
+  content: "=";
+  top: 9px;
+  left: 11px;
+  font-size: 12px;
+  line-height: 12px;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item.type-accord[aria-expanded=true]::before {
+  content: ">";
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #057bfe;
+  color: #fff;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dropdown-item:hover::before {
+  color: #fff;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dd_search {
+  display: block;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dd_search .txt_search {
+  box-sizing: border-box;
+  display: block;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 20px;
+  outline: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.c-settingHeader .c-shDropdown .dropdown-menu .dd_search .txt_search::placeholder {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* -------------------------------------
@@ -3564,6 +3783,37 @@ a:hover {
   text-decoration: none;
   color: #676c7a;
   opacity: 0.4;
+}
+
+/* coloue scheme */
+.colorDemo {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin: 0 0 10px;
+}
+.colorDemo.primary {
+  background-color: #057bfe;
+}
+.colorDemo.font {
+  background-color: #171725;
+}
+.colorDemo.red {
+  background-color: #fe4b4b;
+}
+.colorDemo.green {
+  background-color: #0dce82;
+}
+.colorDemo.orange {
+  background-color: #f19d38;
+}
+
+.colorCode {
+  display: block;
+  font-size: 14px;
+  color: #171725;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=css-style.css.map */

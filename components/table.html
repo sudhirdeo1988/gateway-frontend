@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>OCR Styleguide :: Tables</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/datatables.min.css" />
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="../css/css-style.css" />
+  </head>
+
+  <body>
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody">
+      <!-- ********** Component :: Sidebar **********  -->
+      <div class="c-sidebar">
+        <div class="sidebarHead">
+          <a href="javascript:void(0);" class="sidebarLogo">
+            <img src="../images/logo.png" alt="alt" />
+          </a>
+        </div>
+        <div class="c-pageNav js-customScroll">
+          <ul>
+            <li>
+              <a href="./colors.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Colour Theme</span>
+              </a>
+            </li>
+            <li>
+              <a href="./buttons.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Buttons</span>
+              </a>
+            </li>
+            <li>
+              <a href="./formFields.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Form Fields</span>
+              </a>
+            </li>
+            <li>
+              <a href="./table.html" class="navLink active">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Tables</span>
+              </a>
+            </li>
+            <li>
+              <a href="./cards.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Cards</span>
+              </a>
+            </li>
+            <li>
+              <a href="./other.html" class="navLink">
+                <i class="icon ocr-plus-square"></i>
+                <span class="linkText">Other</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** Component :: Sidebar End **********  -->
+
+      <!-- ********** Component :: Header **********  -->
+      <div class="c-header">
+        <div class="row no-gutters">
+          <div class="col-7">
+            <div class="headerSect_l">
+              <div class="c-pageTitle">OCR Frontend Styleguide</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Header End **********  -->
+
+      <!-- ********** Component :: Wrapper **********  -->
+      <div class="c-wrapper">
+        <div class="container-fluid">
+          <!-- *** First Row *** -->
+          <div class="row align-items-center mb-20">
+            <div class="col">
+              <div class="rowHeading font-h">Table</div>
+            </div>
+          </div>
+          <!-- *** First Row End *** -->
+
+          <!-- ***** Graph Row 2 ***** -->
+          <div class="row">
+            <div class="col">
+              <!-- ***** Primary Table Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">Primary Table</div>
+                <div class="row">
+                  <div class="col">
+                    <div class="c-tableWrapper">
+                      <div class="c-table type-01">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th class="text-center">
+                                View
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- ** Row 1 ** -->
+                            <tr>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td class="text-center">
+                                <button
+                                  class="tableBtn"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="View"
+                                >
+                                  <i class="icon ocr-search"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <!-- ** Row 1 End ** -->
+                            <!-- ** Row 1 ** -->
+                            <tr>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td class="text-center">
+                                <button
+                                  class="tableBtn"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="View"
+                                >
+                                  <i class="icon ocr-search"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <!-- ** Row 1 End ** -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Primary Table Block End***** -->
+
+              <!-- ***** Primary Table Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">Bordered Table</div>
+                <div class="row">
+                  <div class="col">
+                    <div class="c-tableWrapper">
+                      <div class="c-table type-01 bordered">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th class="text-center">
+                                View
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- ** Row 1 ** -->
+                            <tr>
+                              <td>
+                                Column Data
+                                <button
+                                  class="staticBtn error"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="Error Details"
+                                >
+                                  <i class="icon ocr-exclamation"></i>
+                                </button>
+                              </td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td class="text-center">
+                                <button
+                                  class="tableBtn"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="Edit"
+                                >
+                                  <i class="icon ocr-edit-pen"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <!-- ** Row 1 End ** -->
+                            <!-- ** Row 1 ** -->
+                            <tr>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td class="text-center">
+                                <button
+                                  class="tableBtn"
+                                  data-toggle="tooltip"
+                                  data-placement="top"
+                                  title="Delete"
+                                >
+                                  <i class="icon ocr-trash-o"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <!-- ** Row 1 End ** -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Primary Table Block End***** -->
+
+              <!-- ***** Primary Data Table Block ***** -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">DataTable</div>
+                <div class="row">
+                  <div class="col">
+                    <div class="c-tableWrapper">
+                      <div class="c-table type-01">
+                        <table class="table js-dataTable02">
+                          <thead>
+                            <tr>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th>Heading</th>
+                              <th class="no-sort">no Sort</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- ** Row 1 ** -->
+                            <tr>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                            </tr>
+                            <!-- ** Row 1 End ** -->
+                            <!-- ** Row 1 ** -->
+                            <tr>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                              <td>Column Data</td>
+                            </tr>
+                            <!-- ** Row 1 End ** -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Primary Table Block End***** -->
+            </div>
+          </div>
+          <!-- ***** Graph Row 2 End ***** -->
+        </div>
+      </div>
+      <!-- ********** Component :: Wrapper End **********  -->
+    </div>
+    <!-- ********** Page Body End **********  -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

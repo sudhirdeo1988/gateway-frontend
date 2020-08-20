@@ -333,6 +333,15 @@ File Type :: SCSS file (For styling)
 .ocr-trash-o:before {
   content: "\40";
 }
+.ocr-bell-1:before {
+  content: "\60";
+}
+.ocr-ellipsis-h:before {
+  content: "\7b";
+}
+.ocr-ellipsis-v:before {
+  content: "\7c";
+}
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -360,7 +369,7 @@ a:hover {
 }
 
 .c-pageBody {
-  padding-top: 70px;
+  padding-top: 98px;
   display: block;
   position: relative;
 }
@@ -399,9 +408,13 @@ a:hover {
 .c-settingHeader {
   background-color: $primary;
   box-sizing: border-box;
-  position: relative;
-  padding: 10px 20px;
-  height: 51px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px 24px;
+  height: 37px;
+  z-index: 12;
   .c-shList {
     display: block;
     position: relative;
@@ -426,7 +439,7 @@ a:hover {
     &.type-03 {
       ul {
         li {
-          margin-right: 20px;
+          margin-right: 25px;
           &:last-child {
             margin-right: 0;
           }
@@ -444,28 +457,29 @@ a:hover {
   .sh_linkBtn {
     cursor: pointer;
     display: inline-block;
-    height: 31px;
-    width: 31px;
-    padding: 2px;
+    height: 25px;
+    width: 25px;
+    padding: 0;
     border: 0;
     background-color: transparent;
     vertical-align: middle;
+    outline: none;
     .icon {
       display: inline-block;
       color: $white;
-      font-size: 25px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 18px;
       text-align: center;
       vertical-align: middle;
       position: relative;
+      top: 2px;
       &.lg {
-        font-size: 27px;
-        line-height: 27px;
+        font-size: 20px;
+        line-height: 20px;
       }
       &.sm {
-        font-size: 22px;
-        line-height: 20px;
-        top: 2px;
+        font-size: 18px;
+        line-height: 18px;
       }
     }
   }
@@ -473,11 +487,11 @@ a:hover {
     .btn {
       color: $white;
       display: block;
-      padding: 6px 20px 6px 10px;
-      font-size: 13px;
+      padding: 5px 20px 5px 10px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.3px;
-      line-height: 18px;
+      line-height: 12px;
       border: 0;
       &::after {
         border: 0;
@@ -485,15 +499,16 @@ a:hover {
         content: "D";
         position: absolute;
         top: 50%;
-        right: 1px;
+        right: 2px;
         font-size: 12px;
-        line-height: 13px;
-        margin-top: -5px;
+        line-height: 12px;
+        margin-top: -6px;
       }
 
       &.sh_linkBtn {
         width: 45px;
-        padding: 2px 20px 2px 0;
+        padding: 2px 15px 2px 0;
+        @include box-shadow(none);
       }
     }
     &.type-02 {
@@ -510,6 +525,7 @@ a:hover {
       width: 250px;
       padding: 10px 0;
       border: 0;
+      z-index: 12;
       .dropdown-item-accord {
         .multi-collapse {
           .dropdown-item {
@@ -599,7 +615,7 @@ a:hover {
   border-right: 1px solid #ebedf4;
   background-color: $white;
   display: block;
-  top: 0;
+  top: 38px;
   left: 0;
   position: fixed;
   height: 100%;
@@ -611,8 +627,8 @@ a:hover {
     border-bottom: 1px solid #ebedf4;
     display: block;
     position: relative;
-    height: 70px;
-    padding: 19px 40px 19px 20px;
+    height: 60px;
+    padding: 16px 40px 16px 20px;
 
     .sidebarHamb {
       background-color: transparent;
@@ -620,9 +636,9 @@ a:hover {
       display: none;
       border: 0;
       background-color: transparent;
-      height: 50px;
+      height: 40px;
       width: 46px;
-      padding: 10px;
+      padding: 5px 10px;
       text-align: center;
       position: relative;
       outline: none;
@@ -820,11 +836,11 @@ a:hover {
   background-color: $white;
   box-sizing: border-box;
   display: block;
-  top: 0;
+  top: 38px;
   left: 250px;
-  padding: 14px 42px 14px 24px;
+  padding: 10px 24px;
   position: fixed;
-  height: 70px;
+  height: 60px;
   width: calc(100% - 250px);
   z-index: 10;
   @include transition(all ease 0.3s);
@@ -834,7 +850,7 @@ a:hover {
     display: inline-block;
     position: relative;
     text-align: left;
-    padding: 5px 0;
+    padding: 6px 0 4px;
     .c-pageTitle {
       font-family: $heading-font;
       display: inline-block;
@@ -845,20 +861,17 @@ a:hover {
       line-height: 28px;
       text-transform: uppercase;
       letter-spacing: 0.6px;
-      margin: 2px 0 0;
+      margin: 0;
     }
   }
   .profileSetting {
-    display: inline-block;
-    vertical-align: middle;
-    top: -5px;
     .profileBtn {
       background-color: $white;
       box-sizing: border-box;
       border: 0;
       display: block;
-      height: 42px;
-      padding: 0 0 0 42px;
+      height: 38px;
+      padding: 0 0 0 38px;
       margin: 0;
       position: relative;
       outline: none;
@@ -869,8 +882,8 @@ a:hover {
         position: absolute;
         top: 0;
         left: 0;
-        height: 42px;
-        width: 42px;
+        height: 38px;
+        width: 38px;
         @include rounded-corners(50%);
       }
     }
@@ -880,24 +893,48 @@ a:hover {
       left: -30px !important;
     }
   }
+
+  .headerSettings {
+    ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-right: 25px;
+        vertical-align: middle;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   .notifySetting {
     display: inline-block;
     position: relative;
-    margin-right: 20px;
     .profileBtn {
       background-color: transparent;
       box-sizing: border-box;
       border: 0;
       display: block;
-      height: 42px;
-      width: 42px;
+      height: 38px;
+      width: 38px;
       margin: 0;
-      padding: 5px;
+      padding: 7px 5px 3px;
       position: relative;
       outline: none;
+      &.lg {
+        padding: 3px 5px 5px;
+        .icon {
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
       .icon {
         display: inline-block;
-        color: $gray-CCC;
+        color: lighten($gray-01, 20%);
         font-size: 22px;
         line-height: 22px;
         position: relative;
@@ -934,12 +971,21 @@ a:hover {
 /* -------------------------------------
 	Component :: wrapper
 ------------------------------------- */
+.no-settingHeader {
+  .c-sidebar,
+  .c-header {
+    top: 0;
+  }
+  .c-pageBody {
+    padding-top: 65px;
+  }
+}
 
 .c-wrapper {
   background-color: transparent;
   box-sizing: border-box;
   display: block;
-  padding: 40px 25px;
+  padding: 24px 9px;
   position: relative;
   min-height: 100%;
   margin: 0 0 0 250px;
@@ -3113,6 +3159,33 @@ a:hover {
       }
     }
   }
+  &.type-01 {
+    display: block;
+    padding: 0;
+    .graphHeading {
+      border-bottom: 1px solid lighten($primary, 37%);
+      color: lighten($gray-01, 10%);
+      font-size: 16px;
+      padding: 15px 15px 15px 45px;
+      margin: 0;
+      position: relative;
+      line-height: 22px;
+      @include rounded-corners(5px 5px 0 0);
+      .icon {
+        color: darken($secondary, 10%);
+        position: absolute;
+        top: 13px;
+        left: 12px;
+        height: 25px;
+        width: 25px;
+        background-color: lighten($secondary, 10%);
+        @include rounded-corners(30px);
+      }
+    }
+    .graphBody {
+      padding: 15px;
+    }
+  }
 }
 .graph {
   display: block;
@@ -3360,132 +3433,195 @@ a:hover {
 .c-cardHolder {
   .col {
     margin-bottom: 20px;
-    .card {
-      border: 0;
+  }
+  .card {
+    border: 0;
+    position: relative;
+    @include box-shadow(0 0 12px $gray);
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px 0 0 -25px;
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.05);
+      font-family: $icon-font;
+      content: "\2d";
+    }
+    .card-body {
       position: relative;
-      @include box-shadow(0 0 12px $gray);
-      &::before {
+      .card-setting {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -25px 0 0 -25px;
-        height: 50px;
-        width: 50px;
-        line-height: 50px;
-        font-size: 50px;
-        color: rgba(0, 0, 0, 0.05);
-        font-family: $icon-font;
-        content: "\2d";
-      }
-      .card-title {
-        color: rgba(0, 0, 0, 0.3);
-        display: block;
-        position: relative;
-        text-transform: uppercase;
-        font-family: $heading-font;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 20px;
-        letter-spacing: 0.7px;
-        margin-bottom: 10px;
-        padding-left: 30px;
-        .icon {
-          position: absolute;
-          top: 0;
-          left: 2px;
-          color: rgba(0, 0, 0, 0.2);
-          font-size: 16px;
-          line-height: 20px;
-          display: inline-block;
+        top: 2px;
+        right: 0;
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        .btn {
+          box-sizing: border-box;
+          padding: 0;
+          height: 23px;
+          width: 23px;
+          text-align: center;
+          @include box-shadow(none);
+          &::after {
+            display: none;
+          }
+          .icon {
+            font-size: 20px;
+            line-height: 20px;
+            color: lighten($gray-01, 20%);
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        .dropdown-menu {
+          min-width: 150px;
+          padding: 12px 0;
+          .dropdown-item {
+            color: $gray-01;
+            font-size: 12px;
+            line-height: 16px;
+            padding: 4px 12px;
+            font-weight: 500;
+            @include transition(all ease 0.2s);
+            &:hover {
+              background-color: lighten($gray-01, 44%);
+              color: darken($gray-01, 10%);
+            }
+          }
         }
       }
-      .card-number {
+    }
+    .card-title {
+      color: rgba(0, 0, 0, 0.3);
+      display: block;
+      position: relative;
+      text-transform: uppercase;
+      font-family: $heading-font;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 19px;
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 2px;
+        color: rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        line-height: 18px;
+        display: inline-block;
+      }
+    }
+    .card-number {
+      color: $black;
+      display: block;
+      margin: 10px 0;
+      letter-spacing: 1px;
+      font-family: $heading-font;
+      .nLink {
         color: $black;
-        display: block;
-        margin: 10px 0;
-        letter-spacing: 1px;
-        font-family: $heading-font;
-        .nLink {
-          color: $black;
-          border: 0;
-          display: inline-block;
-          font-size: 36px;
-          font-weight: 600;
-          line-height: 42px;
-          outline: none;
+        border: 0;
+        display: inline-block;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 42px;
+        outline: none;
+      }
+    }
+    .card-info {
+      color: rgba(0, 0, 0, 0.3);
+      display: block;
+      position: relative;
+      text-transform: uppercase;
+      font-family: $heading-font;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0.7px;
+      text-align: right;
+    }
+
+    &.type-01 {
+      background-color: $primary;
+      &::before {
+        color: rgba(255, 255, 255, 0.1);
+      }
+      .card-title {
+        color: rgba(255, 255, 255, 0.7);
+        .icon {
+          color: rgba(255, 255, 255, 0.5);
         }
       }
       .card-info {
-        color: rgba(0, 0, 0, 0.3);
-        display: block;
-        position: relative;
-        text-transform: uppercase;
-        font-family: $heading-font;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 20px;
-        letter-spacing: 0.7px;
-        text-align: right;
+        color: darken($primary, 15%);
       }
-
-      &.type-01 {
-        background-color: $primary;
-        &::before {
-          color: rgba(255, 255, 255, 0.1);
-        }
-        .card-title {
-          color: rgba(255, 255, 255, 0.7);
-          .icon {
-            color: rgba(255, 255, 255, 0.5);
-          }
-        }
-        .card-info {
-          color: darken($primary, 15%);
-        }
-        .card-number {
-          .nLink {
-            color: $white;
-          }
+      .card-number {
+        .nLink {
+          color: $white;
         }
       }
+    }
 
-      &.type-02 {
-        background-color: $primary;
-        background: $primary;
-        background: -moz-linear-gradient(
-          -45deg,
-          lighten($primary, 5%) 0%,
-          lighten($primary, 10%) 47%,
-          darken($primary, 6%) 100%
-        );
-        background: -webkit-linear-gradient(
-          -45deg,
-          lighten($primary, 5%) 0%,
-          lighten($primary, 10%) 47%,
-          darken($primary, 6%) 100%
-        );
-        background: linear-gradient(
-          135deg,
-          lighten($primary, 5%) 0%,
-          lighten($primary, 10%) 47%,
-          darken($primary, 6%) 100%
-        );
+    &.type-02 {
+      background-color: $primary;
+      background: $primary;
+      background: -moz-linear-gradient(
+        -45deg,
+        lighten($primary, 5%) 0%,
+        lighten($primary, 10%) 47%,
+        darken($primary, 6%) 100%
+      );
+      background: -webkit-linear-gradient(
+        -45deg,
+        lighten($primary, 5%) 0%,
+        lighten($primary, 10%) 47%,
+        darken($primary, 6%) 100%
+      );
+      background: linear-gradient(
+        135deg,
+        lighten($primary, 5%) 0%,
+        lighten($primary, 10%) 47%,
+        darken($primary, 6%) 100%
+      );
 
-        &::before {
-          color: rgba(255, 255, 255, 0.15);
+      &::before {
+        color: rgba(255, 255, 255, 0.15);
+      }
+      .card-title {
+        color: rgba(255, 255, 255, 0.7);
+        .icon {
+          color: rgba(255, 255, 255, 0.5);
         }
-        .card-title {
-          color: rgba(255, 255, 255, 0.7);
-          .icon {
-            color: rgba(255, 255, 255, 0.5);
+      }
+      .card-info {
+        color: darken($primary, 25%);
+      }
+      .card-number {
+        .nLink {
+          color: $white;
+        }
+      }
+      .card-body {
+        .card-setting {
+          .btn {
+            .icon {
+              color: $white;
+            }
           }
-        }
-        .card-info {
-          color: darken($primary, 15%);
-        }
-        .card-number {
-          .nLink {
-            color: $white;
+          .dropdown-menu {
+            .dropdown-item {
+              color: $gray-01;
+              &:hover {
+                background-color: lighten($primary, 44%);
+                color: darken($primary, 10%);
+              }
+            }
           }
         }
       }

@@ -139,4 +139,14 @@ $(function () {
       dictDefaultMessage: "Drop",
     };
   }
+
+  $(".owl-carousel").owlCarousel({
+    margin: 10,
+    loop: false,
+    mouseDrag: true,
+    nav: true,
+    dots: true,
+    items: 5,
+    responsive: {},
+  });
 });

@@ -342,6 +342,12 @@ File Type :: SCSS file (For styling)
 .ocr-ellipsis-v:before {
   content: "\7c";
 }
+.ocr-link:before {
+  content: "\7d";
+}
+.ocr-flag:before {
+  content: "\7e";
+}
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -925,6 +931,14 @@ a:hover {
       padding: 7px 5px 3px;
       position: relative;
       outline: none;
+      .flag {
+        display: block;
+        height: 28px;
+        width: 28px;
+        position: relative;
+        text-align: center;
+        top: -1px;
+      }
       &.lg {
         padding: 3px 5px 5px;
         .icon {
@@ -1799,9 +1813,9 @@ a:hover {
   .formLbl {
     color: $gray-01;
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 20px;
     letter-spacing: 0.1px;
     margin-bottom: 5px;
     @include transition(all ease 0.3s);
@@ -2516,6 +2530,63 @@ a:hover {
   }
 }
 
+/* --- Badge --- */
+.c-badge {
+  color: $black;
+  padding: 3px 6px;
+  font-size: 10px;
+  line-height: 11px;
+  text-align: center;
+  margin-left: 3px;
+  top: -1px;
+  position: relative;
+  &.primary {
+    color: $white;
+    background-color: $primary !important;
+  }
+  &.secondary {
+    color: $black;
+    background-color: $secondary !important;
+  }
+}
+
+.c-linkList {
+  display: block;
+  position: relative;
+  ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+  .linkItem {
+    color: $gray-01;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 0 4px 20px;
+    position: relative;
+    @include transition(all ease 0.3s);
+    &:hover {
+      color: $font-color;
+    }
+    &::before {
+      color: $gray-01;
+      position: absolute;
+      top: 6px;
+      left: 0px;
+      font-size: 15px;
+      line-height: 15px;
+      font-family: $icon-font;
+      content: "c";
+    }
+  }
+}
+
 /* -------------------------------------
 	Component :: Accordian
 ------------------------------------- */
@@ -3120,11 +3191,26 @@ a:hover {
   @include rounded-corners(5px);
   .graphHeading {
     display: block;
+    position: relative;
     color: $font-color;
     font-weight: 600;
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 24px;
+    .icon {
+      color: $white;
+      display: inline-block;
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      width: 25px;
+      height: 25px;
+      background-color: lighten($gray-01, 10%);
+      font-size: 17px;
+      line-height: 31px;
+      text-align: center;
+      @include rounded-corners(5px);
+    }
   }
   .graphInfoList {
     display: block;
@@ -3163,26 +3249,79 @@ a:hover {
     display: block;
     padding: 0;
     .graphHeading {
-      border-bottom: 1px solid lighten($primary, 37%);
-      color: lighten($gray-01, 10%);
-      font-size: 16px;
-      padding: 15px 15px 15px 45px;
+      background-color: $white;
+      border-bottom: 1px solid lighten($gray-CCC, 15%);
+      color: $gray-01;
+      font-size: 15px;
+      padding: 12px 10px 12px 45px;
       margin: 0;
       position: relative;
-      line-height: 22px;
+      line-height: 21px;
       @include rounded-corners(5px 5px 0 0);
-      .icon {
-        color: darken($secondary, 10%);
+      &::before {
         position: absolute;
-        top: 13px;
-        left: 12px;
-        height: 25px;
-        width: 25px;
-        background-color: lighten($secondary, 10%);
-        @include rounded-corners(30px);
+        top: -2px;
+        left: 50%;
+        height: 4px;
+        width: 80px;
+        margin-left: -40px;
+        background: $primary;
+        content: "";
+        @include rounded-corners(10px);
+      }
+      .icon {
+        color: $white;
+        background-color: lighten($primary, 10%);
       }
     }
     .graphBody {
+      min-height: 250px;
+      padding: 15px;
+    }
+  }
+
+  &.type-02 {
+    display: block;
+    padding: 0;
+    .graphHeading {
+      background-color: $primary;
+      border-bottom: 0;
+      color: $white;
+      padding: 12px 10px 12px 45px;
+      font-size: 15px;
+      line-height: 21px;
+      margin-bottom: 0;
+      @include rounded-corners(5px 5px 0 0);
+      .icon {
+        color: $primary;
+        background-color: $white;
+      }
+    }
+    .graphBody {
+      height: 250px;
+      padding: 15px;
+    }
+  }
+
+  &.type-03 {
+    display: block;
+    padding: 0;
+    .graphHeading {
+      background-color: $secondary;
+      border-bottom: 0;
+      color: $white;
+      padding: 12px 10px 12px 45px;
+      font-size: 15px;
+      line-height: 21px;
+      margin-bottom: 0;
+      @include rounded-corners(5px 5px 0 0);
+      .icon {
+        color: $secondary;
+        background-color: $white;
+      }
+    }
+    .graphBody {
+      height: 250px;
       padding: 15px;
     }
   }
@@ -3453,6 +3592,7 @@ a:hover {
     }
     .card-body {
       position: relative;
+      padding: 15px;
       .card-setting {
         position: absolute;
         top: 2px;
@@ -3620,6 +3760,65 @@ a:hover {
               &:hover {
                 background-color: lighten($primary, 44%);
                 color: darken($primary, 10%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.type-04 {
+      background-color: $secondary;
+      background: $secondary;
+      background: -moz-linear-gradient(
+        -45deg,
+        lighten($secondary, 5%) 0%,
+        lighten($secondary, 10%) 47%,
+        darken($secondary, 6%) 100%
+      );
+      background: -webkit-linear-gradient(
+        -45deg,
+        lighten($secondary, 5%) 0%,
+        lighten($secondary, 10%) 47%,
+        darken($secondary, 6%) 100%
+      );
+      background: linear-gradient(
+        135deg,
+        lighten($secondary, 5%) 0%,
+        lighten($secondary, 10%) 47%,
+        darken($secondary, 6%) 100%
+      );
+
+      &::before {
+        color: lighten($secondary, 18%);
+      }
+      .card-title {
+        color: darken($secondary, 25%);
+        .icon {
+          color: darken($secondary, 25%);
+        }
+      }
+      .card-info {
+        color: darken($secondary, 25%);
+      }
+      .card-number {
+        .nLink {
+          color: $white;
+        }
+      }
+      .card-body {
+        .card-setting {
+          .btn {
+            .icon {
+              color: $white;
+            }
+          }
+          .dropdown-menu {
+            .dropdown-item {
+              color: $gray-01;
+              &:hover {
+                background-color: lighten($secondary, 44%);
+                color: darken($secondary, 10%);
               }
             }
           }

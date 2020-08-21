@@ -522,7 +522,12 @@
               <ul>
                 <li>
                   <div class="notifySetting">
-                    <button class="profileBtn lg" type="button">
+                    <button
+                      class="profileBtn lg"
+                      type="button"
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                    >
                       <i class="icon ocr-cog"></i>
                     </button>
                   </div>
@@ -599,7 +604,7 @@
                 >
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="card h-100 type-02">
+                    <div class="card h-100 type-04">
                       <div class="card-body">
                         <div class="card-setting">
                           <div class="c-dropdown dropdown notifySetting">
@@ -644,7 +649,7 @@
 
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="card h-100 type-02">
+                    <div class="card h-100 type-04">
                       <div class="card-body">
                         <div class="card-setting">
                           <div class="c-dropdown dropdown notifySetting">
@@ -689,7 +694,7 @@
 
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="card h-100 type-02">
+                    <div class="card h-100 type-04">
                       <div class="card-body">
                         <div class="card-setting">
                           <div class="c-dropdown dropdown notifySetting">
@@ -734,7 +739,7 @@
 
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="card h-100 type-02">
+                    <div class="card h-100 type-04">
                       <div class="card-body">
                         <div class="card-setting">
                           <div class="c-dropdown dropdown notifySetting">
@@ -779,7 +784,7 @@
 
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100 type-04">
                       <div class="card-body">
                         <div class="card-setting">
                           <div class="c-dropdown dropdown notifySetting">
@@ -1109,6 +1114,313 @@
       <!-- ********** Component :: Wrapper End **********  -->
     </div>
     <!-- ********** Page Body End **********  -->
+
+    <!-- **** Modal :: Authorization Management Dashboard Setting **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Authorization Management Dashboard Setting
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- ***** Accordian Container ***** -->
+            <div class="accordion c-accordian" id="visiterAccordian">
+              <!-- ***** Accordian 1 ***** -->
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="true"
+                      aria-controls="collapseTwo"
+                    >
+                      SBU Selection
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse show"
+                  aria-labelledby="headingTwo"
+                  data-parent="#visiterAccordian"
+                >
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm">Agreement</span>
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch001"
+                                value="ExitRollCall "
+                                checked
+                              />
+                              <label class="switchLbl" for="switch001">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm"
+                              >Agreement Amendment</span
+                            >
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch002"
+                                value="ExitRollCall "
+                              />
+                              <label class="switchLbl" for="switch002">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm"
+                              >Export Application</span
+                            >
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch003"
+                                value="ExitRollCall "
+                              />
+                              <label class="switchLbl" for="switch003">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm"
+                              >Re-Export Application</span
+                            >
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch004"
+                                value="ExitRollCall "
+                                checked
+                              />
+                              <label class="switchLbl" for="switch004">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ***** Accordian 1 End ***** -->
+              </div>
+              <!-- ***** Accordian 1 End ***** -->
+
+              <!-- ***** Accordian 1 ***** -->
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Pending Internal Release
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#visiterAccordian"
+                >
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm">Agreement</span>
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch005"
+                                value="ExitRollCall "
+                                checked
+                              />
+                              <label class="switchLbl" for="switch005">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm"
+                              >Agreement Amendment</span
+                            >
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch006"
+                                value="ExitRollCall "
+                              />
+                              <label class="switchLbl" for="switch006">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+                      </div>
+                      <div class="col-md-6">
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm"
+                              >Export Application</span
+                            >
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch007"
+                                value="ExitRollCall "
+                              />
+                              <label class="switchLbl" for="switch007">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+
+                        <!-- Check box -->
+                        <div class="row align-items-center mb-05">
+                          <div class="col-8">
+                            <span class="c-staticText sm"
+                              >Re-Export Application</span
+                            >
+                          </div>
+                          <div class="col-4">
+                            <div class="c-switch">
+                              <input
+                                type="checkbox"
+                                class="switchChk"
+                                id="switch008"
+                                value="ExitRollCall "
+                                checked
+                              />
+                              <label class="switchLbl" for="switch008">
+                                <div class="switchTrack"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Check box End -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ***** Accordian 1 End ***** -->
+              </div>
+              <!-- ***** Accordian 1 End ***** -->
+            </div>
+            <!-- ***** Accordian Container End ***** -->
+          </div>
+
+          <div class="modal-footer">
+            <div class="row no-gutters">
+              <div class="col">
+                <button class="c-btn bordered">
+                  Reset to Default
+                </button>
+              </div>
+              <div class="col text-right">
+                <button type="button" class="c-btn">
+                  Save
+                </button>
+                <button
+                  type="button"
+                  class="c-btn col-dark"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Authorization Management Dashboard Setting End **** -->
 
     <!-- ********** Scripts **********  -->
     <script src="../../js/jquery-3.4.0.min.js"></script>

@@ -19,9 +19,15 @@ $(function () {
         .parents(".js-selectable")
         .find(".dropdown-toggle .value")
         .text($(this).val());
-      console.log($(this).val());
     }
   );
+
+  $(document).on("click", ".for-flag .dropdown-item", function () {
+    $(this)
+      .parents(".for-flag")
+      .find(".dropdown-toggle img")
+      .attr("src", "../images/flags/" + $(this).val() + ".svg");
+  });
 
   // ---- Form Datepicker
   if ($(".c-dtPicker").length) {
@@ -139,14 +145,15 @@ $(function () {
       dictDefaultMessage: "Drop",
     };
   }
-
-  $(".owl-carousel").owlCarousel({
-    margin: 10,
-    loop: false,
-    mouseDrag: true,
-    nav: true,
-    dots: true,
-    items: 5,
-    responsive: {},
-  });
+  if ($(".owl-carousel").length) {
+    $(".owl-carousel").owlCarousel({
+      margin: 10,
+      loop: false,
+      mouseDrag: true,
+      nav: true,
+      dots: true,
+      items: 5,
+      responsive: {},
+    });
+  }
 });

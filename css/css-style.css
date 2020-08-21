@@ -467,7 +467,6 @@ body {
   font-weight: 400;
   font-display: swap;
   line-height: 20px;
-  letter-spacing: 0.3px;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -1083,6 +1082,28 @@ a:hover {
   right: auto;
   left: -30px !important;
 }
+.c-header .notifySetting.for-flag .dropdown-menu {
+  min-width: 200px;
+  width: 200px;
+  padding: 10px 0;
+  max-height: 300px;
+  left: auto !important;
+  right: -30px !important;
+}
+.c-header .notifySetting.for-flag .dropdown-menu .dropdown-item {
+  position: relative;
+  padding: 5px 12px 4px 40px;
+  font-size: 12px;
+  font-weight: 500;
+  outline: none;
+}
+.c-header .notifySetting.for-flag .dropdown-menu .dropdown-item .flag-img {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  height: 20px;
+  width: 22px;
+}
 
 /* -------------------------------------
 	Component :: wrapper
@@ -1592,8 +1613,10 @@ a:hover {
 }
 .c-modal .modal-content .modal-header .modal-title {
   color: #171725;
-  font-size: 20px;
-  line-height: 35px;
+  font-size: 16px;
+  line-height: 29px;
+  font-weight: 600;
+  letter-spacing: normal;
 }
 .c-modal .modal-content .modal-header .close {
   color: #676c7a;
@@ -1684,6 +1707,11 @@ a:hover {
   letter-spacing: 0.23px;
   margin-bottom: 16px;
 }
+.c-staticText.sm {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
 
 /* -------------------------------------
 	Component :: Buttons
@@ -1734,6 +1762,11 @@ a:hover {
 }
 .c-btn:last-child {
   margin-right: 0;
+}
+.c-btn.bordered {
+  background-color: #fff;
+  color: #057bfe;
+  border: 1px solid #057bfe;
 }
 .c-btn.link {
   color: #057bfe;
@@ -1833,7 +1866,7 @@ a:hover {
 }
 .c-switch .switchLbl {
   box-sizing: border-box;
-  background-color: #ebedf4;
+  background-color: #dbdeeb;
   cursor: pointer;
   display: block;
   position: relative;
@@ -2704,13 +2737,17 @@ a:hover {
   position: relative;
 }
 .c-accordian .card {
+  background-color: #fafafb;
   border: 0;
-  border-bottom: 1px solid #e2e2ea !important;
-  margin-bottom: 14px;
-  padding-bottom: 14px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  margin-bottom: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #d3d5da;
+  -moz-box-shadow: 0 0 3px #d3d5da;
+  -webkit-box-shadow: 0 0 3px #d3d5da;
+  -ms-box-shadow: 0 0 3px #d3d5da;
+  -o-box-shadow: 0 0 3px #d3d5da;
 }
 .c-accordian .card .card-header {
   background-color: transparent;
@@ -2726,11 +2763,11 @@ a:hover {
   color: #171725;
   box-sizing: border-box;
   display: block;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 21px;
-  height: 32px;
-  padding: 0 50px 0 0;
+  min-height: 48px;
+  padding: 10px 50px 10px 12px;
   position: relative;
   text-decoration: none;
   outline: none;
@@ -2743,17 +2780,17 @@ a:hover {
   -o-box-shadow: none;
 }
 .c-accordian .card .card-header .btn::after {
-  border: 1px solid #ebedf4;
+  background-color: #057bfe;
+  color: #fff;
   font-family: "ocr-inc";
   content: "a";
   font-size: 18px;
-  color: #676c7a;
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 32px;
-  width: 32px;
-  padding: 6px 6px;
+  top: 7px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  padding: 4px 6px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -2762,7 +2799,8 @@ a:hover {
   content: "d";
 }
 .c-accordian .card .card-body {
-  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  padding: 12px;
 }
 
 /* ---- Info Btn ---- */
@@ -3934,6 +3972,14 @@ a:hover {
   margin: 0 !important;
 }
 
+.m10 {
+  margin: 10px;
+}
+
+.mb-05 {
+  margin-bottom: 5px;
+}
+
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -4116,6 +4162,9 @@ a:hover {
 }
 .colorDemo.primary {
   background-color: #057bfe;
+}
+.colorDemo.secondary {
+  background-color: #ffb233;
 }
 .colorDemo.font {
   background-color: #171725;

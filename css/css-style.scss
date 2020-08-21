@@ -362,7 +362,6 @@ body {
   font-weight: 400;
   font-display: swap;
   line-height: 20px;
-  letter-spacing: 0.3px;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -979,6 +978,30 @@ a:hover {
       right: auto;
       left: -30px !important;
     }
+    &.for-flag {
+      .dropdown-menu {
+        min-width: 200px;
+        width: 200px;
+        padding: 10px 0;
+        max-height: 300px;
+        left: auto !important;
+        right: -30px !important;
+        .dropdown-item {
+          position: relative;
+          padding: 5px 12px 4px 40px;
+          font-size: 12px;
+          font-weight: 500;
+          outline: none;
+          .flag-img {
+            position: absolute;
+            top: 4px;
+            left: 10px;
+            height: 20px;
+            width: 22px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1511,8 +1534,10 @@ a:hover {
       padding: 14px 30px;
       .modal-title {
         color: $font-color;
-        font-size: 20px;
-        line-height: 35px;
+        font-size: 16px;
+        line-height: 29px;
+        font-weight: 600;
+        letter-spacing: normal;
       }
       .close {
         color: $gray-01;
@@ -1610,6 +1635,11 @@ a:hover {
   line-height: 19px;
   letter-spacing: 0.23px;
   margin-bottom: 16px;
+  &.sm {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
 }
 
 /* -------------------------------------
@@ -1657,6 +1687,11 @@ a:hover {
   @include rounded-corners(50px);
   &:last-child {
     margin-right: 0;
+  }
+  &.bordered {
+    background-color: $white;
+    color: $primary;
+    border: 1px solid $primary;
   }
   &.link {
     color: $primary;
@@ -1758,7 +1793,7 @@ a:hover {
   }
   .switchLbl {
     box-sizing: border-box;
-    background-color: $gray-02;
+    background-color: darken($gray-02, 5%);
     cursor: pointer;
     display: block;
     position: relative;
@@ -2594,11 +2629,11 @@ a:hover {
   display: block;
   position: relative;
   .card {
+    background-color: lighten($gray-01, 54%);
     border: 0;
-    border-bottom: 1px solid #e2e2ea !important;
-    margin-bottom: 14px;
-    padding-bottom: 14px;
-    @include rounded-corners(0);
+    margin-bottom: 15px;
+    @include rounded-corners(5px);
+    @include box-shadow(0 0 3px lighten($gray-01, 40%));
     .card-header {
       background-color: transparent;
       border: 0;
@@ -2611,11 +2646,11 @@ a:hover {
         color: $font-color;
         box-sizing: border-box;
         display: block;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 15px;
+        font-weight: 600;
         line-height: 21px;
-        height: 32px;
-        padding: 0 50px 0 0;
+        min-height: 48px;
+        padding: 10px 50px 10px 12px;
         position: relative;
         text-decoration: none;
         outline: none;
@@ -2623,17 +2658,17 @@ a:hover {
         width: 100%;
         @include box-shadow(none);
         &::after {
-          border: 1px solid $gray-02;
+          background-color: $primary;
+          color: $white;
           font-family: "ocr-inc";
           content: "\61";
           font-size: 18px;
-          color: $gray-01;
           position: absolute;
-          top: 0;
-          right: 0;
-          height: 32px;
-          width: 32px;
-          padding: 6px 6px;
+          top: 7px;
+          right: 10px;
+          height: 30px;
+          width: 30px;
+          padding: 4px 6px;
           @include rounded-corners(8px);
         }
         &[aria-expanded="true"] {
@@ -2644,7 +2679,8 @@ a:hover {
       }
     }
     .card-body {
-      padding: 10px 0;
+      border-top: 1px solid $gray-CCC;
+      padding: 12px;
     }
   }
 }
@@ -3850,6 +3886,12 @@ a:hover {
 .m0 {
   margin: 0 !important;
 }
+.m10 {
+  margin: 10px;
+}
+.mb-05 {
+  margin-bottom: 5px;
+}
 .mb-10 {
   margin-bottom: 10px;
 }
@@ -4036,6 +4078,9 @@ a:hover {
   margin: 0 0 10px;
   &.primary {
     background-color: $primary;
+  }
+  &.secondary {
+    background-color: $secondary;
   }
   &.font {
     background-color: $font-color;

@@ -15,16 +15,7 @@
     <!-- ********** Page Body **********  -->
     <div class="c-pageBody isCloseSidebar">
       <!-- ********** Component :: Sidebar **********  -->
-      <div class="c-sidebar">
-        <div class="sidebarHead">
-          <a href="javascript:void(0);" class="sidebarLogo">
-            <img src="images/logo.png" alt="alt" />
-          </a>
-          <button class="closeSidebar"></button>
-          <button class="sidebarHamb">
-            <i class="icon ocr-navicon"></i>
-          </button>
-        </div>
+      <div class="c-sidebar js-hover" role="button">
         <div class="c-pageNav js-customScroll">
           <ul>
             <li>
@@ -45,12 +36,6 @@
                 <span class="linkText">Custom Filling</span>
               </a>
             </li>
-            <li>
-              <a href="./04-userProfile.html" class="navLink">
-                <i class="icon ocr-user-2"></i>
-                <span class="linkText">User Profile</span>
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -58,8 +43,13 @@
 
       <!-- ********** Component :: Header **********  -->
       <div class="c-header">
-        <div class="row no-gutters">
+        <div class="row no-gutters align-items-center">
           <div class="col-7">
+            <div class="headerSect_logo">
+              <a href="javascript:void(0);" class="headerLogo">
+                <img src="../images/logo.png" alt="alt" />
+              </a>
+            </div>
             <div class="headerSect_l">
               <div class="c-pageTitle">Global custom filling gateway</div>
             </div>
@@ -68,14 +58,12 @@
             <div class="headerSettings">
               <ul>
                 <li>
-                  <div class="c-dropdown dropdown notifySetting">
+                  <div class="notifySetting">
                     <button
-                      class="profileBtn dropdown-toggle"
+                      class="profileBtn"
                       type="button"
-                      id="dropdownMenuButton3"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
+                      data-toggle="modal"
+                      data-target="#flagModal"
                     >
                       <img
                         src="images/flags/india.svg"
@@ -83,14 +71,6 @@
                         alt="India"
                       />
                     </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton3"
-                    >
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                   </div>
                 </li>
                 <li>
@@ -107,12 +87,48 @@
                       <span class="count">2</span>
                     </button>
                     <div
-                      class="dropdown-menu"
+                      class="dropdown-menu c-notifyDropdown"
                       aria-labelledby="dropdownMenuButton3"
                     >
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="notifyHeading">
+                        Notifications
+                        <span class="c-badge primary sm">10</span>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -126,15 +142,28 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img src="../../images/profile.png" alt="profile" />
+                      <i class="icon ocr-user-2"></i>
                     </button>
                     <div
-                      class="dropdown-menu"
+                      class="dropdown-menu st-clean with-icon"
                       aria-labelledby="dropdownMenuButton2"
                     >
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="./04-userProfile.html">
+                        <i class="icon ocr-user-2"></i>
+                        User Profile</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocr-tax"></i>
+                        Subscription</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocr-cog"></i>
+                        Settings</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocr-sign-out"></i>
+                        Logout</a
+                      >
                     </div>
                   </div>
                 </li>
@@ -171,18 +200,6 @@
                       aria-controls="Details"
                       aria-selected="true"
                       >Filling Now</a
-                    >
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <a
-                      class="nav-link"
-                      id="profile-tab"
-                      data-toggle="tab"
-                      href="#profile"
-                      role="tab"
-                      aria-controls="profile"
-                      aria-selected="false"
-                      >Gateway Result</a
                     >
                   </li>
                 </ul>
@@ -284,17 +301,6 @@
                     <!-- ***** Section 8 End ***** -->
                   </div>
                   <!-- ***** Tab :: Details End ***** -->
-
-                  <!-- ***** Tab :: Access & Activity ***** -->
-                  <div
-                    class="tab-pane fade"
-                    id="profile"
-                    role="tabpanel"
-                    aria-labelledby="profile-tab"
-                  >
-                    Tab 2
-                  </div>
-                  <!-- ***** Tab :: Access & Activity End ***** -->
                 </div>
               </div>
             </div>
@@ -391,6 +397,88 @@
       </div>
     </div>
     <!-- **** Modal :: Edit Profile  End **** -->
+
+    <!-- **** Modal ::  Flags Info **** -->
+    <div
+      class="modal fade c-modal w-950"
+      id="flagModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="flagModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="flagModal">
+              Select Country
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="flagSearch text-right">
+              <!-- *** Text Box *** -->
+              <div class="form-group c-form">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search Country"
+                />
+              </div>
+              <!-- *** Text Box End *** -->
+            </div>
+            <div class="flagList">
+              <ul>
+                <li>
+                  <button class="flagActionBtn st-selected">
+                    <img src="images/flags/india.svg" alt="flag" />
+                    India
+                  </button>
+                </li>
+                <li>
+                  <button class="flagActionBtn">
+                    <img src="images/flags/usa.svg" alt="flag" />
+                    USA
+                  </button>
+                </li>
+                <li>
+                  <button class="flagActionBtn">
+                    <img src="images/flags/japan.svg" alt="flag" />
+                    Japan
+                  </button>
+                </li>
+                <li>
+                  <button class="flagActionBtn">
+                    <img src="images/flags/russia.svg" alt="flag" />
+                    Russia
+                  </button>
+                </li>
+                <li>
+                  <button class="flagActionBtn">
+                    <img src="images/flags/india.svg" alt="flag" />
+                    India
+                  </button>
+                </li>
+                <li>
+                  <button class="flagActionBtn">
+                    <img src="images/flags/india.svg" alt="flag" />
+                    India
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Flags Info  End **** -->
 
     <!-- ********** Scripts **********  -->
     <script src="./js/jquery-3.4.0.min.js"></script>

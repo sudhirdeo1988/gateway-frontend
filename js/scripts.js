@@ -2,7 +2,7 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
   // -- Open close sidebar interaction
   if ($(".c-sidebar").length > 0) {
-    $("body").delegate(".closeSidebar,.sidebarHamb", "click", function () {
+    $(".c-sidebar.js-hover").hover(function () {
       $(this).parents(".c-pageBody").toggleClass("isCloseSidebar");
     });
   }

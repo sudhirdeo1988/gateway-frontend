@@ -27,10 +27,9 @@ File Type :: SCSS file (For styling)
   - Utility classes
   - Plugin overwrite
 ------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap");
 /*
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Montserrat', sans-serif;
+font-family: 'Overpass', sans-serif;
 */
 /* -------------------------------------
 	Theme Colors
@@ -462,9 +461,9 @@ html {
 
 body {
   background-color: #ecf0f6;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Overpass", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
   line-height: 20px;
   margin: 0;
@@ -713,90 +712,26 @@ a:hover {
 	Component :: Sidebar
 ------------------------------------- */
 .c-sidebar {
-  border-right: 1px solid #ebedf4;
+  border-right: 1px solid rgba(101, 126, 174, 0.2);
   background-color: #fff;
   display: block;
-  top: 38px;
+  top: 99px;
   left: 0;
   position: fixed;
   height: 100%;
-  width: 250px;
+  width: 230px;
   z-index: 2;
-  transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-  -webkit-transition: all ease 0.3s;
-  -o-transition: all ease 0.3s;
-  -ms-transition: all ease 0.3s;
-}
-.c-sidebar .sidebarHead {
-  border-bottom: 1px solid #ebedf4;
-  display: block;
-  position: relative;
-  height: 60px;
-  padding: 16px 40px 16px 20px;
-}
-.c-sidebar .sidebarHead .sidebarHamb {
-  background-color: transparent;
-  box-sizing: border-box;
-  display: none;
-  border: 0;
-  background-color: transparent;
-  height: 40px;
-  width: 46px;
-  padding: 5px 10px;
-  text-align: center;
-  position: relative;
-  outline: none;
-}
-.c-sidebar .sidebarHead .sidebarHamb .icon {
-  color: #057bfe;
-  display: block;
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 31px;
-  position: relative;
-  left: -2px;
-}
-.c-sidebar .sidebarHead .sidebarLogo {
-  display: block;
-  outline: none;
-  border: 0;
-  cursor: pointer;
-  max-height: 32px;
-}
-.c-sidebar .sidebarHead .sidebarLogo img {
-  display: block;
-  max-height: 32px;
-}
-.c-sidebar .sidebarHead .closeSidebar {
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  position: absolute;
-  top: 20px;
-  right: 10px;
-  height: 30px;
-  width: 30px;
-  text-align: center;
-  outline: 0;
-  z-index: 2;
-}
-.c-sidebar .sidebarHead .closeSidebar::before {
-  content: "o";
-  color: #057bfe;
-  display: inline-block;
-  font-family: "ocr-inc";
-  font-size: 22px;
-  line-height: 22px;
-  text-align: center;
-  vertical-align: middle;
+  transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
 }
 .c-sidebar .c-pageNav {
   box-sizing: border-box;
   display: block;
   position: relative;
-  padding: 40px 0;
+  padding: 20px 0;
   height: 100%;
 }
 .c-sidebar .c-pageNav ul {
@@ -808,7 +743,7 @@ a:hover {
 }
 .c-sidebar .c-pageNav ul li {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .c-sidebar .c-pageNav ul li .navLink {
   background-color: transparent;
@@ -816,10 +751,10 @@ a:hover {
   border: 0;
   color: #999;
   display: block;
-  height: 32px;
+  height: 38px;
   outline: none;
   position: relative;
-  padding: 3px 5px 3px 64px;
+  padding: 3px 5px 3px 54px;
   text-align: left;
   font-size: 14px;
   transition: all ease 0.3s;
@@ -871,13 +806,14 @@ a:hover {
   vertical-align: middle;
   font-weight: 400;
   padding: 7px 0;
+  opacity: 0;
   animation: showMenu 0.5s ease-in forwards;
 }
 .c-sidebar .c-pageNav ul li .navLink .icon {
   color: #676c7a;
   position: absolute;
   top: 5px;
-  left: 20px;
+  left: 14px;
   height: 30px;
   width: 30px;
   font-size: 24px;
@@ -936,16 +872,16 @@ a:hover {
 	Component :: Header
 ------------------------------------- */
 .c-header {
-  border-bottom: 1px solid #ebedf4;
+  border-bottom: 1px solid rgba(101, 126, 174, 0.2);
   background-color: #fff;
   box-sizing: border-box;
   display: block;
   top: 38px;
-  left: 250px;
+  left: 0;
   padding: 10px 24px;
   position: fixed;
-  height: 60px;
-  width: calc(100% - 250px);
+  height: 61px;
+  width: 100%;
   z-index: 10;
   transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
@@ -958,26 +894,42 @@ a:hover {
   -ms-box-shadow: 0 -1px 1px #ebedf4;
   -o-box-shadow: 0 -1px 1px #ebedf4;
 }
+.c-header .headerSect_logo {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.c-header .headerSect_logo .headerLogo {
+  display: block;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+.c-header .headerSect_logo .headerLogo img {
+  position: relative;
+  display: block;
+  max-height: 34px;
+  top: 1px;
+}
 .c-header .headerSect_l {
   display: inline-block;
   position: relative;
   text-align: left;
-  padding: 6px 0 4px;
+  vertical-align: middle;
 }
 .c-header .headerSect_l .c-pageTitle {
-  font-family: "Roboto Condensed", sans-serif;
   display: inline-block;
   color: #676c7a;
   display: block;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
   margin: 0;
 }
 .c-header .profileSetting .profileBtn {
-  background-color: #fff;
+  background-color: #057bfe;
   box-sizing: border-box;
   border: 0;
   display: block;
@@ -986,19 +938,22 @@ a:hover {
   margin: 0;
   position: relative;
   outline: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 .c-header .profileSetting .profileBtn::after {
   display: none;
 }
-.c-header .profileSetting .profileBtn img {
+.c-header .profileSetting .profileBtn .icon {
+  color: #fff;
   position: absolute;
-  top: 0;
+  top: 6px;
   left: 0;
   height: 38px;
   width: 38px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+  font-size: 24px;
+  line-height: 24px;
 }
 .c-header .profileSetting .dropdown-menu {
   min-width: 250px;
@@ -1052,7 +1007,7 @@ a:hover {
 }
 .c-header .notifySetting .profileBtn .icon {
   display: inline-block;
-  color: #9ca0ab;
+  color: #676c7a;
   font-size: 22px;
   line-height: 22px;
   position: relative;
@@ -1082,35 +1037,94 @@ a:hover {
   right: auto;
   left: -30px !important;
 }
-.c-header .notifySetting.for-flag .dropdown-menu {
-  min-width: 200px;
-  width: 200px;
-  padding: 10px 0;
-  max-height: 300px;
-  left: auto !important;
-  right: -30px !important;
+
+.c-notifyDropdown {
+  padding: 0 0 20px 0 !important;
 }
-.c-header .notifySetting.for-flag .dropdown-menu .dropdown-item {
+.c-notifyDropdown .notifyHeading {
+  display: block;
+  margin-bottom: 5px;
+  color: #171725;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  padding: 10px 15px;
+}
+.c-notifyDropdown .notifyBody {
   position: relative;
-  padding: 5px 12px 4px 40px;
+  max-height: 450px;
+}
+.c-notifyDropdown .c-notify {
+  padding: 0 !important;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.c-notifyDropdown .c-notify:hover {
+  background-color: #fff9f0;
+}
+.c-notifyDropdown .c-notify .dropdown-notification-item {
+  padding: 10px 15px 10px 50px;
+  text-decoration: none;
+  color: #212837;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  position: relative;
+  margin-top: -1px;
+}
+.c-notifyDropdown .c-notify .dropdown-notification-item .dropdown-notification-icon {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: #ffb233;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+}
+.c-notifyDropdown .c-notify .dropdown-notification-item .dropdown-notification-icon .icon {
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+.c-notifyDropdown .c-notify .dropdown-notification-item .dropdown-notification-info {
+  display: block;
+  margin-left: 15px;
+}
+.c-notifyDropdown .c-notify .dropdown-notification-item .dropdown-notification-info .title {
+  display: block;
+  color: #171725;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 2px;
+  white-space: normal;
+}
+.c-notifyDropdown .c-notify .dropdown-notification-item .dropdown-notification-info .time {
+  display: block;
+  color: #808594;
   font-size: 12px;
   font-weight: 500;
-  outline: none;
-}
-.c-header .notifySetting.for-flag .dropdown-menu .dropdown-item .flag-img {
-  position: absolute;
-  top: 4px;
-  left: 10px;
-  height: 20px;
-  width: 22px;
+  line-height: 16px;
+  white-space: normal;
 }
 
 /* -------------------------------------
 	Component :: wrapper
 ------------------------------------- */
-.no-settingHeader .c-sidebar,
 .no-settingHeader .c-header {
   top: 0;
+}
+.no-settingHeader .c-sidebar {
+  top: 61px;
 }
 .no-settingHeader .c-pageBody {
   padding-top: 65px;
@@ -1123,7 +1137,12 @@ a:hover {
   padding: 24px 9px;
   position: relative;
   min-height: 100%;
-  margin: 0 0 0 250px;
+  margin: 0 0 0 230px;
+  transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
 }
 
 .c-settingList {
@@ -1180,8 +1199,8 @@ a:hover {
   border: 0;
   background-color: rgba(187, 199, 214, 0.4);
   color: #676c7a;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   line-height: 16px !important;
   min-height: 38px;
   padding: 13px 20px 9px 12px;
@@ -1212,11 +1231,10 @@ a:hover {
 }
 .c-tableWrapper .c-table.type-01 tr td {
   box-sizing: border-box;
-  border: 0;
   color: #676c7a;
   padding: 10px;
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 16px;
 }
@@ -1242,6 +1260,7 @@ a:hover {
   display: none !important;
 }
 .c-tableWrapper .c-table.bordered .table tr td {
+  border-top: 0;
   border-bottom: 1px solid #ebedf4 !important;
   border-right: 1px solid #ebedf4 !important;
 }
@@ -1693,9 +1712,9 @@ a:hover {
 .rowHeading {
   color: #676c7a;
   display: block;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 32px;
   margin: 0;
 }
 
@@ -1931,7 +1950,7 @@ a:hover {
 .c-form .formLbl {
   color: #676c7a;
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.1px;
@@ -2068,6 +2087,39 @@ a:hover {
 }
 .c-form.js-focus .formLbl {
   color: #057bfe;
+}
+
+.c-dropdown .dropdown-menu.st-clean {
+  padding: 20px 0;
+}
+.c-dropdown .dropdown-menu.st-clean .dropdown-item {
+  padding: 4px 20px;
+  position: relative;
+  transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+}
+.c-dropdown .dropdown-menu.st-clean .dropdown-item:hover {
+  background-color: #057bfe;
+  color: #fff;
+}
+.c-dropdown .dropdown-menu.st-clean .dropdown-item:hover .icon {
+  color: #fff;
+}
+.c-dropdown .dropdown-menu.with-icon .dropdown-item {
+  padding: 6px 20px 6px 40px;
+}
+.c-dropdown .dropdown-menu.with-icon .dropdown-item .icon {
+  color: #2b2b44;
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  height: 16px;
+  width: 16px;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 /* ----- Check Box / Radio Btn ----- */
@@ -2670,6 +2722,7 @@ a:hover {
 
 /* --- Badge --- */
 .c-badge {
+  background-color: #676c7a !important;
   color: #000;
   padding: 3px 6px;
   font-size: 10px;
@@ -2678,6 +2731,12 @@ a:hover {
   margin-left: 3px;
   top: -1px;
   position: relative;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.c-badge.sm {
+  padding: 1px 3px;
 }
 .c-badge.primary {
   color: #fff;
@@ -2904,53 +2963,43 @@ a:hover {
   'isCloseSidebar' class shuld be applied to 'c-pageBody' to take effect
 ------------------------------------- */
 .isCloseSidebar .c-sidebar {
-  width: 66px;
-}
-.isCloseSidebar .c-sidebar .sidebarHead {
-  padding: 10px;
-}
-.isCloseSidebar .c-sidebar .sidebarHead .closeSidebar,
-.isCloseSidebar .c-sidebar .sidebarHead .sidebarLogo {
-  display: none;
-}
-.isCloseSidebar .c-sidebar .sidebarHead .sidebarHamb {
-  display: block;
+  width: 60px;
 }
 .isCloseSidebar .c-sidebar .c-pageNav .navLink {
-  padding: 5px 17px;
+  padding: 5px 12px 5px 12px;
 }
 .isCloseSidebar .c-sidebar .c-pageNav .navLink .linkText {
   animation: hideMenu 0.1s ease-in forwards;
 }
 .isCloseSidebar .c-sidebar .c-pageNav .navLink .icon {
-  left: 19px;
+  left: 15px;
   height: 28px;
   width: 28px;
 }
-.isCloseSidebar .c-header {
-  width: calc(100% - 66px);
-  left: 66px;
-}
 .isCloseSidebar .c-wrapper {
-  margin-left: 66px;
+  margin-left: 60px;
 }
 
 @keyframes showMenu {
   from {
+    display: none;
     opacity: 0;
     visibility: hidden;
   }
   to {
+    display: inline-block;
     opacity: 1;
     visibility: visible;
   }
 }
 @keyframes hideMenu {
   from {
+    display: inline-block;
     opacity: 1;
     visibility: visible;
   }
   to {
+    display: none;
     opacity: 0;
     visibility: hidden;
   }
@@ -3351,6 +3400,7 @@ a:hover {
 }
 
 .c-grapgContainer {
+  border: 1px solid rgba(101, 126, 174, 0.25);
   background: #fff;
   padding: 21px 25px;
   min-height: 100px;
@@ -3363,9 +3413,10 @@ a:hover {
   display: block;
   position: relative;
   color: #171725;
+  font-size: 15px;
   font-weight: 600;
-  font-size: 18px;
   line-height: 21px;
+  text-transform: uppercase;
   margin-bottom: 24px;
 }
 .c-grapgContainer .graphHeading .icon {
@@ -3424,12 +3475,14 @@ a:hover {
 .c-grapgContainer.type-01 .graphHeading {
   background-color: #fff;
   border-bottom: 1px solid #f2f2f2;
-  color: #676c7a;
-  font-size: 15px;
+  color: #000;
   padding: 12px 10px 12px 45px;
   margin: 0;
   position: relative;
+  font-size: 15px;
+  font-weight: 600;
   line-height: 21px;
+  text-transform: uppercase;
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
@@ -3820,11 +3873,9 @@ a:hover {
   display: block;
   position: relative;
   text-transform: uppercase;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 19px;
-  letter-spacing: 0.6px;
   margin-bottom: 10px;
   padding-left: 25px;
 }
@@ -3842,7 +3893,6 @@ a:hover {
   display: block;
   margin: 10px 0;
   letter-spacing: 1px;
-  font-family: "Roboto Condensed", sans-serif;
 }
 .c-cardHolder .card .card-number .nLink {
   color: #000;
@@ -3858,7 +3908,6 @@ a:hover {
   display: block;
   position: relative;
   text-transform: uppercase;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -3961,6 +4010,54 @@ a:hover {
   width: 100%;
 }
 
+.flagList {
+  display: block;
+  position: relative;
+}
+.flagList ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.flagList ul li {
+  border-bottom: solid 1px #ededed;
+  border-right: solid 1px #ededed;
+  box-sizing: border-box;
+  width: 33%;
+  float: left;
+}
+.flagList ul li:nth-child(3n+3) {
+  border-right: 0;
+}
+.flagList .flagActionBtn {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 0;
+  display: block;
+  padding: 15px 15px 15px 65px;
+  text-align: left;
+  position: relative;
+  outline: none;
+  width: 100%;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.flagList .flagActionBtn img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 40px;
+  width: 50px;
+}
+.flagList .flagActionBtn:hover, .flagList .flagActionBtn.st-selected {
+  background-color: #eaf4ff;
+}
+
 /* -------------------------------------
   Component :: Utility classes
 ------------------------------------- */
@@ -4017,10 +4114,8 @@ a:hover {
 }
 
 .font-h {
-  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
 }
 
 /* -------------------------------------
@@ -4060,7 +4155,6 @@ a:hover {
 .daterangepicker {
   background-color: #fff;
   border-color: #ebedf4;
-  font-family: "Montserrat", sans-serif;
   box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
   -moz-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
   -webkit-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);

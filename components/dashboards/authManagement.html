@@ -465,19 +465,11 @@
       </div>
     </div>
     <!-- ***** Setting Header Block End***** -->
+
     <!-- ********** Page Body **********  -->
     <div class="c-pageBody isCloseSidebar">
       <!-- ********** Component :: Sidebar **********  -->
-      <div class="c-sidebar">
-        <div class="sidebarHead">
-          <a href="javascript:void(0);" class="sidebarLogo">
-            <img src="../../images/logo.png" alt="alt" />
-          </a>
-          <button class="closeSidebar"></button>
-          <button class="sidebarHamb">
-            <i class="icon ocr-navicon"></i>
-          </button>
-        </div>
+      <div class="c-sidebar js-hover" role="button">
         <div class="c-pageNav js-customScroll">
           <ul>
             <li>
@@ -511,8 +503,13 @@
 
       <!-- ********** Component :: Header **********  -->
       <div class="c-header">
-        <div class="row no-gutters">
+        <div class="row no-gutters align-items-center">
           <div class="col-7">
+            <div class="headerSect_logo">
+              <a href="javascript:void(0);" class="headerLogo">
+                <img src="../../images/logo.png" alt="alt" />
+              </a>
+            </div>
             <div class="headerSect_l">
               <div class="c-pageTitle">Authorization Management</div>
             </div>
@@ -546,12 +543,49 @@
                       <span class="count">2</span>
                     </button>
                     <div
-                      class="dropdown-menu"
+                      class="dropdown-menu c-notifyDropdown"
                       aria-labelledby="dropdownMenuButton3"
                     >
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="notifyHeading">
+                        Notifications
+                        <span class="c-badge primary sm">10</span>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                Paypal payment method has been enabled for your
+                                store
+                              </div>
+                              <div class="time">2 days ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -565,15 +599,28 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img src="../../images/profile.png" alt="profile" />
+                      <i class="icon ocr-user-2"></i>
                     </button>
                     <div
-                      class="dropdown-menu"
+                      class="dropdown-menu st-clean with-icon"
                       aria-labelledby="dropdownMenuButton2"
                     >
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocr-user-2"></i>
+                        User Profile</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocr-tax"></i>
+                        Subscription</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocr-cog"></i>
+                        Settings</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocr-sign-out"></i>
+                        Logout</a
+                      >
                     </div>
                   </div>
                 </li>

@@ -4378,10 +4378,10 @@ a:hover {
   -o-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
 }
-.c-loginContainer .c-loginHeader .lh_links ul li .link:hover {
+.c-loginContainer .c-loginHeader .lh_links ul li .link:hover, .c-loginContainer .c-loginHeader .lh_links ul li .link.active {
   color: #057bfe;
 }
-.c-loginContainer .c-loginHeader .lh_links ul li .link:hover::before {
+.c-loginContainer .c-loginHeader .lh_links ul li .link:hover::before, .c-loginContainer .c-loginHeader .lh_links ul li .link.active::before {
   content: "";
   position: absolute;
   bottom: -7px;

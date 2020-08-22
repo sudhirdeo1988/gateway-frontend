@@ -4260,7 +4260,8 @@ a:hover {
             &::before {
               @include transition(all ease 0.3s);
             }
-            &:hover {
+            &:hover,
+            &.active {
               color: $primary;
               &::before {
                 content: "";

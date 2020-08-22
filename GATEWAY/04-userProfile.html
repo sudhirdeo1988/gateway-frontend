@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>Custom Filing</title>
+    <title>User Profile Management</title>
 
     <!-- ***** CSS Import ***** -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/dropzone.min.css" />
-    <link rel="stylesheet" href="./css/css-style.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/dropzone.min.css" />
+    <link rel="stylesheet" href="../css/css-style.css" />
   </head>
 
   <body class="no-settingHeader">
@@ -31,7 +31,7 @@
               </a>
             </li>
             <li>
-              <a href="./03-customFiling.html" class="navLink active">
+              <a href="./03-customFiling.html" class="navLink">
                 <i class="icon ocr-tax"></i>
                 <span class="linkText">Custom Filling</span>
               </a>
@@ -66,7 +66,7 @@
                       data-target="#flagModal"
                     >
                       <img
-                        src="images/flags/india.svg"
+                        src="../images/flags/india.svg"
                         class="flag"
                         alt="India"
                       />
@@ -180,7 +180,7 @@
           <!-- *** First Row *** -->
           <div class="row align-items-center mb-20">
             <div class="col">
-              <div class="rowHeading font-h">Custom Filling</div>
+              <div class="rowHeading font-h">User Profile Management</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
@@ -199,7 +199,19 @@
                       role="tab"
                       aria-controls="Details"
                       aria-selected="true"
-                      >Filling Now</a
+                      >User Profile</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="profile-tab"
+                      data-toggle="tab"
+                      href="#profile"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >User Configuration</a
                     >
                   </li>
                 </ul>
@@ -211,96 +223,125 @@
                     role="tabpanel"
                     aria-labelledby="Details-tab"
                   >
-                    <!-- ***** Section 8 ***** -->
-                    <div class="c-grapgContainer">
-                      <div class="profInfo">
-                        <div class="row align-items-center">
-                          <div class="col-12 mb-30">
-                            <h4 class="c-compHeading sm">
-                              Upload File
-                            </h4>
-                            <div class="c-uploadFileSection">
-                              <form
-                                action="/file-upload"
-                                class="dropzone"
-                                id="upload-file-zone"
-                              ></form>
+                    <!-- ***** User Details ***** -->
+                    <div class="c-wrapContainer c-rounded type-01">
+                      <div class="c-profCard">
+                        <div class="profImage">
+                          <img src="../images/profile.svg" alt="profile" />
+                        </div>
+                        <div class="profname">Irene Ball</div>
+                        <div class="profInfo">
+                          <div class="row align-items-center">
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <span class="infoLbl">User ID</span>
+                                <span class="infoTxt">666Q8W</span>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-12">
-                            <div class="c-tableWrapper">
-                              <!-- ***** Table Body ***** -->
-                              <div class="row align-items-center mb-20">
-                                <div class="col">
-                                  <h4 class="c-compHeading sm">
-                                    User Configuration
-                                  </h4>
-                                </div>
-                                <div class="col text-right">
-                                  <button class="c-btn">Refresh</button>
-                                </div>
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <span class="infoLbl">Email</span>
+                                <span class="infoTxt"
+                                  >test.email@example.com</span
+                                >
                               </div>
-
-                              <div class="c-table type-01 bordered">
-                                <table class="table">
-                                  <tr>
-                                    <th style="width: 10%;">ID</th>
-                                    <th style="width: 15%;">Flyier Code</th>
-                                    <th style="width: 17%;">Queue In</th>
-                                    <th style="width: 18%;">Queue Out</th>
-                                    <th style="width: 15%;">Processing Code</th>
-                                    <th style="width: 15%;">
-                                      Environment Name
-                                    </th>
-                                    <th style="width: 10%;" class="text-center">
-                                      Action
-                                    </th>
-                                  </tr>
-                                  <tr>
-                                    <td>01</td>
-                                    <td>S2A</td>
-                                    <td>OCR.TEST.IN</td>
-                                    <td>OCR.TEST.OUT</td>
-                                    <td>S1</td>
-                                    <td>TST</td>
-                                    <td class="text-center">
-                                      <button
-                                        class="tableBtn"
-                                        data-toggle="modal"
-                                        data-target="#editConfig"
-                                      >
-                                        <i class="icon ocr-edit-pen"></i>
-                                      </button>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>01</td>
-                                    <td>S2A</td>
-                                    <td>OCR.TEST.IN</td>
-                                    <td>OCR.TEST.OUT</td>
-                                    <td>S1</td>
-                                    <td>TST</td>
-                                    <td class="text-center">
-                                      <button
-                                        class="tableBtn"
-                                        data-toggle="modal"
-                                        data-target="#editConfig"
-                                      >
-                                        <i class="icon ocr-edit-pen"></i>
-                                      </button>
-                                    </td>
-                                  </tr>
-                                </table>
+                            </div>
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <span class="infoLbl">Status</span>
+                                <span class="infoTag approved">Active</span>
                               </div>
-                              <!-- ***** Table Body ***** -->
+                            </div>
+                            <div class="col">
+                              <div class="c-infoSect">
+                                <button
+                                  class="c-btn"
+                                  data-toggle="modal"
+                                  data-target="#editProfile"
+                                >
+                                  Edit Profile
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- ***** Section 8 End ***** -->
+                    <!-- ***** User Details End ***** -->
                   </div>
                   <!-- ***** Tab :: Details End ***** -->
+
+                  <!-- ***** Tab :: Access & Activity ***** -->
+                  <div
+                    class="tab-pane fade"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <div class="c-grapgContainer">
+                      <div class="row align-items-center">
+                        <div class="col-12">
+                          <div class="c-tableWrapper">
+                            <!-- ***** Table Body ***** -->
+
+                            <div class="c-table type-01 bordered">
+                              <table class="table">
+                                <tr>
+                                  <th style="width: 10%;">ID</th>
+                                  <th style="width: 15%;">Flyier Code</th>
+                                  <th style="width: 17%;">Queue In</th>
+                                  <th style="width: 18%;">Queue Out</th>
+                                  <th style="width: 15%;">Processing Code</th>
+                                  <th style="width: 15%;">
+                                    Environment Name
+                                  </th>
+                                  <th style="width: 10%;" class="text-center">
+                                    Action
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <td>01</td>
+                                  <td>S2A</td>
+                                  <td>OCR.TEST.IN</td>
+                                  <td>OCR.TEST.OUT</td>
+                                  <td>S1</td>
+                                  <td>TST</td>
+                                  <td class="text-center">
+                                    <button
+                                      class="tableBtn"
+                                      data-toggle="modal"
+                                      data-target="#editConfig"
+                                    >
+                                      <i class="icon ocr-edit-pen"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>01</td>
+                                  <td>S2A</td>
+                                  <td>OCR.TEST.IN</td>
+                                  <td>OCR.TEST.OUT</td>
+                                  <td>S1</td>
+                                  <td>TST</td>
+                                  <td class="text-center">
+                                    <button
+                                      class="tableBtn"
+                                      data-toggle="modal"
+                                      data-target="#editConfig"
+                                    >
+                                      <i class="icon ocr-edit-pen"></i>
+                                    </button>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                            <!-- ***** Table Body ***** -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- ***** Tab :: Access & Activity End ***** -->
                 </div>
               </div>
             </div>
@@ -315,17 +356,17 @@
     <!-- **** Modal ::  Edit Profile **** -->
     <div
       class="modal fade c-modal w-750"
-      id="editConfig"
+      id="editProfile"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="editConfigLabel"
+      aria-labelledby="editProfileLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="editConfigLabel">
-              Edit Configuration
+            <h5 class="modal-title" id="editProfileLabel">
+              Edit Profile
             </h5>
             <button
               type="button"
@@ -438,37 +479,37 @@
               <ul>
                 <li>
                   <button class="flagActionBtn st-selected">
-                    <img src="images/flags/india.svg" alt="flag" />
+                    <img src="../images/flags/india.svg" alt="flag" />
                     India
                   </button>
                 </li>
                 <li>
                   <button class="flagActionBtn">
-                    <img src="images/flags/usa.svg" alt="flag" />
+                    <img src="../images/flags/usa.svg" alt="flag" />
                     USA
                   </button>
                 </li>
                 <li>
                   <button class="flagActionBtn">
-                    <img src="images/flags/japan.svg" alt="flag" />
+                    <img src="../images/flags/japan.svg" alt="flag" />
                     Japan
                   </button>
                 </li>
                 <li>
                   <button class="flagActionBtn">
-                    <img src="images/flags/russia.svg" alt="flag" />
+                    <img src="../images/flags/russia.svg" alt="flag" />
                     Russia
                   </button>
                 </li>
                 <li>
                   <button class="flagActionBtn">
-                    <img src="images/flags/india.svg" alt="flag" />
+                    <img src="../images/flags/india.svg" alt="flag" />
                     India
                   </button>
                 </li>
                 <li>
                   <button class="flagActionBtn">
-                    <img src="images/flags/india.svg" alt="flag" />
+                    <img src="../images/flags/india.svg" alt="flag" />
                     India
                   </button>
                 </li>
@@ -481,14 +522,14 @@
     <!-- **** Modal :: Flags Info  End **** -->
 
     <!-- ********** Scripts **********  -->
-    <script src="./js/jquery-3.4.0.min.js"></script>
-    <script src="./js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/daterangepicker.min.js"></script>
-    <script src="./js/datatables.min.js"></script>
-    <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="./js/dropzone.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/daterangepicker.min.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/dropzone.min.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

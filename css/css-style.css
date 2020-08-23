@@ -2175,6 +2175,94 @@ a:hover {
   line-height: 16px;
 }
 
+/* ---- Select 2 - Single select ----- */
+.c-customDropdown .select2-container.select2-container--open .select2-selection {
+  border-color: #057bfe;
+  box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
+  -moz-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
+  -webkit-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
+  -ms-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
+  -o-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.c-customDropdown .select2-selection {
+  box-sizing: border-box;
+  border: 1px solid #e1e2e7;
+  height: 51px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 15px 30px 15px 20px;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  outline: none;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.c-customDropdown .select2-selection .select2-selection__arrow {
+  top: 12px;
+  right: 11px;
+}
+.c-customDropdown .select2-selection .select2-selection__arrow b {
+  border-color: #676c7a transparent transparent transparent;
+}
+.c-customDropdown .select2-selection .select2-selection__rendered {
+  color: #171725;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  padding: 0;
+}
+
+.customeDropdown {
+  border: 0 !important;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
+  -moz-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
+  -webkit-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
+  -ms-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
+  -o-box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
+}
+.customeDropdown .select2-search {
+  padding: 15px;
+}
+.customeDropdown .select2-search .select2-search__field {
+  border: 1px solid #e1e2e7;
+  box-sizing: border-box;
+  color: #171725;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: normal;
+  padding: 10px;
+  outline: none;
+  width: 100%;
+}
+.customeDropdown .select2-results {
+  max-height: 400px;
+}
+.customeDropdown .select2-results .select2-results__options {
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.customeDropdown .select2-results .select2-results__options .select2-results__option {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+.customeDropdown .select2-results .select2-results__options .select2-results__option.select2-results__option--highlighted {
+  background-color: #057bfe;
+}
+
 /* ----- Check Box / Radio Btn ----- */
 .c-chkBox,
 .c-radioBox {
@@ -2812,14 +2900,14 @@ a:hover {
 }
 .c-linkList ul li {
   display: block;
-  margin-bottom: 3px;
 }
 .c-linkList .linkItem {
+  border-bottom: 1px solid #ededed;
   color: #676c7a;
   display: block;
   font-size: 14px;
   font-weight: 500;
-  padding: 4px 0 4px 20px;
+  padding: 6px 0 6px 20px;
   position: relative;
   transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
@@ -2828,17 +2916,139 @@ a:hover {
   -ms-transition: all ease 0.3s;
 }
 .c-linkList .linkItem:hover {
+  background-color: #f2f2f2;
   color: #171725;
 }
 .c-linkList .linkItem::before {
   color: #676c7a;
   position: absolute;
-  top: 6px;
+  top: 8px;
   left: 0px;
   font-size: 15px;
   line-height: 15px;
   font-family: "ocr-inc";
   content: "c";
+}
+
+.c-dataCard {
+  background-color: #fff;
+  border: 1px solid rgba(101, 126, 174, 0.15);
+  display: block;
+  padding: 20px 15px 20px 65px;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.c-dataCard .c-icon {
+  display: inline-block;
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  top: 50%;
+  left: 15px;
+  margin-top: -18px;
+  font-size: 2rem;
+  color: #9dcbff;
+}
+.c-dataCard .c_setting {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+}
+.c-dataCard .c_setting .btn {
+  box-sizing: border-box;
+  padding: 0;
+  height: 23px;
+  width: 23px;
+  text-align: center;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+}
+.c-dataCard .c_setting .btn::after {
+  display: none;
+}
+.c-dataCard .c_setting .btn .icon {
+  font-size: 20px;
+  line-height: 20px;
+  color: #9ca0ab;
+  display: inline-block;
+  vertical-align: middle;
+}
+.c-dataCard .c_setting .dropdown-menu {
+  min-width: 150px;
+  padding: 12px 0;
+}
+.c-dataCard .c_setting .dropdown-menu .dropdown-item {
+  color: #676c7a;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 12px;
+  font-weight: 500;
+  transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+}
+.c-dataCard .c_setting .dropdown-menu .dropdown-item:hover {
+  background-color: #e5f1ff;
+  color: #0163cf;
+}
+.c-dataCard .c_body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 5px;
+  position: relative;
+}
+.c-dataCard .c_body .c_title,
+.c-dataCard .c_body .c_sTitle {
+  color: #676c7a;
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.c-dataCard .c_body .c_sTitle {
+  color: #bfbfbf;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.c-dataCard .c_body .c_number {
+  display: block;
+  margin-bottom: 0;
+}
+.c-dataCard .c_body .c_number .nLink {
+  color: #057bfe;
+  display: inline-block;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 600;
+}
+.c-dataCard.type-01 {
+  border: 1px solid #0163cf;
+  background-color: #016fe9;
+}
+.c-dataCard.type-01 .c-icon {
+  color: rgba(255, 255, 255, 0.6);
+}
+.c-dataCard.type-01 .c_number .nLink,
+.c-dataCard.type-01 .c_setting .btn .icon {
+  color: #fff;
+}
+.c-dataCard.type-01 .c_sTitle,
+.c-dataCard.type-01 .c_title {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* -------------------------------------

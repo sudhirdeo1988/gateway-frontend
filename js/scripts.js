@@ -86,10 +86,6 @@ $(function () {
       minuteStep: 1,
     });
   }
-  // ----  Multi select
-  if ($(".js-multiSelect").length) {
-    $(".js-multiSelect").select2();
-  }
 
   // ----- Data Table - Type 01 - With all Features
   if ($(".js-dataTable02").length) {
@@ -185,5 +181,18 @@ $(function () {
       items: 5,
       responsive: {},
     });
+  }
+
+  // ---- Select 2 dropdown - single option select
+  if ($(".c-customDropdown.selectOne").length) {
+    var $disabledResults = $(".c-customDropdown.selectOne .c-select");
+    $disabledResults.select2({
+      dropdownCssClass: "customeDropdown",
+    });
+  }
+
+  // ----  Select 2 dropdown - Multi select
+  if ($(".js-multiSelect").length) {
+    $(".js-multiSelect").select2();
   }
 });

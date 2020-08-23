@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------------------------------------
 
 Author :: Sudhir Deolalikar
@@ -453,6 +454,18 @@ font-family: 'Overpass', sans-serif;
 
 .ocr-password:before {
   content: "\\";
+}
+
+.ocr-quality:before {
+  content: "";
+}
+
+.ocr-send-1:before {
+  content: "";
+}
+
+.ocr-bookmark-1:before {
+  content: "";
 }
 
 /* -------------------------------------
@@ -1263,6 +1276,16 @@ a:hover {
   content: "";
   display: none !important;
 }
+.c-tableWrapper .c-table.type-01 .childTableTd {
+  margin: -11px !important;
+  width: calc(100% + 20px) !important;
+}
+.c-tableWrapper .c-table.type-01 .childTableTd tr {
+  background-color: #f7f7fa;
+}
+.c-tableWrapper .c-table.type-01 .childTableTd tr:last-child td {
+  border-bottom: 0 !important;
+}
 .c-tableWrapper .c-table.bordered .table tr td {
   border-top: 0;
   border-bottom: 1px solid #ebedf4 !important;
@@ -1946,6 +1969,13 @@ a:hover {
 .staticBtn.error {
   color: #fe4b4b;
 }
+.staticBtn.expandRow {
+  background-color: #ccc;
+  font-size: 14px;
+  margin: 0 5px 0 0;
+  padding: 0 2px;
+  vertical-align: middle;
+}
 
 /* -------------------------------------
 	Component :: Form Fields
@@ -2099,6 +2129,17 @@ a:hover {
 }
 .c-form.js-focus .formLbl {
   color: #057bfe;
+}
+.c-form.c-error .form-control {
+  border-color: #fe4b4b;
+}
+.c-form.c-error .errorMsg {
+  color: #fe4b4b;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-top: 3px;
 }
 
 .c-dropdown .dropdown-menu.st-clean {
@@ -4395,6 +4436,41 @@ a:hover {
   border-radius: 20px;
 }
 
+.c-loginPageHeading {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: 25px;
+}
+.c-loginPageHeading::before {
+  background-color: #057bfe;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  height: 4px;
+  width: 50px;
+  content: "";
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.c-loginPageHeading .subTitle {
+  color: #676c7a;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  margin-bottom: 20px;
+}
+.c-loginPageHeading .mainTitle {
+  color: #171725;
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
 .c-loginBody {
   background: url("../images/map.png") no-repeat center center;
   background-size: 70%;
@@ -4409,6 +4485,8 @@ a:hover {
   border: 1px solid rgba(101, 126, 174, 0.25);
   display: block;
   background-color: #fff;
+  max-width: 450px;
+  margin: 0 auto;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -4496,6 +4574,88 @@ a:hover {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+}
+
+.priceCard {
+  border: 1px solid rgba(101, 126, 174, 0.25);
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.priceCard .cardHead {
+  display: block;
+}
+.priceCard .cardHead .title {
+  color: #171725;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+.priceCard .cardHead .title.lg {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.priceCard .cardHead .icon {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto 15px;
+  text-align: center;
+  color: #057bfe;
+  font-size: 35px;
+  line-height: 40px;
+}
+.priceCard .cardBody {
+  display: block;
+  padding: 20px 0;
+  min-height: 250px;
+}
+.priceCard .cardBody ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.priceCard .cardBody ul li {
+  display: block;
+  position: relative;
+  padding: 3px 10px 3px 30px;
+  color: #676c7a;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+.priceCard .cardBody ul li .icon {
+  color: #057bfe;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.c-signUpModal .modal-content {
+  background-color: transparent;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.c-signUpModal .modal-content .modal-body {
+  padding: 0;
 }
 
 /*# sourceMappingURL=css-style.css.map */

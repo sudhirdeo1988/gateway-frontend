@@ -22,13 +22,6 @@ $(function () {
     }
   );
 
-  $(document).on("click", ".for-flag .dropdown-item", function () {
-    $(this)
-      .parents(".for-flag")
-      .find(".dropdown-toggle img")
-      .attr("src", "../images/flags/" + $(this).val() + ".svg");
-  });
-
   // ---- Form Datepicker
   if ($(".c-dtPicker").length) {
     $(".c-dtPicker .form-control").daterangepicker({
@@ -100,7 +93,7 @@ $(function () {
 
   // ----- Data Table - Type 01 - With all Features
   if ($(".js-dataTable02").length) {
-    $(".js-dataTable02").DataTable({
+    var table = $(".js-dataTable02").DataTable({
       scrollY: "350px",
       paging: true,
       ordering: true,
@@ -115,6 +108,46 @@ $(function () {
           next: '<i class="icon ocr-angle-right"></i>',
         },
       },
+    });
+
+    function format() {
+      return (
+        '<table class="table childTableTd">' +
+        "<tr>" +
+        "<td style='width:15%'></td>" +
+        "<td style='width:15%'>Sent To Custom</td>" +
+        "<td style='width:10%'>CA</td>" +
+        "<td style='width:15%'>2020-07-16 11:55:17.0</td>" +
+        "<td style='width:20%'>CA-Req2020-07-16-11-55-16-633.xm</td>" +
+        "<td style='width:20%'>	rccececpt_edf_0172801957.txt</td>" +
+        "<td style='width:5%'></td>" +
+        "</tr>" +
+        "<tr>" +
+        "<td style='width:15%'></td>" +
+        "<td style='width:15%'>Sent To Custom</td>" +
+        "<td style='width:10%'>CA</td>" +
+        "<td style='width:15%'>2020-07-16 11:55:17.0</td>" +
+        "<td style='width:20%'>CA-Req2020-07-16-11-55-16-633.xm</td>" +
+        "<td style='width:20%'>	rccececpt_edf_0172801957.txt</td>" +
+        "<td style='width:5%'></td>" +
+        "</tr>" +
+        "</table>"
+      );
+    }
+
+    $("body").on("click", "td .expandRow", function () {
+      var tr = $(this).closest("tr");
+      var row = table.row(tr);
+
+      if (row.child.isShown()) {
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass("shown");
+      } else {
+        // Open this row
+        row.child(format()).show();
+        tr.addClass("shown");
+      }
     });
   }
 
@@ -135,9 +168,6 @@ $(function () {
     });
   }
 
-  $(".daterangepicker .ranges li").on("click", function () {
-    $(this).addClass("active").siblings().removeClass("active");
-  });
   if ($("#upload-file-zone").length) {
     Dropzone.options.uploadFileZone = {
       paramName: "file", // The name that will be used to transfer the file

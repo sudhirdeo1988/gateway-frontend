@@ -46,8 +46,8 @@
       <div class="c-loginBody">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-8">8</div>
-            <div class="col-4">
+            <!-- ** Login Window ** -->
+            <div class="col align-self-center">
               <div class="c-loginBlock">
                 <div class="lb_heading">
                   <div class="lb_icon">
@@ -59,12 +59,13 @@
                   >
                 </div>
                 <div class="lb_body">
-                  <div class="form-group c-form">
+                  <div class="form-group c-form c-error">
                     <input
                       type="text"
                       class="form-control"
                       placeholder="Enter User ID"
                     />
+                    <span class="errorMsg">Invalid User ID</span>
                   </div>
                   <div class="form-group c-form">
                     <input
@@ -81,16 +82,100 @@
                 <div class="lb_footer">
                   <span class="lf_text"
                     >Don't have an account yet?
-                    <button class="lf_btn">Sign Up</button></span
+                    <button
+                      class="lf_btn"
+                      data-toggle="modal"
+                      data-target="#signupModal"
+                    >
+                      Sign Up
+                    </button></span
                   >
                 </div>
               </div>
             </div>
+            <!-- ** Login Window End ** -->
           </div>
         </div>
       </div>
       <!-- ** Body End ** -->
     </div>
     <!-- ********** Page Body End **********  -->
+
+    <!-- Sign up Modal -->
+    <div
+      class="modal fade c-signUpModal"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="c-loginBlock">
+              <div class="lb_heading">
+                <div class="lb_icon">
+                  <i class="icon ocr-user-plus"></i>
+                </div>
+                <span class="lb_title">Sign Up</span>
+                <span class="lb_subtitle"><strong>OCR GATEWAY</strong></span>
+              </div>
+              <div class="lb_body">
+                <div class="form-group c-form">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter User ID"
+                  />
+                </div>
+                <div class="form-group c-form">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter First Name"
+                  />
+                </div>
+                <div class="form-group c-form">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter Last Name"
+                  />
+                </div>
+                <div class="form-group c-form">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter Email ID"
+                  />
+                </div>
+                <div class="form-group c-form">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter Password"
+                  />
+                </div>
+                <div class="clearfix text-center">
+                  <button class="c-btn lg">Sign Up</button>
+                  <button
+                    class="c-btn col-gray lg"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sign up Modal End -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>

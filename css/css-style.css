@@ -1147,6 +1147,13 @@ a:hover {
   padding-top: 65px;
 }
 
+.no-customHeader .c-sidebar {
+  top: 37px;
+}
+.no-customHeader .c-pageBody {
+  padding-top: 37px;
+}
+
 .c-wrapper {
   background-color: transparent;
   box-sizing: border-box;
@@ -4866,6 +4873,18 @@ a:hover {
 }
 .c-signUpModal .modal-content .modal-body {
   padding: 0;
+}
+
+.dummyGraph {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+}
+.dummyGraph.lg {
+  max-height: 550px;
+}
+.dummyGraph.sm {
+  max-height: 180px;
 }
 
 /*# sourceMappingURL=css-style.css.map */

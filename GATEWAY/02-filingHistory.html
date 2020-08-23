@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/datatables.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select2.min.css" />
     <link rel="stylesheet" href="../css/css-style.css" />
   </head>
 
@@ -226,37 +227,11 @@
                                   <label class="formLbl"
                                     >Search By: Status</label
                                   >
-                                  <div
-                                    class="dropdown c-dropdown js-selectable"
-                                  >
-                                    <button
-                                      class="btn dropdown-toggle"
-                                      type="button"
-                                      id="dropdownMenuButton3"
-                                      data-toggle="dropdown"
-                                      aria-haspopup="true"
-                                      aria-expanded="false"
-                                    >
-                                      <span class="value">United States</span>
-                                    </button>
-
-                                    <div
-                                      class="dropdown-menu"
-                                      aria-labelledby="dropdownMenuButton3"
-                                    >
-                                      <button
-                                        class="dropdown-item"
-                                        value="option 1"
-                                      >
-                                        Option 1
-                                      </button>
-                                      <button
-                                        class="dropdown-item"
-                                        value="option 2"
-                                      >
-                                        Option 2
-                                      </button>
-                                    </div>
+                                  <div class="c-customDropdown selectOne">
+                                    <select class="c-select">
+                                      <option value="one">First</option>
+                                      <option value="three">Third</option>
+                                    </select>
                                   </div>
                                 </div>
                                 <!-- *** Dropdown End *** -->
@@ -665,6 +640,7 @@
     <script src="../js/daterangepicker.min.js"></script>
     <script src="../js/datatables.min.js"></script>
     <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/select2.min.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
 </html>

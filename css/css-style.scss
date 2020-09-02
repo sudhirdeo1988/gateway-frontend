@@ -2752,9 +2752,9 @@ a:hover {
 .c-badge {
   background-color: $gray-01 !important;
   color: $black;
-  padding: 3px 6px;
+  padding: 3px 6px 1px;
+  height: 15px;
   font-size: 10px;
-  line-height: 11px;
   text-align: center;
   margin-left: 3px;
   top: -1px;
@@ -3536,7 +3536,7 @@ a:hover {
       height: 25px;
       background-color: lighten($gray-01, 10%);
       font-size: 17px;
-      line-height: 31px;
+      padding: 4px 0 0;
       text-align: center;
       @include rounded-corners(5px);
     }

@@ -2872,9 +2872,9 @@ a:hover {
 .c-badge {
   background-color: #676c7a !important;
   color: #000;
-  padding: 3px 6px;
+  padding: 3px 6px 1px;
+  height: 15px;
   font-size: 10px;
-  line-height: 11px;
   text-align: center;
   margin-left: 3px;
   top: -1px;
@@ -3699,7 +3699,7 @@ a:hover {
   height: 25px;
   background-color: #808594;
   font-size: 17px;
-  line-height: 31px;
+  padding: 4px 0 0;
   text-align: center;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

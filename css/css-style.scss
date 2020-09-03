@@ -2887,6 +2887,10 @@ a:hover {
       font-weight: 700;
       margin-bottom: 0;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 15px;
     }
     .c_sTitle {
       color: darken($gray-CCC, 5%);
@@ -3101,6 +3105,12 @@ a:hover {
   }
   .c-wrapper {
     margin-left: 60px;
+  }
+}
+
+.noSidebar {
+  .c-wrapper {
+    margin: 0;
   }
 }
 
@@ -4753,12 +4763,12 @@ a:hover {
 .c-dCard {
   border: 1px solid rgba(101, 126, 174, 0.25);
   box-sizing: border-box;
-  display: inline-block;
-  width: 250px;
-  height: 240px;
-  padding: 30px;
+  float: left;
+  width: 180px;
+  height: 190px;
+  padding: 15px;
   background-color: $white;
-  margin: 0 20px 20px 0;
+  margin: 0 16px 16px 0;
   text-align: center;
   @include rounded-corners(5px);
   @include transition(all ease 0.3s);
@@ -4770,27 +4780,27 @@ a:hover {
     display: block;
     text-align: center;
     text-transform: uppercase;
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 18px;
     font-weight: 700;
-    height: 40px;
+    height: 35px;
   }
   .iconHolder {
     display: block;
-    height: 50px;
-    width: 50px;
-    margin: 25px auto;
+    height: 40px;
+    width: 40px;
+    margin: 20px auto;
     text-align: center;
     .icon {
       display: block;
       color: $primary;
-      font-size: 45px;
-      line-height: 50px;
+      font-size: 40px;
+      line-height: 00px;
     }
     img {
       display: block;
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
     }
   }
   &.type-01 {

@@ -1860,6 +1860,10 @@ a:hover {
 .c-btn.col-orange {
   background-color: #f19d38;
 }
+.c-btn.col-white {
+  background-color: #fff;
+  color: #057bfe;
+}
 
 .tableBtn {
   box-sizing: border-box;
@@ -2943,6 +2947,7 @@ a:hover {
   display: block;
   padding: 20px 15px 20px 65px;
   position: relative;
+  margin-bottom: 16px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -3683,6 +3688,8 @@ a:hover {
   padding: 21px 25px;
   min-height: 100px;
   margin-bottom: 20px;
+  height: auto;
+  overflow: hidden;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -4965,6 +4972,10 @@ a:hover {
   color: #057bfe;
 }
 .c-dCard.hide {
+  display: none;
+}
+
+.hide {
   display: none;
 }
 

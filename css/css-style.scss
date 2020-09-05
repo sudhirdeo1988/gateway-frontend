@@ -360,6 +360,18 @@ File Type :: SCSS file (For styling)
 .ocr-bookmark-1:before {
   content: "\e002";
 }
+.ocr-download-arrow:before {
+  content: "\e003";
+}
+.ocr-settings-line:before {
+  content: "\e004";
+}
+.ocr-tools-line:before {
+  content: "\e005";
+}
+.ocr-sync:before {
+  content: "\e006";
+}
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -833,7 +845,7 @@ a:hover {
   }
   .profileSetting {
     .profileBtn {
-      background-color: $primary;
+      background-color: $gray-CCC;
       box-sizing: border-box;
       border: 0;
       display: block;
@@ -1053,7 +1065,7 @@ a:hover {
   padding: 24px 9px;
   position: relative;
   min-height: 100%;
-  margin: 0 0 0 230px;
+  margin: 0 0 0 60px;
   @include transition(all ease 0.2s);
 }
 .c-settingList {
@@ -1727,6 +1739,7 @@ a:hover {
   margin: 0 15px 0 0;
   outline: none !important;
   @include rounded-corners(50px);
+  @include transition(all ease 0.3s);
   &:last-child {
     margin-right: 0;
   }
@@ -1739,6 +1752,10 @@ a:hover {
     background-color: $white;
     color: $primary;
     border: 1px solid $primary;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
   }
   &.link {
     color: $primary;
@@ -3108,14 +3125,17 @@ a:hover {
       }
     }
   }
-  .c-wrapper {
-    margin-left: 60px;
-  }
 }
-
 .noSidebar {
   .c-wrapper {
     margin: 0;
+  }
+}
+
+// - For styleguide. sidebar always visible - add class to body
+.visibleSidebar {
+  .c-wrapper {
+    margin-left: 230px;
   }
 }
 
@@ -4761,6 +4781,9 @@ a:hover {
   &.lg {
     max-height: 550px;
   }
+  &.md {
+    max-height: 375px;
+  }
   &.sm {
     max-height: 180px;
   }
@@ -4833,4 +4856,153 @@ a:hover {
 }
 .hide {
   display: none;
+}
+
+/* ---------- Graph Cards -------- */
+.c-grapgCard {
+  border: 1px solid rgba(101, 126, 174, 0.25);
+  background: $white;
+  padding: 20px;
+  min-height: 90px;
+  margin-bottom: 20px;
+  height: auto;
+  overflow: hidden;
+  @include rounded-corners(5px);
+  .gc_head {
+    margin-bottom: 20px;
+    .graphHeading {
+      color: $gray-01;
+      display: block;
+      position: relative;
+      color: $font-color;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 18px;
+      text-transform: uppercase;
+    }
+  }
+  .gc_body {
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 0 20px 95px;
+    min-height: 85px;
+    .gc_graph {
+      height: 85px;
+      width: 85px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      img {
+        height: 85px;
+        width: 85px;
+      }
+    }
+    .gc_title {
+      color: lighten($gray-01, 15%);
+      display: block;
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 700;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    .gc_count {
+      color: $primary;
+      display: block;
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 700;
+      margin: 5px 0;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    .gc_footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &.sm {
+    padding: 10px 20px;
+    .gc_head {
+      margin-bottom: 14px;
+    }
+    .gc_body {
+      padding: 0 0 18px 85px;
+      min-height: 70px;
+      .gc_graph {
+        height: 70px;
+        width: 70px;
+        img {
+          height: 70px;
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  &.type-01 {
+    .gc_body {
+      padding: 0;
+      .gc_graph {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        margin-bottom: 20px;
+        img {
+          height: auto;
+          max-height: 200px;
+          width: 100%;
+        }
+      }
+      .gc_title,
+      .gc_count {
+        text-align: center;
+      }
+      .gc_count {
+        color: $gray-01;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+/* ---------- setting list in Graph Cards ----------- */
+.c-settingList {
+  text-align: right;
+  display: block;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 0 2px;
+      .setting {
+        background-color: transparent;
+        border: 0;
+        padding: 2px 0 0;
+        display: block;
+        height: 20px;
+        width: 20px;
+        outline: none;
+        text-align: center;
+        .icon {
+          color: $gray-01;
+          display: block;
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+    }
+  }
 }

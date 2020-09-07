@@ -447,7 +447,45 @@
     <!-- ***** Setting Header Block End***** -->
 
     <!-- ********** Page Body **********  -->
-    <div class="c-pageBody noSidebar">
+    <div class="c-pageBody isCloseSidebar">
+      <!-- ********** Component :: Sidebar **********  -->
+      <div class="c-sidebar js-hover" role="button">
+        <div class="c-pageNav js-customScroll">
+          <ul>
+            <li>
+              <a href="javascript:void(0)" class="navLink active">
+                <i class="icon ocr-dashboard"></i>
+                <span class="linkText">Option 1</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void" class="navLink">
+                <i class="icon ocr-content-7"></i>
+                <span class="linkText">Option 2</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="navLink">
+                <i class="icon ocr-repeat-redo"></i>
+                <span class="linkText">Refresh</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="navLink"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                <i class="icon ocr-cog"></i>
+                <span class="linkText">Dashboard Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** Component :: Sidebar End **********  -->
+
       <!-- ********** Component :: Wrapper **********  -->
       <div class="c-wrapper">
         <div class="container-fluid">
@@ -455,7 +493,7 @@
           <div class="row">
             <div class="col-12">
               <div class="c-grapgContainer">
-                <div class="graphHeading mb-20">CONFIGURATION DASHBAORD</div>
+                <div class="graphHeading mb-20">Common Configurations</div>
                 <div
                   class="row row-cols-1 row-cols-lg-4 row-cols-md-4 row-cols-sm-2"
                 >
@@ -608,12 +646,12 @@
                     >
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">VM CONFIGURATION TOOL</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -622,12 +660,12 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">LDAP CONFIGURATION</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -636,12 +674,12 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">ACS STATUS MAPPING</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -650,14 +688,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >WATCH LIST SCREENING DEFAULTS</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -666,12 +704,12 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">VM CONFIGURATION TOOL</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -680,12 +718,12 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">LDAP CONFIGURATION</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -694,12 +732,12 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">ACS STATUS MAPPING</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -708,14 +746,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard show" data-module="vm">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >WATCH LIST SCREENING DEFAULTS</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -724,14 +762,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >PRODUCT OUTBOUND CONFIGURATION</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -740,12 +778,12 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">FIELD CONFIGURATION</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -754,14 +792,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >UPLOAD TEMPLATE CONFIGURATION</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -770,14 +808,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >QUESTIONNAIRE CONFIGURATION</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -786,14 +824,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >PRODUCT OUTBOUND CONFIGURATION</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -802,12 +840,12 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title">FIELD CONFIGURATION</span>
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -816,14 +854,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >UPLOAD TEMPLATE CONFIGURATION</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -832,14 +870,14 @@
 
                       <!-- ***** Card ***** -->
                       <div class="col colFilterCard hide" data-module="cc">
-                        <div class="c-dataCard type-01">
+                        <div class="c-dataCard type-02">
                           <i class="c-icon ocr-cog"></i>
                           <div class="c_body">
                             <span class="c_title"
                               >QUESTIONNAIRE CONFIGURATION</span
                             >
                             <div class="c_number pt-10">
-                              <button class="c-btn col-white">Configure</button>
+                              <button class="c-btn">Configure</button>
                             </div>
                           </div>
                         </div>
@@ -1161,6 +1199,110 @@
       </div>
     </div>
     <!-- **** Modal :: Authorization Management Dashboard Setting End **** -->
+
+    <!-- **** Toast :: Container **** -->
+    <div aria-live="polite" aria-atomic="true" class="c-toastContainer">
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-success"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="ocr-android-done icon"></i>
+          </div>
+          <span class="toastMsg">Sample of success alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-info"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="ocr-info icon"></i>
+          </div>
+          <span class="toastMsg">Sample of info alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-warning"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="ocr-exclamation icon"></i>
+          </div>
+          <span class="toastMsg">Sample of warning alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+
+      <!-- *** Toast *** -->
+      <div
+        class="toast c-toast col-error"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-autohide="false"
+      >
+        <div class="toast-body">
+          <div class="toastIcon">
+            <i class="icon ocr-android-close"></i>
+          </div>
+          <span class="toastMsg">Sample of error alert.</span>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="toast"
+            aria-label="Close"
+          >
+            <i class="icon ocr-android-close"></i>
+          </button>
+        </div>
+      </div>
+      <!-- *** Toast End *** -->
+    </div>
+    <!-- **** Toast :: Container End **** -->
 
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>

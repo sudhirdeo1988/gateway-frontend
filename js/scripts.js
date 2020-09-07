@@ -1,5 +1,11 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
+
+  // ---- Toast Messages :: show Toast messages
+  if ($(".c-toast").length > 0) {
+    $(".c-toast").toast("show");
+  }
+
   // -- Open close sidebar interaction
   if ($(".c-sidebar").length > 0) {
     $(".c-sidebar.js-hover").hover(function () {

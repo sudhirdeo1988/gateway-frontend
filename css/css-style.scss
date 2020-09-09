@@ -845,7 +845,7 @@ a:hover {
   }
   .profileSetting {
     .profileBtn {
-      background-color: $gray-CCC;
+      background-color: $gray-01;
       box-sizing: border-box;
       border: 0;
       display: block;
@@ -884,7 +884,7 @@ a:hover {
       list-style: none;
       li {
         display: inline-block;
-        margin-right: 25px;
+        margin-right: 15px;
         vertical-align: middle;
         &:last-child {
           margin-right: 0;
@@ -942,9 +942,9 @@ a:hover {
         color: $white;
         height: 14px;
         min-width: 15px;
-        line-height: 14px;
+        line-height: 15px;
         text-align: center;
-        border-radius: 3px;
+        @include rounded-corners(10px);
       }
       &::after {
         display: none;
@@ -1935,11 +1935,11 @@ a:hover {
     box-sizing: border-box;
     color: $font-color;
     display: block;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 15px;
+    line-height: 22px;
     letter-spacing: normal;
-    height: 51px;
-    padding: 14px 20px 16px;
+    height: 44px;
+    padding: 10px 20px 10px;
     @include rounded-corners(6px);
     @include box-shadow(none);
     &::placeholder {
@@ -1961,10 +1961,10 @@ a:hover {
     .btn {
       box-sizing: border-box;
       border: 1px solid #e1e2e7;
-      height: 51px;
-      font-size: 16px;
-      line-height: 19px;
-      padding: 15px 30px 15px 20px;
+      height: 44px;
+      font-size: 15px;
+      line-height: 22px;
+      padding: 10px 30px 10px 20px;
       text-align: left;
       position: relative;
       width: 100%;
@@ -1981,7 +1981,7 @@ a:hover {
         border: 0;
         color: $gray-01;
         position: absolute;
-        top: 17px;
+        top: 15px;
         right: 13px;
         height: 15px;
         width: 15px;
@@ -2013,7 +2013,7 @@ a:hover {
       }
       &::after {
         position: absolute;
-        top: 17px;
+        top: 14px;
         right: 10px;
         height: 15px;
         width: 20px;
@@ -2095,7 +2095,7 @@ a:hover {
       .dropdown-item {
         padding: 6px 20px 6px 40px;
         .icon {
-          color: lighten($font-color, 10%);
+          color: $gray-01;
           position: absolute;
           top: 7px;
           left: 15px;
@@ -2124,10 +2124,10 @@ a:hover {
   .select2-selection {
     box-sizing: border-box;
     border: 1px solid #e1e2e7;
-    height: 51px;
-    font-size: 16px;
-    line-height: 19px;
-    padding: 15px 30px 15px 20px;
+    height: 44px;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 12px 30px 9px 20px;
     text-align: left;
     position: relative;
     width: 100%;
@@ -2135,7 +2135,7 @@ a:hover {
     @include transition(all ease 0.3s);
 
     .select2-selection__arrow {
-      top: 12px;
+      top: 9px;
       right: 11px;
       b {
         border-color: $gray-01 transparent transparent transparent;
@@ -2536,23 +2536,23 @@ a:hover {
     border: 1px solid #e1e2e7;
     box-sizing: border-box;
     letter-spacing: normal;
-    height: 51px;
-    padding: 10px;
+    height: 44px;
+    padding: 6px 10px;
     .select2-selection__choice {
       border: 0;
       background-color: rgba(40, 79, 152, 0.1);
       display: inline-block;
       margin: 0 10px 0 0;
-      height: 30px;
-      padding: 6px 10px;
+      height: 26px;
+      padding: 4px 10px;
       position: relative;
-      top: -1px;
+      top: 1px;
       box-sizing: border-box;
       @include rounded-corners(5px);
       .select2-selection__choice__display {
         float: left;
         padding: 0;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         line-height: 18px;
         color: #284f98;
@@ -2606,7 +2606,7 @@ a:hover {
   display: block;
   position: relative;
   .dropdown-item {
-    color: $font-color;
+    color: $gray-01;
     display: block;
     padding: 7px 0;
     font-size: 14px;
@@ -4567,6 +4567,38 @@ a:hover {
     .c-btn {
       background-color: $white;
       color: $primary;
+    }
+  }
+  &.theme-color-01 {
+    border: 1px solid lighten($theme-color-01, 10%);
+    background-color: $theme-color-01;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $theme-color-01;
+    }
+  }
+  &.theme-color-02 {
+    border: 1px solid lighten($theme-color-02, 10%);
+    background-color: $theme-color-02;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $theme-color-02;
     }
   }
 

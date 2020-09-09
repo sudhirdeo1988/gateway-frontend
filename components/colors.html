@@ -502,7 +502,7 @@
       <!-- ********** Component :: Header **********  -->
       <div class="c-header">
         <div class="row no-gutters">
-          <div class="col-7">
+          <div class="col-9">
             <div class="headerSect_logo">
               <a href="javascript:void(0);" class="headerLogo">
                 <img src="../../images/logo.png" alt="alt" />
@@ -510,6 +510,30 @@
             </div>
             <div class="headerSect_l">
               <div class="c-pageTitle">OCR Frontend Styleguide</div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group c-form m0">
+              <div class="dropdown c-dropdown js-themeChanger">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton3"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="value">Select Theme</span>
+                </button>
+
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton3"
+                >
+                  <button class="dropdown-item" value="dark">Dark</button>
+                  <button class="dropdown-item" value="light">Light</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -595,5 +619,31 @@
     <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../js/datatables.min.js"></script>
     <script src="../js/scripts.js"></script>
+    <script>
+      $(function () {
+        if (localStorage) {
+          var theme = localStorage.getItem("theme");
+          document.querySelector("body").classList.add("theme-" + theme);
+        }
+        // ----- Dropdown Settings
+        $(document).on(
+          "click",
+          ".js-themeChanger .dropdown-menu .dropdown-item",
+          function () {
+            $(this)
+              .parents(".js-themeChanger")
+              .find(".dropdown-toggle .value")
+              .text($(this).val());
+
+            var selectedValue = $(this).val();
+            var className = "theme-" + selectedValue;
+            document.querySelector("body").classList.add(className);
+            if (localStorage) {
+              localStorage.setItem("theme", selectedValue);
+            }
+          }
+        );
+      });
+    </script>
   </body>
 </html>

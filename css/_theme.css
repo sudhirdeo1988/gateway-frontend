@@ -1,0 +1,10 @@
+.theme-light .container {
+  background-color: #ffb233;
+  border: 5px solid #057bfe;
+}
+.theme-dark .container {
+  background-color: #aaa;
+  border: 5px solid #333;
+}
+
+/*# sourceMappingURL=_theme.css.map */

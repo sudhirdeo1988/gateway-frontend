@@ -962,7 +962,7 @@ a:hover {
   margin: 0;
 }
 .c-header .profileSetting .profileBtn {
-  background-color: #ccc;
+  background-color: #676c7a;
   box-sizing: border-box;
   border: 0;
   display: block;
@@ -1001,7 +1001,7 @@ a:hover {
 }
 .c-header .headerSettings ul li {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 15px;
   vertical-align: middle;
 }
 .c-header .headerSettings ul li:last-child {
@@ -1058,9 +1058,11 @@ a:hover {
   color: #fff;
   height: 14px;
   min-width: 15px;
-  line-height: 14px;
+  line-height: 15px;
   text-align: center;
-  border-radius: 3px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 .c-header .notifySetting .profileBtn::after {
   display: none;
@@ -2041,11 +2043,11 @@ a:hover {
   box-sizing: border-box;
   color: #171725;
   display: block;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 15px;
+  line-height: 22px;
   letter-spacing: normal;
-  height: 51px;
-  padding: 14px 20px 16px;
+  height: 44px;
+  padding: 10px 20px 10px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -2079,10 +2081,10 @@ a:hover {
 .c-form .c-dropdown .btn {
   box-sizing: border-box;
   border: 1px solid #e1e2e7;
-  height: 51px;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 15px 30px 15px 20px;
+  height: 44px;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 10px 30px 10px 20px;
   text-align: left;
   position: relative;
   width: 100%;
@@ -2103,7 +2105,7 @@ a:hover {
   border: 0;
   color: #676c7a;
   position: absolute;
-  top: 17px;
+  top: 15px;
   right: 13px;
   height: 15px;
   width: 15px;
@@ -2130,7 +2132,7 @@ a:hover {
 }
 .c-form.c-dateRangePicker .dtPickWrapper::after, .c-form.c-dtPicker .dtPickWrapper::after, .c-form.c-timePicker .dtPickWrapper::after {
   position: absolute;
-  top: 17px;
+  top: 14px;
   right: 10px;
   height: 15px;
   width: 20px;
@@ -2201,7 +2203,7 @@ a:hover {
   padding: 6px 20px 6px 40px;
 }
 .c-dropdown .dropdown-menu.with-icon .dropdown-item .icon {
-  color: #2b2b44;
+  color: #676c7a;
   position: absolute;
   top: 7px;
   left: 15px;
@@ -2226,10 +2228,10 @@ a:hover {
 .c-customDropdown .select2-selection {
   box-sizing: border-box;
   border: 1px solid #e1e2e7;
-  height: 51px;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 15px 30px 15px 20px;
+  height: 44px;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 12px 30px 9px 20px;
   text-align: left;
   position: relative;
   width: 100%;
@@ -2241,7 +2243,7 @@ a:hover {
   -ms-transition: all ease 0.3s;
 }
 .c-customDropdown .select2-selection .select2-selection__arrow {
-  top: 12px;
+  top: 9px;
   right: 11px;
 }
 .c-customDropdown .select2-selection .select2-selection__arrow b {
@@ -2656,18 +2658,18 @@ a:hover {
   border: 1px solid #e1e2e7;
   box-sizing: border-box;
   letter-spacing: normal;
-  height: 51px;
-  padding: 10px;
+  height: 44px;
+  padding: 6px 10px;
 }
 .select2-container .select2-selection--multiple .select2-selection__choice {
   border: 0;
   background-color: rgba(40, 79, 152, 0.1);
   display: inline-block;
   margin: 0 10px 0 0;
-  height: 30px;
-  padding: 6px 10px;
+  height: 26px;
+  padding: 4px 10px;
   position: relative;
-  top: -1px;
+  top: 1px;
   box-sizing: border-box;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2676,7 +2678,7 @@ a:hover {
 .select2-container .select2-selection--multiple .select2-selection__choice .select2-selection__choice__display {
   float: left;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   color: #284f98;
@@ -2740,7 +2742,7 @@ a:hover {
   position: relative;
 }
 .c-dropdown .dropdown-item {
-  color: #171725;
+  color: #676c7a;
   display: block;
   padding: 7px 0;
   font-size: 14px;
@@ -4694,6 +4696,34 @@ a:hover {
 .c-dCard.type-01 .c-btn {
   background-color: #fff;
   color: #057bfe;
+}
+.c-dCard.theme-color-01 {
+  border: 1px solid #b1c2d2;
+  background-color: #90a8c0;
+}
+.c-dCard.theme-color-01 .title {
+  color: #fff;
+}
+.c-dCard.theme-color-01 .iconHolder .icon {
+  color: #fff;
+}
+.c-dCard.theme-color-01 .c-btn {
+  background-color: #fff;
+  color: #90a8c0;
+}
+.c-dCard.theme-color-02 {
+  border: 1px solid #7192a6;
+  background-color: #58788c;
+}
+.c-dCard.theme-color-02 .title {
+  color: #fff;
+}
+.c-dCard.theme-color-02 .iconHolder .icon {
+  color: #fff;
+}
+.c-dCard.theme-color-02 .c-btn {
+  background-color: #fff;
+  color: #58788c;
 }
 .c-dCard.hide {
   display: none;

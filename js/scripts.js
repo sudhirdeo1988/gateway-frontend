@@ -177,17 +177,6 @@ $(function () {
       dictDefaultMessage: "Drop",
     };
   }
-  if ($(".owl-carousel").length) {
-    $(".owl-carousel").owlCarousel({
-      margin: 10,
-      loop: false,
-      mouseDrag: true,
-      nav: true,
-      dots: true,
-      items: 5,
-      responsive: {},
-    });
-  }
 
   // ---- Select 2 dropdown - single option select
   if ($(".c-customDropdown.selectOne").length) {
@@ -200,5 +189,17 @@ $(function () {
   // ----  Select 2 dropdown - Multi select
   if ($(".js-multiSelect").length) {
     $(".js-multiSelect").select2();
+  }
+
+  if ($(".js-dataSlider").length) {
+    $(".js-dataSlider").owlCarousel({
+      loop: true,
+      mouseDrag: true,
+      nav: true,
+      dots: false,
+      items: 1,
+      autoplay: true,
+      autoplaySpeed: 1500,
+    });
   }
 });

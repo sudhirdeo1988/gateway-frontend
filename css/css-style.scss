@@ -2832,142 +2832,6 @@ a:hover {
   }
 }
 
-// --- Card New
-.c-dataCard {
-  background-color: $white;
-  border: 1px solid rgba(101, 126, 174, 0.15);
-  display: block;
-  padding: 20px 15px 20px 65px;
-  position: relative;
-  margin-bottom: 16px;
-  @include rounded-corners(5px);
-  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
-  .c-icon {
-    display: inline-block;
-    position: absolute;
-    height: 36px;
-    width: 36px;
-    top: 50%;
-    left: 15px;
-    margin-top: -18px;
-    font-size: 2rem;
-    color: lighten($primary, 30%);
-  }
-  .c_setting {
-    position: absolute;
-    top: 2px;
-    right: 0;
-    height: 25px;
-    width: 25px;
-    background-color: transparent;
-    .btn {
-      box-sizing: border-box;
-      padding: 0;
-      height: 23px;
-      width: 23px;
-      text-align: center;
-      @include box-shadow(none);
-      &::after {
-        display: none;
-      }
-      .icon {
-        font-size: 20px;
-        line-height: 20px;
-        color: lighten($gray-01, 20%);
-        display: inline-block;
-        vertical-align: middle;
-      }
-    }
-    .dropdown-menu {
-      min-width: 150px;
-      padding: 12px 0;
-      .dropdown-item {
-        color: $gray-01;
-        font-size: 12px;
-        line-height: 16px;
-        padding: 4px 12px;
-        font-weight: 500;
-        @include transition(all ease 0.2s);
-        &:hover {
-          background-color: lighten($primary, 44%);
-          color: darken($primary, 10%);
-        }
-      }
-    }
-  }
-  .c_body {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 0 5px;
-    position: relative;
-    .c_title,
-    .c_sTitle {
-      color: $gray-01;
-      display: block;
-      font-size: 13px;
-      line-height: 16px;
-      font-weight: 700;
-      margin-bottom: 0;
-      text-transform: uppercase;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding-right: 15px;
-    }
-    .c_sTitle {
-      color: darken($gray-CCC, 5%);
-      font-size: 11px;
-      line-height: 18px;
-      font-weight: 700;
-    }
-    .c_number {
-      display: block;
-      margin-bottom: 0;
-      .nLink {
-        color: $primary;
-        display: inline-block;
-        font-size: 32px;
-        line-height: 44px;
-        font-weight: 600;
-      }
-    }
-  }
-  &.type-01 {
-    border: 1px solid darken($primary, 10%);
-    background-color: darken($primary, 5%);
-    .c-icon {
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .c_number .nLink,
-    .c_setting .btn .icon {
-      color: $white;
-    }
-    .c_sTitle,
-    .c_title {
-      color: rgba(255, 255, 255, 0.9);
-    }
-  }
-  &.type-02 {
-    border: 1px solid darken($secondary, 10%);
-    background-color: darken($secondary, 5%);
-    .c-icon {
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .c_number .nLink,
-    .c_setting .btn .icon {
-      color: $secondary;
-    }
-    .c_number .c-btn {
-      color: $secondary;
-      background-color: $white;
-    }
-    .c_sTitle,
-    .c_title {
-      color: rgba(255, 255, 255, 0.9);
-    }
-  }
-}
-
 /* -------------------------------------
 	Component :: Accordian
 ------------------------------------- */
@@ -3956,255 +3820,560 @@ a:hover {
 /* -------------------------------------
 	Component :: Cards
 ------------------------------------- */
-.c-cardHolder {
-  .col {
-    margin-bottom: 10px;
+
+.c-dataCard {
+  background-color: $white;
+  border: 1px solid rgba(101, 126, 174, 0.15);
+  display: block;
+  padding: 20px 15px 20px 65px;
+  position: relative;
+  margin-bottom: 16px;
+  @include rounded-corners(5px);
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
+  .c-icon {
+    display: inline-block;
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    top: 50%;
+    left: 15px;
+    margin-top: -18px;
+    font-size: 2rem;
+    color: lighten($primary, 30%);
   }
-  .card {
-    border: 0;
-    position: relative;
-    @include box-shadow(0 0 12px $gray);
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: -25px 0 0 -25px;
-      height: 50px;
-      width: 50px;
-      line-height: 50px;
-      font-size: 50px;
-      color: rgba(0, 0, 0, 0.05);
-      font-family: $icon-font;
-      content: "\2d";
-    }
-    .card-body {
-      position: relative;
-      padding: 15px;
-      .card-setting {
-        position: absolute;
-        top: 2px;
-        right: 0;
-        height: 25px;
-        width: 25px;
-        background-color: transparent;
-        .btn {
-          box-sizing: border-box;
-          padding: 0;
-          height: 23px;
-          width: 23px;
-          text-align: center;
-          @include box-shadow(none);
-          &::after {
-            display: none;
-          }
-          .icon {
-            font-size: 20px;
-            line-height: 20px;
-            color: lighten($gray-01, 20%);
-            display: inline-block;
-            vertical-align: middle;
-          }
-        }
-        .dropdown-menu {
-          min-width: 150px;
-          padding: 12px 0;
-          .dropdown-item {
-            color: $gray-01;
-            font-size: 12px;
-            line-height: 16px;
-            padding: 4px 12px;
-            font-weight: 500;
-            @include transition(all ease 0.2s);
-            &:hover {
-              background-color: lighten($gray-01, 44%);
-              color: darken($gray-01, 10%);
-            }
-          }
-        }
+  .c_setting {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    .btn {
+      box-sizing: border-box;
+      padding: 0;
+      height: 23px;
+      width: 23px;
+      text-align: center;
+      @include box-shadow(none);
+      &::after {
+        display: none;
       }
-    }
-    .card-title {
-      color: rgba(0, 0, 0, 0.3);
-      display: block;
-      position: relative;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 19px;
-      margin-bottom: 10px;
-      padding-left: 25px;
       .icon {
-        position: absolute;
-        top: 0;
-        left: 2px;
-        color: rgba(0, 0, 0, 0.2);
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 20px;
+        line-height: 20px;
+        color: lighten($gray-01, 20%);
         display: inline-block;
+        vertical-align: middle;
       }
     }
-    .card-number {
-      color: $black;
+    .dropdown-menu {
+      min-width: 150px;
+      padding: 12px 0;
+      .dropdown-item {
+        color: $gray-01;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 4px 12px;
+        font-weight: 500;
+        @include transition(all ease 0.2s);
+        &:hover {
+          background-color: lighten($primary, 44%);
+          color: darken($primary, 10%);
+        }
+      }
+    }
+  }
+  .c_body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 5px;
+    position: relative;
+    .c_title,
+    .c_sTitle {
+      color: $gray-01;
       display: block;
-      margin: 10px 0;
-      letter-spacing: 1px;
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 700;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 15px;
+    }
+    .c_sTitle {
+      color: darken($gray-CCC, 5%);
+      font-size: 11px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+    .c_number {
+      display: block;
+      margin-bottom: 0;
       .nLink {
-        color: $black;
-        border: 0;
+        color: $primary;
         display: inline-block;
-        font-size: 36px;
+        font-size: 32px;
+        line-height: 44px;
         font-weight: 600;
-        line-height: 42px;
-        outline: none;
       }
     }
-    .card-info {
-      color: rgba(0, 0, 0, 0.3);
+  }
+  &.theme-primary {
+    border: 1px solid darken($primary, 10%);
+    background-color: darken($primary, 5%);
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink,
+    .c_setting .btn .icon {
+      color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  &.theme-secondary {
+    border: 1px solid darken($secondary, 10%);
+    background-color: darken($secondary, 5%);
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink,
+    .c_setting .btn .icon {
+      color: $secondary;
+    }
+    .c_number .c-btn {
+      color: $secondary;
+      background-color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  &.theme-color-3 {
+    border: 1px solid darken($theme-color-3, 10%);
+    background-color: darken($theme-color-3, 5%);
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink {
+      color: $white;
+    }
+    .c_setting .btn .icon {
+      color: $theme-color-3;
+    }
+    .c_number .c-btn {
+      color: $theme-color-3;
+      background-color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  &.theme-color-2 {
+    border: 1px solid darken($theme-color-2, 10%);
+    background-color: darken($theme-color-2, 5%);
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink {
+      color: $white;
+    }
+    .c_setting .btn .icon {
+      color: $theme-color-2;
+    }
+    .c_number .c-btn {
+      color: $theme-color-2;
+      background-color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  &.theme-color-1 {
+    border: 1px solid darken($theme-color-1, 10%);
+    background-color: darken($theme-color-1, 5%);
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink {
+      color: $white;
+    }
+    .c_setting .btn .icon {
+      color: $theme-color-1;
+    }
+    .c_number .c-btn {
+      color: $theme-color-1;
+      background-color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  &.theme-gradient-1 {
+    border: 0;
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink {
+      color: $white;
+    }
+    .c_setting .btn .icon {
+      color: $theme-color-1;
+    }
+    .c_number .c-btn {
+      color: $theme-color-1;
+      background-color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    @include gradient-1;
+  }
+  &.theme-gradient-2 {
+    border: 0;
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink {
+      color: $white;
+    }
+    .c_setting .btn .icon {
+      color: $theme-color-1;
+    }
+    .c_number .c-btn {
+      color: $theme-color-1;
+      background-color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    @include gradient-2;
+  }
+  &.theme-gradient-3 {
+    border: 0;
+    .c-icon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .c_number .nLink {
+      color: $white;
+    }
+    .c_setting .btn .icon {
+      color: $theme-color-1;
+    }
+    .c_number .c-btn {
+      color: $theme-color-1;
+      background-color: $white;
+    }
+    .c_sTitle,
+    .c_title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    @include gradient-3;
+  }
+}
+
+.c-dCard {
+  border: 1px solid rgba(101, 126, 174, 0.25);
+  box-sizing: border-box;
+  float: left;
+  width: 180px;
+  height: 190px;
+  padding: 15px;
+  background-color: $white;
+  margin: 0 16px 16px 0;
+  text-align: center;
+  @include rounded-corners(5px);
+  @include transition(all ease 0.3s);
+  &:hover {
+    @include transform(scale(1.05));
+  }
+  .title {
+    color: $gray-01;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    height: 35px;
+  }
+  .iconHolder {
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: 20px auto;
+    text-align: center;
+    .icon {
+      display: block;
+      color: $primary;
+      font-size: 40px;
+      line-height: 00px;
+    }
+    img {
+      display: block;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  &.theme-primary {
+    border: 1px solid lighten($primary, 10%);
+    background-color: $primary;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $primary;
+    }
+  }
+
+  &.theme-secondary {
+    border: 1px solid lighten($secondary, 10%);
+    background-color: $secondary;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $secondary;
+    }
+  }
+
+  &.theme-color-2 {
+    border: 1px solid lighten($theme-color-2, 10%);
+    background-color: $theme-color-2;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $theme-color-2;
+    }
+  }
+
+  &.theme-gradient-1 {
+    border: 0;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $font-color;
+    }
+    @include gradient-1;
+  }
+
+  &.theme-gradient-2 {
+    border: 1px solid transparent;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $font-color;
+    }
+    @include gradient-2;
+  }
+
+  &.theme-gradient-3 {
+    border: 0;
+    .title {
+      color: $white;
+    }
+    .iconHolder {
+      .icon {
+        color: $white;
+      }
+    }
+    .c-btn {
+      background-color: $white;
+      color: $theme-color-1;
+    }
+    @include gradient-3;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.c-grapgCard {
+  border: 1px solid rgba(101, 126, 174, 0.25);
+  background: $white;
+  padding: 20px;
+  min-height: 90px;
+  margin-bottom: 20px;
+  height: auto;
+  overflow: hidden;
+  @include rounded-corners(5px);
+  .gc_head {
+    margin-bottom: 20px;
+    .graphHeading {
+      color: $gray-01;
       display: block;
       position: relative;
+      color: $font-color;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 18px;
       text-transform: uppercase;
-      font-size: 16px;
+    }
+  }
+  .gc_body {
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 0 20px 95px;
+    min-height: 85px;
+    .gc_graph {
+      height: 85px;
+      width: 85px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      img {
+        height: 85px;
+        width: 85px;
+      }
+    }
+    .gc_title {
+      color: lighten($gray-01, 15%);
+      display: block;
+      font-size: 12px;
+      line-height: 16px;
       font-weight: 700;
-      line-height: 20px;
-      letter-spacing: 0.7px;
+      margin-bottom: 0;
+      text-transform: uppercase;
       text-align: right;
     }
+    .gc_count {
+      color: $primary;
+      display: block;
+      font-size: 28px;
+      line-height: 36px;
+      font-weight: 700;
+      margin: 5px 0;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    .gc_footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
 
-    &.type-01 {
-      background-color: $primary;
-      &::before {
-        color: rgba(255, 255, 255, 0.1);
-      }
-      .card-title {
-        color: rgba(255, 255, 255, 0.7);
-        .icon {
-          color: rgba(255, 255, 255, 0.5);
-        }
-      }
-      .card-info {
-        color: darken($primary, 15%);
-      }
-      .card-number {
-        .nLink {
-          color: $white;
+  &.sm {
+    padding: 10px 20px;
+    .gc_head {
+      margin-bottom: 14px;
+    }
+    .gc_body {
+      padding: 0 0 18px 85px;
+      min-height: 70px;
+      .gc_graph {
+        height: 70px;
+        width: 70px;
+        img {
+          height: 70px;
+          width: 70px;
         }
       }
     }
+  }
 
-    &.type-02 {
-      background-color: $primary;
-      background: $primary;
-      background: -moz-linear-gradient(
-        -45deg,
-        lighten($primary, 5%) 0%,
-        lighten($primary, 10%) 47%,
-        darken($primary, 6%) 100%
-      );
-      background: -webkit-linear-gradient(
-        -45deg,
-        lighten($primary, 5%) 0%,
-        lighten($primary, 10%) 47%,
-        darken($primary, 6%) 100%
-      );
-      background: linear-gradient(
-        135deg,
-        lighten($primary, 5%) 0%,
-        lighten($primary, 10%) 47%,
-        darken($primary, 6%) 100%
-      );
-
-      &::before {
-        color: rgba(255, 255, 255, 0.15);
-      }
-      .card-title {
-        color: rgba(255, 255, 255, 0.7);
-        .icon {
-          color: rgba(255, 255, 255, 0.5);
+  &.type-01 {
+    .gc_body {
+      padding: 0;
+      .gc_graph {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        margin-bottom: 20px;
+        img {
+          height: auto;
+          max-height: 200px;
+          width: 100%;
         }
       }
-      .card-info {
-        color: darken($primary, 25%);
+      .gc_title,
+      .gc_count {
+        text-align: center;
       }
-      .card-number {
-        .nLink {
-          color: $white;
-        }
-      }
-      .card-body {
-        .card-setting {
-          .btn {
-            .icon {
-              color: $white;
-            }
-          }
-          .dropdown-menu {
-            .dropdown-item {
-              color: $gray-01;
-              &:hover {
-                background-color: lighten($primary, 44%);
-                color: darken($primary, 10%);
-              }
-            }
-          }
-        }
+      .gc_count {
+        color: $gray-01;
+        font-size: 18px;
+        line-height: 22px;
       }
     }
+  }
+}
 
-    &.type-04 {
-      background-color: $secondary;
-      background: $secondary;
-      background: -moz-linear-gradient(
-        -45deg,
-        lighten($secondary, 5%) 0%,
-        lighten($secondary, 10%) 47%,
-        darken($secondary, 6%) 100%
-      );
-      background: -webkit-linear-gradient(
-        -45deg,
-        lighten($secondary, 5%) 0%,
-        lighten($secondary, 10%) 47%,
-        darken($secondary, 6%) 100%
-      );
-      background: linear-gradient(
-        135deg,
-        lighten($secondary, 5%) 0%,
-        lighten($secondary, 10%) 47%,
-        darken($secondary, 6%) 100%
-      );
-
-      &::before {
-        color: lighten($secondary, 18%);
-      }
-      .card-title {
-        color: darken($secondary, 25%);
+/* -- setting list in Graph Cards -- */
+.c-settingList {
+  text-align: right;
+  display: block;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 0 2px;
+      .setting {
+        background-color: transparent;
+        border: 0;
+        padding: 2px 0 0;
+        display: block;
+        height: 20px;
+        width: 20px;
+        outline: none;
+        text-align: center;
         .icon {
-          color: darken($secondary, 25%);
-        }
-      }
-      .card-info {
-        color: darken($secondary, 25%);
-      }
-      .card-number {
-        .nLink {
-          color: $white;
-        }
-      }
-      .card-body {
-        .card-setting {
-          .btn {
-            .icon {
-              color: $white;
-            }
-          }
-          .dropdown-menu {
-            .dropdown-item {
-              color: $gray-01;
-              &:hover {
-                background-color: lighten($secondary, 44%);
-                color: darken($secondary, 10%);
-              }
-            }
-          }
+          color: $gray-01;
+          display: block;
+          font-size: 13px;
+          line-height: 13px;
         }
       }
     }
@@ -4223,6 +4392,10 @@ a:hover {
     width: 100%;
   }
 }
+
+/* -------------------------------------
+	Component :: Flag List
+------------------------------------- */
 
 .flagList {
   display: block;
@@ -4363,7 +4536,9 @@ a:hover {
   }
 }
 
-// ------- Daterange Picker -------
+/* -------------------------------------
+	Component :: Date Range Picker
+------------------------------------- */
 
 .daterangepicker {
   background-color: $white;
@@ -4509,251 +4684,116 @@ a:hover {
   }
 }
 
-/* -- Card -- */
-.c-dCard {
-  border: 1px solid rgba(101, 126, 174, 0.25);
-  box-sizing: border-box;
-  float: left;
-  width: 180px;
-  height: 190px;
-  padding: 15px;
-  background-color: $white;
-  margin: 0 16px 16px 0;
-  text-align: center;
-  @include rounded-corners(5px);
-  @include transition(all ease 0.3s);
-  &:hover {
-    @include transform(scale(1.05));
-  }
-  .title {
-    color: $gray-01;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 700;
-    height: 35px;
-  }
-  .iconHolder {
-    display: block;
-    height: 40px;
-    width: 40px;
-    margin: 20px auto;
-    text-align: center;
-    .icon {
-      display: block;
-      color: $primary;
-      font-size: 40px;
-      line-height: 00px;
-    }
-    img {
-      display: block;
-      height: 40px;
-      width: 40px;
-    }
-  }
-  &.type-01 {
-    border: 1px solid lighten($primary, 10%);
-    background-color: $primary;
-    .title {
-      color: $white;
-    }
-    .iconHolder {
-      .icon {
-        color: $white;
-      }
-    }
-    .c-btn {
-      background-color: $white;
-      color: $primary;
-    }
-  }
-  &.theme-color-01 {
-    border: 1px solid lighten($theme-color-01, 10%);
-    background-color: $theme-color-01;
-    .title {
-      color: $white;
-    }
-    .iconHolder {
-      .icon {
-        color: $white;
-      }
-    }
-    .c-btn {
-      background-color: $white;
-      color: $theme-color-01;
-    }
-  }
-  &.theme-color-02 {
-    border: 1px solid lighten($theme-color-02, 10%);
-    background-color: $theme-color-02;
-    .title {
-      color: $white;
-    }
-    .iconHolder {
-      .icon {
-        color: $white;
-      }
-    }
-    .c-btn {
-      background-color: $white;
-      color: $theme-color-02;
-    }
-  }
-
-  &.hide {
-    display: none;
-  }
-}
 .hide {
   display: none;
 }
 
-/* ---------- Graph Cards -------- */
-.c-grapgCard {
+/* -------------------------------------
+	Component :: Data Slider
+------------------------------------- */
+.c-dataSlider {
+  display: block;
+  position: relative;
   border: 1px solid rgba(101, 126, 174, 0.25);
-  background: $white;
-  padding: 20px;
-  min-height: 90px;
-  margin-bottom: 20px;
-  height: auto;
-  overflow: hidden;
-  @include rounded-corners(5px);
-  .gc_head {
-    margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #fff;
+
+  .ds_heading {
+    margin: 0 0 10px;
     .graphHeading {
-      color: $gray-01;
       display: block;
-      position: relative;
       color: $font-color;
+      font-weight: 700;
+      margin: 0;
       font-size: 13px;
       font-weight: 600;
       line-height: 18px;
       text-transform: uppercase;
     }
   }
-  .gc_body {
-    box-sizing: border-box;
-    position: relative;
-    padding: 0 0 20px 95px;
-    min-height: 85px;
-    .gc_graph {
-      height: 85px;
-      width: 85px;
+  .ds_body {
+    display: block;
+    padding: 10px 0;
+
+    .ds_item {
+      .ds_title {
+        color: $gray-01;
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 6px;
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .ds_number {
+        color: $primary;
+        display: block;
+        font-size: 40px;
+        line-height: 46px;
+        margin-bottom: 5px;
+        padding: 0;
+        text-align: center;
+        font-weight: 600;
+        &.sm {
+          font-size: 20px;
+          line-height: 26px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .ds_footer {
+    display: block;
+    padding: 0;
+    color: $gray-CCC;
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .owl-nav {
+    position: absolute;
+    height: 30px;
+    top: 50%;
+    left: 0;
+    margin-top: -15px;
+    padding: 0 30px;
+    width: 100%;
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      background-color: $primary !important;
+      height: 26px;
+      width: 26px;
       top: 0;
       left: 0;
-      position: absolute;
-      img {
-        height: 85px;
-        width: 85px;
-      }
-    }
-    .gc_title {
-      color: lighten($gray-01, 15%);
-      display: block;
-      font-size: 12px;
-      line-height: 16px;
-      font-weight: 700;
-      margin-bottom: 0;
-      text-transform: uppercase;
-      text-align: right;
-    }
-    .gc_count {
-      color: $primary;
-      display: block;
-      font-size: 28px;
-      line-height: 36px;
-      font-weight: 700;
-      margin: 5px 0;
-      text-transform: uppercase;
-      text-align: right;
-    }
-    .gc_footer {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-  }
+      outline: none;
 
-  &.sm {
-    padding: 10px 20px;
-    .gc_head {
-      margin-bottom: 14px;
-    }
-    .gc_body {
-      padding: 0 0 18px 85px;
-      min-height: 70px;
-      .gc_graph {
-        height: 70px;
-        width: 70px;
-        img {
-          height: 70px;
-          width: 70px;
-        }
-      }
-    }
-  }
-
-  &.type-01 {
-    .gc_body {
-      padding: 0;
-      .gc_graph {
-        position: relative;
-        width: 100%;
-        height: 200px;
-        text-align: center;
-        margin-bottom: 20px;
-        img {
-          height: auto;
-          max-height: 200px;
-          width: 100%;
-        }
-      }
-      .gc_title,
-      .gc_count {
-        text-align: center;
-      }
-      .gc_count {
-        color: $gray-01;
-        font-size: 18px;
-        line-height: 22px;
-      }
-    }
-  }
-}
-
-/* ---------- setting list in Graph Cards ----------- */
-.c-settingList {
-  text-align: right;
-  display: block;
-  position: relative;
-  height: auto;
-  overflow: hidden;
-  ul {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    li {
-      display: inline-block;
-      height: 20px;
-      width: 20px;
-      margin: 0 2px;
-      .setting {
-        background-color: transparent;
-        border: 0;
-        padding: 2px 0 0;
+      @include rounded-corners(50px);
+      &::before {
+        color: $white;
+        font-size: 16px;
+        line-height: 16px;
         display: block;
-        height: 20px;
-        width: 20px;
-        outline: none;
-        text-align: center;
-        .icon {
-          color: $gray-01;
-          display: block;
-          font-size: 13px;
-          line-height: 13px;
-        }
+        content: "\62";
+        font-family: $icon-font;
+        margin: 0 3px 0 0;
+      }
+      span {
+        display: none;
+      }
+    }
+    .owl-next {
+      right: 0;
+      left: auto;
+      &::before {
+        content: "\63";
+        margin: 0 0 0 3px;
       }
     }
   }

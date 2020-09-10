@@ -8,7 +8,7 @@ font-family: 'Overpass', sans-serif;
 	Theme Colors
 ------------------------------------- */
 $primary: #057bfe;
-$secondary: #ffb233;
+$secondary: #f1b44c;
 $font-color: #171725;
 $fontDark: #181d2c;
 
@@ -18,8 +18,9 @@ $red: #fe4b4b;
 $green: #0dce82;
 $orange: #f19d38;
 
-$theme-color-01: #90a8c0;
-$theme-color-02: #58788c;
+$theme-color-1: #90a8c0;
+$theme-color-2: #58788c;
+$theme-color-3: #f1b44c;
 
 /* -------------------------------------
 	Gray Shades
@@ -68,4 +69,71 @@ $primary-font: "Overpass", sans-serif;
   -webkit-transform: $property;
   -o-transform: $property;
   -ms-transform: $property;
+}
+
+@mixin gradient-1 {
+  background: rgb(44, 80, 142);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(44, 80, 142, 1) 0%,
+    rgba(41, 112, 178, 1) 37%,
+    rgba(30, 242, 248, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(44, 80, 142, 1) 0%,
+    rgba(41, 112, 178, 1) 37%,
+    rgba(30, 242, 248, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(44, 80, 142, 1) 0%,
+    rgba(41, 112, 178, 1) 37%,
+    rgba(30, 242, 248, 1) 100%
+  );
+}
+
+@mixin gradient-2 {
+  background: rgb(215, 28, 88);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(215, 28, 88, 1) 0%,
+    rgba(227, 83, 76, 1) 40%,
+    rgba(241, 137, 65, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(215, 28, 88, 1) 0%,
+    rgba(227, 83, 76, 1) 40%,
+    rgba(241, 137, 65, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(215, 28, 88, 1) 0%,
+    rgba(227, 83, 76, 1) 40%,
+    rgba(241, 137, 65, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d71c58', endColorstr='#f18941',GradientType=1 );
+}
+
+@mixin gradient-3 {
+  background: $primary;
+  background: -moz-linear-gradient(
+    45deg,
+    darken($primary, 10%) 0%,
+    lighten($primary, 5%) 40%,
+    lighten($primary, 25%) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    darken($primary, 10%) 0%,
+    lighten($primary, 5%) 40%,
+    lighten($primary, 25%) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    darken($primary, 10%) 0%,
+    lighten($primary, 5%) 40%,
+    lighten($primary, 25%) 100%
+  );
 }

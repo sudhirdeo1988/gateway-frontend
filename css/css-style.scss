@@ -1910,6 +1910,17 @@ a:hover {
     vertical-align: middle;
   }
 }
+.fileBtn {
+  color: $gray-01;
+  background-color: transparent;
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  outline: none !important;
+  font-size: 13px;
+  line-height: 13px;
+  text-decoration: underline;
+}
 
 /* -------------------------------------
 	Component :: Form Fields
@@ -4794,6 +4805,36 @@ a:hover {
       &::before {
         content: "\63";
         margin: 0 0 0 3px;
+      }
+    }
+  }
+}
+
+.c-downloadList {
+  display: block;
+  position: relative;
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      height: 25px;
+      margin-right: 5px;
+      width: 25px;
+      .dl_btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        height: 25px;
+        width: 25px;
+        outline: none;
+        img {
+          height: 25px;
+          width: 25px;
+        }
       }
     }
   }

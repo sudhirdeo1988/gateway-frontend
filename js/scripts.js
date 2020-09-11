@@ -1,6 +1,25 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 
+  // popover
+  $(".selector")
+    .popover({ trigger: "manual", html: true, animation: false })
+    .on("mouseenter", function () {
+      var _this = this;
+      $(this).popover("show");
+      $(".popover").on("mouseleave", function () {
+        $(_this).popover("hide");
+      });
+    })
+    .on("mouseleave", function () {
+      var _this = this;
+      setTimeout(function () {
+        if (!$(".popover:hover").length) {
+          $(_this).popover("hide");
+        }
+      }, 200);
+    });
+
   // ---- Toast Messages :: show Toast messages
   if ($(".c-toast").length > 0) {
     $(".c-toast").toast("show");
@@ -117,21 +136,19 @@ $(function () {
         '<table class="table childTableTd">' +
         "<tr>" +
         "<td style='width:15%'></td>" +
-        "<td style='width:15%'>Sent To Custom</td>" +
+        "<td style='width:20%'>Sent To Custom</td>" +
         "<td style='width:10%'>CA</td>" +
         "<td style='width:15%'>2020-07-16 11:55:17.0</td>" +
         "<td style='width:20%'>CA-Req2020-07-16-11-55-16-633.xm</td>" +
         "<td style='width:20%'>	rccececpt_edf_0172801957.txt</td>" +
-        "<td style='width:5%'></td>" +
         "</tr>" +
         "<tr>" +
         "<td style='width:15%'></td>" +
-        "<td style='width:15%'>Sent To Custom</td>" +
+        "<td style='width:20%'>Sent To Custom</td>" +
         "<td style='width:10%'>CA</td>" +
         "<td style='width:15%'>2020-07-16 11:55:17.0</td>" +
         "<td style='width:20%'>CA-Req2020-07-16-11-55-16-633.xm</td>" +
         "<td style='width:20%'>	rccececpt_edf_0172801957.txt</td>" +
-        "<td style='width:5%'></td>" +
         "</tr>" +
         "</table>"
       );

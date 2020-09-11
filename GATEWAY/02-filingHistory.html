@@ -276,23 +276,15 @@
                                 <table class="table js-dataTable02">
                                   <thead>
                                     <tr>
-                                      <th style="width: 15%;">
-                                        Transaction Id
-                                      </th>
-                                      <th style="width: 15%;">Status</th>
-                                      <th style="width: 10%;">Country</th>
-                                      <th style="width: 15%;">Date</th>
-                                      <th style="width: 20%;">
+                                      <th style="width: 15%">Transaction Id</th>
+                                      <th style="width: 20%">Status</th>
+                                      <th style="width: 10%">Country</th>
+                                      <th style="width: 15%">Date</th>
+                                      <th style="width: 20%">
                                         Request File Name
                                       </th>
-                                      <th style="width: 20%;">
+                                      <th style="width: 20%">
                                         Response File Name
-                                      </th>
-                                      <th
-                                        style="width: 5%;"
-                                        class="text-center no-sort"
-                                      >
-                                        View
                                       </th>
                                     </tr>
                                   </thead>
@@ -316,21 +308,43 @@
                                       <td>CA</td>
                                       <td>2020-07-16 11:55:17.0</td>
                                       <td>
-                                        CA-Req2020-07-16-11-55-16-633.xml
-                                        <button class="staticBtn download">
+                                        <button
+                                          class="fileBtn"
+                                          data-toggle="modal"
+                                          data-target="#badgePreview"
+                                        >
+                                          CA-Req2020-07-16-11-55-16-633.xml
+                                        </button>
+
+                                        <button
+                                          class="staticBtn download selector"
+                                          data-container="body"
+                                          data-toggle="popover"
+                                          data-placement="left"
+                                          data-content="<div class='c-downloadList'>
+                                            <ul>
+                                              <li>
+                                                <a href='javascript:void(0)' class='dl_btn'>
+                                                  <img src='../images/svg/xml.svg' alt='xml' />
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href='javascript:void(0)' class='dl_btn'>
+                                                  <img src='../images/svg/csv.svg' alt='csv' />
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href='javascript:void(0)' class='dl_btn'>
+                                                  <img src='../images/svg/pdf.svg' alt='pdf' />
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </div>"
+                                        >
                                           <i class="icon ocr-download"></i>
                                         </button>
                                       </td>
                                       <td>rccececpt_edf_0172801957.txt</td>
-                                      <td class="text-center">
-                                        <button
-                                          class="tableBtn"
-                                          data-toggle="modal"
-                                          data-target="#badgePreview"
-                                        >
-                                          <i class="icon ocr-search"></i>
-                                        </button>
-                                      </td>
                                     </tr>
                                     <tr>
                                       <td>87K7420500003</td>
@@ -338,21 +352,42 @@
                                       <td>CA</td>
                                       <td>2020-07-16 11:55:17.0</td>
                                       <td>
-                                        CA-Req2020-07-16-11-55-16-633.xml
-                                        <button class="staticBtn download">
+                                        <button
+                                          class="fileBtn"
+                                          data-toggle="modal"
+                                          data-target="#badgePreview"
+                                        >
+                                          CA-Req2020-07-16-11-55-16-633.xml
+                                        </button>
+                                        <button
+                                          class="staticBtn download selector"
+                                          data-container="body"
+                                          data-toggle="popover"
+                                          data-placement="left"
+                                          data-content="<div class='c-downloadList'>
+                                            <ul>
+                                              <li>
+                                                <a href='javascript:void(0)' class='dl_btn'>
+                                                  <img src='../images/svg/xml.svg' alt='xml' />
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href='javascript:void(0)' class='dl_btn'>
+                                                  <img src='../images/svg/csv.svg' alt='csv' />
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href='javascript:void(0)' class='dl_btn'>
+                                                  <img src='../images/svg/pdf.svg' alt='pdf' />
+                                                </a>
+                                              </li>
+                                            </ul>
+                                          </div>"
+                                        >
                                           <i class="icon ocr-download"></i>
                                         </button>
                                       </td>
                                       <td>rccececpt_edf_0172801957.txt</td>
-                                      <td class="text-center">
-                                        <button
-                                          class="tableBtn"
-                                          data-toggle="modal"
-                                          data-target="#badgePreview"
-                                        >
-                                          <i class="icon ocr-search"></i>
-                                        </button>
-                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -389,9 +424,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="badgePreviewLabel">
-              Transaction Id: 87K7420500003
-            </h5>
+            <h5 class="modal-title" id="badgePreviewLabel">XML tree view</h5>
             <button
               type="button"
               class="close"
@@ -401,47 +434,7 @@
               <i class="icon ocr-android-close"></i>
             </button>
           </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col">
-                <!-- *** Badge Card *** -->
-                <div class="c-tableWrapper">
-                  <!-- ***** Table Body ***** -->
-                  <div class="c-table type-01 bordered">
-                    <table class="table">
-                      <tr>
-                        <th style="width: 20%;">Status</th>
-                        <th style="width: 10%;">Country</th>
-                        <th style="width: 20%;">Date</th>
-                        <th style="width: 25%;">
-                          Request File Name
-                        </th>
-                        <th style="width: 25%;">
-                          Response File Name
-                        </th>
-                      </tr>
-                      <tr>
-                        <td>Response processed</td>
-                        <td>CA</td>
-                        <td>2020-07-16 11:55:17.0</td>
-                        <td>CA-Req2020-07-16-11-55-16-633.xml</td>
-                        <td>rccececpt_edf_0172801957.txt</td>
-                      </tr>
-                      <tr>
-                        <td>Response processed</td>
-                        <td>CA</td>
-                        <td>2020-07-16 11:55:17.0</td>
-                        <td>CA-Req2020-07-16-11-55-16-633.xml</td>
-                        <td>rccececpt_edf_0172801957.txt</td>
-                      </tr>
-                    </table>
-                  </div>
-                  <!-- ***** Table Body ***** -->
-                </div>
-                <!-- *** Badge Card End *** -->
-              </div>
-            </div>
-          </div>
+          <div class="modal-body">XML tree view</div>
         </div>
       </div>
     </div>
@@ -459,9 +452,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="errorInfoLabel">
-              Error Details
-            </h5>
+            <h5 class="modal-title" id="errorInfoLabel">Error Details</h5>
             <button
               type="button"
               class="close"
@@ -481,13 +472,13 @@
                   <div class="c-table type-01 bordered">
                     <table class="table">
                       <tr>
-                        <th style="width: 10%;">Sr No.</th>
-                        <th style="width: 15%;">Status Type</th>
-                        <th style="width: 15%;">Error Type</th>
-                        <th style="width: 15%;">Error Status</th>
-                        <th style="width: 10%;">Code</th>
-                        <th style="width: 20%;">Remarks</th>
-                        <th style="width: 15%;">Date</th>
+                        <th style="width: 10%">Sr No.</th>
+                        <th style="width: 15%">Status Type</th>
+                        <th style="width: 15%">Error Type</th>
+                        <th style="width: 15%">Error Status</th>
+                        <th style="width: 10%">Code</th>
+                        <th style="width: 20%">Remarks</th>
+                        <th style="width: 15%">Date</th>
                       </tr>
                       <tr>
                         <td>01</td>
@@ -517,11 +508,11 @@
                   <div class="c-table type-01 bordered">
                     <table class="table">
                       <tr>
-                        <th style="width: 10%;">Sr No.</th>
-                        <th style="width: 20%;">Entry Line No.</th>
-                        <th style="width: 20%;">Warning Code</th>
-                        <th style="width: 35%;">Warning Description</th>
-                        <th style="width: 15%;">Date</th>
+                        <th style="width: 10%">Sr No.</th>
+                        <th style="width: 20%">Entry Line No.</th>
+                        <th style="width: 20%">Warning Code</th>
+                        <th style="width: 35%">Warning Description</th>
+                        <th style="width: 15%">Date</th>
                       </tr>
                       <tr>
                         <td>01</td>
@@ -562,9 +553,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="flagModal">
-              Select Country
-            </h5>
+            <h5 class="modal-title" id="flagModal">Select Country</h5>
             <button
               type="button"
               class="close"

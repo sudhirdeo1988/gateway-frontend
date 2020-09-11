@@ -3941,9 +3941,11 @@ a:hover {
     .c-icon {
       color: rgba(255, 255, 255, 0.6);
     }
-    .c_number .nLink,
-    .c_setting .btn .icon {
+    .c_number .nLink {
       color: $secondary;
+    }
+    .c_setting .btn .icon {
+      color: $white;
     }
     .c_number .c-btn {
       color: $secondary;
@@ -3960,11 +3962,9 @@ a:hover {
     .c-icon {
       color: rgba(255, 255, 255, 0.6);
     }
-    .c_number .nLink {
-      color: $white;
-    }
+    .c_number .nLink,
     .c_setting .btn .icon {
-      color: $theme-color-3;
+      color: $white;
     }
     .c_number .c-btn {
       color: $theme-color-3;
@@ -4026,7 +4026,7 @@ a:hover {
       color: $white;
     }
     .c_setting .btn .icon {
-      color: $theme-color-1;
+      color: $white;
     }
     .c_number .c-btn {
       color: $theme-color-1;
@@ -4047,7 +4047,7 @@ a:hover {
       color: $white;
     }
     .c_setting .btn .icon {
-      color: $theme-color-1;
+      color: $white;
     }
     .c_number .c-btn {
       color: $theme-color-1;
@@ -4068,7 +4068,7 @@ a:hover {
       color: $white;
     }
     .c_setting .btn .icon {
-      color: $theme-color-1;
+      color: $white;
     }
     .c_number .c-btn {
       color: $theme-color-1;

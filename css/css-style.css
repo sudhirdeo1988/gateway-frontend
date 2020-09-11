@@ -4108,9 +4108,11 @@ a:hover {
 .c-dataCard.theme-secondary .c-icon {
   color: rgba(255, 255, 255, 0.6);
 }
-.c-dataCard.theme-secondary .c_number .nLink,
-.c-dataCard.theme-secondary .c_setting .btn .icon {
+.c-dataCard.theme-secondary .c_number .nLink {
   color: #f1b44c;
+}
+.c-dataCard.theme-secondary .c_setting .btn .icon {
+  color: #fff;
 }
 .c-dataCard.theme-secondary .c_number .c-btn {
   color: #f1b44c;
@@ -4127,11 +4129,9 @@ a:hover {
 .c-dataCard.theme-color-3 .c-icon {
   color: rgba(255, 255, 255, 0.6);
 }
-.c-dataCard.theme-color-3 .c_number .nLink {
-  color: #fff;
-}
+.c-dataCard.theme-color-3 .c_number .nLink,
 .c-dataCard.theme-color-3 .c_setting .btn .icon {
-  color: #f1b44c;
+  color: #fff;
 }
 .c-dataCard.theme-color-3 .c_number .c-btn {
   color: #f1b44c;
@@ -4197,7 +4197,7 @@ a:hover {
   color: #fff;
 }
 .c-dataCard.theme-gradient-1 .c_setting .btn .icon {
-  color: #90a8c0;
+  color: #fff;
 }
 .c-dataCard.theme-gradient-1 .c_number .c-btn {
   color: #90a8c0;
@@ -4222,7 +4222,7 @@ a:hover {
   color: #fff;
 }
 .c-dataCard.theme-gradient-2 .c_setting .btn .icon {
-  color: #90a8c0;
+  color: #fff;
 }
 .c-dataCard.theme-gradient-2 .c_number .c-btn {
   color: #90a8c0;
@@ -4246,7 +4246,7 @@ a:hover {
   color: #fff;
 }
 .c-dataCard.theme-gradient-3 .c_setting .btn .icon {
-  color: #90a8c0;
+  color: #fff;
 }
 .c-dataCard.theme-gradient-3 .c_number .c-btn {
   color: #90a8c0;

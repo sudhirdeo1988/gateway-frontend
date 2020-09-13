@@ -412,34 +412,6 @@
     </div>
     <!-- ********** Page Body End **********  -->
 
-    <!-- **** Modal ::  Grant Access **** -->
-    <div
-      class="modal fade c-modal w-950"
-      id="badgePreview"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="badgePreviewLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="badgePreviewLabel">XML tree view</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="icon ocr-android-close"></i>
-            </button>
-          </div>
-          <div class="modal-body">XML tree view</div>
-        </div>
-      </div>
-    </div>
-    <!-- **** Modal :: Grant Access  End **** -->
-
     <!-- **** Modal ::  Error Info **** -->
     <div
       class="modal fade c-modal w-950"
@@ -620,6 +592,458 @@
       </div>
     </div>
     <!-- **** Modal :: Flags Info  End **** -->
+
+    <!-- **** Modal ::  Grant Access **** -->
+    <div
+      class="modal fade c-modal w-750"
+      id="badgePreview"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="badgePreviewLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="badgePreviewLabel">XML tree view</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocr-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="c-treeView">
+              <!-- ***** Treeview - parent ***** -->
+              <div class="accordion parent-01">
+                <div class="card">
+                  <div class="card-header parent-btn">
+                    <button
+                      class="btn"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#treeViewParent01"
+                      aria-expanded="true"
+                      aria-controls="treeViewParent01"
+                    >
+                      Accordian Parent 1
+                    </button>
+                  </div>
+
+                  <div
+                    id="treeViewParent01"
+                    class="collapse show"
+                    aria-labelledby="treeViewParent01"
+                  >
+                    <div class="card-body">
+                      <!-- ***** List ***** -->
+                      <div class="treeViewListing">
+                        <ul>
+                          <li>
+                            <button class="listItem">List item 01</button>
+                          </li>
+                          <li>
+                            <button class="listItem">List item 01</button>
+                          </li>
+                          <li>
+                            <button class="listItem">List item 01</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- ***** List End ***** -->
+
+                      <!-- ***** Treeview - Child 1 ***** -->
+                      <div class="accordion child-01">
+                        <div class="card">
+                          <div class="card-header">
+                            <button
+                              class="btn"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#treeViewChild01"
+                              aria-expanded="false"
+                              aria-controls="treeViewChild01"
+                            >
+                              Accordian Child 1
+                            </button>
+                          </div>
+
+                          <div
+                            id="treeViewChild01"
+                            class="collapse"
+                            aria-labelledby="treeViewChild01"
+                          >
+                            <div class="card-body">
+                              <!-- ***** Treeview - Child 1 - 1 ***** -->
+                              <div class="accordion child-02">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <button
+                                      class="btn"
+                                      type="button"
+                                      data-toggle="collapse"
+                                      data-target="#treeViewChild0101"
+                                      aria-expanded="false"
+                                      aria-controls="treeViewChild0101"
+                                    >
+                                      Accordian Child 2
+                                    </button>
+                                  </div>
+
+                                  <div
+                                    id="treeViewChild0101"
+                                    class="collapse"
+                                    aria-labelledby="treeViewChild0101"
+                                  >
+                                    <div class="card-body">
+                                      <div class="treeViewListing">
+                                        <ul>
+                                          <li>
+                                            <button class="listItem">
+                                              List item 01
+                                            </button>
+                                          </li>
+                                          <li>
+                                            <button class="listItem">
+                                              List item 01
+                                            </button>
+                                          </li>
+                                          <li>
+                                            <button class="listItem">
+                                              List item 01
+                                            </button>
+                                          </li>
+                                        </ul>
+                                      </div>
+
+                                      <!-- ***** Treeview - Child 1 - 1 ***** -->
+                                      <div class="accordion child-03">
+                                        <div class="card">
+                                          <div class="card-header">
+                                            <button
+                                              class="btn"
+                                              type="button"
+                                              data-toggle="collapse"
+                                              data-target="#treeViewChild010101"
+                                              aria-expanded="false"
+                                              aria-controls="treeViewChild010101"
+                                            >
+                                              Accordian child Level 3
+                                            </button>
+                                          </div>
+
+                                          <div
+                                            id="treeViewChild010101"
+                                            class="collapse"
+                                            aria-labelledby="treeViewChild010101"
+                                          >
+                                            <div class="card-body">
+                                              <div class="treeViewListing">
+                                                <ul>
+                                                  <li>
+                                                    <button class="listItem">
+                                                      List item 01
+                                                    </button>
+                                                  </li>
+                                                  <li>
+                                                    <button class="listItem">
+                                                      List item 01
+                                                    </button>
+                                                  </li>
+                                                  <li>
+                                                    <button class="listItem">
+                                                      List item 01
+                                                    </button>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- ***** Treeview - Child 1 - 1 End ***** -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- ***** Treeview - Child 1 - 1 End ***** -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ***** Treeview - Child 1 End ***** -->
+
+                      <!-- ***** Treeview - Child 1 ***** -->
+                      <div class="accordion child-01">
+                        <div class="card">
+                          <div class="card-header">
+                            <button
+                              class="btn"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#treeViewChild02"
+                              aria-expanded="false"
+                              aria-controls="treeViewChild02"
+                            >
+                              Accordian Child 1
+                            </button>
+                          </div>
+
+                          <div
+                            id="treeViewChild02"
+                            class="collapse"
+                            aria-labelledby="treeViewChild02"
+                          >
+                            <div class="card-body">
+                              <div class="treeViewListing">
+                                <ul>
+                                  <li>
+                                    <button class="listItem">
+                                      List item 01
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button class="listItem">
+                                      List item 01
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button class="listItem">
+                                      List item 01
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ***** Treeview - Child 1 End ***** -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Treeview - parent End ***** -->
+
+              <!-- ***** Treeview - parent 2 ***** -->
+              <div class="accordion parent-01">
+                <div class="card">
+                  <div class="card-header parent-btn">
+                    <button
+                      class="btn"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#treeViewParent02"
+                      aria-expanded="false"
+                      aria-controls="treeViewParent02"
+                    >
+                      Accordian Parent 2
+                    </button>
+                  </div>
+
+                  <div
+                    id="treeViewParent02"
+                    class="collapse"
+                    aria-labelledby="treeViewParent02"
+                  >
+                    <div class="card-body">
+                      <!-- ***** List ***** -->
+                      <div class="treeViewListing">
+                        <ul>
+                          <li>
+                            <button class="listItem">List item 01</button>
+                          </li>
+                          <li>
+                            <button class="listItem">List item 01</button>
+                          </li>
+                          <li>
+                            <button class="listItem">List item 01</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- ***** List End ***** -->
+
+                      <!-- ***** Treeview - Child 1 ***** -->
+                      <div class="accordion child-01">
+                        <div class="card">
+                          <div class="card-header">
+                            <button
+                              class="btn"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#treeViewChild02"
+                              aria-expanded="false"
+                              aria-controls="treeViewChild02"
+                            >
+                              Accordian Child 1
+                            </button>
+                          </div>
+
+                          <div
+                            id="treeViewChild02"
+                            class="collapse"
+                            aria-labelledby="treeViewChild02"
+                          >
+                            <div class="card-body">
+                              <!-- ***** Treeview - Child 1 - 1 ***** -->
+                              <div class="accordion child-02">
+                                <div class="card">
+                                  <div class="card-header">
+                                    <button
+                                      class="btn"
+                                      type="button"
+                                      data-toggle="collapse"
+                                      data-target="#treeViewChild0201"
+                                      aria-expanded="false"
+                                      aria-controls="treeViewChild0201"
+                                    >
+                                      Accordian Child 2
+                                    </button>
+                                  </div>
+
+                                  <div
+                                    id="treeViewChild0201"
+                                    class="collapse"
+                                    aria-labelledby="treeViewChild0201"
+                                  >
+                                    <div class="card-body">
+                                      <div class="treeViewListing">
+                                        <ul>
+                                          <li>
+                                            <button class="listItem">
+                                              List item 01
+                                            </button>
+                                          </li>
+                                          <li>
+                                            <button class="listItem">
+                                              List item 01
+                                            </button>
+                                          </li>
+                                          <li>
+                                            <button class="listItem">
+                                              List item 01
+                                            </button>
+                                          </li>
+                                        </ul>
+                                      </div>
+
+                                      <!-- ***** Treeview - Child 1 - 1 ***** -->
+                                      <div class="accordion child-03">
+                                        <div class="card">
+                                          <div class="card-header">
+                                            <button
+                                              class="btn"
+                                              type="button"
+                                              data-toggle="collapse"
+                                              data-target="#treeViewChild020101"
+                                              aria-expanded="false"
+                                              aria-controls="treeViewChild020101"
+                                            >
+                                              Accordian child Level 3
+                                            </button>
+                                          </div>
+
+                                          <div
+                                            id="treeViewChild020101"
+                                            class="collapse"
+                                            aria-labelledby="treeViewChild020101"
+                                          >
+                                            <div class="card-body">
+                                              <div class="treeViewListing">
+                                                <ul>
+                                                  <li>
+                                                    <button class="listItem">
+                                                      List item 01
+                                                    </button>
+                                                  </li>
+                                                  <li>
+                                                    <button class="listItem">
+                                                      List item 01
+                                                    </button>
+                                                  </li>
+                                                  <li>
+                                                    <button class="listItem">
+                                                      List item 01
+                                                    </button>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- ***** Treeview - Child 1 - 1 End ***** -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- ***** Treeview - Child 1 - 1 End ***** -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ***** Treeview - Child 1 End ***** -->
+
+                      <!-- ***** Treeview - Child 1 ***** -->
+                      <div class="accordion child-01">
+                        <div class="card">
+                          <div class="card-header">
+                            <button
+                              class="btn"
+                              type="button"
+                              data-toggle="collapse"
+                              data-target="#treeViewChild0202"
+                              aria-expanded="false"
+                              aria-controls="treeViewChild0202"
+                            >
+                              Accordian Child 1
+                            </button>
+                          </div>
+
+                          <div
+                            id="treeViewChild0202"
+                            class="collapse"
+                            aria-labelledby="treeViewChild0202"
+                          >
+                            <div class="card-body">
+                              <div class="treeViewListing">
+                                <ul>
+                                  <li>
+                                    <button class="listItem">
+                                      List item 01
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button class="listItem">
+                                      List item 01
+                                    </button>
+                                  </li>
+                                  <li>
+                                    <button class="listItem">
+                                      List item 01
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ***** Treeview - Child 1 End ***** -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Treeview - parent 2 End ***** -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Grant Access  End **** -->
 
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>

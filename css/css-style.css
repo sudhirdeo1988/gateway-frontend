@@ -5266,12 +5266,12 @@ a:hover {
   content: "b";
   position: absolute;
   top: 0;
-  left: -40px;
+  left: -20px;
   height: 40px;
-  width: 40px;
+  width: 20px;
   color: var(--white);
   font-size: 24px;
-  padding: 8px 7px;
+  padding: 8px 0;
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;

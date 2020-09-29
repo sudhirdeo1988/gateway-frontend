@@ -19,7 +19,7 @@
         <div class="row no-gutters">
           <!-- *** Left Side *** -->
           <div class="col">
-            <div class="c-shList theme-primary">
+            <div class="c-shList type-01">
               <ul>
                 <li>
                   <div class="btn-group c-shDropdown js-preventClick">
@@ -67,9 +67,7 @@
                 </li>
 
                 <li>
-                  <div
-                    class="btn-group c-shDropdown theme-secondary js-preventClick"
-                  >
+                  <div class="btn-group c-shDropdown type-02 js-preventClick">
                     <button
                       type="button"
                       class="btn dropdown-toggle"
@@ -435,9 +433,28 @@
                 </li>
 
                 <li>
-                  <button class="sh_linkBtn">
-                    <i class="icon ocr-sign-out"></i>
-                  </button>
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon sm ocr-person"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <button
+                        class="dropdown-item"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                      >
+                        Dashboard Settings
+                      </button>
+                      <button class="dropdown-item">User Settings</button>
+                      <button class="dropdown-item">Logout</button>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -450,6 +467,20 @@
 
     <!-- ********** Page Body **********  -->
     <div class="c-pageBody isCloseSidebar">
+      <div class="c-floatingDiv">
+        <button class="btnFloat">
+          <i class="icon ocr-repeat-redo"></i>
+          Refresh
+        </button>
+        <button
+          class="btnFloat"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          <i class="icon ocr-cog"></i>
+          Settings
+        </button>
+      </div>
       <!-- ********** Component :: Sidebar **********  -->
       <div class="c-sidebar js-hover" role="button">
         <div class="c-pageNav js-customScroll">
@@ -464,23 +495,6 @@
               <a href="javascript:void" class="navLink">
                 <i class="icon ocr-content-7"></i>
                 <span class="linkText">Option 2</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="navLink">
-                <i class="icon ocr-repeat-redo"></i>
-                <span class="linkText">Refresh</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                class="navLink"
-                data-toggle="modal"
-                data-target="#exampleModal"
-              >
-                <i class="icon ocr-cog"></i>
-                <span class="linkText">Dashboard Settings</span>
               </a>
             </li>
           </ul>

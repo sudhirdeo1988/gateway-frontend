@@ -433,9 +433,28 @@
                 </li>
 
                 <li>
-                  <button class="sh_linkBtn">
-                    <i class="icon ocr-sign-out"></i>
-                  </button>
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon sm ocr-person"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <button
+                        class="dropdown-item"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                      >
+                        Dashboard Settings
+                      </button>
+                      <button class="dropdown-item">User Settings</button>
+                      <button class="dropdown-item">Logout</button>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -448,6 +467,20 @@
 
     <!-- ********** Page Body **********  -->
     <div class="c-pageBody isCloseSidebar">
+      <div class="c-floatingDiv">
+        <button class="btnFloat">
+          <i class="icon ocr-repeat-redo"></i>
+          Refresh
+        </button>
+        <button
+          class="btnFloat"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          <i class="icon ocr-cog"></i>
+          Settings
+        </button>
+      </div>
       <!-- ********** Component :: Sidebar **********  -->
       <div class="c-sidebar js-hover" role="button">
         <div class="c-pageNav js-customScroll">
@@ -462,23 +495,6 @@
               <a href="javascript:void" class="navLink">
                 <i class="icon ocr-content-7"></i>
                 <span class="linkText">Option 2</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="navLink">
-                <i class="icon ocr-repeat-redo"></i>
-                <span class="linkText">Refresh</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                class="navLink"
-                data-toggle="modal"
-                data-target="#exampleModal"
-              >
-                <i class="icon ocr-cog"></i>
-                <span class="linkText">Dashboard Settings</span>
               </a>
             </li>
           </ul>
@@ -505,12 +521,7 @@
                         <ul>
                           <li>
                             <button class="setting">
-                              <i class="icon ocr-settings-line"></i>
-                            </button>
-                          </li>
-                          <li>
-                            <button class="setting">
-                              <i class="icon ocr-download-arrow"></i>
+                              <i class="icon ocr-sync"></i>
                             </button>
                           </li>
                         </ul>
@@ -550,12 +561,7 @@
                         <ul>
                           <li>
                             <button class="setting">
-                              <i class="icon ocr-settings-line"></i>
-                            </button>
-                          </li>
-                          <li>
-                            <button class="setting">
-                              <i class="icon ocr-download-arrow"></i>
+                              <i class="icon ocr-sync"></i>
                             </button>
                           </li>
                         </ul>
@@ -595,12 +601,7 @@
                         <ul>
                           <li>
                             <button class="setting">
-                              <i class="icon ocr-settings-line"></i>
-                            </button>
-                          </li>
-                          <li>
-                            <button class="setting">
-                              <i class="icon ocr-download-arrow"></i>
+                              <i class="icon ocr-sync"></i>
                             </button>
                           </li>
                         </ul>
@@ -640,12 +641,7 @@
                         <ul>
                           <li>
                             <button class="setting">
-                              <i class="icon ocr-settings-line"></i>
-                            </button>
-                          </li>
-                          <li>
-                            <button class="setting">
-                              <i class="icon ocr-download-arrow"></i>
+                              <i class="icon ocr-sync"></i>
                             </button>
                           </li>
                         </ul>
@@ -678,7 +674,29 @@
                 <!-- main graph -->
                 <div class="col-12">
                   <div class="c-grapgContainer">
-                    <div class="graphHeading">EXPORT SUMMARY</div>
+                    <div class="row align-items-center">
+                      <div class="col-7">
+                        <span class="graphHeading m0">CUSTOMS METRICS</span>
+                      </div>
+                      <div class="col-5">
+                        <!-- setting List -->
+                        <div class="c-settingList">
+                          <ul>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-filter-line"></i>
+                              </button>
+                            </li>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-sync"></i>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- setting List End -->
+                      </div>
+                    </div>
                     <div class="graphBody">
                       <img src="../images/g4.png" class="dummyGraph" alt="" />
                     </div>
@@ -702,12 +720,12 @@
                         <ul>
                           <li>
                             <button class="setting">
-                              <i class="icon ocr-settings-line"></i>
+                              <i class="icon ocr-filter-line"></i>
                             </button>
                           </li>
                           <li>
                             <button class="setting">
-                              <i class="icon ocr-download-arrow"></i>
+                              <i class="icon ocr-sync"></i>
                             </button>
                           </li>
                         </ul>

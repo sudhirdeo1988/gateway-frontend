@@ -433,9 +433,28 @@
                 </li>
 
                 <li>
-                  <button class="sh_linkBtn">
-                    <i class="icon ocr-sign-out"></i>
-                  </button>
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon sm ocr-person"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <button
+                        class="dropdown-item"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                      >
+                        Dashboard Settings
+                      </button>
+                      <button class="dropdown-item">User Settings</button>
+                      <button class="dropdown-item">Logout</button>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -448,6 +467,21 @@
 
     <!-- ********** Page Body **********  -->
     <div class="c-pageBody isCloseSidebar">
+      <div class="c-floatingDiv">
+        <button class="btnFloat">
+          <i class="icon ocr-repeat-redo"></i>
+          Refresh
+        </button>
+        <button
+          class="btnFloat"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          <i class="icon ocr-cog"></i>
+          Settings
+        </button>
+      </div>
+
       <!-- ********** Component :: Sidebar **********  -->
       <div class="c-sidebar js-hover" role="button">
         <div class="c-pageNav js-customScroll">
@@ -462,23 +496,6 @@
               <a href="javascript:void" class="navLink">
                 <i class="icon ocr-content-7"></i>
                 <span class="linkText">Option 2</span>
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0)" class="navLink">
-                <i class="icon ocr-repeat-redo"></i>
-                <span class="linkText">Refresh</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="javascript:void(0)"
-                class="navLink"
-                data-toggle="modal"
-                data-target="#exampleModal"
-              >
-                <i class="icon ocr-cog"></i>
-                <span class="linkText">Dashboard Settings</span>
               </a>
             </li>
           </ul>
@@ -498,7 +515,7 @@
                 >
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="c-dataCard theme-gradient-3">
+                    <div class="c-dataCard theme-primary">
                       <i class="c-icon ocr-pie-chart"></i>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -510,7 +527,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocr-cog"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -539,7 +556,7 @@
 
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="c-dataCard theme-gradient-3">
+                    <div class="c-dataCard theme-primary">
                       <i class="c-icon ocr-line-chart"></i>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -551,7 +568,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocr-cog"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -580,7 +597,7 @@
 
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="c-dataCard theme-gradient-3">
+                    <div class="c-dataCard theme-primary">
                       <i class="c-icon ocr-pie-chart"></i>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -592,7 +609,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocr-cog"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -621,7 +638,7 @@
 
                   <!-- ***** Card ***** -->
                   <div class="col">
-                    <div class="c-dataCard theme-gradient-3">
+                    <div class="c-dataCard theme-primary">
                       <i class="c-icon ocr-bar-chart"></i>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -633,7 +650,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocr-cog"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -682,12 +699,12 @@
                           <ul>
                             <li>
                               <button class="setting">
-                                <i class="icon ocr-settings-line"></i>
+                                <i class="icon ocr-filter-line"></i>
                               </button>
                             </li>
                             <li>
                               <button class="setting">
-                                <i class="icon ocr-download-arrow"></i>
+                                <i class="icon ocr-sync"></i>
                               </button>
                             </li>
                           </ul>
@@ -723,12 +740,12 @@
                           <ul>
                             <li>
                               <button class="setting">
-                                <i class="icon ocr-settings-line"></i>
+                                <i class="icon ocr-filter-line"></i>
                               </button>
                             </li>
                             <li>
                               <button class="setting">
-                                <i class="icon ocr-download-arrow"></i>
+                                <i class="icon ocr-sync"></i>
                               </button>
                             </li>
                           </ul>
@@ -764,12 +781,12 @@
                           <ul>
                             <li>
                               <button class="setting">
-                                <i class="icon ocr-settings-line"></i>
+                                <i class="icon ocr-filter-line"></i>
                               </button>
                             </li>
                             <li>
                               <button class="setting">
-                                <i class="icon ocr-download-arrow"></i>
+                                <i class="icon ocr-sync"></i>
                               </button>
                             </li>
                           </ul>

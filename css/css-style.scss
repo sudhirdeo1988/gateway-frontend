@@ -378,6 +378,10 @@ File Type :: SCSS file (For styling)
 .ocr-circle:before {
   content: "\e008";
 }
+.ocr-filter-line:before {
+  content: "\e009";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -386,8 +390,8 @@ html {
   width: 100%;
 }
 body {
-  background-color: $gray;
-  font-family: $primary-font;
+  background-color: var(--gray);
+  font-family: var(--primary-font);
   font-size: 14px;
   font-weight: 300;
   font-display: swap;
@@ -409,7 +413,7 @@ a:hover {
   position: relative;
 }
 .c-wrapContainer {
-  background-color: $white;
+  background-color: var(--white);
   box-sizing: border-box;
   display: block;
   position: relative;
@@ -441,7 +445,7 @@ a:hover {
 	Component :: Main Setting Header
 ------------------------------------- */
 .c-settingHeader {
-  background-color: $primary;
+  background-color: var(--primary);
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -501,7 +505,7 @@ a:hover {
     outline: none;
     .icon {
       display: inline-block;
-      color: $white;
+      color: var(--white);
       font-size: 18px;
       line-height: 18px;
       text-align: center;
@@ -520,7 +524,7 @@ a:hover {
   }
   .c-shDropdown {
     .btn {
-      color: $white;
+      color: var(--white);
       display: block;
       padding: 5px 20px 5px 10px;
       font-size: 12px;
@@ -548,8 +552,8 @@ a:hover {
     }
     &.type-02 {
       .btn {
-        background-color: $white;
-        color: $primary;
+        background-color: var(--white);
+        color: var(--primary);
         padding: 6px 30px 6px 10px;
         &::after {
           right: 6px;
@@ -572,7 +576,7 @@ a:hover {
         }
       }
       .dropdown-item {
-        color: $gray-01;
+        color: var(--gray-01);
         position: relative;
         padding: 6px 15px 6px 30px;
         font-size: 13px;
@@ -584,7 +588,7 @@ a:hover {
         @include transition(all ease 0.2s);
 
         &::before {
-          color: $gray-01;
+          color: var(--gray-01);
           content: "c";
           border: 0;
           font-family: "ocr-inc";
@@ -611,10 +615,10 @@ a:hover {
         }
 
         &:hover {
-          background-color: $primary;
-          color: $white;
+          background-color: var(--primary);
+          color: var(--white);
           &::before {
-            color: $white;
+            color: var(--white);
           }
         }
       }
@@ -699,25 +703,25 @@ a:hover {
           }
           &:hover {
             &::before {
-              background-color: $primary;
+              background-color: var(--primary);
             }
             .linkText,
             .icon {
-              color: $primary;
+              color: var(--primary);
             }
           }
           &.active {
-            color: $primary;
+            color: var(--primary);
             .linkText,
             .icon {
-              color: $primary;
+              color: var(--primary);
             }
             &::before {
-              background-color: $primary;
+              background-color: var(--primary);
             }
           }
           .linkText {
-            color: $fontDark;
+            color: var(--fontColor);
             position: relative;
             display: inline-block;
             font-size: 14px;
@@ -729,7 +733,7 @@ a:hover {
             animation: showMenu 0.5s ease-in forwards;
           }
           .icon {
-            color: $gray-01;
+            color: var(--gray-01);
             position: absolute;
             top: 5px;
             left: 14px;
@@ -748,22 +752,22 @@ a:hover {
           &.active {
             .navLink {
               &::after {
-                color: $primary;
+                color: var(--primary);
               }
             }
           }
           .navLink {
             padding-right: 30px;
             &::after {
-              color: $font-color;
+              color: var(--fontColor);
               position: absolute;
               top: 10px;
               right: 10px;
               height: 14px;
               width: 14px;
-              font-family: $icon-font;
+              font-family: var(--icon-font);
               content: "\61";
-              color: $primary;
+              color: var(--primary);
               font-size: 16px;
               line-height: 15px;
             }
@@ -778,7 +782,7 @@ a:hover {
             padding-left: 64px;
             .childLink {
               border: 0;
-              color: $font-color;
+              color: var(--fontColor);
               font-weight: 500;
               display: block;
               padding: 18px 0;
@@ -786,7 +790,7 @@ a:hover {
               line-height: 16px;
               outline: none;
               &.active {
-                color: $primary;
+                color: var(--primary);
               }
             }
           }
@@ -801,7 +805,7 @@ a:hover {
 ------------------------------------- */
 .c-header {
   border-bottom: 1px solid rgba(101, 126, 174, 0.2);
-  background-color: $white;
+  background-color: var(--white);
   box-sizing: border-box;
   display: block;
   top: 38px;
@@ -840,7 +844,7 @@ a:hover {
     vertical-align: middle;
     .c-pageTitle {
       display: inline-block;
-      color: $gray-01;
+      color: var(--gray-01);
       display: block;
       font-size: 16px;
       font-weight: 600;
@@ -851,7 +855,7 @@ a:hover {
   }
   .profileSetting {
     .profileBtn {
-      background-color: $gray-01;
+      background-color: var(--gray-01);
       box-sizing: border-box;
       border: 0;
       display: block;
@@ -865,7 +869,7 @@ a:hover {
         display: none;
       }
       .icon {
-        color: $white;
+        color: var(--white);
         position: absolute;
         top: 6px;
         left: 0;
@@ -930,7 +934,7 @@ a:hover {
       }
       .icon {
         display: inline-block;
-        color: $gray-01;
+        color: var(--gray-01);
         font-size: 22px;
         line-height: 22px;
         position: relative;
@@ -942,10 +946,10 @@ a:hover {
         right: 4px;
         display: inline-block;
         padding: 0;
-        background: $primary;
+        background: var(--primary);
         font-size: 10px;
         font-weight: 600;
-        color: $white;
+        color: var(--white);
         height: 14px;
         min-width: 15px;
         line-height: 15px;
@@ -969,7 +973,7 @@ a:hover {
   .notifyHeading {
     display: block;
     margin-bottom: 5px;
-    color: $font-color;
+    color: var(--fontColor);
     font-size: 14px;
     font-weight: 600;
     line-height: 14px;
@@ -983,14 +987,14 @@ a:hover {
     padding: 0 !important;
     @include transition(all ease 0.3s);
     &:hover {
-      background-color: lighten($secondary, 37%);
+      background: lighten(var(--secondary), opacity(37));
     }
     .dropdown-notification-item {
       padding: 10px 15px 10px 50px;
       text-decoration: none;
       color: #212837;
-      border-top: 1px solid lighten($gray-CCC, 10%);
-      border-bottom: 1px solid lighten($gray-CCC, 10%);
+      border-top: 1px solid lighten(var(--gray-CCC), opacity(10));
+      border-bottom: 1px solid lighten(var(--gray-CCC), opacity(10));
       display: block;
       position: relative;
       margin-top: -1px;
@@ -998,13 +1002,13 @@ a:hover {
         position: absolute;
         top: 10px;
         left: 20px;
-        background-color: $secondary;
+        background-color: var(--secondary);
         width: 24px;
         height: 24px;
         text-align: center;
         @include rounded-corners(40px);
         .icon {
-          color: $white;
+          color: var(--white);
           font-size: 14px;
           line-height: 14px;
           display: inline-block;
@@ -1017,7 +1021,7 @@ a:hover {
         margin-left: 15px;
         .title {
           display: block;
-          color: $font-color;
+          color: var(--fontColor);
           font-size: 13px;
           font-weight: 600;
           line-height: 18px;
@@ -1026,7 +1030,7 @@ a:hover {
         }
         .time {
           display: block;
-          color: lighten($gray-01, 10%);
+          color: lighten(var(--gray-01), opacity(10));
           font-size: 12px;
           font-weight: 500;
           line-height: 16px;
@@ -1129,7 +1133,7 @@ a:hover {
       th {
         border: 0;
         background-color: rgba(187, 199, 214, 0.4);
-        color: $gray-01;
+        color: var(--gray-01);
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
@@ -1169,8 +1173,8 @@ a:hover {
       tr {
         td {
           box-sizing: border-box;
-          color: $gray-01;
-          padding: 10px;
+          color: var(--gray-01);
+          padding: 8px;
           vertical-align: middle;
           font-size: 13px;
           font-weight: 500;
@@ -1218,7 +1222,7 @@ a:hover {
         margin: -11px !important;
         width: calc(100% + 20px) !important;
         tr {
-          background-color: lighten($gray-02, 3.5%);
+          background: lighten(var(--gray-02), opacity(3));
           &:last-child {
             td {
               border-bottom: 0 !important;
@@ -1232,8 +1236,8 @@ a:hover {
         tr {
           td {
             border-top: 0;
-            border-bottom: 1px solid $gray-02 !important;
-            border-right: 1px solid $gray-02 !important;
+            border-bottom: 1px solid var(--gray-02) !important;
+            border-right: 1px solid var(--gray-02) !important;
             &:last-child {
               border-right: 0 !important;
             }
@@ -1244,14 +1248,14 @@ a:hover {
   }
 
   .c-tableFooter {
-    border-top: 1px solid $gray-02;
+    border-top: 1px solid var(--gray-02);
     padding: 16px;
     .c-settingList {
       li {
         margin-bottom: 0;
         vertical-align: middle;
         .selectedCount {
-          color: $gray-01;
+          color: var(--gray-01);
           display: block;
           font-size: 14px;
           font-weight: 500;
@@ -1279,8 +1283,8 @@ a:hover {
             margin-right: 15px;
           }
           .pageBtn {
-            background-color: $white;
-            border: 1px solid $gray-02;
+            background-color: var(--white);
+            border: 1px solid var(--gray-02);
             display: block;
             height: 32px;
             width: 32px;
@@ -1290,15 +1294,15 @@ a:hover {
             .icon {
               display: inline-block;
               vertical-align: middle;
-              color: $gray-01;
+              color: var(--gray-01);
               font-size: 20px;
               line-height: 20px;
             }
           }
           .pageNumer {
-            background-color: $white;
+            background-color: var(--white);
             border: 0;
-            color: $gray-01;
+            color: var(--gray-01);
             display: block;
             height: 32px;
             width: 32px;
@@ -1309,7 +1313,7 @@ a:hover {
             outline: none;
             @include rounded-corners(0);
             &.active {
-              color: $primary;
+              color: var(--primary);
               font-weight: 600;
             }
           }
@@ -1323,8 +1327,8 @@ a:hover {
       .paginate_button {
         border: 0;
         background-image: none;
-        color: $gray-01;
-        background-color: $white;
+        color: var(--gray-01);
+        background-color: var(--white);
         display: inline-block;
         height: 32px;
         width: 32px;
@@ -1334,25 +1338,25 @@ a:hover {
         line-height: 23px;
         outline: none;
         &.current {
-          color: $primary;
+          color: var(--primary);
           font-weight: 600;
         }
         &:hover {
           border: 0;
-          background-color: $white;
+          background-color: var(--white);
           background-image: none;
         }
 
         &.next,
         &.previous {
-          border: 1px solid $gray-02;
+          border: 1px solid var(--gray-02);
           padding: 4px;
           margin-left: 15px;
           @include rounded-corners(8px);
           .icon {
             display: inline-block;
             vertical-align: middle;
-            color: $gray-01;
+            color: var(--gray-01);
             font-size: 20px;
             line-height: 20px;
           }
@@ -1370,13 +1374,13 @@ a:hover {
       label {
         font-size: 13px;
         font-weight: 500;
-        color: $gray-01;
+        color: var(--gray-01);
         margin-bottom: 0;
       }
       select {
         box-sizing: border-box;
         display: inline-block;
-        border: 1px solid $gray-02;
+        border: 1px solid var(--gray-02);
         height: 32px;
         padding: 5px;
         @include rounded-corners(6px);
@@ -1385,7 +1389,7 @@ a:hover {
     .dataTables_info {
       font-size: 13px;
       font-weight: 500;
-      color: $gray-01;
+      color: var(--gray-01);
     }
   }
 }
@@ -1398,14 +1402,14 @@ a:hover {
   position: relative;
 
   .c-tableFooter {
-    border-top: 1px solid $gray-02;
+    border-top: 1px solid var(--gray-02);
     padding: 16px;
     .c-settingList {
       li {
         margin-bottom: 0;
         vertical-align: middle;
         .selectedCount {
-          color: $gray-01;
+          color: var(--gray-01);
           display: block;
           font-size: 14px;
           font-weight: 500;
@@ -1433,8 +1437,8 @@ a:hover {
             margin-right: 15px;
           }
           .pageBtn {
-            background-color: $white;
-            border: 1px solid $gray-02;
+            background-color: var(--white);
+            border: 1px solid var(--gray-02);
             display: block;
             height: 32px;
             width: 32px;
@@ -1444,15 +1448,15 @@ a:hover {
             .icon {
               display: inline-block;
               vertical-align: middle;
-              color: $gray-01;
+              color: var(--gray-01);
               font-size: 20px;
               line-height: 20px;
             }
           }
           .pageNumer {
-            background-color: $white;
+            background-color: var(--white);
             border: 0;
-            color: $gray-01;
+            color: var(--gray-01);
             display: block;
             height: 32px;
             width: 32px;
@@ -1463,7 +1467,7 @@ a:hover {
             outline: none;
             @include rounded-corners(0);
             &.active {
-              color: $primary;
+              color: var(--primary);
               font-weight: 600;
             }
           }
@@ -1488,7 +1492,7 @@ a:hover {
 }
 
 .c-numberSpinner {
-  border: 1px solid $gray-02;
+  border: 1px solid var(--gray-02);
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -1498,8 +1502,8 @@ a:hover {
   @include rounded-corners(8px);
   .spinTxt {
     border: 0;
-    background-color: $white;
-    color: $gray-01;
+    background-color: var(--white);
+    color: var(--gray-01);
     display: block;
     position: relative;
     width: 100%;
@@ -1515,7 +1519,7 @@ a:hover {
     display: inline-block;
     border: 0;
     background-color: transparent;
-    border-left: 1px solid $gray-02;
+    border-left: 1px solid var(--gray-02);
     position: absolute;
     padding: 0;
     text-align: center;
@@ -1570,7 +1574,7 @@ a:hover {
     }
   }
   .userName {
-    color: $font-color;
+    color: var(--fontColor);
     display: inline-block;
     vertical-align: middle;
     font-size: 14px;
@@ -1586,21 +1590,21 @@ a:hover {
 .c-modal {
   .modal-content {
     border: 0;
-    background-color: $white;
+    background-color: var(--white);
     @include rounded-corners(10px);
 
     .modal-header {
-      border-bottom: 1px solid $gray-02;
+      border-bottom: 1px solid var(--gray-02);
       padding: 14px 30px;
       .modal-title {
-        color: $font-color;
+        color: var(--fontColor);
         font-size: 16px;
         line-height: 29px;
         font-weight: 600;
         letter-spacing: normal;
       }
       .close {
-        color: $gray-01;
+        color: var(--gray-01);
         opacity: 1;
         font-size: 24px;
         line-height: 16px;
@@ -1622,7 +1626,7 @@ a:hover {
         outline: none;
         background-color: transparent;
         .icon {
-          color: $gray-01;
+          color: var(--gray-01);
           font-size: 22px;
           line-height: 15px;
           display: inline-block;
@@ -1637,7 +1641,7 @@ a:hover {
     }
     .modal-footer {
       display: block;
-      border-top: 1px solid $gray-02;
+      border-top: 1px solid var(--gray-02);
     }
   }
   &.w-950 {
@@ -1669,7 +1673,7 @@ a:hover {
 ------------------------------------- */
 .c-compHeading {
   display: block;
-  color: $gray-01;
+  color: var(--gray-01);
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
@@ -1680,7 +1684,7 @@ a:hover {
   }
 }
 .rowHeading {
-  color: $gray-01;
+  color: var(--gray-01);
   display: block;
   font-size: 22px;
   font-weight: 500;
@@ -1689,7 +1693,7 @@ a:hover {
 }
 
 .c-staticText {
-  color: $gray-01;
+  color: var(--gray-01);
   display: block;
   font-size: 16px;
   line-height: 19px;
@@ -1708,7 +1712,7 @@ a:hover {
 .c-backBtn {
   border: 0;
   background-color: transparent;
-  color: $font-color;
+  color: var(--fontColor);
   display: inline-block;
   padding: 11px 15px;
   font-size: 24px;
@@ -1727,13 +1731,13 @@ a:hover {
     line-height: 24px;
     top: 7px;
     left: 0;
-    color: $primary;
+    color: var(--primary);
   }
 }
 .c-btn {
   border: 0;
-  background-color: $primary;
-  color: $white;
+  background-color: var(--primary);
+  color: var(--white);
   display: inline-block;
   padding: 11px 25px;
   font-size: 14px;
@@ -1755,16 +1759,16 @@ a:hover {
     min-width: 150px;
   }
   &.bordered {
-    background-color: $white;
-    color: $primary;
-    border: 1px solid $primary;
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
     &:hover {
-      background-color: $primary;
-      color: $white;
+      background-color: var(--primary);
+      color: var(--white);
     }
   }
   &.link {
-    color: $primary;
+    color: var(--primary);
     text-decoration: underline;
     background-color: transparent;
     padding: 11px;
@@ -1773,7 +1777,7 @@ a:hover {
     padding: 11px 25px 11px 45px;
     text-align: left;
     .icon {
-      color: $white;
+      color: var(--white);
       font-size: 19px;
       line-height: 20px;
       position: absolute;
@@ -1784,22 +1788,22 @@ a:hover {
     }
   }
   &.col-gray {
-    background-color: $gray-02;
-    color: $font-color;
+    background-color: var(--gray-02);
+    color: var(--fontColor);
   }
   &.col-dark {
     background-color: #676c7a;
-    color: $white;
+    color: var(--white);
   }
   &.col-red {
-    background-color: $red;
+    background-color: var(--red) !important;
   }
   &.col-orange {
-    background-color: $orange;
+    background-color: var(--orange) !important;
   }
   &.col-white {
-    background-color: $white;
-    color: $primary;
+    background-color: var(--white);
+    color: var(--primary);
   }
 }
 
@@ -1808,22 +1812,22 @@ a:hover {
   background-color: transparent;
   border: 0;
   display: inline-block;
-  height: 30px;
-  width: 30px;
-  padding: 5px;
+  height: 28px;
+  width: 28px;
+  padding: 3px;
   text-align: center;
   outline: none !important;
   .icon {
-    color: $primary;
+    color: var(--primary);
     font-size: 20px;
     line-height: 20px;
   }
 }
 
 .c-btnIcon {
-  background-color: $primary;
+  background-color: var(--primary);
   border: 0;
-  color: $white;
+  color: var(--white);
   display: inline-block;
   height: 38px;
   width: 38px;
@@ -1833,14 +1837,14 @@ a:hover {
   margin: 0;
   @include rounded-corners(50px);
   .icon {
-    color: $white;
+    color: var(--white);
     font-size: 19px;
     line-height: 17px;
     display: block;
   }
   &.col-gray {
     background-color: #676c7a;
-    color: $font-color;
+    color: var(--fontColor);
   }
 }
 
@@ -1856,7 +1860,7 @@ a:hover {
     &:checked {
       ~ {
         .switchLbl {
-          background-color: $primary;
+          background-color: var(--primary);
           .switchTrack {
             left: auto;
             right: 2px;
@@ -1867,7 +1871,7 @@ a:hover {
   }
   .switchLbl {
     box-sizing: border-box;
-    background-color: darken($gray-02, 5%);
+    background: darken(var(--gray-02), opacity(5));
     cursor: pointer;
     display: block;
     position: relative;
@@ -1891,7 +1895,7 @@ a:hover {
 }
 
 .staticBtn {
-  color: $gray-01;
+  color: var(--gray-01);
   background-color: transparent;
   display: inline-block;
   padding: 2px;
@@ -1903,13 +1907,13 @@ a:hover {
   margin-left: 5px;
 
   &.download {
-    color: $primary;
+    color: var(--primary);
   }
   &.error {
-    color: $red;
+    color: var(--red) !important;
   }
   &.expandRow {
-    background-color: $gray-CCC;
+    background-color: var(--gray-CCC);
     font-size: 14px;
     margin: 0 5px 0 0;
     padding: 0 2px;
@@ -1917,7 +1921,7 @@ a:hover {
   }
 }
 .fileBtn {
-  color: $gray-01;
+  color: var(--gray-01);
   background-color: transparent;
   display: inline-block;
   padding: 0;
@@ -1938,7 +1942,7 @@ a:hover {
   position: relative;
   margin-bottom: 20px;
   .formLbl {
-    color: $gray-01;
+    color: var(--gray-01);
     display: block;
     font-size: 13px;
     font-weight: 400;
@@ -1950,7 +1954,7 @@ a:hover {
   .form-control {
     border: 1px solid #e1e2e7;
     box-sizing: border-box;
-    color: $font-color;
+    color: var(--fontColor);
     display: block;
     font-size: 15px;
     line-height: 22px;
@@ -1964,7 +1968,7 @@ a:hover {
     }
     &:focus,
     &:active {
-      border-color: $primary;
+      border-color: var(--primary);
       @include box-shadow(0 4px 10px rgba(40, 79, 152, 0.2));
     }
     &.textarea {
@@ -1973,7 +1977,7 @@ a:hover {
     }
   }
   .c-dropdown {
-    background-color: $white;
+    background-color: var(--white);
     @include rounded-corners(6px);
     .btn {
       box-sizing: border-box;
@@ -1987,16 +1991,16 @@ a:hover {
       width: 100%;
       &:focus,
       &:active {
-        border-color: $primary;
+        border-color: var(--primary);
         @include box-shadow(0 4px 10px rgba(40, 79, 152, 0.2));
       }
       &.default {
-        color: $gray-01;
+        color: var(--gray-01);
         font-weight: 400;
       }
       &::after {
         border: 0;
-        color: $gray-01;
+        color: var(--gray-01);
         position: absolute;
         top: 15px;
         right: 13px;
@@ -2012,7 +2016,7 @@ a:hover {
       .btn {
         &:focus,
         &:active {
-          border-color: $red;
+          border-color: var(--red) !important;
           @include box-shadow(0 4px 10px rgba(254, 75, 75, 0.2));
         }
       }
@@ -2034,7 +2038,7 @@ a:hover {
         right: 10px;
         height: 15px;
         width: 20px;
-        color: $gray-01;
+        color: var(--gray-01);
         font-family: "ocr-inc";
         content: "\51";
         font-size: 15px;
@@ -2048,7 +2052,7 @@ a:hover {
         }
         .form-control {
           box-sizing: border-box;
-          color: $font-color;
+          color: var(--fontColor);
           height: 38px;
           font-size: 14px;
           font-weight: 500;
@@ -2073,15 +2077,15 @@ a:hover {
   }
   &.js-focus {
     .formLbl {
-      color: $primary;
+      color: var(--primary);
     }
   }
   &.c-error {
     .form-control {
-      border-color: $red;
+      border-color: var(--red) !important;
     }
     .errorMsg {
-      color: $red;
+      color: var(--red) !important;
       display: block;
       font-size: 12px;
       font-weight: 600;
@@ -2100,10 +2104,10 @@ a:hover {
         position: relative;
         @include transition(all ease 0.2s);
         &:hover {
-          background-color: $primary;
-          color: $white;
+          background-color: var(--primary);
+          color: var(--white);
           .icon {
-            color: $white;
+            color: var(--white);
           }
         }
       }
@@ -2112,7 +2116,7 @@ a:hover {
       .dropdown-item {
         padding: 6px 20px 6px 40px;
         .icon {
-          color: $gray-01;
+          color: var(--gray-01);
           position: absolute;
           top: 7px;
           left: 15px;
@@ -2131,7 +2135,7 @@ a:hover {
   .select2-container {
     &.select2-container--open {
       .select2-selection {
-        border-color: $primary;
+        border-color: var(--primary);
         @include box-shadow(0 4px 10px rgba(40, 79, 152, 0.2));
         @include rounded-corners(5px);
       }
@@ -2155,11 +2159,11 @@ a:hover {
       top: 9px;
       right: 11px;
       b {
-        border-color: $gray-01 transparent transparent transparent;
+        border-color: var(--gray-01) transparent transparent transparent;
       }
     }
     .select2-selection__rendered {
-      color: $font-color;
+      color: var(--fontColor);
       font-size: 16px;
       font-weight: 400;
       line-height: 19px;
@@ -2169,7 +2173,7 @@ a:hover {
 }
 .customeDropdown {
   border: 0 !important;
-  background-color: $white;
+  background-color: var(--white);
   box-sizing: border-box;
   @include box-shadow(0 6px 15px rgba(196, 203, 216, 0.25));
 
@@ -2178,7 +2182,7 @@ a:hover {
     .select2-search__field {
       border: 1px solid #e1e2e7;
       box-sizing: border-box;
-      color: $font-color;
+      color: var(--fontColor);
       display: block;
       font-size: 14px;
       line-height: 18px;
@@ -2197,7 +2201,7 @@ a:hover {
         font-weight: 500;
         padding: 10px 15px;
         &.select2-results__option--highlighted {
-          background-color: $primary;
+          background-color: var(--primary);
         }
       }
     }
@@ -2245,9 +2249,9 @@ a:hover {
     &:checked {
       ~ {
         .chkLbl {
-          color: $font-color;
+          color: var(--fontColor);
           &::before {
-            color: $primary !important;
+            color: var(--primary) !important;
             content: "\4d";
           }
         }
@@ -2297,9 +2301,9 @@ a:hover {
       &:checked {
         ~ {
           .chkLbl {
-            color: $font-color;
+            color: var(--fontColor);
             &::before {
-              color: $primary !important;
+              color: var(--primary) !important;
               content: "\4d";
             }
           }
@@ -2316,7 +2320,7 @@ a:hover {
 /* --- Search Box --- */
 
 .c-searchBox {
-  background-color: $white;
+  background-color: var(--white);
   box-sizing: border-box;
   display: block;
   position: relative;
@@ -2325,7 +2329,7 @@ a:hover {
   padding: 0 30px 0 43px;
   @include rounded-corners(10px);
   .searchTxt {
-    background-color: $white;
+    background-color: var(--white);
     border: 0;
     box-sizing: border-box;
     display: block;
@@ -2333,7 +2337,7 @@ a:hover {
     font-weight: 500;
     line-height: 16px;
     padding: 11px 0;
-    color: $font-color;
+    color: var(--fontColor);
     width: 100%;
     outline: none;
     &::placeholder {
@@ -2349,7 +2353,7 @@ a:hover {
     left: 12px;
     font-family: "ocr-inc";
     content: "\4c";
-    color: $gray-01;
+    color: var(--gray-01);
     font-size: 18px;
     line-height: 20px;
   }
@@ -2362,7 +2366,7 @@ a:hover {
     font-size: 14px;
     font-weight: 500;
     line-height: 16px;
-    color: $font-color;
+    color: var(--fontColor);
     &::before {
       color: #284f98;
       font-family: "ocr-inc";
@@ -2384,7 +2388,7 @@ a:hover {
       padding-bottom: 0;
     }
     .ph {
-      color: $gray-01;
+      color: var(--gray-01);
       display: block;
       font-size: 11px;
       line-height: 13px;
@@ -2396,7 +2400,7 @@ a:hover {
     .pl {
       background-color: transparent;
       border: 0;
-      color: $fontDark;
+      color: var(--fontColor);
       display: block;
       font-size: 14px;
       line-height: 16px;
@@ -2411,7 +2415,7 @@ a:hover {
       outline: none;
       letter-spacing: normal;
       &.colored {
-        color: $primary;
+        color: var(--primary);
         font-weight: 500;
       }
       &:last-child {
@@ -2426,7 +2430,7 @@ a:hover {
         @include rounded-corners(50%);
       }
       .icon {
-        color: $primary;
+        color: var(--primary);
         height: 24px;
         width: 24px;
         position: absolute;
@@ -2451,8 +2455,8 @@ a:hover {
           width: 42px;
         }
         .icon {
-          background-color: $primary;
-          color: $white;
+          background-color: var(--primary);
+          color: var(--white);
           height: 42px;
           width: 42px;
           @include rounded-corners(50%);
@@ -2467,7 +2471,7 @@ a:hover {
         }
         .title,
         .subTitle {
-          color: $font-color;
+          color: var(--fontColor);
           display: block;
           font-size: 16px;
           font-weight: 400;
@@ -2479,7 +2483,7 @@ a:hover {
           line-height: 16px;
           margin-bottom: 0;
           &.colored {
-            color: $primary;
+            color: var(--primary);
           }
         }
       }
@@ -2498,7 +2502,7 @@ a:hover {
       &::before {
         font-family: "ocr-inc";
         content: "\64";
-        color: $gray-01;
+        color: var(--gray-01);
         font-size: 20px;
       }
     }
@@ -2586,14 +2590,14 @@ a:hover {
   }
   &.select2-container--focus {
     .select2-selection--multiple {
-      border: 1px solid $primary;
+      border: 1px solid var(--primary);
       border-radius: 6px !important;
       @include transition(all ease 0.3s);
       @include box-shadow(0 4px 10px rgba(40, 79, 152, 0.2));
     }
   }
   .select2-dropdown--below {
-    border: 1px solid $gray-02;
+    border: 1px solid var(--gray-02);
     padding: 10px 0;
     background-color: #fff;
     box-sizing: border-box;
@@ -2604,12 +2608,12 @@ a:hover {
     .select2-results__option {
       padding: 10px;
       &.select2-results__option--highlighted {
-        background-color: $primary;
-        color: $white;
+        background-color: var(--primary);
+        color: var(--white);
       }
       &.select2-results__option--selected {
-        background-color: $white;
-        color: $gray-CCC;
+        background-color: var(--white);
+        color: var(--gray-CCC);
         &.select2-results__option--highlighted {
           background-color: transparent;
         }
@@ -2623,7 +2627,7 @@ a:hover {
   display: block;
   position: relative;
   .dropdown-item {
-    color: $gray-01;
+    color: var(--gray-01);
     display: block;
     padding: 7px 0;
     font-size: 14px;
@@ -2636,7 +2640,7 @@ a:hover {
     }
   }
   .btn-dd {
-    background-color: $white;
+    background-color: var(--white);
     border: 0;
     box-sizing: border-box;
     display: block;
@@ -2671,7 +2675,7 @@ a:hover {
   }
   .dropdown-menu {
     border: 0;
-    background-color: $white;
+    background-color: var(--white);
     box-sizing: border-box;
     min-width: 300px;
     left: auto !important;
@@ -2706,7 +2710,7 @@ a:hover {
           display: none;
         }
         .icon {
-          color: $gray-01;
+          color: var(--gray-01);
           font-size: 20px;
           line-height: 12px;
           display: inline-block;
@@ -2734,7 +2738,7 @@ a:hover {
       font-size: 14px !important;
       @include rounded-corners(10px);
       &::after {
-        color: $gray-01;
+        color: var(--gray-01);
         top: 12px !important;
         right: 8px;
         content: "\61" !important;
@@ -2747,9 +2751,9 @@ a:hover {
     &.dd-01 {
       .btn {
         background-color: #284f98;
-        color: $white !important;
+        color: var(--white) !important;
         &::after {
-          color: $white;
+          color: var(--white);
         }
         span {
           white-space: nowrap;
@@ -2761,19 +2765,19 @@ a:hover {
     }
     &.dd-02 {
       .btn {
-        background-color: $gray-01;
-        color: $white !important;
+        background-color: var(--gray-01);
+        color: var(--white) !important;
         &::after {
-          color: $white;
+          color: var(--white);
         }
       }
     }
     &.dd-03 {
       .btn {
         background-color: #f19d38;
-        color: $white !important;
+        color: var(--white) !important;
         &::after {
-          color: $white;
+          color: var(--white);
         }
       }
     }
@@ -2788,8 +2792,8 @@ a:hover {
 
 /* --- Badge --- */
 .c-badge {
-  background-color: $gray-01 !important;
-  color: $black;
+  background-color: var(--gray-01) !important;
+  color: var(--black);
   padding: 3px 6px 1px;
   height: 15px;
   font-size: 10px;
@@ -2802,12 +2806,12 @@ a:hover {
     padding: 1px 3px;
   }
   &.primary {
-    color: $white;
-    background-color: $primary !important;
+    color: var(--white);
+    background-color: var(--primary) !important;
   }
   &.secondary {
-    color: $black;
-    background-color: $secondary !important;
+    color: var(--black);
+    background-color: var(--secondary) !important;
   }
 }
 
@@ -2824,8 +2828,8 @@ a:hover {
     }
   }
   .linkItem {
-    border-bottom: 1px solid lighten($gray-CCC, 13%);
-    color: $gray-01;
+    border-bottom: 1px solid lighten(var(--gray-CCC), opacity(13));
+    color: var(--gray-01);
     display: block;
     font-size: 14px;
     font-weight: 500;
@@ -2833,17 +2837,17 @@ a:hover {
     position: relative;
     @include transition(all ease 0.3s);
     &:hover {
-      background-color: lighten($gray-CCC, 15%);
-      color: $font-color;
+      background: lighten(var(--gray-CCC), opacity(15));
+      color: var(--fontColor);
     }
     &::before {
-      color: $gray-01;
+      color: var(--gray-01);
       position: absolute;
       top: 8px;
       left: 0px;
       font-size: 15px;
       line-height: 15px;
-      font-family: $icon-font;
+      font-family: var(--icon-font);
       content: "c";
     }
   }
@@ -2856,11 +2860,11 @@ a:hover {
   display: block;
   position: relative;
   .card {
-    background-color: lighten($gray-01, 54%);
+    background: lighten(var(--gray-01), opacity(90));
     border: 0;
     margin-bottom: 15px;
     @include rounded-corners(5px);
-    @include box-shadow(0 0 3px lighten($gray-01, 40%));
+    @include box-shadow(0 0 3px lighten(var(--gray-01), opacity(40)));
     .card-header {
       background-color: transparent;
       border: 0;
@@ -2870,7 +2874,7 @@ a:hover {
 
       .btn {
         background-color: transparent;
-        color: $font-color;
+        color: var(--fontColor);
         box-sizing: border-box;
         display: block;
         font-size: 15px;
@@ -2885,8 +2889,8 @@ a:hover {
         width: 100%;
         @include box-shadow(none);
         &::after {
-          background-color: $primary;
-          color: $white;
+          background-color: var(--primary);
+          color: var(--white);
           font-family: "ocr-inc";
           content: "\61";
           font-size: 18px;
@@ -2906,7 +2910,7 @@ a:hover {
       }
     }
     .card-body {
-      border-top: 1px solid $gray-CCC;
+      border-top: 1px solid var(--gray-CCC);
       padding: 12px;
     }
   }
@@ -2914,7 +2918,7 @@ a:hover {
 
 /* ---- Info Btn ---- */
 .c-infoBtn {
-  background-color: $white;
+  background-color: var(--white);
   box-sizing: border-box;
   display: block;
   height: 38px;
@@ -2923,7 +2927,7 @@ a:hover {
   padding: 7px 15px 5px 42px;
   @include rounded-corners(10px);
   .icon {
-    color: $primary;
+    color: var(--primary);
     display: block;
     position: absolute;
     top: 9px;
@@ -2935,7 +2939,7 @@ a:hover {
   }
   .title,
   .subtitle {
-    color: $gray-01;
+    color: var(--gray-01);
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -2944,7 +2948,7 @@ a:hover {
     vertical-align: middle;
   }
   .subtitle {
-    color: $font-color;
+    color: var(--fontColor);
     margin: 0;
     font-weight: 600;
   }
@@ -2955,7 +2959,7 @@ a:hover {
 ------------------------------------- */
 .c-tabs {
   .nav-tabs {
-    background-color: $white;
+    background-color: var(--white);
     border: 0;
     display: inline-block;
     padding: 0;
@@ -2964,8 +2968,8 @@ a:hover {
     padding: 10px 0;
     @include rounded-corners(5px);
     .nav-item {
-      border-right: 1px solid $gray-02;
-      background-color: $white;
+      border-right: 1px solid var(--gray-02);
+      background-color: var(--white);
       display: inline-block;
       float: left;
       margin: 0;
@@ -2974,7 +2978,7 @@ a:hover {
       }
       .nav-link {
         border: 0 !important;
-        color: $gray-01;
+        color: var(--gray-01);
         display: block;
         padding: 6px 30px;
         position: relative;
@@ -2982,9 +2986,9 @@ a:hover {
         font-size: 16px;
         line-height: 19px;
         &.active {
-          color: $font-color;
+          color: var(--fontColor);
           &::before {
-            background: $primary;
+            background: var(--primary);
             position: absolute;
             bottom: -10px;
             content: "";
@@ -3078,7 +3082,7 @@ a:hover {
     left: 0;
     height: 92px;
     width: 92px;
-    background-color: $gray-01;
+    background-color: var(--gray-01);
     @include rounded-corners(50%);
     img {
       display: block;
@@ -3087,7 +3091,7 @@ a:hover {
     }
   }
   .profname {
-    color: $font-color;
+    color: var(--fontColor);
     display: block;
     font-size: 22px;
     font-weight: 600;
@@ -3104,7 +3108,7 @@ a:hover {
     height: 38px;
     .title {
       display: inline-block;
-      color: $font-color;
+      color: var(--fontColor);
       font-weight: 600;
       font-size: 16px;
       line-height: 19px;
@@ -3121,7 +3125,7 @@ a:hover {
 .c-infoSect {
   display: block;
   .infoLbl {
-    color: $gray-01;
+    color: var(--gray-01);
     display: block;
     font-size: 14px;
     font-weight: 400;
@@ -3129,7 +3133,7 @@ a:hover {
     margin-bottom: 6px;
   }
   .infoTxt {
-    color: $font-color;
+    color: var(--fontColor);
     display: block;
     font-size: 14px;
     font-weight: 500;
@@ -3137,7 +3141,7 @@ a:hover {
   }
   .infoTag {
     background-color: rgba(40, 79, 152, 0.1);
-    color: $primary;
+    color: var(--primary);
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
@@ -3154,7 +3158,7 @@ a:hover {
 
 .notifyTag {
   background-color: rgba(40, 79, 152, 0.1);
-  color: $primary;
+  color: var(--primary);
   display: inline-block;
   font-size: 12px;
   font-weight: 500;
@@ -3162,17 +3166,17 @@ a:hover {
   padding: 5px 15px;
   @include rounded-corners(5px);
   &.approved {
-    background-color: lighten($green, 50%);
-    color: darken($green, 5%);
+    background: lighten(var(--green), opacity(80));
+    color: var(--green);
   }
   &.rejected {
-    background-color: lighten($red, 32%);
-    color: darken($red, 5%);
+    background: lighten(var(--red), opacity(80));
+    color: var(--red);
   }
 }
 
 .c-docSect {
-  border: 1px solid $gray-02;
+  border: 1px solid var(--gray-02);
   display: inline-block;
   margin-right: 15px;
   height: 56px;
@@ -3180,8 +3184,8 @@ a:hover {
   position: relative;
   @include rounded-corners(10px);
   .infoDoc {
-    background-color: $primary;
-    color: $white;
+    background-color: var(--primary);
+    color: var(--white);
     display: block;
     height: 56px;
     width: 56px;
@@ -3195,14 +3199,14 @@ a:hover {
     @include rounded-corners(10px);
   }
   .infoLbl {
-    color: $font-color;
+    color: var(--fontColor);
     display: block;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
   }
   .infoTxt {
-    color: $gray-01;
+    color: var(--gray-01);
     display: block;
     font-size: 14px;
     font-weight: 400;
@@ -3214,7 +3218,7 @@ a:hover {
   Component :: Badge Card
 ------------------------------------- */
 .c-previewBadgeCard {
-  background-color: $white;
+  background-color: var(--white);
   box-sizing: border-box;
   display: block;
   margin: 0 auto;
@@ -3238,7 +3242,7 @@ a:hover {
     min-height: 80px;
     margin-bottom: 17px;
     .userPic {
-      background-color: $gray-01;
+      background-color: var(--gray-01);
       position: absolute;
       top: 0;
       left: 0;
@@ -3252,7 +3256,7 @@ a:hover {
       }
     }
     .badgeUserName {
-      color: $font-color;
+      color: var(--fontColor);
       display: block;
       font-size: 24px;
       font-weight: 600;
@@ -3261,8 +3265,8 @@ a:hover {
     }
     .badgeTags {
       .tag {
-        background-color: $primary;
-        color: $white;
+        background-color: var(--primary);
+        color: var(--white);
         display: inline-block;
         margin-right: 10px;
         padding: 7px;
@@ -3272,7 +3276,7 @@ a:hover {
         @include rounded-corners(5px);
         &.type-01 {
           background-color: rgba(40, 79, 152, 0.1);
-          color: $primary;
+          color: var(--primary);
         }
       }
     }
@@ -3300,7 +3304,7 @@ a:hover {
   position: relative;
   text-align: center;
   .confirmIcon {
-    background-color: $primary;
+    background-color: var(--primary);
     box-sizing: border-box;
     display: block;
     margin: 0 auto;
@@ -3311,8 +3315,8 @@ a:hover {
     @include rounded-corners(50%);
     .icon {
       display: inline-block;
-      background-color: $white;
-      color: $primary;
+      background-color: var(--white);
+      color: var(--primary);
       height: 48px;
       width: 48px;
       font-size: 39px;
@@ -3324,28 +3328,28 @@ a:hover {
   .confirmHeading,
   .confirmSubHeading {
     display: block;
-    color: $font-color;
+    color: var(--fontColor);
     font-size: 20px;
     line-height: 26px;
     font-weight: 600;
     margin-bottom: 10px;
   }
   .confirmSubHeading {
-    color: $gray-01;
+    color: var(--gray-01);
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
     margin-bottom: 17px;
   }
   .confirmMsg {
-    color: $font-color;
+    color: var(--fontColor);
     display: block;
     font-size: 20px;
     font-weight: 500;
     line-height: 26px;
     margin-bottom: 20px;
     .visitorId {
-      color: $primary;
+      color: var(--primary);
       display: inline-block;
     }
   }
@@ -3373,7 +3377,7 @@ a:hover {
     &.col-info {
       .toast-body {
         .toastIcon {
-          background-color: $primary;
+          background-color: var(--primary);
         }
       }
     }
@@ -3410,14 +3414,14 @@ a:hover {
           display: inline-block;
           font-size: 20px;
           line-height: 20px;
-          color: $white;
+          color: var(--white);
           vertical-align: middle;
           position: relative;
           top: 5px;
         }
       }
       .toastMsg {
-        color: $font-color;
+        color: var(--fontColor);
         display: inline-block;
         font-size: 14px;
         line-height: 16px;
@@ -3434,7 +3438,7 @@ a:hover {
         width: 20px;
         outline: none;
         .icon {
-          color: $gray-01;
+          color: var(--gray-01);
           font-size: 22px;
           line-height: 15px;
           display: inline-block;
@@ -3447,7 +3451,7 @@ a:hover {
 
 .c-grapgContainer {
   border: 1px solid rgba(101, 126, 174, 0.25);
-  background: $white;
+  background: var(--white);
   padding: 21px 25px;
   min-height: 100px;
   margin-bottom: 20px;
@@ -3457,21 +3461,21 @@ a:hover {
   .graphHeading {
     display: block;
     position: relative;
-    color: $font-color;
+    color: var(--fontColor);
     font-size: 15px;
     font-weight: 600;
     line-height: 21px;
     text-transform: uppercase;
     margin-bottom: 24px;
     .icon {
-      color: $white;
+      color: var(--white);
       display: inline-block;
       position: absolute;
       top: 9px;
       left: 10px;
       width: 25px;
       height: 25px;
-      background-color: lighten($gray-01, 10%);
+      background: lighten(var(--gray-01), opacity(10));
       font-size: 17px;
       padding: 4px 0 0;
       text-align: center;
@@ -3497,7 +3501,7 @@ a:hover {
         .infoLbl,
         .infoData {
           float: left;
-          color: $font-color;
+          color: var(--fontColor);
           font-weight: 400;
           font-size: 14px;
           line-height: 18px;
@@ -3515,9 +3519,9 @@ a:hover {
     display: block;
     padding: 0;
     .graphHeading {
-      background-color: $white;
-      border-bottom: 1px solid lighten($gray-CCC, 15%);
-      color: $black;
+      background-color: var(--white);
+      border-bottom: 1px solid lighten(var(--gray-CCC), opacity(15));
+      color: var(--black);
       padding: 12px 10px 12px 45px;
       margin: 0;
       position: relative;
@@ -3533,13 +3537,13 @@ a:hover {
         height: 4px;
         width: 80px;
         margin-left: -40px;
-        background: $primary;
+        background: var(--primary);
         content: "";
         @include rounded-corners(10px);
       }
       .icon {
-        color: $white;
-        background-color: lighten($primary, 10%);
+        color: var(--white);
+        background: lighten(var(--primary), opacity(10));
       }
     }
     .graphBody {
@@ -3552,17 +3556,17 @@ a:hover {
     display: block;
     padding: 0;
     .graphHeading {
-      background-color: $primary;
+      background-color: var(--primary);
       border-bottom: 0;
-      color: $white;
+      color: var(--white);
       padding: 12px 10px 12px 45px;
       font-size: 15px;
       line-height: 21px;
       margin-bottom: 0;
       @include rounded-corners(5px 5px 0 0);
       .icon {
-        color: $primary;
-        background-color: $white;
+        color: var(--primary);
+        background-color: var(--white);
       }
     }
     .graphBody {
@@ -3575,17 +3579,17 @@ a:hover {
     display: block;
     padding: 0;
     .graphHeading {
-      background-color: $secondary;
+      background-color: var(--secondary);
       border-bottom: 0;
-      color: $white;
+      color: var(--white);
       padding: 12px 10px 12px 45px;
       font-size: 15px;
       line-height: 21px;
       margin-bottom: 0;
       @include rounded-corners(5px 5px 0 0);
       .icon {
-        color: $secondary;
-        background-color: $white;
+        color: var(--secondary);
+        background-color: var(--white);
       }
     }
     .graphBody {
@@ -3621,20 +3625,20 @@ a:hover {
         height: auto;
         overflow: hidden;
         .gh_l {
-          color: $font-color;
+          color: var(--fontColor);
           float: left;
           font-size: 14px;
           line-height: 16px;
           font-weight: 500;
         }
         .gh_r {
-          color: $font-color;
+          color: var(--fontColor);
           float: right;
           font-size: 12px;
           line-height: 14px;
           font-weight: 500;
           .gh_rp {
-            color: $gray-01;
+            color: var(--gray-01);
             display: inline-block;
             font-weight: 400;
           }
@@ -3642,14 +3646,14 @@ a:hover {
       }
       .gb {
         .g_track {
-          background-color: $gray-02;
+          background-color: var(--gray-02);
           display: block;
           position: relative;
           height: 8px;
           width: 100%;
           @include rounded-corners(4px);
           .g_progress {
-            background-color: $primary;
+            background-color: var(--primary);
             position: absolute;
             top: 0;
             left: 0;
@@ -3660,22 +3664,22 @@ a:hover {
         }
         &.col-green {
           .g_progress {
-            background-color: $green;
+            background-color: var(--green) !important;
           }
         }
         &.col-red {
           .g_progress {
-            background-color: $red;
+            background-color: var(--red) !important;
           }
         }
         &.col-orange {
           .g_progress {
-            background-color: $orange;
+            background-color: var(--orange) !important;
           }
         }
         &.col-gray {
           .g_progress {
-            background-color: $gray-01;
+            background-color: var(--gray-01);
           }
         }
       }
@@ -3693,8 +3697,8 @@ a:hover {
     .table {
       tr {
         td {
-          border-bottom: 1px solid $gray-02 !important;
-          border-right: 1px solid $gray-02 !important;
+          border-bottom: 1px solid var(--gray-02) !important;
+          border-right: 1px solid var(--gray-02) !important;
           &:last-child {
             border-right: 0 !important;
           }
@@ -3715,22 +3719,22 @@ a:hover {
             }
             &.type-01 {
               &::before {
-                background-color: $primary;
+                background-color: var(--primary);
               }
             }
             &.type-02 {
               &::before {
-                background-color: lighten($primary, 22%);
+                background: lighten(var(--primary), opacity(22));
               }
             }
             &.type-03 {
               &::before {
-                background-color: lighten($primary, 39%);
+                background: lighten(var(--primary), opacity(39));
               }
             }
             &.type-04 {
               &::before {
-                background-color: lighten($primary, 53%);
+                background: lighten(var(--primary), opacity(53));
               }
             }
           }
@@ -3747,13 +3751,13 @@ a:hover {
   display: block;
   margin-bottom: 20px;
   .card {
-    background-color: $white;
+    background-color: var(--white);
     display: block;
     position: relative;
     @include rounded-corners(20px);
 
     .card-header {
-      background-color: $white;
+      background-color: var(--white);
       border: 0;
       display: block;
       position: relative;
@@ -3761,9 +3765,9 @@ a:hover {
       margin: 0;
       @include rounded-corners(20px);
       .btn {
-        background-color: $white;
+        background-color: var(--white);
         border: 0;
-        color: $font-color;
+        color: var(--fontColor);
         font-size: 18px;
         font-weight: 500;
         line-height: 21px;
@@ -3776,7 +3780,7 @@ a:hover {
         @include rounded-corners(20px);
         @include box-shadow(none);
         &::after {
-          color: $gray-01;
+          color: var(--gray-01);
           position: absolute;
           top: 20px;
           right: 20px;
@@ -3785,7 +3789,7 @@ a:hover {
           font-size: 20px;
           line-height: 20px;
           background-color: transparent;
-          font-family: $icon-font;
+          font-family: var(--icon-font);
           content: "\44";
         }
         &[aria-expanded="true"] {
@@ -3806,9 +3810,9 @@ a:hover {
   padding: 17px 0;
   height: auto;
   overflow: hidden;
-  border-bottom: 1px solid $gray-02;
+  border-bottom: 1px solid var(--gray-02);
   .sr_title {
-    color: $font-color;
+    color: var(--fontColor);
     font-size: 16px;
     line-height: 19px;
     float: left;
@@ -3822,7 +3826,7 @@ a:hover {
 }
 
 .c-tag {
-  color: $gray-01;
+  color: var(--gray-01);
   display: inline-block;
   background-color: rgba(40, 79, 152, 0.1);
   padding: 5px 10px;
@@ -3830,7 +3834,7 @@ a:hover {
   line-height: 16px;
   @include rounded-corners(5px);
   &.enabled {
-    color: $primary;
+    color: var(--primary);
   }
 }
 
@@ -3839,7 +3843,7 @@ a:hover {
 ------------------------------------- */
 
 .c-dataCard {
-  background-color: $white;
+  background-color: var(--white);
   border: 1px solid rgba(101, 126, 174, 0.15);
   display: block;
   padding: 20px 15px 20px 65px;
@@ -3856,7 +3860,7 @@ a:hover {
     left: 15px;
     margin-top: -18px;
     font-size: 2rem;
-    color: lighten($primary, 30%);
+    color: var(--primary);
   }
   .c_setting {
     position: absolute;
@@ -3878,7 +3882,7 @@ a:hover {
       .icon {
         font-size: 20px;
         line-height: 20px;
-        color: lighten($gray-01, 20%);
+        color: var(--gray-CCC);
         display: inline-block;
         vertical-align: middle;
       }
@@ -3887,15 +3891,14 @@ a:hover {
       min-width: 150px;
       padding: 12px 0;
       .dropdown-item {
-        color: $gray-01;
+        color: var(--gray-01);
         font-size: 12px;
         line-height: 16px;
         padding: 4px 12px;
         font-weight: 500;
-        @include transition(all ease 0.2s);
         &:hover {
-          background-color: lighten($primary, 44%);
-          color: darken($primary, 10%);
+          background: lighten(var(--primary), opacity(85));
+          color: var(--primary);
         }
       }
     }
@@ -3907,7 +3910,7 @@ a:hover {
     position: relative;
     .c_title,
     .c_sTitle {
-      color: $gray-01;
+      color: var(--gray-01);
       display: block;
       font-size: 13px;
       line-height: 16px;
@@ -3920,7 +3923,7 @@ a:hover {
       padding-right: 15px;
     }
     .c_sTitle {
-      color: darken($gray-CCC, 5%);
+      color: var(--gray-CCC);
       font-size: 11px;
       line-height: 18px;
       font-weight: 700;
@@ -3929,7 +3932,7 @@ a:hover {
       display: block;
       margin-bottom: 0;
       .nLink {
-        color: $primary;
+        color: var(--primary);
         display: inline-block;
         font-size: 32px;
         line-height: 44px;
@@ -3938,14 +3941,14 @@ a:hover {
     }
   }
   &.theme-primary {
-    border: 1px solid darken($primary, 10%);
-    background-color: darken($primary, 5%);
+    border: 1px solid darken(var(--primary), opacity(10));
+    background: darken(var(--primary), opacity(5));
     .c-icon {
       color: rgba(255, 255, 255, 0.6);
     }
     .c_number .nLink,
     .c_setting .btn .icon {
-      color: $white;
+      color: var(--white);
     }
     .c_sTitle,
     .c_title {
@@ -3953,20 +3956,20 @@ a:hover {
     }
   }
   &.theme-secondary {
-    border: 1px solid darken($secondary, 10%);
-    background-color: darken($secondary, 5%);
+    border: 1px solid darken(var(--secondary), opacity(10));
+    background: darken(var(--secondary), opacity(5));
     .c-icon {
       color: rgba(255, 255, 255, 0.6);
     }
     .c_number .nLink {
-      color: $secondary;
+      color: var(--secondary);
     }
     .c_setting .btn .icon {
-      color: $white;
+      color: var(--white);
     }
     .c_number .c-btn {
-      color: $secondary;
-      background-color: $white;
+      color: var(--secondary);
+      background-color: var(--white);
     }
     .c_sTitle,
     .c_title {
@@ -3974,18 +3977,18 @@ a:hover {
     }
   }
   &.theme-color-3 {
-    border: 1px solid darken($theme-color-3, 10%);
-    background-color: darken($theme-color-3, 5%);
+    border: 1px solid var(--theme-color-3);
+    background: var(--theme-color-3);
     .c-icon {
       color: rgba(255, 255, 255, 0.6);
     }
     .c_number .nLink,
     .c_setting .btn .icon {
-      color: $white;
+      color: var(--white);
     }
     .c_number .c-btn {
-      color: $theme-color-3;
-      background-color: $white;
+      color: var(--theme-color-3);
+      background-color: var(--white);
     }
     .c_sTitle,
     .c_title {
@@ -3993,20 +3996,20 @@ a:hover {
     }
   }
   &.theme-color-2 {
-    border: 1px solid darken($theme-color-2, 10%);
-    background-color: darken($theme-color-2, 5%);
+    border: 1px solid var(--theme-color-2);
+    background: darken(var(--theme-color-2), opacity(5));
     .c-icon {
       color: rgba(255, 255, 255, 0.6);
     }
     .c_number .nLink {
-      color: $white;
+      color: var(--white);
     }
     .c_setting .btn .icon {
-      color: $theme-color-2;
+      color: var(--theme-color-2);
     }
     .c_number .c-btn {
-      color: $theme-color-2;
-      background-color: $white;
+      color: var(--theme-color-2);
+      background-color: var(--white);
     }
     .c_sTitle,
     .c_title {
@@ -4014,20 +4017,20 @@ a:hover {
     }
   }
   &.theme-color-1 {
-    border: 1px solid darken($theme-color-1, 10%);
-    background-color: darken($theme-color-1, 5%);
+    border: 1px solid var(--theme-color-1);
+    background: darken(var(--theme-color-1), opacity(5));
     .c-icon {
       color: rgba(255, 255, 255, 0.6);
     }
     .c_number .nLink {
-      color: $white;
+      color: var(--white);
     }
     .c_setting .btn .icon {
-      color: $theme-color-1;
+      color: var(--theme-color-1);
     }
     .c_number .c-btn {
-      color: $theme-color-1;
-      background-color: $white;
+      color: var(--theme-color-1);
+      background-color: var(--white);
     }
     .c_sTitle,
     .c_title {
@@ -4040,14 +4043,14 @@ a:hover {
       color: rgba(255, 255, 255, 0.6);
     }
     .c_number .nLink {
-      color: $white;
+      color: var(--white);
     }
     .c_setting .btn .icon {
-      color: $white;
+      color: var(--white);
     }
     .c_number .c-btn {
-      color: $theme-color-1;
-      background-color: $white;
+      color: var(--theme-color-1);
+      background-color: var(--white);
     }
     .c_sTitle,
     .c_title {
@@ -4061,41 +4064,20 @@ a:hover {
       color: rgba(255, 255, 255, 0.6);
     }
     .c_number .nLink {
-      color: $white;
+      color: var(--white);
     }
     .c_setting .btn .icon {
-      color: $white;
+      color: var(--white);
     }
     .c_number .c-btn {
-      color: $theme-color-1;
-      background-color: $white;
+      color: var(--theme-color-1);
+      background-color: var(--white);
     }
     .c_sTitle,
     .c_title {
       color: rgba(255, 255, 255, 0.9);
     }
     @include gradient-2;
-  }
-  &.theme-gradient-3 {
-    border: 0;
-    .c-icon {
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .c_number .nLink {
-      color: $white;
-    }
-    .c_setting .btn .icon {
-      color: $white;
-    }
-    .c_number .c-btn {
-      color: $theme-color-1;
-      background-color: $white;
-    }
-    .c_sTitle,
-    .c_title {
-      color: rgba(255, 255, 255, 0.9);
-    }
-    @include gradient-3;
   }
 }
 
@@ -4106,7 +4088,7 @@ a:hover {
   width: 180px;
   height: 190px;
   padding: 15px;
-  background-color: $white;
+  background-color: var(--white);
   margin: 0 16px 16px 0;
   text-align: center;
   @include rounded-corners(5px);
@@ -4115,7 +4097,7 @@ a:hover {
     @include transform(scale(1.05));
   }
   .title {
-    color: $gray-01;
+    color: var(--gray-01);
     display: block;
     text-align: center;
     text-transform: uppercase;
@@ -4132,7 +4114,7 @@ a:hover {
     text-align: center;
     .icon {
       display: block;
-      color: $primary;
+      color: var(--primary);
       font-size: 40px;
       line-height: 00px;
     }
@@ -4143,69 +4125,69 @@ a:hover {
     }
   }
   &.theme-primary {
-    border: 1px solid lighten($primary, 10%);
-    background-color: $primary;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
     .title {
-      color: $white;
+      color: var(--white);
     }
     .iconHolder {
       .icon {
-        color: $white;
+        color: var(--white);
       }
     }
     .c-btn {
-      background-color: $white;
-      color: $primary;
+      background-color: var(--white);
+      color: var(--primary);
     }
   }
 
   &.theme-secondary {
-    border: 1px solid lighten($secondary, 10%);
-    background-color: $secondary;
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
     .title {
-      color: $white;
+      color: var(--white);
     }
     .iconHolder {
       .icon {
-        color: $white;
+        color: var(--white);
       }
     }
     .c-btn {
-      background-color: $white;
-      color: $secondary;
+      background-color: var(--white);
+      color: var(--secondary);
     }
   }
 
   &.theme-color-2 {
-    border: 1px solid lighten($theme-color-2, 10%);
-    background-color: $theme-color-2;
+    border: 1px solid lighten(var(--theme-color-2), opacity(10));
+    background-color: var(--theme-color-2);
     .title {
-      color: $white;
+      color: var(--white);
     }
     .iconHolder {
       .icon {
-        color: $white;
+        color: var(--white);
       }
     }
     .c-btn {
-      background-color: $white;
-      color: $theme-color-2;
+      background-color: var(--white);
+      color: var(--theme-color-2);
     }
   }
 
   &.theme-gradient-1 {
     border: 0;
     .title {
-      color: $white;
+      color: var(--white);
     }
     .iconHolder {
       .icon {
-        color: $white;
+        color: var(--white);
       }
     }
     .c-btn {
-      background-color: $white;
-      color: $font-color;
+      background-color: var(--white);
+      color: var(--fontColor);
     }
     @include gradient-1;
   }
@@ -4213,35 +4195,18 @@ a:hover {
   &.theme-gradient-2 {
     border: 1px solid transparent;
     .title {
-      color: $white;
+      color: var(--white);
     }
     .iconHolder {
       .icon {
-        color: $white;
+        color: var(--white);
       }
     }
     .c-btn {
-      background-color: $white;
-      color: $font-color;
+      background-color: var(--white);
+      color: var(--fontColor);
     }
     @include gradient-2;
-  }
-
-  &.theme-gradient-3 {
-    border: 0;
-    .title {
-      color: $white;
-    }
-    .iconHolder {
-      .icon {
-        color: $white;
-      }
-    }
-    .c-btn {
-      background-color: $white;
-      color: $theme-color-1;
-    }
-    @include gradient-3;
   }
 
   &.hide {
@@ -4251,7 +4216,7 @@ a:hover {
 
 .c-grapgCard {
   border: 1px solid rgba(101, 126, 174, 0.25);
-  background: $white;
+  background: var(--white);
   padding: 20px;
   min-height: 90px;
   margin-bottom: 20px;
@@ -4261,10 +4226,10 @@ a:hover {
   .gc_head {
     margin-bottom: 20px;
     .graphHeading {
-      color: $gray-01;
+      color: var(--gray-01);
       display: block;
       position: relative;
-      color: $font-color;
+      color: var(--fontColor);
       font-size: 13px;
       font-weight: 600;
       line-height: 18px;
@@ -4288,7 +4253,7 @@ a:hover {
       }
     }
     .gc_title {
-      color: lighten($gray-01, 15%);
+      color: lighten(var(--gray-01), opacity(15));
       display: block;
       font-size: 12px;
       line-height: 16px;
@@ -4298,7 +4263,7 @@ a:hover {
       text-align: right;
     }
     .gc_count {
-      color: $primary;
+      color: var(--primary);
       display: block;
       font-size: 28px;
       line-height: 36px;
@@ -4353,7 +4318,7 @@ a:hover {
         text-align: center;
       }
       .gc_count {
-        color: $gray-01;
+        color: var(--gray-01);
         font-size: 18px;
         line-height: 22px;
       }
@@ -4387,7 +4352,7 @@ a:hover {
         outline: none;
         text-align: center;
         .icon {
-          color: $gray-01;
+          color: var(--gray-01);
           display: block;
           font-size: 13px;
           line-height: 13px;
@@ -4400,12 +4365,12 @@ a:hover {
 .c-uploadFileSection {
   position: relative;
   .dropzone {
-    background-color: lighten($gray-CCC, 16%);
+    background: lighten(var(--gray-CCC), opacity(15));
     display: flex;
     align-items: center;
     justify-content: center;
     height: 200px;
-    border: dashed 2px $gray-CCC;
+    border: dashed 2px var(--gray-CCC);
     width: 100%;
   }
 }
@@ -4423,8 +4388,8 @@ a:hover {
     margin: 0;
     list-style: none;
     li {
-      border-bottom: solid 1px lighten($gray-CCC, 13%);
-      border-right: solid 1px lighten($gray-CCC, 13%);
+      border-bottom: solid 1px lighten(var(--gray-CCC), opacity(13));
+      border-right: solid 1px lighten(var(--gray-CCC), opacity(13));
       box-sizing: border-box;
       width: 33%;
       float: left;
@@ -4456,7 +4421,7 @@ a:hover {
 
     &:hover,
     &.st-selected {
-      background-color: lighten($primary, 45%);
+      background: lighten(var(--primary), opacity(45));
     }
   }
 }
@@ -4558,8 +4523,8 @@ a:hover {
 ------------------------------------- */
 
 .daterangepicker {
-  background-color: $white;
-  border-color: $gray-02;
+  background-color: var(--white);
+  border-color: var(--gray-02);
   @include box-shadow(0 6px 15px rgba(196, 203, 216, 0.25));
   @include rounded-corners(10px);
   &::before {
@@ -4578,26 +4543,26 @@ a:hover {
     }
     li {
       display: block;
-      color: $font-color;
+      color: var(--fontColor);
       font-size: 14px;
       font-weight: 500;
       padding: 12px;
       @include transition(all ease 0.3s);
       &.active {
-        background-color: $primary;
-        color: $white;
+        background-color: var(--primary);
+        color: var(--white);
         &:hover {
-          background-color: $primary;
+          background-color: var(--primary);
         }
       }
       &:hover {
-        background-color: $gray-02;
+        background-color: var(--gray-02);
       }
     }
   }
 
   .drp-calendar {
-    border: 1px solid $gray-02;
+    border: 1px solid var(--gray-02);
     max-width: none;
     padding: 0 !important;
     &.single {
@@ -4608,14 +4573,14 @@ a:hover {
     .calendar-table {
       .table-condensed {
         th {
-          border-bottom: 1px solid $gray-02;
+          border-bottom: 1px solid var(--gray-02);
           &.month {
             .monthselect,
             .yearselect {
-              border: 1px solid $gray-02;
+              border: 1px solid var(--gray-02);
               padding: 5px;
               outline: none;
-              color: $gray-01;
+              color: var(--gray-01);
               font-size: 14px;
               line-height: 16px;
               font-weight: 500;
@@ -4624,7 +4589,7 @@ a:hover {
         }
         th,
         td {
-          color: $gray-01;
+          color: var(--gray-01);
           text-align: center;
           font-size: 14px;
           line-height: 16px;
@@ -4634,13 +4599,13 @@ a:hover {
         td {
           &.start-date,
           &.end-date {
-            background-color: $primary !important;
-            color: $white !important;
+            background-color: var(--primary) !important;
+            color: var(--white) !important;
             @include rounded-corners(8px);
           }
           &.in-range {
             background-color: transparent;
-            color: $primary;
+            color: var(--primary);
           }
           &.disabled {
             text-decoration: none;
@@ -4660,28 +4625,37 @@ a:hover {
   width: 100px;
   margin: 0 0 10px;
   &.primary {
-    background-color: $primary;
+    background-color: var(--primary);
   }
   &.secondary {
-    background-color: $secondary;
+    background-color: var(--secondary);
+  }
+  &.theme-color-1 {
+    background-color: var(--theme-color-1);
+  }
+  &.theme-color-2 {
+    background-color: var(--theme-color-2);
+  }
+  &.theme-color-3 {
+    background-color: var(--theme-color-3);
   }
   &.font {
-    background-color: $font-color;
+    background-color: var(--fontColor);
   }
   &.red {
-    background-color: $red;
+    background-color: var(--red) !important;
   }
   &.green {
-    background-color: $green;
+    background-color: var(--green) !important;
   }
   &.orange {
-    background-color: $orange;
+    background-color: var(--orange) !important;
   }
 }
 .colorCode {
   display: block;
   font-size: 14px;
-  color: $font-color;
+  color: var(--fontColor);
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -4720,7 +4694,7 @@ a:hover {
     margin: 0 0 10px;
     .graphHeading {
       display: block;
-      color: $font-color;
+      color: var(--fontColor);
       font-weight: 700;
       margin: 0;
       font-size: 13px;
@@ -4735,7 +4709,7 @@ a:hover {
 
     .ds_item {
       .ds_title {
-        color: $gray-01;
+        color: var(--gray-01);
         display: block;
         font-size: 14px;
         line-height: 20px;
@@ -4746,7 +4720,7 @@ a:hover {
         font-weight: 700;
       }
       .ds_number {
-        color: $primary;
+        color: var(--primary);
         display: block;
         font-size: 40px;
         line-height: 46px;
@@ -4765,7 +4739,7 @@ a:hover {
   .ds_footer {
     display: block;
     padding: 0;
-    color: $gray-CCC;
+    color: var(--gray-CCC);
     display: block;
     font-size: 12px;
     line-height: 18px;
@@ -4784,7 +4758,7 @@ a:hover {
     .owl-prev,
     .owl-next {
       position: absolute;
-      background-color: $primary !important;
+      background-color: var(--primary) !important;
       height: 26px;
       width: 26px;
       top: 0;
@@ -4793,12 +4767,12 @@ a:hover {
 
       @include rounded-corners(50px);
       &::before {
-        color: $white;
+        color: var(--white);
         font-size: 16px;
         line-height: 16px;
         display: block;
         content: "\62";
-        font-family: $icon-font;
+        font-family: var(--icon-font);
         margin: 0 3px 0 0;
       }
       span {
@@ -4848,15 +4822,15 @@ a:hover {
 
 /* ---------- Tree View -------- */
 .c-treeView {
-  border-left: 1px solid $gray-CCC;
+  border-left: 1px solid var(--gray-CCC);
   display: block;
   position: relative;
   padding: 20px 0;
   &::before,
   &::after {
-    color: $primary;
+    color: var(--primary);
     content: "\e008";
-    font-family: $icon-font;
+    font-family: var(--icon-font);
     top: -4px;
     left: -6px;
     position: absolute;
@@ -4880,7 +4854,7 @@ a:hover {
           background-color: transparent;
           border: 0;
           box-sizing: border-box;
-          color: $primary;
+          color: var(--primary);
           display: block;
           font-size: 14px;
           line-height: 18px;
@@ -4893,10 +4867,10 @@ a:hover {
           width: 100%;
           @include box-shadow(none);
           &::after {
-            background-color: $primary;
-            color: $white;
+            background-color: var(--primary);
+            color: var(--white);
             content: "\71";
-            font-family: $icon-font;
+            font-family: var(--icon-font);
             position: absolute;
             top: 11px;
             left: 7px;
@@ -4922,7 +4896,7 @@ a:hover {
               content: "\76";
             }
             &::before {
-              background-color: $gray-CCC;
+              background-color: var(--gray-CCC);
             }
           }
         }
@@ -4931,7 +4905,7 @@ a:hover {
         padding: 0 0 0 28px;
         position: relative;
         &::before {
-          background-color: $gray-CCC;
+          background-color: var(--gray-CCC);
           content: "";
           top: 0;
           left: 27px;
@@ -4958,7 +4932,7 @@ a:hover {
             }
           }
           &::before {
-            background-color: $gray-CCC;
+            background-color: var(--gray-CCC);
             content: "";
             top: 18px;
             left: 0;
@@ -4975,7 +4949,7 @@ a:hover {
               position: relative;
               padding-left: 10px;
               &::before {
-                background-color: $gray-CCC;
+                background-color: var(--gray-CCC);
                 content: "";
                 top: 18px;
                 left: 0;
@@ -4998,7 +4972,7 @@ a:hover {
             }
             &[aria-expanded="true"] {
               &::before {
-                background-color: $gray-CCC;
+                background-color: var(--gray-CCC);
               }
             }
           }
@@ -5085,7 +5059,7 @@ a:hover {
       list-style: none;
       li {
         display: block;
-        border-left: 1px solid $gray-CCC;
+        border-left: 1px solid var(--gray-CCC);
         .listItem {
           position: relative;
           border: 0;
@@ -5104,9 +5078,9 @@ a:hover {
             width: 20px;
           }
           &::after {
-            color: $primary;
+            color: var(--primary);
             content: "\e008";
-            font-family: $icon-font;
+            font-family: var(--icon-font);
             top: 20px;
             left: 19px;
             position: absolute;
@@ -5115,6 +5089,63 @@ a:hover {
           }
         }
       }
+    }
+  }
+}
+
+.c-floatingDiv {
+  display: block;
+  position: fixed;
+  top: 100px;
+  right: -130px;
+  height: auto;
+  width: 130px;
+  background-color: var(--theme-color-1);
+  z-index: 10;
+  @include transition(all ease 0.3s);
+
+  &::before {
+    background-color: var(--theme-color-1);
+    cursor: pointer;
+    font-family: var(--icon-font);
+    content: "\62";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    height: 40px;
+    width: 40px;
+    color: var(--white);
+    font-size: 24px;
+    padding: 8px 7px;
+    @include rounded-corners(4px 0 0 4px);
+  }
+
+  &:hover {
+    right: 0;
+  }
+  .btnFloat {
+    color: var(--white);
+    border: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: block;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    padding: 0 0 0 35px;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+    font-weight: 600;
+    .icon {
+      position: absolute;
+      top: 13px;
+      left: 10px;
+      color: var(--white);
+      background-color: transparent;
+      font-size: 14px;
+      line-height: 14px;
+      display: block;
     }
   }
 }

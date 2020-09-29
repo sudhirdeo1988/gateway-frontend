@@ -556,7 +556,10 @@
             <div class="col">
               <!-- ***** Primary Button Block ***** -->
               <div class="c-grapgContainer">
-                <div class="row">
+                <div class="row mb-20">
+                  <div class="col-12 mb-10">
+                    <div class="graphHeading m0">Primary Colours</div>
+                  </div>
                   <div class="col-md-3 col-sm-4">
                     <div class="form-group c-form">
                       <label class="formLbl">Primary Color</label>
@@ -571,32 +574,57 @@
                       <span class="colorCode">#ffb233</span>
                     </div>
                   </div>
+                </div>
+                <div class="row mb-20">
+                  <div class="col-12 mb-10">
+                    <div class="graphHeading m0">Theme Colours</div>
+                  </div>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="form-group c-form">
+                      <label class="formLbl">Theme Color - 1</label>
+                      <div class="colorDemo theme-color-1"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="form-group c-form">
+                      <label class="formLbl">Theme Color - 2</label>
+                      <div class="colorDemo theme-color-2"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="form-group c-form">
+                      <label class="formLbl">Theme Color - 3</label>
+                      <div class="colorDemo theme-color-3"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-20">
+                  <div class="col-12 mb-10">
+                    <div class="graphHeading m0">Utility Colours</div>
+                  </div>
                   <div class="col-md-3 col-sm-4">
                     <div class="form-group c-form">
                       <label class="formLbl">Font Color</label>
                       <div class="colorDemo font"></div>
-                      <span class="colorCode">#171725</span>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-4">
                     <div class="form-group c-form">
-                      <label class="formLbl">Red Color</label>
+                      <label class="formLbl">Alert</label>
                       <div class="colorDemo red"></div>
-                      <span class="colorCode">#fe4b4b</span>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-4">
                     <div class="form-group c-form">
-                      <label class="formLbl">Green Color</label>
+                      <label class="formLbl">Success</label>
                       <div class="colorDemo green"></div>
-                      <span class="colorCode">#0dce82</span>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-4">
                     <div class="form-group c-form">
-                      <label class="formLbl">Orange Color</label>
+                      <label class="formLbl">Warning</label>
                       <div class="colorDemo orange"></div>
-                      <span class="colorCode">#f19d38</span>
                     </div>
                   </div>
                 </div>
@@ -637,6 +665,9 @@
 
             var selectedValue = $(this).val();
             var className = "theme-" + selectedValue;
+            $("body").removeClass(function (index, className) {
+              return (className.match(/(^|\s)theme-\S+/g) || []).join(" ");
+            });
             document.querySelector("body").classList.add(className);
             if (localStorage) {
               localStorage.setItem("theme", selectedValue);

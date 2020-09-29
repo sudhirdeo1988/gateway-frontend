@@ -3869,6 +3869,18 @@ a:hover {
     height: 25px;
     width: 25px;
     background-color: transparent;
+
+    &.type-02 {
+      right: 25px;
+      .icon {
+        color: var(--white);
+        font-size: 16px;
+        line-height: 17px;
+        font-weight: 500;
+        padding: 4px;
+        display: block;
+      }
+    }
     .btn {
       box-sizing: border-box;
       padding: 0;
@@ -4663,7 +4675,7 @@ a:hover {
 .dummyGraph {
   display: block;
   width: 100%;
-  max-height: 300px;
+  max-height: 285px;
   &.lg {
     max-height: 550px;
   }

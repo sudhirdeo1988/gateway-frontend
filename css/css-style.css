@@ -528,6 +528,26 @@ SCSS functions
   content: "";
 }
 
+.ocr-mail:before {
+  content: "";
+}
+
+.ocr-alarm:before {
+  content: "";
+}
+
+.ocr-copy:before {
+  content: "";
+}
+
+.ocr-edit:before {
+  content: "";
+}
+
+.ocr-dashboard-1:before {
+  content: "";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -789,10 +809,9 @@ a:hover {
 	Component :: Sidebar
 ------------------------------------- */
 .c-sidebar {
-  border-right: 1px solid rgba(101, 126, 174, 0.2);
   background-color: rgba(255, 255, 255, 0.95);
   display: block;
-  top: 99px;
+  top: 74px;
   left: 0;
   position: fixed;
   height: 100%;
@@ -803,6 +822,11 @@ a:hover {
   -webkit-transition: all ease 0.2s;
   -o-transition: all ease 0.2s;
   -ms-transition: all ease 0.2s;
+  box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
 }
 .c-sidebar .c-pageNav {
   box-sizing: border-box;
@@ -949,15 +973,14 @@ a:hover {
 	Component :: Header
 ------------------------------------- */
 .c-header {
-  border-bottom: 1px solid rgba(101, 126, 174, 0.2);
   background-color: var(--white);
   box-sizing: border-box;
   display: block;
   top: 38px;
   left: 0;
-  padding: 10px 24px;
+  padding: 0 24px;
   position: fixed;
-  height: 61px;
+  height: 74px;
   width: 100%;
   z-index: 10;
   transition: all ease 0.3s;
@@ -965,11 +988,14 @@ a:hover {
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
-  box-shadow: 0 -1px 1px #e1e2e7;
-  -moz-box-shadow: 0 -1px 1px #e1e2e7;
-  -webkit-box-shadow: 0 -1px 1px #e1e2e7;
-  -ms-box-shadow: 0 -1px 1px #e1e2e7;
-  -o-box-shadow: 0 -1px 1px #e1e2e7;
+  box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.01);
+  -moz-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.01);
+  -webkit-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.01);
+  -ms-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.01);
+  -o-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.01);
+}
+.c-header .hs_left {
+  padding: 22px 0;
 }
 .c-header .headerSect_logo {
   display: inline-block;
@@ -986,7 +1012,7 @@ a:hover {
 .c-header .headerSect_logo .headerLogo img {
   position: relative;
   display: block;
-  max-height: 34px;
+  max-height: 30px;
   top: 1px;
 }
 .c-header .headerSect_l {
@@ -994,15 +1020,17 @@ a:hover {
   position: relative;
   text-align: left;
   vertical-align: middle;
+  top: -1px;
 }
 .c-header .headerSect_l .c-pageTitle {
   display: inline-block;
   color: var(--gray-01);
   display: block;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 23px;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 14px;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
   margin: 0;
 }
 .c-header .profileSetting .profileBtn {
@@ -1010,8 +1038,8 @@ a:hover {
   box-sizing: border-box;
   border: 0;
   display: block;
-  height: 38px;
-  padding: 0 0 0 38px;
+  height: 41px;
+  padding: 0 0 0 41px;
   margin: 0;
   position: relative;
   outline: none;
@@ -1025,8 +1053,8 @@ a:hover {
 .c-header .profileSetting .profileBtn .icon {
   color: var(--white);
   position: absolute;
-  top: 6px;
-  left: 0;
+  top: 7px;
+  left: 1px;
   height: 38px;
   width: 38px;
   font-size: 24px;
@@ -1034,8 +1062,16 @@ a:hover {
 }
 .c-header .profileSetting .dropdown-menu {
   min-width: 250px;
-  right: auto;
-  left: -30px !important;
+  left: 0 !important;
+  top: 30px !important;
+  box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 .c-header .headerSettings ul {
   display: block;
@@ -1044,36 +1080,68 @@ a:hover {
   list-style: none;
 }
 .c-header .headerSettings ul li {
+  border-left: 1px solid #f0f3f6;
   display: inline-block;
-  margin-right: 15px;
-  vertical-align: middle;
+  vertical-align: top;
+  padding: 21px 20px;
 }
 .c-header .headerSettings ul li:last-child {
-  margin-right: 0;
+  padding-right: 0;
+}
+.c-header .headerSettings ul li:first-child {
+  border: 0;
+}
+.c-header .headerSettings ul li.userProf {
+  padding: 17px 0 16px 20px;
+}
+.c-header .headerSettings ul li.countryFlag .flagBtn {
+  background: transparent;
+  border: 0;
+  height: 32px;
+  padding: 0;
+  outline: none;
+}
+.c-header .headerSettings ul li.countryFlag .flagBtn::after {
+  position: relative;
+  top: 1px;
+  color: #252d36;
+  font-family: "ocr-inc";
+  content: "a";
+  font-size: 14px;
+  line-height: 16px;
+  border: 0;
+  vertical-align: middle;
+}
+.c-header .headerSettings ul li.countryFlag .flagBtn .flag {
+  display: inline-block;
+  height: 30px;
+}
+.c-header .headerSettings ul li.countryFlag .flagBtn .country {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 2px;
+  position: relative;
+  top: 1px;
 }
 .c-header .notifySetting {
   display: inline-block;
   position: relative;
+  height: 32px;
+  width: 32px;
 }
 .c-header .notifySetting .profileBtn {
   background-color: transparent;
   box-sizing: border-box;
   border: 0;
   display: block;
-  height: 38px;
-  width: 38px;
+  height: 32px;
+  width: 32px;
   margin: 0;
-  padding: 7px 5px 3px;
+  padding: 3px;
   position: relative;
   outline: none;
-}
-.c-header .notifySetting .profileBtn .flag {
-  display: block;
-  height: 28px;
-  width: 28px;
-  position: relative;
-  text-align: center;
-  top: -1px;
 }
 .c-header .notifySetting .profileBtn.lg {
   padding: 3px 5px 5px;
@@ -1088,22 +1156,22 @@ a:hover {
   font-size: 22px;
   line-height: 22px;
   position: relative;
-  top: 2px;
+  top: 4px;
 }
 .c-header .notifySetting .profileBtn .count {
   position: absolute;
-  top: 5px;
-  right: 4px;
-  display: inline-block;
+  top: 2px;
+  right: 1px;
+  display: block;
   padding: 0;
   background: var(--primary);
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--white);
-  height: 14px;
-  min-width: 15px;
-  line-height: 15px;
+  height: 15px;
+  width: 15px;
   text-align: center;
+  line-height: normal;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -1111,10 +1179,138 @@ a:hover {
 .c-header .notifySetting .profileBtn::after {
   display: none;
 }
-.c-header .notifySetting .dropdown-menu {
-  min-width: 350px;
-  right: auto;
-  left: -30px !important;
+.c-header .dropdown-menu {
+  border: 0;
+  min-width: 300px;
+  left: 0 !important;
+  top: 30px !important;
+  right: auto !important;
+  transform: translate3d(-240px, 35px, 0px) !important;
+  box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.c-header .dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 35px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--white);
+}
+.c-header .dropdown-menu.flagListDD {
+  padding: 12px 0 !important;
+  transform: translate3d(-210px, 35px, 0px) !important;
+}
+.c-header .dropdown-menu.userDD {
+  padding: 12px 0 !important;
+  transform: translate3d(-190px, 35px, 0px) !important;
+}
+.c-header .dropdown-menu .flagSearchHeader {
+  padding: 0 12px;
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+.c-header .dropdown-menu .flagSearchHeader .searchTxt {
+  box-sizing: border-box;
+  border: 1px solid #f0f3f6;
+  background-color: #f8f9fa;
+  display: block;
+  position: relative;
+  height: 40px;
+  padding: 0 15px 0 45px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+.c-header .dropdown-menu .flagSearchHeader .searchTxt .icon {
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  height: 18px;
+  width: 18px;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--gray-01);
+}
+.c-header .dropdown-menu .flagSearchHeader .searchTxt .txtBox {
+  background-color: transparent;
+  border: 0;
+  box-sizing: border-box;
+  padding: 9px 0 8px;
+  width: 100%;
+  font-size: 14px;
+  outline: none !important;
+}
+.c-header .dropdown-menu .flagSearchBody {
+  display: block;
+  position: relative;
+}
+.c-header .dropdown-menu .flagSearchBody ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.c-header .dropdown-menu .flagSearchBody ul li {
+  display: block;
+  padding: 0;
+}
+.c-header .dropdown-menu .flagSearchBody ul li .selectBtn {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 0;
+  display: block;
+  padding: 0 27px;
+  outline: none;
+  text-align: left;
+  width: 100%;
+}
+.c-header .dropdown-menu .flagSearchBody ul li .selectBtn .flagInfo {
+  box-sizing: border-box;
+  display: block;
+  height: 48px;
+  padding: 12px 0 12px 50px;
+  border-bottom: 1px solid var(--gray-02);
+  position: relative;
+}
+.c-header .dropdown-menu .flagSearchBody ul li .selectBtn .flagInfo .flag {
+  position: absolute;
+  display: inline-block;
+  height: 24px;
+  width: 34px;
+  top: 11px;
+  left: 0;
+}
+.c-header .dropdown-menu .flagSearchBody ul li .selectBtn .flagInfo .country {
+  color: var(--fontColor);
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  text-transform: uppercase;
+  position: relative;
+  top: 4px;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.c-header .dropdown-menu .flagSearchBody ul li .selectBtn:hover {
+  background-color: var(--gray-02);
+}
+.c-header .dropdown-menu .flagSearchBody ul li .selectBtn:hover .flagInfo .country {
+  color: var(--primary);
 }
 
 .c-notifyDropdown {
@@ -1195,7 +1391,6 @@ a:hover {
   line-height: 16px;
   white-space: normal;
 }
-
 /* -------------------------------------
 	Component :: wrapper
 ------------------------------------- */
@@ -1203,10 +1398,10 @@ a:hover {
   top: 0;
 }
 .no-settingHeader .c-sidebar {
-  top: 61px;
+  top: 74px;
 }
 .no-settingHeader .c-pageBody {
-  padding-top: 65px;
+  padding-top: 74px;
 }
 
 .no-customHeader .c-sidebar {
@@ -1220,10 +1415,10 @@ a:hover {
   background-color: transparent;
   box-sizing: border-box;
   display: block;
-  padding: 24px 9px;
+  padding: 24px 30px;
   position: relative;
   min-height: 100%;
-  margin: 0 0 0 60px;
+  margin: 0 0 0 74px;
   transition: all ease 0.2s;
   -moz-transition: all ease 0.2s;
   -webkit-transition: all ease 0.2s;
@@ -2848,24 +3043,6 @@ a:hover {
 .c-dropdown .btn-dd::after {
   display: none;
 }
-.c-dropdown .dropdown-menu {
-  border: 0;
-  background-color: var(--white);
-  box-sizing: border-box;
-  min-width: 300px;
-  left: auto !important;
-  right: 0 !important;
-  top: 2px !important;
-  margin: 0;
-  padding: 20px;
-  box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-.c-dropdown .dropdown-menu.sm {
-  min-width: 250px;
-}
 .c-dropdown.custome .dropdown-menu {
   min-width: 150px;
   width: 100%;
@@ -3199,7 +3376,7 @@ a:hover {
   'isCloseSidebar' class shuld be applied to 'c-pageBody' to take effect
 ------------------------------------- */
 .isCloseSidebar .c-sidebar {
-  width: 60px;
+  width: 74px;
 }
 .isCloseSidebar .c-sidebar .c-pageNav .navLink {
   padding: 5px 12px 5px 12px;

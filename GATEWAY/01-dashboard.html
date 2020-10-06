@@ -51,34 +51,76 @@
 
       <!-- ********** Component :: Header **********  -->
       <div class="c-header">
-        <div class="row no-gutters align-items-center">
+        <div class="row no-gutters">
           <div class="col-7">
-            <div class="headerSect_logo">
-              <a href="javascript:void(0);" class="headerLogo">
-                <img src="../images/logo.png" alt="alt" />
-              </a>
-            </div>
-            <div class="headerSect_l">
-              <div class="c-pageTitle">Global custom filling gateway</div>
+            <div class="hs_left">
+              <div class="headerSect_logo">
+                <a href="javascript:void(0);" class="headerLogo">
+                  <img src="../images/logo.png" alt="alt" />
+                </a>
+              </div>
+              <div class="headerSect_l">
+                <div class="c-pageTitle">Global custom filling gateway</div>
+              </div>
             </div>
           </div>
           <div class="col-5 text-right">
             <div class="headerSettings">
               <ul>
-                <li>
-                  <div class="notifySetting">
+                <li class="countryFlag">
+                  <div class="c-dropdown dropdown">
                     <button
-                      class="profileBtn"
+                      class="flagBtn dropdown-toggle"
                       type="button"
-                      data-toggle="modal"
-                      data-target="#flagModal"
+                      id="countrySelection"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
                     >
-                      <img
-                        src="../images/flags/india.svg"
-                        class="flag"
-                        alt="India"
-                      />
+                      <img src="../images/flags/india.svg" class="flag" />
+                      <span class="country">IND</span>
                     </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown flagListDD"
+                      aria-labelledby="countrySelection"
+                    >
+                      <div class="flagSearchHeader">
+                        <div class="searchTxt">
+                          <i class="icon ocr-search"></i>
+                          <input
+                            type="text"
+                            class="txtBox"
+                            placeholder="Search"
+                          />
+                        </div>
+                      </div>
+                      <div class="flagSearchBody">
+                        <ul>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/india.svg"
+                                  class="flag"
+                                />
+                                <span class="country">India</span>
+                              </div>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/japan.svg"
+                                  class="flag"
+                                />
+                                <span class="country">Japan</span>
+                              </div>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li>
@@ -91,7 +133,7 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i class="icon ocr-bell-1"></i>
+                      <i class="icon ocr-alarm"></i>
                       <span class="count">2</span>
                     </button>
                     <div
@@ -141,6 +183,65 @@
                   </div>
                 </li>
                 <li>
+                  <div class="c-dropdown dropdown notifySetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocr-mail"></i>
+                      <span class="count">2</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div class="notifyHeading">
+                        Notifications
+                        <span class="c-badge primary sm">10</span>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="userProf">
                   <div class="c-dropdown dropdown profileSetting">
                     <button
                       class="profileBtn dropdown-toggle"
@@ -153,7 +254,7 @@
                       <i class="icon ocr-user-2"></i>
                     </button>
                     <div
-                      class="dropdown-menu st-clean with-icon"
+                      class="dropdown-menu userDD st-clean with-icon"
                       aria-labelledby="dropdownMenuButton2"
                     >
                       <a class="dropdown-item" href="./04-userProfile.html">

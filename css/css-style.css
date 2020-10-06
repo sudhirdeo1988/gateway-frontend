@@ -28,7 +28,7 @@ File Type :: SCSS file (For styling)
   - Utility classes
   - Plugin overwrite
 ------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;900&display=swap");
 /*
 font-family: 'Overpass', sans-serif;
 */
@@ -518,6 +518,14 @@ SCSS functions
 
 .ocr-filter-line:before {
   content: "";
+}
+
+.ocr-no-visibility:before {
+  content: "";
+}
+
+.ocr-visibility:before {
+  content: "";
 }
 
 /* -------------------------------------
@@ -2110,11 +2118,11 @@ a:hover {
 }
 .c-form .form-control:focus, .c-form .form-control:active {
   border-color: var(--primary);
-  box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
-  -moz-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
-  -webkit-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
-  -ms-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
-  -o-box-shadow: 0 4px 10px rgba(40, 79, 152, 0.2);
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
 }
 .c-form .form-control.textarea {
   height: 101px;
@@ -5506,7 +5514,7 @@ a:hover {
   background-size: cover;
 }
 .c-loginBody.type-02::after {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
   content: "";
   position: fixed;
   top: 67px;
@@ -5518,10 +5526,14 @@ a:hover {
 
 .c-loginBlock {
   border: 1px solid rgba(101, 126, 174, 0.25);
+  box-sizing: border-box;
   display: block;
   background-color: var(--white);
-  max-width: 450px;
+  width: 540px;
   margin: 0 auto;
+  position: relative;
+  z-index: 14;
+  padding: 50px 0 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -5530,85 +5542,149 @@ a:hover {
   background-color: mixw(var(--primary), 40%);
   display: block;
   text-align: center;
-  padding: 20px 30px;
+  padding: 0 59px;
   position: relative;
-  margin-bottom: 60px;
-  min-height: 100px;
+  margin-bottom: 40px;
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
-.c-loginBlock .lb_heading .lb_icon {
-  border: 2px solid var(--white);
-  position: absolute;
-  left: 30px;
-  bottom: -35px;
-  background-color: var(--primary);
-  height: 70px;
-  width: 70px;
-  text-align: center;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-}
-.c-loginBlock .lb_heading .lb_icon .icon {
-  color: var(--white);
+.c-loginBlock .lb_heading .lb_title {
+  color: var(--black);
   display: block;
-  font-size: 40px;
-  line-height: 40px;
-  position: relative;
-  top: 11px;
-}
-.c-loginBlock .lb_heading .lb_title,
-.c-loginBlock .lb_heading .lb_subtitle {
-  color: var(--primary);
-  display: block;
-  font-size: 22px;
-  line-height: 28px;
-  font-weight: 700;
-  margin-bottom: 5px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 900;
   text-transform: uppercase;
+  margin-bottom: 13px;
+}
+.c-loginBlock .lb_heading .lb_subtitle {
+  color: #333232;
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
   position: relative;
   text-align: center;
 }
-.c-loginBlock .lb_heading .lb_subtitle {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: none;
+.c-loginBlock .lb_heading .lb_subtitle strong {
+  color: var(--primary);
 }
 .c-loginBlock .lb_body {
-  padding: 0 30px 20px;
+  padding: 0 59px 30px;
 }
 .c-loginBlock .lb_footer {
-  border-top: 1px solid rgba(101, 126, 174, 0.25);
-  padding: 20px 30px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  padding: 30px 59px;
   text-align: center;
 }
 .c-loginBlock .lb_footer .lf_text {
   display: block;
   text-align: center;
-  color: var(--gray-01);
-  font-size: 14px;
+  color: #717171;
+  font-size: 15px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 17px;
   text-align: center;
 }
 .c-loginBlock .lb_footer .lf_text .lf_btn {
   border: 0;
-  background-color: var(--primary);
+  background-color: transparent;
   display: inline-block;
-  padding: 2px 10px;
-  font-size: 13px;
-  font-weight: 600;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 16px;
-  color: var(--white);
+  color: var(--primary);
   text-align: center;
   outline: none;
-  margin-left: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+}
+
+.c-loginBtn {
+  background-color: var(--primary);
+  border: 0;
+  color: var(--white);
+  display: inline-block;
+  padding: 17px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  outline: none !important;
+  min-width: 130px;
+  border-radius: 50px;
+}
+
+.c-link {
+  background-color: transparent;
+  border: 0;
+  color: #717171;
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  outline: none;
+}
+
+.c-form {
+  display: block;
+  position: relative;
+  margin-bottom: 28px;
+}
+.c-form.password .ps-block {
+  background: #f6f6f6;
+  border: 1px solid #f1f1f1;
+  padding-right: 45px;
+  position: relative;
+  border-radius: 6px;
+}
+.c-form.password .ps-block .form-control {
+  border: 0;
+  box-shadow: none;
+}
+.c-form.password .ps-block .showPassword {
+  color: #717171;
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  height: 25px;
+  width: 25px;
+  outline: none;
+  padding: 0;
+  font-size: 22px;
+  line-height: 27px;
+}
+.c-form.password .ps-block .showPassword::before {
+  font-family: "ocr-inc";
+  content: "";
+}
+.c-form.password .ps-block.st-hide .showPassword::before {
+  content: "";
+}
+.c-form label {
+  color: #717171;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.c-form .form-control {
+  background: #f6f6f6;
+  border: 1px solid #f1f1f1;
+  box-sizing: border-box;
+  color: var(--fontColor);
+  display: block;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: normal;
+  height: 46px;
+  padding: 12px 20px;
+  border-radius: 6px;
 }
 
 .priceCard {
@@ -5682,6 +5758,10 @@ a:hover {
   line-height: 14px;
 }
 
+.c-signUpModal .modal-dialog {
+  width: 540px !important;
+  max-width: 540px !important;
+}
 .c-signUpModal .modal-content {
   background-color: transparent;
   border: 0;
@@ -5694,38 +5774,45 @@ a:hover {
 }
 
 .infoBlock {
-  background-color: rgba(255, 255, 255, 0.8);
   position: relative;
-  padding: 40px;
+  padding: 0;
+  text-align: center;
   z-index: 5;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
 .infoBlock .ib_heading {
-  color: #0f55a0;
+  color: var(--white, #fff);
   display: block;
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 42px;
+  font-size: 68px;
+  font-weight: 900;
+  line-height: 68px;
   margin-bottom: 30px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
 }
 .infoBlock .ib_info {
+  color: var(--white, #fff);
   display: block;
-  font-size: 16px;
-  line-height: 28px;
-  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  line-height: 26px;
 }
 .infoBlock .ib_btn {
-  background-color: transparent;
-  border: 1px solid #0f55a0;
-  color: #0f55a0;
+  background-color: var(--primary);
+  border: 0;
+  color: var(--white, #fff);
   display: inline-block;
-  padding: 15px 50px;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 20px 50px;
+  font-size: 14px;
+  font-weight: 900;
   line-height: 16px;
   outline: none;
+  text-transform: uppercase;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;

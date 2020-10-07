@@ -27,8 +27,8 @@ $(function () {
 
   // -- Open close sidebar interaction
   if ($(".c-sidebar").length > 0) {
-    $(".c-sidebar.js-hover").hover(function () {
-      $(this).parents(".c-pageBody").toggleClass("isCloseSidebar");
+    $(".c-sidebar").hover(function () {
+      $(this).parents(".c-pageBody").toggleClass("js-sidebarOpen");
     });
   }
 
@@ -125,8 +125,8 @@ $(function () {
       columnDefs: [{ targets: "no-sort", orderable: false }],
       language: {
         paginate: {
-          previous: '<i class="icon ocr-angle-left"></i>',
-          next: '<i class="icon ocr-angle-right"></i>',
+          previous: '<i class="icon ocr-angle-left"></i> Previous',
+          next: 'Next <i class="icon ocr-angle-right"></i>',
         },
       },
     });

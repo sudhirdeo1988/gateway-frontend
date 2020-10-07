@@ -33,23 +33,25 @@ SCSS functions
   );
 }
 :root {
-  --primary: #057bfe;
+  --primary-color: #057bfe;
   --primary-rgb: #{hexToRGB(#057bfe)};
-  --secondary: #f1b44c;
-  --secondary-rgb: #{hexToRGB(#f1b44c)};
 
-  --fontColor: #171725;
+  --theme-color-1: #ffd200;
+  --theme-color-2: #f28f8f;
+  --theme-color-3: #afaaf7;
+  --theme-color-4: #83dde1;
 
-  --theme-color-1: #90a8c0;
-  --theme-color-2: #58788c;
-  --theme-color-3: #f1b44c;
+  --page-bg-color: #f0f3f6;
+  --widget-bg-color: #ffffff;
+
+  --fontColor: #252d36;
 
   --white: #fff;
   --black: #000;
+
   --gray: #ecf0f6;
-  --gray-01: #676c7a;
+  --gray-01: #898989;
   --gray-02: #ebedf4;
-  --gray-CCC: #ccc;
 
   --red: #fe4b4b;
   --green: #0dce82;
@@ -59,14 +61,23 @@ SCSS functions
   --primary-font: "Overpass", sans-serif;
 
   .theme-dark {
-    --primary: #7b4816;
-    --secondary: #f1b44c;
+    --primary-color: #057bfe;
+    --primary-rgb: #{hexToRGB(#057bfe)};
 
-    --fontColor: #171725;
+    --theme-color-1: #ffd200;
+    --theme-color-2: #f28f8f;
+    --theme-color-3: #afaaf7;
+    --theme-color-4: #83dde1;
 
-    --theme-color-1: #90a8c0;
-    --theme-color-2: #58788c;
-    --theme-color-3: #f1b44c;
+    --page-bg-color: #1a1c33;
+    --widget-bg-color: #272d47;
+
+    --fontColor: #d5dae2;
+
+    --theme-color-1: #ffd200;
+    --theme-color-2: #f28f8f;
+    --theme-color-3: #afaaf7;
+    --theme-color-4: #83dde1;
   }
 }
 

@@ -1051,59 +1051,48 @@ a:hover {
     vertical-align: middle;
   }
 }
-.fileBtn {
-  color: var(--gray-01);
-  background-color: transparent;
-  display: inline-block;
-  padding: 0;
-  border: 0;
-  outline: none !important;
-  font-size: 13px;
-  line-height: 13px;
-  text-decoration: underline;
-}
 
 /* -------------------------------------
 	Component :: Form Fields
 ------------------------------------- */
 
 /* ---- Select 2 - Single select ----- */
-.customeDropdown {
-  border: 0 !important;
-  background-color: var(--white);
-  box-sizing: border-box;
-  @include box-shadow(0 6px 15px rgba(196, 203, 216, 0.25));
+// .customeDropdown {
+//   border: 0 !important;
+//   background-color: var(--white);
+//   box-sizing: border-box;
+//   @include box-shadow(0 6px 15px rgba(196, 203, 216, 0.25));
 
-  .select2-search {
-    padding: 15px;
-    .select2-search__field {
-      border: 1px solid #e1e2e7;
-      box-sizing: border-box;
-      color: var(--fontColor);
-      display: block;
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: normal;
-      padding: 10px;
-      outline: none;
-      width: 100%;
-    }
-  }
-  .select2-results {
-    max-height: 400px;
-    .select2-results__options {
-      @include transition(all ease 0.3s);
-      .select2-results__option {
-        font-size: 14px;
-        font-weight: 500;
-        padding: 10px 15px;
-        &.select2-results__option--highlighted {
-          background-color: var(--primary-color);
-        }
-      }
-    }
-  }
-}
+//   .select2-search {
+//     padding: 15px;
+//     .select2-search__field {
+//       border: 1px solid #e1e2e7;
+//       box-sizing: border-box;
+//       color: var(--fontColor);
+//       display: block;
+//       font-size: 14px;
+//       line-height: 18px;
+//       letter-spacing: normal;
+//       padding: 10px;
+//       outline: none;
+//       width: 100%;
+//     }
+//   }
+//   .select2-results {
+//     max-height: 400px;
+//     .select2-results__options {
+//       @include transition(all ease 0.3s);
+//       .select2-results__option {
+//         font-size: 14px;
+//         font-weight: 500;
+//         padding: 10px 15px;
+//         &.select2-results__option--highlighted {
+//           background-color: var(--primary-color);
+//         }
+//       }
+//     }
+//   }
+// }
 
 /* --- Search Box --- */
 .c-searchBox {
@@ -1328,81 +1317,6 @@ a:hover {
         margin-bottom: 0;
         label {
           margin-bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-/* --- Multi Select --- */
-.select2-container {
-  display: block;
-  box-sizing: border-box;
-  width: 100% !important;
-
-  .select2-selection--multiple {
-    border: 1px solid #e1e2e7;
-    box-sizing: border-box;
-    letter-spacing: normal;
-    height: 44px;
-    padding: 6px 10px;
-    .select2-selection__choice {
-      border: 0;
-      background-color: rgba(40, 79, 152, 0.1);
-      display: inline-block;
-      margin: 0 10px 0 0;
-      height: 26px;
-      padding: 4px 10px;
-      position: relative;
-      top: 1px;
-      box-sizing: border-box;
-      @include rounded-corners(5px);
-      .select2-selection__choice__display {
-        float: left;
-        padding: 0;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 18px;
-        color: #284f98;
-      }
-      .select2-selection__choice__remove {
-        border: 0;
-        display: inline-block;
-        height: 12px;
-        font-size: 16px;
-        width: 12px;
-        margin-left: 7px;
-      }
-    }
-  }
-  &.select2-container--focus {
-    .select2-selection--multiple {
-      border: 1px solid var(--primary-color);
-      border-radius: 6px !important;
-      @include transition(all ease 0.3s);
-      @include box-shadow(0 4px 10px rgba(40, 79, 152, 0.2));
-    }
-  }
-  .select2-dropdown--below {
-    border: 1px solid var(--gray-02);
-    padding: 10px 0;
-    background-color: #fff;
-    box-sizing: border-box;
-    top: 2px !important;
-    margin: 0;
-    @include rounded-corners(10px);
-    @include box-shadow(0 6px 15px rgba(196, 203, 216, 0.25));
-    .select2-results__option {
-      padding: 10px;
-      &.select2-results__option--highlighted {
-        background-color: var(--primary-color);
-        color: var(--white);
-      }
-      &.select2-results__option--selected {
-        background-color: var(--white);
-        color: var(--gray-01);
-        &.select2-results__option--highlighted {
-          background-color: transparent;
         }
       }
     }

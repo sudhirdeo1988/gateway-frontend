@@ -134,8 +134,8 @@ $(function () {
       columnDefs: [{ targets: "no-sort", orderable: false }],
       language: {
         paginate: {
-          previous: '<i class="icon ocr-angle-left"></i> Previous',
-          next: 'Next <i class="icon ocr-angle-right"></i>',
+          previous: "Previous",
+          next: "Next",
         },
       },
     });

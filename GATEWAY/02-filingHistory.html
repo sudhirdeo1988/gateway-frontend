@@ -346,49 +346,66 @@
                       <div class="row align-items-center">
                         <div class="col-12">
                           <div class="row">
-                            <div class="col-3">
-                              <!-- *** Dropdown *** -->
-                              <div class="form-group c-form">
-                                <label class="formLbl"
-                                  ><strong>Search By: </strong> Status</label
-                                >
-                                <div class="c-customDropdown selectOne">
-                                  <select class="c-select">
-                                    <option value="one">First</option>
-                                    <option value="three">Third</option>
-                                  </select>
+                            <div class="col-md-10 col-12">
+                              <div class="row">
+                                <div class="col-md-3 col-12">
+                                  <!-- *** Text Box *** -->
+                                  <div class="form-group c-form">
+                                    <label class="formLbl"
+                                      ><strong>Search By: </strong> Transaction
+                                      ID</label
+                                    >
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                  <!-- *** Text Box End *** -->
+                                </div>
+
+                                <div class="col-md-3 col-12">
+                                  <!-- *** Date Range Picker - Without range *** -->
+                                  <div
+                                    class="form-group c-form c-dateRangePicker"
+                                  >
+                                    <label class="formLbl"
+                                      ><strong>Search By: </strong> Date</label
+                                    >
+                                    <div class="dtPickWrapper">
+                                      <input type="text" class="form-control" />
+                                    </div>
+                                  </div>
+                                  <!-- *** Date Range Picker - Without range End *** -->
+                                </div>
+
+                                <div class="col-md-3 col-12">
+                                  <!-- *** Text Box *** -->
+                                  <div class="form-group c-form">
+                                    <label class="formLbl"
+                                      ><strong>Search By: </strong> Message Type
+                                    </label>
+                                    <input type="text" class="form-control" />
+                                  </div>
+                                  <!-- *** Text Box End *** -->
+                                </div>
+
+                                <div class="col-md-3 col-12">
+                                  <!-- *** Dropdown *** -->
+                                  <div class="form-group c-form">
+                                    <label class="formLbl"
+                                      ><strong>Search By: </strong>
+                                      Status</label
+                                    >
+                                    <div class="c-customDropdown selectOne">
+                                      <select class="c-select">
+                                        <option value="one">First</option>
+                                        <option value="three">Third</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <!-- *** Dropdown End *** -->
                                 </div>
                               </div>
-                              <!-- *** Dropdown End *** -->
                             </div>
-                            <div class="col-3">
-                              <!-- *** Text Box *** -->
-                              <div class="form-group c-form">
-                                <label class="formLbl"
-                                  ><strong>Search By: </strong> Transaction
-                                  ID</label
-                                >
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  placeholder="Transaction ID"
-                                />
-                              </div>
-                              <!-- *** Text Box End *** -->
-                            </div>
-                            <div class="col-3">
-                              <!-- *** Date Range Picker - Without range *** -->
-                              <div class="form-group c-form c-dateRangePicker">
-                                <label class="formLbl"
-                                  ><strong>Search By: </strong> Date</label
-                                >
-                                <div class="dtPickWrapper">
-                                  <input type="text" class="form-control" />
-                                </div>
-                              </div>
-                              <!-- *** Date Range Picker - Without range End *** -->
-                            </div>
-                            <div class="col-3">
+
+                            <div class="col-md-2 col-12">
                               <!-- *** Date Range Picker - Without range *** -->
                               <button class="c-btn">Search</button>
                               <!-- *** Date Range Picker - Without range End *** -->

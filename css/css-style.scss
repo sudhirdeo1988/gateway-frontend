@@ -408,6 +408,15 @@ File Type :: SCSS file (For styling)
 .ocr-settings:before {
   content: "\e012";
 }
+.ocr-down-arrow:before {
+  content: "\e013";
+}
+.ocr-warning:before {
+  content: "\e014";
+}
+.ocr-mail:before {
+  content: "\e00c";
+}
 
 /* -------------------------------------
 	Theme default CSS Containers
@@ -674,6 +683,9 @@ a:hover {
   }
 }
 
+/* ---------- Static Site -------- */
+@import "./static-site.scss";
+
 /* -------------------------------------
 	Component :: All updated comps
 ------------------------------------- */
@@ -822,44 +834,6 @@ a:hover {
         min-height: 200px;
       }
     }
-  }
-}
-
-/* -------------------------------------
-	Component :: Headings
-------------------------------------- */
-.c-compHeading {
-  display: block;
-  color: var(--gray-01);
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 21px;
-  margin-bottom: 10px;
-  &.sm {
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
-.rowHeading {
-  color: var(--gray-01);
-  display: block;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 32px;
-  margin: 0;
-}
-
-.c-staticText {
-  color: var(--gray-01);
-  display: block;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.23px;
-  margin-bottom: 16px;
-  &.sm {
-    font-size: 11px;
-    font-weight: 600;
-    margin-bottom: 0;
   }
 }
 
@@ -1093,241 +1067,7 @@ a:hover {
 	Component :: Form Fields
 ------------------------------------- */
 
-/* ----- Text Box ----- */
-.c-form {
-  display: block;
-  position: relative;
-  margin-bottom: 20px;
-  .formLbl {
-    color: var(--gray-01);
-    display: block;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.1px;
-    margin-bottom: 5px;
-    @include transition(all ease 0.3s);
-  }
-  .form-control {
-    border: 1px solid #e1e2e7;
-    box-sizing: border-box;
-    color: var(--fontColor);
-    display: block;
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: normal;
-    height: 44px;
-    padding: 10px 20px 10px;
-    @include rounded-corners(6px);
-    @include box-shadow(none);
-    &::placeholder {
-      color: rgba(103, 108, 122, 0.4);
-    }
-    &:focus,
-    &:active {
-      border-color: var(--primary-color);
-      @include box-shadow(none);
-    }
-    &.textarea {
-      height: 101px;
-      resize: none;
-    }
-  }
-  .c-dropdown {
-    background-color: var(--white);
-    @include rounded-corners(6px);
-    .btn {
-      box-sizing: border-box;
-      border: 1px solid #e1e2e7;
-      height: 44px;
-      font-size: 15px;
-      line-height: 22px;
-      padding: 10px 30px 10px 20px;
-      text-align: left;
-      position: relative;
-      width: 100%;
-      &:focus,
-      &:active {
-        border-color: var(--primary-color);
-        @include box-shadow(0 4px 10px rgba(40, 79, 152, 0.2));
-      }
-      &.default {
-        color: var(--gray-01);
-        font-weight: 400;
-      }
-      &::after {
-        border: 0;
-        color: var(--gray-01);
-        position: absolute;
-        top: 15px;
-        right: 13px;
-        height: 15px;
-        width: 15px;
-        font-size: 14px;
-        line-height: 14px;
-        font-family: "ocr-inc";
-        content: "D";
-      }
-    }
-    &.col-red {
-      .btn {
-        &:focus,
-        &:active {
-          border-color: var(--red) !important;
-          @include box-shadow(0 4px 10px rgba(254, 75, 75, 0.2));
-        }
-      }
-    }
-  }
-  &.c-dateRangePicker,
-  &.c-dtPicker,
-  &.c-timePicker {
-    .dtPickWrapper {
-      position: relative;
-      box-sizing: border-box;
-      display: block;
-      .form-control {
-        padding-right: 40px;
-      }
-      &::after {
-        position: absolute;
-        top: 14px;
-        right: 10px;
-        height: 15px;
-        width: 20px;
-        color: var(--gray-01);
-        font-family: "ocr-inc";
-        content: "\51";
-        font-size: 15px;
-        line-height: 15px;
-      }
-    }
-    &.sm {
-      .dtPickWrapper {
-        &::after {
-          top: 12px;
-        }
-        .form-control {
-          box-sizing: border-box;
-          color: var(--fontColor);
-          height: 38px;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 16px;
-          padding: 11px 45px 11px 20px;
-          min-width: 270px;
-          @include rounded-corners(10px);
-        }
-      }
-    }
-  }
-  &.c-timePicker {
-    .dtPickWrapper {
-      &::after {
-        font-family: "ocr-inc";
-        content: "\54";
-      }
-    }
-  }
-  &.fix-height {
-    height: 80px;
-  }
-  &.js-focus {
-    .formLbl {
-      color: var(--primary-color);
-    }
-  }
-  &.c-error {
-    .form-control {
-      border-color: var(--red) !important;
-    }
-    .errorMsg {
-      color: var(--red) !important;
-      display: block;
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 16px;
-      margin-top: 3px;
-    }
-  }
-}
-
-.c-dropdown {
-  .dropdown-menu {
-    &.st-clean {
-      padding: 20px 0;
-      .dropdown-item {
-        padding: 4px 20px;
-        position: relative;
-        @include transition(all ease 0.2s);
-        &:hover {
-          background-color: RGBA(var(--primary-rgb), 0.2);
-          color: var(--white);
-          .icon {
-            color: var(--white);
-          }
-        }
-      }
-    }
-    &.with-icon {
-      .dropdown-item {
-        padding: 6px 20px 6px 40px;
-        .icon {
-          color: var(--gray-01);
-          position: absolute;
-          top: 7px;
-          left: 15px;
-          height: 16px;
-          width: 16px;
-          font-size: 16px;
-          line-height: 16px;
-        }
-      }
-    }
-  }
-}
-
 /* ---- Select 2 - Single select ----- */
-.c-customDropdown {
-  .select2-container {
-    &.select2-container--open {
-      .select2-selection {
-        border-color: var(--primary-color);
-        @include box-shadow(0 4px 10px rgba(40, 79, 152, 0.2));
-        @include rounded-corners(5px);
-      }
-    }
-  }
-
-  .select2-selection {
-    box-sizing: border-box;
-    border: 1px solid #e1e2e7;
-    height: 44px;
-    font-size: 15px;
-    line-height: 22px;
-    padding: 12px 30px 9px 20px;
-    text-align: left;
-    position: relative;
-    width: 100%;
-    outline: none;
-    @include transition(all ease 0.3s);
-
-    .select2-selection__arrow {
-      top: 9px;
-      right: 11px;
-      b {
-        border-color: var(--gray-01) transparent transparent transparent;
-      }
-    }
-    .select2-selection__rendered {
-      color: var(--fontColor);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 19px;
-      padding: 0;
-    }
-  }
-}
 .customeDropdown {
   border: 0 !important;
   background-color: var(--white);
@@ -1365,117 +1105,7 @@ a:hover {
   }
 }
 
-/* ----- Check Box / Radio Btn ----- */
-.c-chkBox,
-.c-radioBox {
-  display: block;
-  position: relative;
-  .chkLbl {
-    color: #676c7a;
-    cursor: pointer;
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 16px;
-    position: relative;
-    padding: 0 0 0 24px;
-    margin-bottom: 10px;
-    @include transition(all ease 0.2s);
-
-    &::before {
-      color: #b5b5be;
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 18px;
-      line-height: 16px;
-      height: 16px;
-      width: 16px;
-      font-family: "ocr-inc";
-      content: "\4e";
-      z-index: 2;
-      @include transition(all ease 0.2s);
-    }
-  }
-  .chkBox {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    opacity: 0;
-
-    &:checked {
-      ~ {
-        .chkLbl {
-          color: var(--fontColor);
-          &::before {
-            color: var(--primary-color) !important;
-            content: "\4d";
-          }
-        }
-      }
-    }
-  }
-  &.c-radioBox {
-    .chkLbl {
-      margin-bottom: 0;
-      &::before {
-        content: "\21";
-      }
-    }
-    .chkBox {
-      &:checked {
-        ~ {
-          .chkLbl {
-            &::before {
-              content: "\39";
-            }
-          }
-        }
-      }
-    }
-  }
-  &.no-label {
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    .chkLbl {
-      display: inline-block;
-      height: 16px;
-      width: 16px;
-      margin: 0;
-      position: relative;
-      top: 2px;
-    }
-    .chkBox {
-      cursor: pointer;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      opacity: 0;
-      height: 16px;
-      width: 16px;
-      z-index: 3;
-      &:checked {
-        ~ {
-          .chkLbl {
-            color: var(--fontColor);
-            &::before {
-              color: var(--primary-color) !important;
-              content: "\4d";
-            }
-          }
-        }
-      }
-    }
-  }
-  &.inline {
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
-
 /* --- Search Box --- */
-
 .c-searchBox {
   background-color: var(--white);
   box-sizing: border-box;
@@ -1774,98 +1404,6 @@ a:hover {
         &.select2-results__option--highlighted {
           background-color: transparent;
         }
-      }
-    }
-  }
-}
-
-/* --- Dropdown --- */
-.c-dropdown {
-  display: block;
-  position: relative;
-  .dropdown-item {
-    color: var(--fontColor);
-    display: block;
-    padding: 7px 0;
-    font-size: 14px;
-    line-height: 19px;
-    @include rounded-corners(0);
-    &:active {
-      border: 0;
-      outline: none;
-      background-color: transparent;
-    }
-    &:hover {
-      background-color: RGBA(var(--primary-rgb), 0.1);
-    }
-  }
-  .btn-dd {
-    background-color: var(--white);
-    border: 0;
-    box-sizing: border-box;
-    display: block;
-    height: 38px;
-    padding: 7px 20px 7px 38px;
-    position: relative;
-    outline: none;
-    @include rounded-corners(10px);
-    .icon {
-      display: block;
-      position: absolute;
-      left: 7px;
-      top: 5px;
-      color: #676c7a;
-      font-size: 28px;
-      line-height: 17px;
-    }
-    &::before {
-      color: #676c7a;
-      display: block;
-      position: absolute;
-      right: 5px;
-      top: 13px;
-      font-size: 14px;
-      line-height: 14px;
-      font-family: "ocr-inc";
-      content: "D";
-    }
-    &::after {
-      display: none;
-    }
-  }
-  &.custome {
-    .dropdown-menu {
-      min-width: 150px;
-      width: 100%;
-      left: -42px !important;
-      right: auto !important;
-    }
-  }
-  &.type-btn {
-    position: relative;
-    &.dropdown {
-      .btn {
-        height: auto;
-        border: 0;
-        padding: 5px;
-        text-align: center;
-        line-height: 12px;
-        &::after {
-          display: none;
-        }
-        .icon {
-          color: var(--gray-01);
-          font-size: 20px;
-          line-height: 12px;
-          display: inline-block;
-          position: relative;
-          top: 2px;
-        }
-      }
-      .dropdown-menu {
-        right: 0 !important;
-        min-width: 150px;
-        transform: translate3d(-5px, 31px, 0px) !important;
       }
     }
   }
@@ -3361,10 +2899,6 @@ a:hover {
 .p-right {
   float: right;
 }
-.font-h {
-  font-weight: 700;
-  text-transform: uppercase;
-}
 
 /* -------------------------------------
   Component :: Plugin overwrite
@@ -4042,6 +3576,3 @@ a:hover {
     }
   }
 }
-
-/* ---------- Static Site -------- */
-@import "./static-site.scss";

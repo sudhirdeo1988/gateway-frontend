@@ -15,26 +15,26 @@
 
   <body class="no-settingHeader">
     <!-- ********** Page Body **********  -->
-    <div class="c-pageBody isCloseSidebar">
+    <div class="c-pageBody">
       <!-- ********** Component :: Sidebar **********  -->
-      <div class="c-sidebar js-hover" role="button">
-        <div class="c-pageNav js-customScroll">
+      <div class="c-sidebar" role="button">
+        <div class="c-pageNav">
           <ul>
             <li>
               <a href="./01-dashboard.html" class="navLink">
-                <i class="icon ocr-dashboard"></i>
+                <i class="icon ocr-dashboard-1"></i>
                 <span class="linkText">Dashboard</span>
               </a>
             </li>
             <li>
               <a href="./02-filingHistory.html" class="navLink active">
-                <i class="icon ocr-content-7"></i>
+                <i class="icon ocr-edit"></i>
                 <span class="linkText">Filling History</span>
               </a>
             </li>
             <li>
               <a href="./03-customFiling.html" class="navLink">
-                <i class="icon ocr-tax"></i>
+                <i class="icon ocr-copy"></i>
                 <span class="linkText">Custom Filling</span>
               </a>
             </li>
@@ -45,34 +45,89 @@
 
       <!-- ********** Component :: Header **********  -->
       <div class="c-header">
-        <div class="row no-gutters align-items-center">
+        <div class="row no-gutters">
           <div class="col-7">
-            <div class="headerSect_logo">
-              <a href="javascript:void(0);" class="headerLogo">
-                <img src="../images/logo.png" alt="alt" />
-              </a>
-            </div>
-            <div class="headerSect_l">
-              <div class="c-pageTitle">Global custom filling gateway</div>
+            <div class="hs_left">
+              <div class="headerSect_logo">
+                <a href="javascript:void(0);" class="headerLogo">
+                  <img src="../images/logo.png" alt="alt" />
+                </a>
+              </div>
+              <div class="headerSect_l">
+                <div class="c-pageTitle">Global custom filling gateway</div>
+              </div>
             </div>
           </div>
           <div class="col-5 text-right">
             <div class="headerSettings">
               <ul>
-                <li>
-                  <div class="notifySetting">
+                <li class="themeSwitch">
+                  <div class="c-switch">
+                    <input
+                      type="checkbox"
+                      class="switchChk"
+                      id="themeSwitch"
+                      value="dark"
+                    />
+                    <label class="switchLbl" for="themeSwitch">
+                      <div class="switchTrack"></div>
+                    </label>
+                  </div>
+                </li>
+                <li class="countryFlag">
+                  <div class="c-dropdown dropdown">
                     <button
-                      class="profileBtn"
+                      class="flagBtn dropdown-toggle"
                       type="button"
-                      data-toggle="modal"
-                      data-target="#flagModal"
+                      id="countrySelection"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
                     >
-                      <img
-                        src="../images/flags/india.svg"
-                        class="flag"
-                        alt="India"
-                      />
+                      <img src="../images/flags/india.svg" class="flag" />
+                      <span class="country">IND</span>
                     </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown flagListDD"
+                      aria-labelledby="countrySelection"
+                    >
+                      <div class="flagSearchHeader">
+                        <div class="searchTxt">
+                          <i class="icon ocr-search"></i>
+                          <input
+                            type="text"
+                            class="txtBox"
+                            placeholder="Search"
+                          />
+                        </div>
+                      </div>
+                      <div class="flagSearchBody">
+                        <ul>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/india.svg"
+                                  class="flag"
+                                />
+                                <span class="country">India</span>
+                              </div>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/japan.svg"
+                                  class="flag"
+                                />
+                                <span class="country">Japan</span>
+                              </div>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li>
@@ -85,7 +140,7 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i class="icon ocr-bell-1"></i>
+                      <i class="icon ocr-alarm"></i>
                       <span class="count">2</span>
                     </button>
                     <div
@@ -135,6 +190,65 @@
                   </div>
                 </li>
                 <li>
+                  <div class="c-dropdown dropdown notifySetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocr-mail"></i>
+                      <span class="count">2</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div class="notifyHeading">
+                        Notifications
+                        <span class="c-badge primary sm">10</span>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocr-bell-1"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="userProf">
                   <div class="c-dropdown dropdown profileSetting">
                     <button
                       class="profileBtn dropdown-toggle"
@@ -147,7 +261,7 @@
                       <i class="icon ocr-user-2"></i>
                     </button>
                     <div
-                      class="dropdown-menu st-clean with-icon"
+                      class="dropdown-menu userDD st-clean with-icon"
                       aria-labelledby="dropdownMenuButton2"
                     >
                       <a class="dropdown-item" href="./04-userProfile.html">
@@ -180,9 +294,9 @@
       <div class="c-wrapper">
         <div class="container-fluid">
           <!-- *** First Row *** -->
-          <div class="row align-items-center mb-20">
+          <div class="row align-items-center">
             <div class="col">
-              <div class="rowHeading font-h">Filling History</div>
+              <div class="c-pageHeading">Filling History</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
@@ -204,6 +318,18 @@
                       >Custom Filling History</a
                     >
                   </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="Details-tab"
+                      data-toggle="tab"
+                      href="#Details"
+                      role="tab"
+                      aria-controls="Details"
+                      aria-selected="true"
+                      >Custom Filling History</a
+                    >
+                  </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
                   <!-- ***** Tab :: Details ***** -->
@@ -214,114 +340,114 @@
                     aria-labelledby="Details-tab"
                   >
                     <!-- ***** Section 8 ***** -->
-                    <div class="c-grapgContainer">
-                      <div class="profInfo">
-                        <div class="graphHeading">Grant Access</div>
+                    <div class="c-dataContainer type-01">
+                      <div class="c-compHeading">Grant Access</div>
 
-                        <div class="row align-items-center">
-                          <div class="col-12">
-                            <div class="row">
-                              <div class="col-3">
-                                <!-- *** Dropdown *** -->
-                                <div class="form-group c-form">
-                                  <label class="formLbl"
-                                    >Search By: Status</label
-                                  >
-                                  <div class="c-customDropdown selectOne">
-                                    <select class="c-select">
-                                      <option value="one">First</option>
-                                      <option value="three">Third</option>
-                                    </select>
-                                  </div>
-                                </div>
-                                <!-- *** Dropdown End *** -->
-                              </div>
-                              <div class="col-3">
-                                <!-- *** Text Box *** -->
-                                <div class="form-group c-form">
-                                  <label class="formLbl"
-                                    >Search By : Transaction ID</label
-                                  >
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Transaction ID"
-                                  />
-                                </div>
-                                <!-- *** Text Box End *** -->
-                              </div>
-                              <div class="col-3">
-                                <!-- *** Date Range Picker - Without range *** -->
-                                <div
-                                  class="form-group c-form c-dateRangePicker"
+                      <div class="row align-items-center">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-3">
+                              <!-- *** Dropdown *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl"
+                                  ><strong>Search By: </strong> Status</label
                                 >
-                                  <label class="formLbl">Search By: Date</label>
-                                  <div class="dtPickWrapper">
-                                    <input type="text" class="form-control" />
-                                  </div>
+                                <div class="c-customDropdown selectOne">
+                                  <select class="c-select">
+                                    <option value="one">First</option>
+                                    <option value="three">Third</option>
+                                  </select>
                                 </div>
-                                <!-- *** Date Range Picker - Without range End *** -->
                               </div>
-                              <div class="col-3">
-                                <!-- *** Date Range Picker - Without range *** -->
-                                <button class="c-btn mt-35">Search</button>
-                                <!-- *** Date Range Picker - Without range End *** -->
+                              <!-- *** Dropdown End *** -->
+                            </div>
+                            <div class="col-3">
+                              <!-- *** Text Box *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl"
+                                  ><strong>Search By: </strong> Transaction
+                                  ID</label
+                                >
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Transaction ID"
+                                />
                               </div>
+                              <!-- *** Text Box End *** -->
+                            </div>
+                            <div class="col-3">
+                              <!-- *** Date Range Picker - Without range *** -->
+                              <div class="form-group c-form c-dateRangePicker">
+                                <label class="formLbl"
+                                  ><strong>Search By: </strong> Date</label
+                                >
+                                <div class="dtPickWrapper">
+                                  <input type="text" class="form-control" />
+                                </div>
+                              </div>
+                              <!-- *** Date Range Picker - Without range End *** -->
+                            </div>
+                            <div class="col-3">
+                              <!-- *** Date Range Picker - Without range *** -->
+                              <button class="c-btn">Search</button>
+                              <!-- *** Date Range Picker - Without range End *** -->
                             </div>
                           </div>
-                          <div class="col-12">
-                            <div class="c-tableWrapper">
-                              <!-- ***** Table Body ***** -->
-                              <div class="c-table type-01 bordered">
-                                <table class="table js-dataTable02">
-                                  <thead>
-                                    <tr>
-                                      <th style="width: 15%">Transaction Id</th>
-                                      <th style="width: 20%">Status</th>
-                                      <th style="width: 10%">Country</th>
-                                      <th style="width: 15%">Date</th>
-                                      <th style="width: 20%">
-                                        Request File Name
-                                      </th>
-                                      <th style="width: 20%">
-                                        Response File Name
-                                      </th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <button class="staticBtn expandRow">
-                                          <i class="icon ocr-angle-right"></i>
-                                        </button>
-                                        87K7420500003
-                                      </td>
-                                      <td>
-                                        Response processed<button
-                                          class="staticBtn error"
-                                          data-toggle="modal"
-                                          data-target="#errorInfo"
-                                        >
-                                          <i class="icon ocr-exclamation"></i>
-                                        </button>
-                                      </td>
-                                      <td>CA</td>
-                                      <td>2020-07-16 11:55:17.0</td>
-                                      <td>
-                                        <button
-                                          class="fileBtn"
-                                          data-toggle="modal"
-                                          data-target="#badgePreview"
-                                        >
-                                          CA-Req2020-07-16-11-55-16-633.xml
-                                        </button>
+                        </div>
+                        <div class="col-12">
+                          <div class="c-tableWrapper">
+                            <!-- ***** Table Body ***** -->
+                            <div class="c-table type-01">
+                              <table class="table js-dataTable02">
+                                <thead>
+                                  <tr>
+                                    <th style="width: 15%">Transaction Id</th>
+                                    <th style="width: 20%">Status</th>
+                                    <th style="width: 10%">Country</th>
+                                    <th style="width: 15%">Date</th>
+                                    <th style="width: 20%">
+                                      Request File Name
+                                    </th>
+                                    <th style="width: 20%">
+                                      Response File Name
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <button class="staticBtn expandRow">
+                                        <i class="icon ocr-angle-right"></i>
+                                      </button>
+                                      87K7420500003
+                                    </td>
+                                    <td>
+                                      Response processed<button
+                                        class="staticBtn error"
+                                        data-toggle="modal"
+                                        data-target="#errorInfo"
+                                      >
+                                        <i class="icon ocr-warning"></i>
+                                      </button>
+                                    </td>
+                                    <td>CA</td>
+                                    <td>2020-07-16 11:55:17.0</td>
+                                    <td>
+                                      <button
+                                        class="fileBtn"
+                                        data-toggle="modal"
+                                        data-target="#badgePreview"
+                                      >
+                                        CA-Req2020-07-16-11-55-16-633.xml
+                                      </button>
 
-                                        <button
-                                          class="staticBtn download selector"
-                                          data-container="body"
-                                          data-toggle="popover"
-                                          data-placement="left"
-                                          data-content="<div class='c-downloadList'>
+                                      <button
+                                        class="staticBtn download selector"
+                                        data-container="body"
+                                        data-toggle="popover"
+                                        data-placement="left"
+                                        data-content="<div class='c-downloadList'>
                                             <ul>
                                               <li>
                                                 <a href='javascript:void(0)' class='dl_btn'>
@@ -340,31 +466,31 @@
                                               </li>
                                             </ul>
                                           </div>"
-                                        >
-                                          <i class="icon ocr-download"></i>
-                                        </button>
-                                      </td>
-                                      <td>rccececpt_edf_0172801957.txt</td>
-                                    </tr>
-                                    <tr>
-                                      <td>87K7420500003</td>
-                                      <td>Response processed</td>
-                                      <td>CA</td>
-                                      <td>2020-07-16 11:55:17.0</td>
-                                      <td>
-                                        <button
-                                          class="fileBtn"
-                                          data-toggle="modal"
-                                          data-target="#badgePreview"
-                                        >
-                                          CA-Req2020-07-16-11-55-16-633.xml
-                                        </button>
-                                        <button
-                                          class="staticBtn download selector"
-                                          data-container="body"
-                                          data-toggle="popover"
-                                          data-placement="left"
-                                          data-content="<div class='c-downloadList'>
+                                      >
+                                        <i class="icon ocr-down-arrow"></i>
+                                      </button>
+                                    </td>
+                                    <td>rccececpt_edf_0172801957.txt</td>
+                                  </tr>
+                                  <tr>
+                                    <td>87K7420500003</td>
+                                    <td>Response processed</td>
+                                    <td>CA</td>
+                                    <td>2020-07-16 11:55:17.0</td>
+                                    <td>
+                                      <button
+                                        class="fileBtn"
+                                        data-toggle="modal"
+                                        data-target="#badgePreview"
+                                      >
+                                        CA-Req2020-07-16-11-55-16-633.xml
+                                      </button>
+                                      <button
+                                        class="staticBtn download selector"
+                                        data-container="body"
+                                        data-toggle="popover"
+                                        data-placement="left"
+                                        data-content="<div class='c-downloadList'>
                                             <ul>
                                               <li>
                                                 <a href='javascript:void(0)' class='dl_btn'>
@@ -383,17 +509,16 @@
                                               </li>
                                             </ul>
                                           </div>"
-                                        >
-                                          <i class="icon ocr-download"></i>
-                                        </button>
-                                      </td>
-                                      <td>rccececpt_edf_0172801957.txt</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </div>
-                              <!-- ***** Table Body ***** -->
+                                      >
+                                        <i class="icon ocr-down-arrow"></i>
+                                      </button>
+                                    </td>
+                                    <td>rccececpt_edf_0172801957.txt</td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
+                            <!-- ***** Table Body ***** -->
                           </div>
                         </div>
                       </div>

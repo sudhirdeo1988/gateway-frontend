@@ -1,6 +1,15 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 
+  $("#themeSwitch").change(function () {
+    const theme = $(this).val();
+    if ($(this).is(":checked")) {
+      $("body").addClass("theme-dark").removeClass("theme-light");
+    } else {
+      $("body").removeClass("theme-dark").addClass("theme-light");
+    }
+  });
+
   // popover
   $(".selector")
     .popover({ trigger: "manual", html: true, animation: false })

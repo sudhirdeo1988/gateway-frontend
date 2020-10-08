@@ -97,11 +97,13 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      float: right;
       li {
         border-left: 1px solid #f0f3f6;
         display: inline-block;
         vertical-align: top;
         padding: 21px 20px;
+        float: left;
         &:last-child {
           padding-right: 0;
         }
@@ -276,9 +278,12 @@
         display: block;
         margin: 0;
         padding: 0;
+        float: none;
         li {
+          border: 0;
           display: block;
           padding: 0;
+          float: none;
           .selectBtn {
             background-color: transparent;
             box-sizing: border-box;
@@ -316,7 +321,7 @@
               }
             }
             &:hover {
-              background-color: var(--gray-02);
+              background-color: RGBA(var(--primary-rgb), 0.1);
               .flagInfo {
                 .country {
                   color: var(--primary-color);
@@ -402,14 +407,12 @@
       }
     }
   }
-
-  .countryFlagDD {
-  }
 }
 
 /* --- For Dark theme --- */
 #{$darkTheme} {
   .c-header {
+    border-bottom: 1px solid #2f344d;
     .profileSetting {
       .profileBtn {
         background-color: var(--page-bg-color);
@@ -422,7 +425,7 @@
     .headerSettings {
       ul {
         li {
-          border-left: 1px solid var(--page-bg-color);
+          border-left: 1px solid #2f344d;
           &:first-child {
             border: 0;
           }
@@ -526,7 +529,7 @@
       list-style: none;
       li {
         display: block;
-        margin-bottom: 2px;
+        margin-bottom: 15px;
         .navLink {
           background-color: transparent;
           box-sizing: border-box;
@@ -536,7 +539,7 @@
           height: 54px;
           outline: none;
           position: relative;
-          padding: 16px 16px 16px 66px;
+          padding: 16px 0 16px 66px;
           text-align: left;
           font-size: 15px;
           @include transition(all ease 0.3s);
@@ -650,7 +653,7 @@
             color: var(--fontColor);
             &:hover,
             &.active {
-              background-color: var(--page-bg-color);
+              background-color: #20223c;
               &::before {
                 background-color: var(--primary-color);
               }
@@ -678,6 +681,9 @@
   margin-bottom: 25px;
   @include rounded-corners(10px);
   @include box-shadow(-2px 4px 13px rgba(0, 0, 0, 0.03));
+  &.type-01 {
+    padding: 24px;
+  }
 }
 
 .c-chartBlockhead {
@@ -792,16 +798,16 @@
     .c_count {
       color: var(--fontColor);
       display: block;
-      font-size: 61px;
-      line-height: 61px;
+      font-size: 40px;
+      line-height: 40px;
       font-weight: 700;
-      margin: 5px 0;
-      letter-spacing: -1px;
+      padding: 15px 0 8px;
+      letter-spacing: -2px;
       text-transform: uppercase;
       text-align: right;
     }
     .c_footer {
-      color: var(--gray-01);
+      color: var(--fontColor-light);
       display: block;
       font-size: 14px;
       line-height: 16px;
@@ -860,13 +866,15 @@
     }
     th {
       border: 0;
+      border-bottom: 2px solid var(--gray-02);
+      border-top: 1px solid var(--gray-02);
       background-color: #f7f7f7;
       color: var(--fontColor);
       font-size: 12px;
       font-weight: 700;
       line-height: 16px !important;
-      min-height: 38px;
-      padding: 14px 20px 12px 14px;
+      min-height: 48px;
+      padding: 18px 20px 14px 14px;
       text-transform: uppercase;
       vertical-align: middle;
       &.sorting,
@@ -878,7 +886,7 @@
           color: var(--fontColor);
           position: absolute;
           top: 50%;
-          right: 5px;
+          right: 10px;
           height: 15px;
           width: 12px;
           font-family: "ocr-inc";
@@ -898,17 +906,27 @@
         }
       }
     }
-    tr {
-      &:nth-child(even) {
-        td {
-          background-color: RGBA(var(--primary-rgb), 0.03);
+    tbody {
+      tr {
+        .childTableTd {
+          td {
+            background-color: var(--gray-01);
+          }
+        }
+        &:nth-child(even) {
+          td {
+            background-color: RGBA(var(--primary-rgb), 0.03);
+          }
         }
       }
-
+    }
+    tr {
       td {
+        border-bottom: 1px solid var(--gray-02);
+        border-top: 0;
         box-sizing: border-box;
         color: var(--gray-01);
-        padding: 8px 12px;
+        padding: 10px 12px;
         vertical-align: middle;
         font-size: 13px;
         font-weight: 500;
@@ -988,7 +1006,7 @@
 
   .c-tableFooter {
     border-top: 1px solid var(--gray-02);
-    padding: 16px;
+    padding: 30px 26px 6px;
     .c-settingList {
       li {
         margin-bottom: 0;
@@ -1167,18 +1185,29 @@
   .c-tableWrapper {
     .c-table {
       th {
+        border-color: #2f344d;
         background-color: #232741;
-        color: var(--fontColor);
+        color: var(--fontColor-light);
       }
-      tr {
-        &:nth-child(even) {
-          td {
-            background-color: var(--widget-bg-color);
+      tbody {
+        tr {
+          .childTableTd {
+            td {
+              background-color: var(--page-bg-color) !important;
+            }
+          }
+          &:nth-child(even) {
+            td {
+              background-color: var(--widget-bg-color);
+            }
           }
         }
+      }
+      tr {
         td {
+          border-color: #2f344d;
           background-color: var(--widget-bg-color);
-          color: var(--fontColor);
+          color: var(--fontColor-light);
         }
       }
 
@@ -1267,12 +1296,12 @@
   .notifyTag {
     color: var(--white);
     &.approved {
-      border: 1px solid var(--green);
-      background: lighten(var(--green), opacity(15));
+      border: 1px solid #4fc590;
+      background: #4fc590;
     }
     &.rejected {
       border: 1px solid #d57171;
-      background: lighten(var(--red), opacity(15));
+      background: #d57171;
     }
   }
 }
@@ -1282,44 +1311,56 @@
 ------------------------------------- */
 .c-tabs {
   .nav-tabs {
-    background-color: var(--white);
+    background-color: var(--widget-bg-color);
     border: 0;
     display: inline-block;
     padding: 0;
     margin: 0;
     list-style: none;
-    padding: 10px 0;
-    @include rounded-corners(5px);
+    padding: 0;
+    @include rounded-corners(10px);
     .nav-item {
-      border-right: 1px solid var(--gray-02);
-      background-color: var(--white);
+      background-color: var(--widget-bg-color);
       display: inline-block;
+      position: relative;
       float: left;
       margin: 0;
+      @include rounded-corners(10px);
+      &::after {
+        background: var(--page-bg-color);
+        position: absolute;
+        top: 16px;
+        content: "";
+        right: 0;
+        height: 20px;
+        width: 1px;
+      }
       &:last-child {
-        border-right: 0;
+        &::after {
+          display: none;
+        }
       }
       .nav-link {
         border: 0 !important;
         color: var(--gray-01);
         display: block;
-        padding: 6px 30px;
+        padding: 16px 20px;
         position: relative;
         font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 14px;
+        line-height: 16px;
+        @include rounded-corners(10px);
         &.active {
+          background-color: var(--widget-bg-color);
           color: var(--fontColor);
           &::before {
             background: var(--primary-color);
             position: absolute;
-            bottom: -10px;
+            bottom: 0;
             content: "";
-            left: 50%;
-            margin-left: -28px;
-            height: 4px;
-            width: 56px;
-            @include rounded-corners(6px);
+            left: 20px;
+            height: 2px;
+            width: calc(100% - 40px);
           }
         }
       }
@@ -1331,12 +1372,396 @@
 }
 
 /* -------------------------------------
+	Component :: Form Fields
+------------------------------------- */
+/* ----- Text Box ----- */
+.c-form {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  .formLbl {
+    color: var(--fontColor);
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    margin-bottom: 5px;
+    @include transition(all ease 0.3s);
+    strong {
+      font-weight: 700;
+    }
+  }
+  .form-control {
+    background-color: transparent;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    color: var(--fontColor);
+    display: block;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: normal;
+    height: 44px;
+    padding: 10px 20px 10px;
+    @include rounded-corners(6px);
+    @include box-shadow(-2px 4px 10px rgba(0, 0, 0, 0.03));
+    &::placeholder {
+      color: #898989;
+    }
+    &.textarea {
+      height: 101px;
+      resize: none;
+    }
+  }
+
+  &.c-dateRangePicker,
+  &.c-dtPicker,
+  &.c-timePicker {
+    .dtPickWrapper {
+      position: relative;
+      box-sizing: border-box;
+      display: block;
+      .form-control {
+        padding-right: 40px;
+      }
+      &::after {
+        position: absolute;
+        top: 14px;
+        right: 10px;
+        height: 15px;
+        width: 20px;
+        color: var(--fontColor);
+        font-family: "ocr-inc";
+        content: "\51";
+        font-size: 15px;
+        line-height: 15px;
+      }
+    }
+  }
+  &.c-timePicker {
+    .dtPickWrapper {
+      &::after {
+        font-family: "ocr-inc";
+        content: "\54";
+      }
+    }
+  }
+
+  &.c-error {
+    .form-control {
+      border-color: var(--red) !important;
+    }
+    .errorMsg {
+      color: var(--red) !important;
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      margin-top: 3px;
+    }
+  }
+}
+
+#{$darkTheme} {
+  .c-form {
+    .form-control {
+      background-color: var(--page-bg-color);
+      border: 1px solid #2f344d;
+    }
+  }
+}
+
+/* ----- Dropdown - Bootstrap ----- */
+.c-dropdown {
+  display: block;
+  position: relative;
+  .dropdown-item {
+    color: var(--fontColor);
+    display: block;
+    padding: 7px 0;
+    font-size: 14px;
+    line-height: 19px;
+    @include rounded-corners(0);
+    &:active {
+      border: 0;
+      outline: none;
+      background-color: transparent;
+    }
+    &:hover {
+      background-color: RGBA(var(--primary-rgb), 0.1);
+    }
+  }
+  .btn-dd {
+    background-color: var(--white);
+    border: 0;
+    box-sizing: border-box;
+    display: block;
+    height: 38px;
+    padding: 7px 20px 7px 38px;
+    position: relative;
+    outline: none;
+    @include rounded-corners(10px);
+    .icon {
+      display: block;
+      position: absolute;
+      left: 7px;
+      top: 5px;
+      color: #676c7a;
+      font-size: 28px;
+      line-height: 17px;
+    }
+    &::before {
+      color: #676c7a;
+      display: block;
+      position: absolute;
+      right: 5px;
+      top: 13px;
+      font-size: 14px;
+      line-height: 14px;
+      font-family: "ocr-inc";
+      content: "D";
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .dropdown-menu {
+    &.st-clean {
+      padding: 20px 0;
+      .dropdown-item {
+        color: var(--fontColor);
+        padding: 4px 20px;
+        position: relative;
+        @include transition(all ease 0.2s);
+        &:hover {
+          background-color: RGBA(var(--primary-rgb), 0.1);
+        }
+      }
+    }
+    &.with-icon {
+      .dropdown-item {
+        padding: 6px 20px 6px 40px;
+        .icon {
+          color: var(--fontColor);
+          position: absolute;
+          top: 7px;
+          left: 15px;
+          height: 16px;
+          width: 16px;
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
+
+/* ------ Dropdown - select 2 ----- */
+.c-customDropdown {
+  .select2-container {
+    &.select2-container--open {
+      .select2-selection {
+        @include rounded-corners(6px);
+        @include box-shadow(-2px 4px 10px rgba(0, 0, 0, 0.03));
+      }
+    }
+  }
+
+  .select2-selection {
+    box-sizing: border-box;
+    border: 1px solid #eaeaea;
+    height: 44px;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 12px 30px 9px 20px;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    outline: none;
+    @include transition(all ease 0.3s);
+    @include box-shadow(-2px 4px 10px rgba(0, 0, 0, 0.03));
+
+    .select2-selection__arrow {
+      top: 9px;
+      right: 11px;
+      b {
+        border-color: var(--fontColor) transparent transparent transparent;
+      }
+    }
+    .select2-selection__rendered {
+      color: var(--fontColor);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      padding: 0;
+    }
+  }
+}
+
+#{$darkTheme} {
+  .c-customDropdown {
+    .select2-selection {
+      background-color: var(--page-bg-color);
+      border: 1px solid #2f344d;
+      .select2-selection__rendered {
+        color: var(--fontColor);
+      }
+    }
+  }
+}
+
+/* ----- Check Box / Radio Btn ----- */
+.c-chkBox,
+.c-radioBox {
+  display: block;
+  position: relative;
+  .chkLbl {
+    color: var(--fontColor);
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    position: relative;
+    padding: 0 0 0 24px;
+    margin-bottom: 10px;
+    @include transition(all ease 0.2s);
+
+    &::before {
+      color: #b5b5be;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 18px;
+      line-height: 16px;
+      height: 16px;
+      width: 16px;
+      font-family: "ocr-inc";
+      content: "\4e";
+      z-index: 2;
+      @include transition(all ease 0.2s);
+    }
+  }
+  .chkBox {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    opacity: 0;
+
+    &:checked {
+      ~ {
+        .chkLbl {
+          color: var(--fontColor);
+          &::before {
+            color: var(--primary-color) !important;
+            content: "\4d";
+          }
+        }
+      }
+    }
+  }
+  &.c-radioBox {
+    .chkLbl {
+      margin-bottom: 0;
+      &::before {
+        content: "\21";
+      }
+    }
+    .chkBox {
+      &:checked {
+        ~ {
+          .chkLbl {
+            &::before {
+              content: "\39";
+            }
+          }
+        }
+      }
+    }
+  }
+  &.no-label {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    .chkLbl {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      margin: 0;
+      position: relative;
+      top: 2px;
+    }
+    .chkBox {
+      cursor: pointer;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      opacity: 0;
+      height: 16px;
+      width: 16px;
+      z-index: 3;
+      &:checked {
+        ~ {
+          .chkLbl {
+            color: var(--fontColor);
+            &::before {
+              color: var(--primary-color) !important;
+              content: "\4d";
+            }
+          }
+        }
+      }
+    }
+  }
+  &.inline {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+/* -------------------------------------
+	Component :: Headings
+------------------------------------- */
+.c-compHeading {
+  display: block;
+  color: var(--fontColor);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.c-pageHeading {
+  color: var(--fontColor);
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 30px;
+}
+
+.c-staticText {
+  color: var(--fontColor);
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.23px;
+  margin-bottom: 16px;
+  &.sm {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+}
+
+/* -------------------------------------
 	Component :: demo utils
 ------------------------------------- */
 .forLight {
   display: block;
 }
-.forDARK {
+.forDark {
   display: none;
 }
 
@@ -1344,7 +1769,7 @@
   .forLight {
     display: none;
   }
-  .forDARK {
+  .forDark {
     display: block;
   }
 }

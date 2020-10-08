@@ -73,6 +73,9 @@ SCSS functions
 }
 
 /* -------------------------------------
+	Theme Variables
+------------------------------------- */
+/* -------------------------------------
 	Mixins
 ------------------------------------- */
 /* -------------------------------------
@@ -979,6 +982,9 @@ a:hover {
   position: relative;
   top: 1px;
 }
+.c-header .headerSettings ul li.themeSwitch .c-switch {
+  top: 4px;
+}
 .c-header .notifySetting {
   display: inline-block;
   position: relative;
@@ -1255,6 +1261,9 @@ a:hover {
 .theme-dark .c-header .headerSettings ul li {
   border-left: 1px solid var(--page-bg-color);
 }
+.theme-dark .c-header .headerSettings ul li:first-child {
+  border: 0;
+}
 .theme-dark .c-header .headerSettings ul li.countryFlag .flagBtn::after {
   color: var(--fontColor);
 }
@@ -1526,6 +1535,7 @@ a:hover {
   float: left;
   padding: 9px;
   margin-left: 3px;
+  outline: none;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
@@ -2021,6 +2031,79 @@ a:hover {
 .theme-dark .notifyTag.rejected {
   border: 1px solid #d57171;
   background: linear-gradient(to top,rgba(255, 255, 255,0.15),rgba(255, 255, 255,0.15)) var(--red);
+}
+
+/* -------------------------------------
+	Component :: Tabs
+------------------------------------- */
+.c-tabs .nav-tabs {
+  background-color: var(--white);
+  border: 0;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding: 10px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.c-tabs .nav-tabs .nav-item {
+  border-right: 1px solid var(--gray-02);
+  background-color: var(--white);
+  display: inline-block;
+  float: left;
+  margin: 0;
+}
+.c-tabs .nav-tabs .nav-item:last-child {
+  border-right: 0;
+}
+.c-tabs .nav-tabs .nav-item .nav-link {
+  border: 0 !important;
+  color: var(--gray-01);
+  display: block;
+  padding: 6px 30px;
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.c-tabs .nav-tabs .nav-item .nav-link.active {
+  color: var(--fontColor);
+}
+.c-tabs .nav-tabs .nav-item .nav-link.active::before {
+  background: var(--primary-color);
+  position: absolute;
+  bottom: -10px;
+  content: "";
+  left: 50%;
+  margin-left: -28px;
+  height: 4px;
+  width: 56px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.c-tabs .tab-content {
+  padding: 20px 0;
+}
+
+/* -------------------------------------
+	Component :: demo utils
+------------------------------------- */
+.forLight {
+  display: block;
+}
+
+.forDARK {
+  display: none;
+}
+
+.theme-dark .forLight {
+  display: none;
+}
+.theme-dark .forDARK {
+  display: block;
 }
 
 /* -------------------------------------
@@ -2618,7 +2701,7 @@ a:hover {
   -ms-transition: all ease 0.2s;
 }
 .c-dropdown .dropdown-menu.st-clean .dropdown-item:hover {
-  background-color: var(--primary-color);
+  background-color: RGBA(var(--primary-rgb), 0.2);
   color: var(--white);
 }
 .c-dropdown .dropdown-menu.st-clean .dropdown-item:hover .icon {
@@ -3167,7 +3250,7 @@ a:hover {
   position: relative;
 }
 .c-dropdown .dropdown-item {
-  color: var(--gray-01);
+  color: var(--fontColor);
   display: block;
   padding: 7px 0;
   font-size: 14px;
@@ -3180,6 +3263,9 @@ a:hover {
   border: 0;
   outline: none;
   background-color: transparent;
+}
+.c-dropdown .dropdown-item:hover {
+  background-color: RGBA(var(--primary-rgb), 0.1);
 }
 .c-dropdown .btn-dd {
   background-color: var(--white);
@@ -3487,61 +3573,6 @@ a:hover {
   color: var(--fontColor);
   margin: 0;
   font-weight: 600;
-}
-
-/* -------------------------------------
-	Component :: Tabs
-------------------------------------- */
-.c-tabs .nav-tabs {
-  background-color: var(--white);
-  border: 0;
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  padding: 10px 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-.c-tabs .nav-tabs .nav-item {
-  border-right: 1px solid var(--gray-02);
-  background-color: var(--white);
-  display: inline-block;
-  float: left;
-  margin: 0;
-}
-.c-tabs .nav-tabs .nav-item:last-child {
-  border-right: 0;
-}
-.c-tabs .nav-tabs .nav-item .nav-link {
-  border: 0 !important;
-  color: var(--gray-01);
-  display: block;
-  padding: 6px 30px;
-  position: relative;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-}
-.c-tabs .nav-tabs .nav-item .nav-link.active {
-  color: var(--fontColor);
-}
-.c-tabs .nav-tabs .nav-item .nav-link.active::before {
-  background: var(--primary-color);
-  position: absolute;
-  bottom: -10px;
-  content: "";
-  left: 50%;
-  margin-left: -28px;
-  height: 4px;
-  width: 56px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-.c-tabs .tab-content {
-  padding: 20px 0;
 }
 
 /* -------------------------------------

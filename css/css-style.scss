@@ -1261,7 +1261,7 @@ a:hover {
         position: relative;
         @include transition(all ease 0.2s);
         &:hover {
-          background-color: var(--primary-color);
+          background-color: RGBA(var(--primary-rgb), 0.2);
           color: var(--white);
           .icon {
             color: var(--white);
@@ -1784,7 +1784,7 @@ a:hover {
   display: block;
   position: relative;
   .dropdown-item {
-    color: var(--gray-01);
+    color: var(--fontColor);
     display: block;
     padding: 7px 0;
     font-size: 14px;
@@ -1794,6 +1794,9 @@ a:hover {
       border: 0;
       outline: none;
       background-color: transparent;
+    }
+    &:hover {
+      background-color: RGBA(var(--primary-rgb), 0.1);
     }
   }
   .btn-dd {
@@ -1830,22 +1833,6 @@ a:hover {
       display: none;
     }
   }
-  // .dropdown-menu {
-  //   border: 0;
-  //   background-color: var(--white);
-  //   box-sizing: border-box;
-  //   min-width: 300px;
-  //   left: auto !important;
-  //   right: 0 !important;
-  //   top: 2px !important;
-  //   margin: 0;
-  //   padding: 20px;
-  //   box-shadow: 0 6px 15px rgba(196, 203, 216, 0.25);
-  //   @include rounded-corners(10px);
-  //   &.sm {
-  //     min-width: 250px;
-  //   }
-  // }
   &.custome {
     .dropdown-menu {
       min-width: 150px;
@@ -2108,59 +2095,6 @@ a:hover {
     color: var(--fontColor);
     margin: 0;
     font-weight: 600;
-  }
-}
-
-/* -------------------------------------
-	Component :: Tabs
-------------------------------------- */
-.c-tabs {
-  .nav-tabs {
-    background-color: var(--white);
-    border: 0;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    padding: 10px 0;
-    @include rounded-corners(5px);
-    .nav-item {
-      border-right: 1px solid var(--gray-02);
-      background-color: var(--white);
-      display: inline-block;
-      float: left;
-      margin: 0;
-      &:last-child {
-        border-right: 0;
-      }
-      .nav-link {
-        border: 0 !important;
-        color: var(--gray-01);
-        display: block;
-        padding: 6px 30px;
-        position: relative;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        &.active {
-          color: var(--fontColor);
-          &::before {
-            background: var(--primary-color);
-            position: absolute;
-            bottom: -10px;
-            content: "";
-            left: 50%;
-            margin-left: -28px;
-            height: 4px;
-            width: 56px;
-            @include rounded-corners(6px);
-          }
-        }
-      }
-    }
-  }
-  .tab-content {
-    padding: 20px 0;
   }
 }
 

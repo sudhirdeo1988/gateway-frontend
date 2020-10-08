@@ -82,6 +82,12 @@ SCSS functions
 }
 
 /* -------------------------------------
+	Theme Variables
+------------------------------------- */
+$darkTheme: ".theme-dark";
+$lightTheme: ".theme-light";
+
+/* -------------------------------------
 	Mixins
 ------------------------------------- */
 @mixin rounded-corners($property) {

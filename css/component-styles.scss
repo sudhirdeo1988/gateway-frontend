@@ -1,4 +1,3 @@
-$darkTheme: ".theme-dark";
 /* -------------------------------------
 	Component :: Header
 ------------------------------------- */
@@ -143,6 +142,11 @@ $darkTheme: ".theme-dark";
               position: relative;
               top: 1px;
             }
+          }
+        }
+        &.themeSwitch {
+          .c-switch {
+            top: 4px;
           }
         }
       }
@@ -419,6 +423,9 @@ $darkTheme: ".theme-dark";
       ul {
         li {
           border-left: 1px solid var(--page-bg-color);
+          &:first-child {
+            border: 0;
+          }
           &.countryFlag {
             .flagBtn {
               &::after {
@@ -708,6 +715,7 @@ $darkTheme: ".theme-dark";
       float: left;
       padding: 9px;
       margin-left: 3px;
+      outline: none;
       @include rounded-corners(30px);
       .icon {
         color: #d3d3d3;
@@ -1266,5 +1274,77 @@ $darkTheme: ".theme-dark";
       border: 1px solid #d57171;
       background: lighten(var(--red), opacity(15));
     }
+  }
+}
+
+/* -------------------------------------
+	Component :: Tabs
+------------------------------------- */
+.c-tabs {
+  .nav-tabs {
+    background-color: var(--white);
+    border: 0;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding: 10px 0;
+    @include rounded-corners(5px);
+    .nav-item {
+      border-right: 1px solid var(--gray-02);
+      background-color: var(--white);
+      display: inline-block;
+      float: left;
+      margin: 0;
+      &:last-child {
+        border-right: 0;
+      }
+      .nav-link {
+        border: 0 !important;
+        color: var(--gray-01);
+        display: block;
+        padding: 6px 30px;
+        position: relative;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        &.active {
+          color: var(--fontColor);
+          &::before {
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            content: "";
+            left: 50%;
+            margin-left: -28px;
+            height: 4px;
+            width: 56px;
+            @include rounded-corners(6px);
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    padding: 20px 0;
+  }
+}
+
+/* -------------------------------------
+	Component :: demo utils
+------------------------------------- */
+.forLight {
+  display: block;
+}
+.forDARK {
+  display: none;
+}
+
+#{$darkTheme} {
+  .forLight {
+    display: none;
+  }
+  .forDARK {
+    display: block;
   }
 }

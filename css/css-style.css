@@ -291,6 +291,10 @@ SCSS functions
   content: "R";
 }
 
+.ocrd-chart-alt:before {
+  content: "S";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -3757,7 +3761,7 @@ a:hover {
   font-size: 15px;
   line-height: 15px;
   font-family: var(--icon-font);
-  content: "c";
+  content: "P";
 }
 
 /* -------------------------------------
@@ -4522,7 +4526,7 @@ a:hover {
   display: block;
   padding: 20px 15px 20px 65px;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -5540,7 +5544,7 @@ a:hover {
   background-color: var(--theme-color-1);
   cursor: pointer;
   font-family: var(--icon-font);
-  content: "b";
+  content: "n";
   position: absolute;
   top: 0;
   left: -20px;

@@ -12,259 +12,464 @@
     <link rel="stylesheet" href="../css/css-style.css" />
   </head>
 
-  <body class="no-settingHeader">
-    <!-- ********** Page Body **********  -->
-    <div class="c-pageBody">
-      <!-- ********** Component :: Header **********  -->
-      <div class="c-header">
+  <body class="no-customHeader">
+    <!-- ***** Setting Header Block ***** -->
+    <div class="c-settingHeader">
+      <div class="clearfix">
         <div class="row no-gutters">
-          <div class="col-7">
-            <div class="hs_left">
-              <div class="headerSect_logo">
-                <a href="javascript:void(0);" class="headerLogo">
-                  <img src="../images/logo.png" alt="alt" />
-                </a>
-              </div>
-              <div class="headerSect_l">
-                <div class="c-pageTitle">Authorization Management</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-5 text-right">
-            <div class="headerSettings">
+          <!-- *** Left Side *** -->
+          <div class="col">
+            <div class="c-shList type-01">
               <ul>
-                <li class="themeSwitch">
-                  <div class="c-switch">
-                    <input
-                      type="checkbox"
-                      class="switchChk"
-                      id="themeSwitch"
-                      value="dark"
-                    />
-                    <label class="switchLbl" for="themeSwitch">
-                      <div class="switchTrack"></div>
-                    </label>
-                  </div>
-                </li>
-                <li class="countryFlag">
-                  <div class="c-dropdown dropdown">
+                <li>
+                  <div class="btn-group c-shDropdown js-preventClick">
                     <button
-                      class="flagBtn dropdown-toggle"
                       type="button"
-                      id="countrySelection"
+                      class="btn dropdown-toggle"
                       data-toggle="dropdown"
+                      data-trigger="hover"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <img src="../images/flags/india.svg" class="flag" />
-                      <span class="country">IND</span>
+                      Demo - US
                     </button>
-                    <div
-                      class="dropdown-menu c-notifyDropdown flagListDD"
-                      aria-labelledby="countrySelection"
-                    >
-                      <div class="flagSearchHeader">
-                        <div class="searchTxt">
-                          <i class="icon ocrd-search"></i>
-                          <input
-                            type="text"
-                            class="txtBox"
-                            placeholder="Search"
-                          />
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+
+                      <div class="clearfix dropdown-item-accord">
+                        <a
+                          class="dropdown-item type-accord"
+                          data-toggle="collapse"
+                          href="#multiCollapseExample1"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="multiCollapseExample1"
+                          >Accord Link</a
+                        >
+                        <div
+                          class="collapse multi-collapse"
+                          id="multiCollapseExample1"
+                        >
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
                         </div>
                       </div>
-                      <div class="flagSearchBody">
-                        <ul>
-                          <li>
-                            <button class="selectBtn">
-                              <div class="flagInfo">
-                                <img
-                                  src="../images/flags/india.svg"
-                                  class="flag"
-                                />
-                                <span class="country">India</span>
-                              </div>
-                            </button>
-                          </li>
-                          <li>
-                            <button class="selectBtn">
-                              <div class="flagInfo">
-                                <img
-                                  src="../images/flags/japan.svg"
-                                  class="flag"
-                                />
-                                <span class="country">Japan</span>
-                              </div>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div class="c-dropdown dropdown notifySetting">
-                    <button
-                      class="profileBtn dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton3"
-                      data-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <i class="icon ocrd-alarm"></i>
-                      <span class="count">2</span>
-                    </button>
-                    <div
-                      class="dropdown-menu c-notifyDropdown"
-                      aria-labelledby="dropdownMenuButton3"
-                    >
-                      <div class="notifyHeading">
-                        Notifications
-                        <span class="c-badge primary sm">10</span>
-                      </div>
 
-                      <div class="notifyBody">
-                        <a
-                          class="dropdown-item c-notify"
-                          href="javascript:void(0)"
-                        >
-                          <div class="dropdown-notification-item">
-                            <div class="dropdown-notification-icon">
-                              <i class="icon ocrd-alarm"></i>
-                            </div>
-                            <div class="dropdown-notification-info">
-                              <div class="title">
-                                3 new customer account is created
-                              </div>
-                              <div class="time">2 minutes ago</div>
-                            </div>
-                          </div>
-                        </a>
-                        <a
-                          class="dropdown-item c-notify"
-                          href="javascript:void(0)"
-                        >
-                          <div class="dropdown-notification-item">
-                            <div class="dropdown-notification-icon">
-                              <i class="icon ocrd-alarm"></i>
-                            </div>
-                            <div class="dropdown-notification-info">
-                              <div class="title">
-                                3 new customer account is created
-                              </div>
-                              <div class="time">2 minutes ago</div>
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
                 <li>
-                  <div class="c-dropdown dropdown notifySetting">
+                  <div class="btn-group c-shDropdown type-02 js-preventClick">
                     <button
-                      class="profileBtn dropdown-toggle"
                       type="button"
-                      id="dropdownMenuButton3"
+                      class="btn dropdown-toggle"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i class="icon ocrd-mail"></i>
-                      <span class="count">2</span>
+                      Module Title
                     </button>
-                    <div
-                      class="dropdown-menu c-notifyDropdown"
-                      aria-labelledby="dropdownMenuButton3"
-                    >
-                      <div class="notifyHeading">
-                        Notifications
-                        <span class="c-badge primary sm">10</span>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
                       </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
 
-                      <div class="notifyBody">
+                      <div class="clearfix dropdown-item-accord">
                         <a
-                          class="dropdown-item c-notify"
-                          href="javascript:void(0)"
+                          class="dropdown-item type-accord"
+                          data-toggle="collapse"
+                          href="#multiCollapseExample1"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="multiCollapseExample1"
+                          >Accord Link</a
                         >
-                          <div class="dropdown-notification-item">
-                            <div class="dropdown-notification-icon">
-                              <i class="icon ocrd-alarm"></i>
-                            </div>
-                            <div class="dropdown-notification-info">
-                              <div class="title">
-                                3 new customer account is created
-                              </div>
-                              <div class="time">2 minutes ago</div>
-                            </div>
-                          </div>
-                        </a>
-                        <a
-                          class="dropdown-item c-notify"
-                          href="javascript:void(0)"
+                        <div
+                          class="collapse multi-collapse"
+                          id="multiCollapseExample1"
                         >
-                          <div class="dropdown-notification-item">
-                            <div class="dropdown-notification-icon">
-                              <i class="icon ocrd-alarm"></i>
-                            </div>
-                            <div class="dropdown-notification-info">
-                              <div class="title">
-                                3 new customer account is created
-                              </div>
-                              <div class="time">2 minutes ago</div>
-                            </div>
-                          </div>
-                        </a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="userProf">
-                  <div class="c-dropdown dropdown profileSetting">
+
+                <li>
+                  <div class="btn-group c-shDropdown js-preventClick">
                     <button
-                      class="profileBtn dropdown-toggle"
                       type="button"
-                      id="dropdownMenuButton2"
+                      class="btn dropdown-toggle"
                       data-toggle="dropdown"
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i class="icon ocrd-user"></i>
+                      Features
                     </button>
-                    <div
-                      class="dropdown-menu userDD st-clean with-icon"
-                      aria-labelledby="dropdownMenuButton2"
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+
+                      <div class="clearfix dropdown-item-accord">
+                        <a
+                          class="dropdown-item type-accord"
+                          data-toggle="collapse"
+                          href="#multiCollapseExample1"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="multiCollapseExample1"
+                          >Accord Link</a
+                        >
+                        <div
+                          class="collapse multi-collapse"
+                          id="multiCollapseExample1"
+                        >
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- Example single danger button -->
+                  <div class="btn-group c-shDropdown js-preventClick">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
                     >
-                      <a class="dropdown-item" href="./04-userProfile.html">
-                        <i class="icon ocrd-user"></i>
-                        User Profile</a
-                      >
-                      <a class="dropdown-item" href="#">
-                        <i class="icon ocrd-certificate"></i>
-                        Subscription</a
-                      >
-                      <a class="dropdown-item" href="#">
-                        <i class="icon ocrd-setting-wheel"></i>
-                        Settings</a
-                      >
-                      <a class="dropdown-item" href="#">
-                        <i class="icon ocrd-sign-out"></i>
-                        Logout</a
-                      >
+                      Reports
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+
+                      <div class="clearfix dropdown-item-accord">
+                        <a
+                          class="dropdown-item type-accord"
+                          data-toggle="collapse"
+                          href="#multiCollapseExample1"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="multiCollapseExample1"
+                          >Accord Link</a
+                        >
+                        <div
+                          class="collapse multi-collapse"
+                          id="multiCollapseExample1"
+                        >
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- Example single danger button -->
+                  <div class="btn-group c-shDropdown js-preventClick">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Files
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+
+                      <div class="clearfix dropdown-item-accord">
+                        <a
+                          class="dropdown-item type-accord"
+                          data-toggle="collapse"
+                          href="#multiCollapseExample1"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="multiCollapseExample1"
+                          >Accord Link</a
+                        >
+                        <div
+                          class="collapse multi-collapse"
+                          id="multiCollapseExample1"
+                        >
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <!-- Example single danger button -->
+                  <div class="btn-group c-shDropdown js-preventClick">
+                    <button
+                      type="button"
+                      class="btn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Tables
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+
+                      <div class="clearfix dropdown-item-accord">
+                        <a
+                          class="dropdown-item type-accord"
+                          data-toggle="collapse"
+                          href="#multiCollapseExample1"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="multiCollapseExample1"
+                          >Accord Link</a
+                        >
+                        <div
+                          class="collapse multi-collapse"
+                          id="multiCollapseExample1"
+                        >
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
+          <!-- *** Left Side End *** -->
+
+          <!-- *** right Side *** -->
+          <div class="col">
+            <div class="c-shList type-03 text-right">
+              <ul>
+                <li>
+                  <button class="sh_linkBtn">
+                    <i class="icon ocr-home lg"></i>
+                  </button>
+                </li>
+                <li>
+                  <button class="sh_linkBtn">
+                    <i class="icon ocr-tachometer"></i>
+                  </button>
+                </li>
+                <li>
+                  <button class="sh_linkBtn">
+                    <i class="icon ocrd-alarm sm"></i>
+                  </button>
+                </li>
+                <li>
+                  <!-- Example single danger button -->
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocr-cog sm"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+
+                      <div class="clearfix dropdown-item-accord">
+                        <a
+                          class="dropdown-item type-accord"
+                          data-toggle="collapse"
+                          href="#multiCollapseExample1"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="multiCollapseExample1"
+                          >Accord Link</a
+                        >
+                        <div
+                          class="collapse multi-collapse"
+                          id="multiCollapseExample1"
+                        >
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocr-star sm"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon sm ocr-help-circled"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon sm ocr-book"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <div class="dd_search">
+                        <input
+                          type="text"
+                          class="txt_search"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <button class="dropdown-item" href="#">Action</button>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn-group c-shDropdown">
+                    <button
+                      type="button"
+                      class="btn sh_linkBtn dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon sm ocr-person"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                      <button
+                        class="dropdown-item"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                      >
+                        Dashboard Settings
+                      </button>
+                      <button class="dropdown-item">User Settings</button>
+                      <button class="dropdown-item">Logout</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- *** right Side End *** -->
         </div>
       </div>
-      <!-- ********** Component :: Header End **********  -->
+    </div>
+    <!-- ***** Setting Header Block End***** -->
 
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody isCloseSidebar">
       <div class="c-floatingDiv">
         <button class="btnFloat">
-          <i class="icon ocrd-refresh"></i>
+          <i class="icon ocr-repeat-redo"></i>
           Refresh
         </button>
         <button
@@ -272,24 +477,24 @@
           data-toggle="modal"
           data-target="#exampleModal"
         >
-          <i class="icon ocrd-setting-wheel"></i>
+          <i class="icon ocr-cog"></i>
           Settings
         </button>
       </div>
 
       <!-- ********** Component :: Sidebar **********  -->
-      <div class="c-sidebar js-hover">
-        <div class="c-pageNav">
+      <div class="c-sidebar js-hover" role="button">
+        <div class="c-pageNav js-customScroll">
           <ul>
             <li>
               <a href="javascript:void(0)" class="navLink active">
-                <i class="icon ocrd-dashboard"></i>
+                <i class="icon ocr-dashboard"></i>
                 <span class="linkText">Option 1</span>
               </a>
             </li>
             <li>
               <a href="javascript:void" class="navLink">
-                <i class="icon ocrd-edit"></i>
+                <i class="icon ocr-content-7"></i>
                 <span class="linkText">Option 2</span>
               </a>
             </li>
@@ -311,9 +516,9 @@
                   <!-- ***** Card ***** -->
                   <div class="col">
                     <div class="c-dataCard theme-primary">
-                      <i class="c-icon ocrd-chart-alt"></i>
+                      <i class="c-icon ocr-line-chart"></i>
                       <div class="c_setting type-02">
-                        <i class="icon ocrd-refresh"></i>
+                        <i class="icon ocr-repeat-redo"></i>
                       </div>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -325,7 +530,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocrd-filter"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -355,9 +560,9 @@
                   <!-- ***** Card ***** -->
                   <div class="col">
                     <div class="c-dataCard theme-primary">
-                      <i class="c-icon ocrd-chart-alt"></i>
+                      <i class="c-icon ocr-line-chart"></i>
                       <div class="c_setting type-02">
-                        <i class="icon ocrd-refresh"></i>
+                        <i class="icon ocr-repeat-redo"></i>
                       </div>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -369,7 +574,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocrd-filter"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -399,9 +604,9 @@
                   <!-- ***** Card ***** -->
                   <div class="col">
                     <div class="c-dataCard theme-primary">
-                      <i class="c-icon ocrd-chart-alt"></i>
+                      <i class="c-icon ocr-pie-chart"></i>
                       <div class="c_setting type-02">
-                        <i class="icon ocrd-refresh"></i>
+                        <i class="icon ocr-repeat-redo"></i>
                       </div>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -413,7 +618,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocrd-filter"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -443,9 +648,9 @@
                   <!-- ***** Card ***** -->
                   <div class="col">
                     <div class="c-dataCard theme-primary">
-                      <i class="c-icon ocrd-chart-alt"></i>
+                      <i class="c-icon ocr-bar-chart"></i>
                       <div class="c_setting type-02">
-                        <i class="icon ocrd-refresh"></i>
+                        <i class="icon ocr-repeat-redo"></i>
                       </div>
                       <div class="c_setting">
                         <div class="c-dropdown dropdown">
@@ -457,7 +662,7 @@
                             aria-haspopup="true"
                             aria-expanded="false"
                           >
-                            <i class="icon ocrd-filter"></i>
+                            <i class="icon ocr-filter"></i>
                           </button>
                           <div
                             class="dropdown-menu"
@@ -489,123 +694,134 @@
           </div>
           <!-- *** Second Row End *** -->
 
-          <!-- *****  Updated Chart row 2 ***** -->
-          <div class="row">
-            <!-- Chart block 1 -->
-            <div class="col-4">
-              <div class="c-dataContainer c-chartContainer">
-                <!-- Head -->
-                <div class="c-chartBlockhead">
-                  <span class="heading">CUSTOMS METRICS</span>
-                  <div class="settings">
-                    <button class="btnSetting">
-                      <i class="icon ocrd-settings"></i>
-                    </button>
-                    <button class="btnSetting">
-                      <i class="icon ocrd-refresh"></i>
-                    </button>
+          <!-- *****  Row 2 ***** -->
+          <div class="clearfix">
+            <div class="row">
+              <div class="col-4">
+                <div class="c-grapgCard type-01">
+                  <!-- Graph Head -->
+                  <div class="gc_head">
+                    <div class="row align-items-center">
+                      <div class="col-7">
+                        <span class="graphHeading m0">CUSTOMS METRICS</span>
+                      </div>
+                      <div class="col-5">
+                        <!-- setting List -->
+                        <div class="c-settingList">
+                          <ul>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-filter-line"></i>
+                              </button>
+                            </li>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-sync"></i>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- setting List End -->
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <!-- Head End -->
+                  <!-- Graph Head End -->
 
-                <!-- body -->
-                <div class="c_body">
-                  <div class="graphBlock">
-                    <img
-                      src="../images/dummy/g5.png"
-                      class="graphImg forLight"
-                      alt="graph"
-                    />
-                    <img
-                      src="../images/dummy/g9-dark.png"
-                      class="graphImg forDark"
-                      alt="graph"
-                    />
+                  <!-- Graph Body -->
+                  <div class="gc_body">
+                    <div class="gc_graph">
+                      <img src="../images/g2.png" alt="graph" />
+                    </div>
+                    <span class="gc_title text-right">+/-3Months</span>
                   </div>
-                  <div class="graphFooter">+/-3MONTHS</div>
+                  <!-- Graph Body End -->
                 </div>
-                <!-- body End -->
+              </div>
+
+              <div class="col-4">
+                <div class="c-grapgCard type-01">
+                  <!-- Graph Head -->
+                  <div class="gc_head">
+                    <div class="row align-items-center">
+                      <div class="col-7">
+                        <span class="graphHeading m0">LICENSE METRICS</span>
+                      </div>
+                      <div class="col-5">
+                        <!-- setting List -->
+                        <div class="c-settingList">
+                          <ul>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-filter-line"></i>
+                              </button>
+                            </li>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-sync"></i>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- setting List End -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Graph Head End -->
+
+                  <!-- Graph Body -->
+                  <div class="gc_body">
+                    <div class="gc_graph">
+                      <img src="../images/g10.png" alt="graph" />
+                    </div>
+                    <span class="gc_title text-right">+/-3Months</span>
+                  </div>
+                  <!-- Graph Body End -->
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="c-grapgCard type-01">
+                  <!-- Graph Head -->
+                  <div class="gc_head">
+                    <div class="row align-items-center">
+                      <div class="col-7">
+                        <span class="graphHeading m0">Graph Heading</span>
+                      </div>
+                      <div class="col-5">
+                        <!-- setting List -->
+                        <div class="c-settingList">
+                          <ul>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-filter-line"></i>
+                              </button>
+                            </li>
+                            <li>
+                              <button class="setting">
+                                <i class="icon ocr-sync"></i>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- setting List End -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Graph Head End -->
+
+                  <!-- Graph Body -->
+                  <div class="gc_body">
+                    <div class="gc_graph">
+                      <img src="../images/g1.png" alt="graph" />
+                    </div>
+                    <span class="gc_title text-right">+/-3Months</span>
+                  </div>
+                  <!-- Graph Body End -->
+                </div>
               </div>
             </div>
-            <!-- Chart block 1  End -->
-
-            <!-- Chart block 2 -->
-            <div class="col-4">
-              <div class="c-dataContainer c-chartContainer">
-                <!-- Head -->
-                <div class="c-chartBlockhead">
-                  <span class="heading">CUSTOMS METRICS</span>
-                  <div class="settings">
-                    <button class="btnSetting">
-                      <i class="icon ocrd-settings"></i>
-                    </button>
-                    <button class="btnSetting">
-                      <i class="icon ocrd-refresh"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- Head End -->
-
-                <!-- body -->
-                <div class="c_body">
-                  <div class="graphBlock">
-                    <img
-                      src="../images/dummy/g2.png"
-                      class="graphImg forLight"
-                      alt="graph"
-                    />
-                    <img
-                      src="../images/dummy/g1-dark.png"
-                      class="graphImg forDark"
-                      alt="graph"
-                    />
-                  </div>
-                  <div class="graphFooter">+/-3MONTHS</div>
-                </div>
-                <!-- body End -->
-              </div>
-            </div>
-            <!-- Chart block 2  End -->
-
-            <!-- Chart block 3 -->
-            <div class="col-4">
-              <div class="c-dataContainer c-chartContainer">
-                <!-- Head -->
-                <div class="c-chartBlockhead">
-                  <span class="heading">CUSTOMS METRICS</span>
-                  <div class="settings">
-                    <button class="btnSetting">
-                      <i class="icon ocrd-settings"></i>
-                    </button>
-                    <button class="btnSetting">
-                      <i class="icon ocrd-refresh"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- Head End -->
-
-                <!-- body -->
-                <div class="c_body">
-                  <div class="graphBlock">
-                    <img
-                      src="../images/dummy/g1.png"
-                      class="graphImg forLight"
-                      alt="graph"
-                    />
-                    <img
-                      src="../images/dummy/g1-dark.png"
-                      class="graphImg forDark"
-                      alt="graph"
-                    />
-                  </div>
-                  <div class="graphFooter">+/-3MONTHS</div>
-                </div>
-                <!-- body End -->
-              </div>
-            </div>
-            <!-- Chart block 3  End -->
           </div>
-          <!-- *****  Updated Chart row 2 End ***** -->
+          <!-- *****  Row 2 End ***** -->
 
           <!-- ***** Graph Row 2 ***** -->
           <div class="row">
@@ -718,24 +934,12 @@
           <!-- ***** Table ***** -->
           <div class="row">
             <div class="col">
-              <div class="c-dataContainer c-chartContainer">
-                <!-- Head -->
-                <div class="c-chartBlockhead">
-                  <span class="heading">My Queue</span>
-                  <div class="settings">
-                    <button class="btnSetting">
-                      <i class="icon ocrd-settings"></i>
-                    </button>
-                    <button class="btnSetting">
-                      <i class="icon ocrd-refresh"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- Head End -->
+              <div class="c-grapgContainer">
+                <div class="graphHeading mb-20">My Queue</div>
                 <div class="row">
                   <div class="col">
                     <div class="c-tableWrapper">
-                      <div class="c-table type-01">
+                      <div class="c-table type-01 bordered">
                         <table class="table">
                           <thead>
                             <tr>
@@ -760,7 +964,7 @@
                                   title=""
                                   data-original-title="Error Details"
                                 >
-                                  <i class="icon ocrd-warning"></i>
+                                  <i class="icon ocr-exclamation"></i>
                                 </button>
                               </td>
                               <td>Column Data</td>
@@ -776,7 +980,7 @@
                                   title=""
                                   data-original-title="Edit"
                                 >
-                                  <i class="icon ocrd-pencil-square-o"></i>
+                                  <i class="icon ocr-edit-pen"></i>
                                 </button>
                               </td>
                             </tr>
@@ -797,7 +1001,7 @@
                                   title=""
                                   data-original-title="Delete"
                                 >
-                                  <i class="icon ocrd-pencil-square-o"></i>
+                                  <i class="icon ocr-trash-o"></i>
                                 </button>
                               </td>
                             </tr>

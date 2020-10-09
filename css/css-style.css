@@ -4128,6 +4128,7 @@ a:hover {
   vertical-align: middle;
 }
 
+/* -------- remove this after all dependency updated. -- not used in new design---- */
 .c-grapgContainer {
   border: 1px solid rgba(101, 126, 174, 0.25);
   background: var(--white);
@@ -5584,6 +5585,20 @@ a:hover {
   font-size: 14px;
   line-height: 14px;
   display: block;
+}
+
+.st-sidebarAlwaysOpen .c-wrapper {
+  margin-left: 230px;
+}
+.st-sidebarAlwaysOpen .c-header {
+  top: 0 !important;
+}
+.st-sidebarAlwaysOpen .c-sidebar {
+  width: 230px !important;
+}
+.st-sidebarAlwaysOpen .c-sidebar .c-pageNav .navLink .linkText {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /*# sourceMappingURL=css-style.css.map */

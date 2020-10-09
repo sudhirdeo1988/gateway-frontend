@@ -43,6 +43,7 @@ SCSS functions
 
   --page-bg-color: #f0f3f6;
   --widget-bg-color: #ffffff;
+  --border-color: #f0f3f6;
 
   --fontColor: #252d36;
   --fontColor-light: #898888;
@@ -58,7 +59,7 @@ SCSS functions
   --green: #4fc590;
   --orange: #f19d38;
 
-  --icon-font: "ocr-inc";
+  --icon-font: "ocr-dashboard";
   --primary-font: "Overpass", sans-serif;
 
   .theme-dark {
@@ -72,7 +73,8 @@ SCSS functions
 
     --page-bg-color: #1a1c33;
     --widget-bg-color: #272d47;
-    --component-bg-color: #20223c;
+    --component-bg-color: #232741;
+    --border-color: #2f344d;
 
     --fontColor: #d5dae2;
     --fontColor-light: #b2b7c1;

@@ -7,32 +7,32 @@
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/dropzone.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select2.min.css" />
     <link rel="stylesheet" href="../css/css-style.css" />
   </head>
 
   <body class="no-settingHeader">
     <!-- ********** Page Body **********  -->
-    <div class="c-pageBody isCloseSidebar">
+    <div class="c-pageBody">
       <!-- ********** Component :: Sidebar **********  -->
-      <div class="c-sidebar js-hover" role="button">
-        <div class="c-pageNav js-customScroll">
+      <div class="c-sidebar">
+        <div class="c-pageNav">
           <ul>
             <li>
               <a href="./01-dashboard.html" class="navLink">
-                <i class="icon ocr-dashboard"></i>
+                <i class="icon ocrd-dashboard"></i>
                 <span class="linkText">Dashboard</span>
               </a>
             </li>
             <li>
               <a href="./02-filingHistory.html" class="navLink">
-                <i class="icon ocr-content-7"></i>
+                <i class="icon ocrd-edit"></i>
                 <span class="linkText">Filling History</span>
               </a>
             </li>
             <li>
               <a href="./03-customFiling.html" class="navLink">
-                <i class="icon ocr-tax"></i>
+                <i class="icon ocrd-copy"></i>
                 <span class="linkText">Custom Filling</span>
               </a>
             </li>
@@ -43,34 +43,89 @@
 
       <!-- ********** Component :: Header **********  -->
       <div class="c-header">
-        <div class="row no-gutters align-items-center">
+        <div class="row no-gutters">
           <div class="col-7">
-            <div class="headerSect_logo">
-              <a href="javascript:void(0);" class="headerLogo">
-                <img src="../images/logo.png" alt="alt" />
-              </a>
-            </div>
-            <div class="headerSect_l">
-              <div class="c-pageTitle">Global custom filling gateway</div>
+            <div class="hs_left">
+              <div class="headerSect_logo">
+                <a href="javascript:void(0);" class="headerLogo">
+                  <img src="../images/logo.png" alt="alt" />
+                </a>
+              </div>
+              <div class="headerSect_l">
+                <div class="c-pageTitle">Global custom filling gateway</div>
+              </div>
             </div>
           </div>
           <div class="col-5 text-right">
             <div class="headerSettings">
               <ul>
-                <li>
-                  <div class="notifySetting">
+                <li class="themeSwitch">
+                  <div class="c-switch">
+                    <input
+                      type="checkbox"
+                      class="switchChk"
+                      id="themeSwitch"
+                      value="dark"
+                    />
+                    <label class="switchLbl" for="themeSwitch">
+                      <div class="switchTrack"></div>
+                    </label>
+                  </div>
+                </li>
+                <li class="countryFlag">
+                  <div class="c-dropdown dropdown">
                     <button
-                      class="profileBtn"
+                      class="flagBtn dropdown-toggle"
                       type="button"
-                      data-toggle="modal"
-                      data-target="#flagModal"
+                      id="countrySelection"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
                     >
-                      <img
-                        src="../images/flags/india.svg"
-                        class="flag"
-                        alt="India"
-                      />
+                      <img src="../images/flags/india.svg" class="flag" />
+                      <span class="country">IND</span>
                     </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown flagListDD"
+                      aria-labelledby="countrySelection"
+                    >
+                      <div class="flagSearchHeader">
+                        <div class="searchTxt">
+                          <i class="icon ocrd-search"></i>
+                          <input
+                            type="text"
+                            class="txtBox"
+                            placeholder="Search"
+                          />
+                        </div>
+                      </div>
+                      <div class="flagSearchBody">
+                        <ul>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/india.svg"
+                                  class="flag"
+                                />
+                                <span class="country">India</span>
+                              </div>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/japan.svg"
+                                  class="flag"
+                                />
+                                <span class="country">Japan</span>
+                              </div>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li>
@@ -83,7 +138,7 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i class="icon ocr-bell-1"></i>
+                      <i class="icon ocrd-alarm"></i>
                       <span class="count">2</span>
                     </button>
                     <div
@@ -102,7 +157,7 @@
                         >
                           <div class="dropdown-notification-item">
                             <div class="dropdown-notification-icon">
-                              <i class="icon ocr-bell-1"></i>
+                              <i class="icon ocrd-alarm"></i>
                             </div>
                             <div class="dropdown-notification-info">
                               <div class="title">
@@ -118,7 +173,7 @@
                         >
                           <div class="dropdown-notification-item">
                             <div class="dropdown-notification-icon">
-                              <i class="icon ocr-bell-1"></i>
+                              <i class="icon ocrd-alarm"></i>
                             </div>
                             <div class="dropdown-notification-info">
                               <div class="title">
@@ -133,6 +188,65 @@
                   </div>
                 </li>
                 <li>
+                  <div class="c-dropdown dropdown notifySetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocrd-mail"></i>
+                      <span class="count">2</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div class="notifyHeading">
+                        Notifications
+                        <span class="c-badge primary sm">10</span>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="userProf">
                   <div class="c-dropdown dropdown profileSetting">
                     <button
                       class="profileBtn dropdown-toggle"
@@ -142,26 +256,26 @@
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i class="icon ocr-user-2"></i>
+                      <i class="icon ocrd-user"></i>
                     </button>
                     <div
-                      class="dropdown-menu st-clean with-icon"
+                      class="dropdown-menu userDD st-clean with-icon"
                       aria-labelledby="dropdownMenuButton2"
                     >
                       <a class="dropdown-item" href="./04-userProfile.html">
-                        <i class="icon ocr-user-2"></i>
+                        <i class="icon ocrd-user"></i>
                         User Profile</a
                       >
                       <a class="dropdown-item" href="#">
-                        <i class="icon ocr-tax"></i>
+                        <i class="icon ocrd-certificate"></i>
                         Subscription</a
                       >
                       <a class="dropdown-item" href="#">
-                        <i class="icon ocr-cog"></i>
+                        <i class="icon ocrd-setting-wheel"></i>
                         Settings</a
                       >
                       <a class="dropdown-item" href="#">
-                        <i class="icon ocr-sign-out"></i>
+                        <i class="icon ocrd-sign-out"></i>
                         Logout</a
                       >
                     </div>
@@ -178,9 +292,9 @@
       <div class="c-wrapper">
         <div class="container-fluid">
           <!-- *** First Row *** -->
-          <div class="row align-items-center mb-20">
+          <div class="row align-items-center">
             <div class="col">
-              <div class="rowHeading font-h">User Profile Management</div>
+              <div class="c-pageHeading">User Settings</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
@@ -214,6 +328,18 @@
                       >User Configuration</a
                     >
                   </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="dashboard-tab"
+                      data-toggle="tab"
+                      href="#dashboard"
+                      role="tab"
+                      aria-controls="dashboard"
+                      aria-selected="false"
+                      >Dashboard Settings</a
+                    >
+                  </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
                   <!-- ***** Tab :: Details ***** -->
@@ -224,44 +350,76 @@
                     aria-labelledby="Details-tab"
                   >
                     <!-- ***** User Details ***** -->
-                    <div class="c-wrapContainer c-rounded type-01">
-                      <div class="c-profCard">
-                        <div class="profImage">
-                          <img src="../images/profile.svg" alt="profile" />
+                    <div class="c-dataContainer type-02">
+                      <div class="row">
+                        <div class="col-md-2 col-12">
+                          <div class="c-profCard">
+                            <div class="profImage">
+                              <img src="../images/profile.svg" alt="profile" />
+                            </div>
+                            <button class="c-btn sm bordered">
+                              Upload Picture
+                            </button>
+                          </div>
                         </div>
-                        <div class="profname">Irene Ball</div>
-                        <div class="profInfo">
-                          <div class="row align-items-center">
-                            <div class="col">
-                              <div class="c-infoSect">
-                                <span class="infoLbl">User ID</span>
-                                <span class="infoTxt">666Q8W</span>
+                        <div class="col-md-10 col-12">
+                          <div class="row">
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <!-- *** Text Box *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl">User ID</label>
+                                <input type="text" class="form-control" />
                               </div>
+                              <!-- *** Text Box End *** -->
                             </div>
-                            <div class="col">
-                              <div class="c-infoSect">
-                                <span class="infoLbl">Email</span>
-                                <span class="infoTxt"
-                                  >test.email@example.com</span
-                                >
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <!-- *** Text Box *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl">Name</label>
+                                <input type="text" class="form-control" />
                               </div>
+                              <!-- *** Text Box End *** -->
                             </div>
-                            <div class="col">
-                              <div class="c-infoSect">
-                                <span class="infoLbl">Status</span>
-                                <span class="infoTag approved">Active</span>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <!-- *** Text Box *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl">Email</label>
+                                <input type="text" class="form-control" />
                               </div>
+                              <!-- *** Text Box End *** -->
                             </div>
-                            <div class="col">
-                              <div class="c-infoSect">
-                                <button
-                                  class="c-btn"
-                                  data-toggle="modal"
-                                  data-target="#editProfile"
-                                >
-                                  Edit Profile
-                                </button>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <!-- *** Text Box *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl">Contact</label>
+                                <input type="text" class="form-control" />
                               </div>
+                              <!-- *** Text Box End *** -->
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <!-- *** Text Box *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl">Status</label>
+                                <div class="c-customDropdown selectOne">
+                                  <select class="c-select">
+                                    <option value="one">First</option>
+                                    <option value="three">Third</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <!-- *** Text Box End *** -->
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-12">
+                              <!-- *** Text Box *** -->
+                              <div class="form-group c-form">
+                                <label class="formLbl">Address</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                              <!-- *** Text Box End *** -->
+                            </div>
+                            <div class="col-12 mt-30">
+                              <button class="c-btn col-gray">Cancel</button>
+                              <button class="c-btn">Update</button>
                             </div>
                           </div>
                         </div>
@@ -278,61 +436,67 @@
                     role="tabpanel"
                     aria-labelledby="profile-tab"
                   >
-                    <div class="c-grapgContainer">
+                    <div class="c-dataContainer type-01">
                       <div class="row align-items-center">
                         <div class="col-12">
                           <div class="c-tableWrapper">
                             <!-- ***** Table Body ***** -->
 
-                            <div class="c-table type-01 bordered">
+                            <div class="c-table type-01">
                               <table class="table">
-                                <tr>
-                                  <th style="width: 10%;">ID</th>
-                                  <th style="width: 15%;">Flyier Code</th>
-                                  <th style="width: 17%;">Queue In</th>
-                                  <th style="width: 18%;">Queue Out</th>
-                                  <th style="width: 15%;">Processing Code</th>
-                                  <th style="width: 15%;">
-                                    Environment Name
-                                  </th>
-                                  <th style="width: 10%;" class="text-center">
-                                    Action
-                                  </th>
-                                </tr>
-                                <tr>
-                                  <td>01</td>
-                                  <td>S2A</td>
-                                  <td>OCR.TEST.IN</td>
-                                  <td>OCR.TEST.OUT</td>
-                                  <td>S1</td>
-                                  <td>TST</td>
-                                  <td class="text-center">
-                                    <button
-                                      class="tableBtn"
-                                      data-toggle="modal"
-                                      data-target="#editConfig"
-                                    >
-                                      <i class="icon ocr-edit-pen"></i>
-                                    </button>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>01</td>
-                                  <td>S2A</td>
-                                  <td>OCR.TEST.IN</td>
-                                  <td>OCR.TEST.OUT</td>
-                                  <td>S1</td>
-                                  <td>TST</td>
-                                  <td class="text-center">
-                                    <button
-                                      class="tableBtn"
-                                      data-toggle="modal"
-                                      data-target="#editConfig"
-                                    >
-                                      <i class="icon ocr-edit-pen"></i>
-                                    </button>
-                                  </td>
-                                </tr>
+                                <thead>
+                                  <tr>
+                                    <th style="width: 10%">ID</th>
+                                    <th style="width: 15%">Flyier Code</th>
+                                    <th style="width: 17%">Queue In</th>
+                                    <th style="width: 18%">Queue Out</th>
+                                    <th style="width: 15%">Processing Code</th>
+                                    <th style="width: 15%">Environment Name</th>
+                                    <th style="width: 10%" class="text-center">
+                                      Action
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>S2A</td>
+                                    <td>OCR.TEST.IN</td>
+                                    <td>OCR.TEST.OUT</td>
+                                    <td>S1</td>
+                                    <td>TST</td>
+                                    <td class="text-center">
+                                      <button
+                                        class="tableBtn"
+                                        data-toggle="modal"
+                                        data-target="#editConfig"
+                                      >
+                                        <i
+                                          class="icon ocrd-pencil-square-o"
+                                        ></i>
+                                      </button>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>S2A</td>
+                                    <td>OCR.TEST.IN</td>
+                                    <td>OCR.TEST.OUT</td>
+                                    <td>S1</td>
+                                    <td>TST</td>
+                                    <td class="text-center">
+                                      <button
+                                        class="tableBtn"
+                                        data-toggle="modal"
+                                        data-target="#editConfig"
+                                      >
+                                        <i
+                                          class="icon ocrd-pencil-square-o"
+                                        ></i>
+                                      </button>
+                                    </td>
+                                  </tr>
+                                </tbody>
                               </table>
                             </div>
                             <!-- ***** Table Body ***** -->
@@ -342,6 +506,19 @@
                     </div>
                   </div>
                   <!-- ***** Tab :: Access & Activity End ***** -->
+
+                  <!-- ***** Tab :: Details ***** -->
+                  <div
+                    class="tab-pane fade"
+                    id="dashboard"
+                    role="tabpanel"
+                    aria-labelledby="dashboard-tab"
+                  >
+                    <!-- ***** User Details ***** -->
+                    <div class="c-dataContainer type-01">theme Config</div>
+                    <!-- ***** User Details End ***** -->
+                  </div>
+                  <!-- ***** Tab :: Details End ***** -->
                 </div>
               </div>
             </div>
@@ -353,183 +530,12 @@
     </div>
     <!-- ********** Page Body End **********  -->
 
-    <!-- **** Modal ::  Edit Profile **** -->
-    <div
-      class="modal fade c-modal w-750"
-      id="editProfile"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="editProfileLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="editProfileLabel">
-              Edit Profile
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="icon ocr-android-close"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-6">
-                <!-- *** Form Field *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">User ID</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Form Field End *** -->
-              </div>
-              <div class="col-6">
-                <!-- *** Form Field *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Name</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Form Field End *** -->
-              </div>
-              <div class="col-6">
-                <!-- *** Form Field *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Email</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Form Field End *** -->
-              </div>
-              <div class="col-6">
-                <!-- *** Form Field *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Contact</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Form Field End *** -->
-              </div>
-              <div class="col-12">
-                <!-- *** Form Field *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Address</label>
-                  <textarea class="form-control textarea"></textarea>
-                </div>
-                <!-- *** Form Field End *** -->
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer text-right">
-            <button
-              type="button"
-              class="c-btn col-gray"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              Cancel
-            </button>
-            <button type="button" class="c-btn">
-              Update
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- **** Modal :: Edit Profile  End **** -->
-
-    <!-- **** Modal ::  Flags Info **** -->
-    <div
-      class="modal fade c-modal w-950"
-      id="flagModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="flagModal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="flagModal">
-              Select Country
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="icon ocr-android-close"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="flagSearch text-right">
-              <!-- *** Text Box *** -->
-              <div class="form-group c-form">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search Country"
-                />
-              </div>
-              <!-- *** Text Box End *** -->
-            </div>
-            <div class="flagList">
-              <ul>
-                <li>
-                  <button class="flagActionBtn st-selected">
-                    <img src="../images/flags/india.svg" alt="flag" />
-                    India
-                  </button>
-                </li>
-                <li>
-                  <button class="flagActionBtn">
-                    <img src="../images/flags/usa.svg" alt="flag" />
-                    USA
-                  </button>
-                </li>
-                <li>
-                  <button class="flagActionBtn">
-                    <img src="../images/flags/japan.svg" alt="flag" />
-                    Japan
-                  </button>
-                </li>
-                <li>
-                  <button class="flagActionBtn">
-                    <img src="../images/flags/russia.svg" alt="flag" />
-                    Russia
-                  </button>
-                </li>
-                <li>
-                  <button class="flagActionBtn">
-                    <img src="../images/flags/india.svg" alt="flag" />
-                    India
-                  </button>
-                </li>
-                <li>
-                  <button class="flagActionBtn">
-                    <img src="../images/flags/india.svg" alt="flag" />
-                    India
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- **** Modal :: Flags Info  End **** -->
-
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>
     <script src="../js/jquery-migrate-3.0.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/daterangepicker.min.js"></script>
-    <script src="../js/datatables.min.js"></script>
-    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../js/dropzone.min.js"></script>
+    <script src="../js/select2.min.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
 </html>

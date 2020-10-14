@@ -486,10 +486,10 @@ a:hover {
     top: 0;
   }
   .c-sidebar {
-    top: 74px;
+    top: 64px;
   }
   .c-pageBody {
-    padding-top: 74px;
+    padding-top: 64px;
   }
 }
 
@@ -507,10 +507,10 @@ a:hover {
   background-color: transparent;
   box-sizing: border-box;
   display: block;
-  padding: 24px 30px;
+  padding: 24px 9px;
   position: relative;
   min-height: 100%;
-  margin: 0 0 0 74px;
+  margin: 0 0 0 64px;
   @include transition(all ease 0.2s);
 }
 .c-settingList {

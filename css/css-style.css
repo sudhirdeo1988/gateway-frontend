@@ -295,6 +295,18 @@ SCSS functions
   content: "S";
 }
 
+.ocrd-gold:before {
+  content: "T";
+}
+
+.ocrd-user-1:before {
+  content: "U";
+}
+
+.ocrd-logout:before {
+  content: "V";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -1302,8 +1314,9 @@ a:hover {
   border-bottom: 10px solid RGBA(var(--primary-rgb), 0.1);
 }
 .c-header .dropdown-menu.flagListDD {
+  min-width: 230px;
   padding: 12px 0 !important;
-  transform: translate3d(-260px, 35px, 0px) !important;
+  transform: translate3d(-130px, 35px, 0px) !important;
 }
 .c-header .dropdown-menu.userDD {
   min-width: 188px;
@@ -1322,7 +1335,7 @@ a:hover {
 .c-header .dropdown-menu.userDD .dropdown-item .icon {
   color: var(--primary-color);
   position: absolute;
-  top: 18px;
+  top: 17px;
   left: 20px;
   height: 16px;
   width: 16px;
@@ -1435,7 +1448,7 @@ a:hover {
   padding: 0 0 20px 0 !important;
 }
 .c-notifyDropdown .notifyHeading {
-  background-color: RGBA(var(--primary-rgb), 0.1);
+  background-color: RGBA(var(--primary-rgb), 0.07);
   border-bottom: 1px solid var(--border-color);
   display: block;
   padding: 20px;
@@ -1469,9 +1482,6 @@ a:hover {
   -o-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
 }
-.c-notifyDropdown .c-notify:hover {
-  background: linear-gradient(to top,rgba(255, 255, 255,0.37),rgba(255, 255, 255,0.37)) var(--theme-color-1);
-}
 .c-notifyDropdown .c-notify .dropdown-notification-item {
   padding: 14px 24px 14px 72px;
   text-decoration: none;
@@ -1486,7 +1496,7 @@ a:hover {
   position: absolute;
   top: 14px;
   left: 24px;
-  background-color: RGBA(var(--primary-rgb), 0.2);
+  background-color: RGBA(var(--primary-rgb), 0.07);
   width: 34px;
   height: 34px;
   text-align: center;
@@ -1632,7 +1642,7 @@ a:hover {
 }
 .c-sidebar .c-pageNav ul li {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .c-sidebar .c-pageNav ul li .navLink {
   background-color: transparent;
@@ -1787,11 +1797,16 @@ a:hover {
 .c-dataContainer.type-02 {
   padding: 64px;
 }
+.c-dataContainer.auto-height {
+  min-height: 100px;
+  height: auto;
+}
 
 .c-chartBlockhead {
   display: block;
   position: relative;
   padding-right: 70px;
+  margin-bottom: 16px;
   height: 32px;
 }
 .c-chartBlockhead .heading {
@@ -1828,6 +1843,11 @@ a:hover {
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   border-radius: 30px;
+  transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
 }
 .c-chartBlockhead .settings .btnSetting .icon {
   color: #d3d3d3;
@@ -1839,6 +1859,12 @@ a:hover {
   position: relative;
   top: -1px;
 }
+.c-chartBlockhead .settings .btnSetting:hover {
+  background-color: #e8e8e8;
+}
+.c-chartBlockhead .settings .btnSetting:hover .icon {
+  color: #b7b7b7;
+}
 
 /* --- For Dark theme --- */
 .theme-dark .c-chartBlockhead .settings .btnSetting {
@@ -1846,6 +1872,12 @@ a:hover {
 }
 .theme-dark .c-chartBlockhead .settings .btnSetting .icon {
   color: #585e77;
+}
+.theme-dark .c-chartBlockhead .settings .btnSetting:hover {
+  background-color: #3f4663;
+}
+.theme-dark .c-chartBlockhead .settings .btnSetting:hover .icon {
+  color: #70737d;
 }
 
 /* -------------------------------------
@@ -1932,7 +1964,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  margin-top: 18px;
 }
 .c-chartContainer .c_body .graphBlock {
   height: 242px;
@@ -2554,7 +2585,7 @@ a:hover {
   background-color: transparent;
 }
 .c-dropdown .dropdown-item:hover {
-  background-color: RGBA(var(--primary-rgb), 0.1);
+  background-color: RGBA(var(--primary-rgb), 0.07);
 }
 .c-dropdown .btn-dd {
   background-color: var(--white);
@@ -2604,9 +2635,6 @@ a:hover {
   -webkit-transition: all ease 0.2s;
   -o-transition: all ease 0.2s;
   -ms-transition: all ease 0.2s;
-}
-.c-dropdown .dropdown-menu.st-clean .dropdown-item:hover {
-  background-color: RGBA(var(--primary-rgb), 0.1);
 }
 
 .theme-dark .c-dropdown .dropdown-item:hover {
@@ -3020,9 +3048,9 @@ a:hover {
   background-color: var(--primary-color);
   color: var(--white);
   display: inline-block;
-  padding: 11px 25px;
+  padding: 12px 25px 11px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 16px;
   text-align: center;
   position: relative;
@@ -3339,6 +3367,186 @@ a:hover {
   width: 150px;
   position: relative;
   z-index: 2;
+}
+
+.c-pricingCard {
+  background-color: var(--white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 556px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -ms-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -o-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  transition: all ease 0.3;
+  -moz-transition: all ease 0.3;
+  -webkit-transition: all ease 0.3;
+  -o-transition: all ease 0.3;
+  -ms-transition: all ease 0.3;
+}
+.c-pricingCard .cardHead {
+  display: block;
+}
+.c-pricingCard .cardHead .title {
+  border-bottom: 2px dotted var(--border-color);
+  color: var(--font-color);
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+.c-pricingCard .cardHead .iconContainer {
+  background-color: RGBA(var(--primary-rgb), 0.04);
+  position: relative;
+  margin: 0 auto 24px;
+  height: 83px;
+  width: 83px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.c-pricingCard .cardHead .iconContainer .icon {
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  color: var(--fontColor);
+  font-size: 64px;
+}
+.c-pricingCard .cardHead .iconContainer .icon.ocrd-basic {
+  font-size: 78px;
+  top: 5px;
+  transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+}
+.c-pricingCard .cardHead .price {
+  color: var(--primary-color);
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 46px;
+  margin-bottom: 24px;
+}
+.c-pricingCard .cardHead .price sup {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+}
+.c-pricingCard .cardBody {
+  display: block;
+  padding: 0 40px;
+  min-height: 250px;
+}
+.c-pricingCard .cardBody ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.c-pricingCard .cardBody ul li {
+  display: block;
+  position: relative;
+  padding: 3px 10px 3px 30px;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.c-pricingCard .cardBody ul li .icon {
+  color: var(--primary);
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.c-pricingCard.active {
+  background-color: var(--primary-color);
+}
+.c-pricingCard.active .cardHead .title {
+  border-color: RGBA(255, 255, 255, 0.2);
+  color: var(--white);
+}
+.c-pricingCard.active .cardHead .iconContainer {
+  background-color: RGBA(255, 255, 255, 0.08);
+}
+.c-pricingCard.active .cardHead .iconContainer .icon {
+  color: var(--white);
+}
+.c-pricingCard.active .cardHead .price {
+  color: var(--white);
+}
+.c-pricingCard.active .cardBody ul li {
+  color: var(--white);
+}
+.c-pricingCard.active .cardBody ul li .icon {
+  color: var(--white);
+}
+.c-pricingCard.active .cardFooter .c-btn {
+  color: var(--primary-color);
+  background-color: var(--white);
+}
+
+.theme-dark .c-pricingCard {
+  background-color: var(--widget-bg-color);
+}
+.theme-dark .c-pricingCard .cardHead .title {
+  color: var(--fontColor);
+}
+.theme-dark .c-pricingCard .cardHead .iconContainer {
+  background-color: var(--page-bg-color);
+}
+.theme-dark .c-pricingCard .cardHead .iconContainer .icon {
+  color: var(--fontColor);
+}
+.theme-dark .c-pricingCard .cardBody ul li {
+  color: var(--fontColor);
+}
+.theme-dark .c-pricingCard .cardBody ul li .icon {
+  color: var(--primary);
+}
+.theme-dark .c-pricingCard.active {
+  background-color: var(--primary-color);
+}
+.theme-dark .c-pricingCard.active .cardHead .title {
+  border-color: RGBA(255, 255, 255, 0.2);
+  color: var(--white);
+}
+.theme-dark .c-pricingCard.active .cardHead .iconContainer {
+  background-color: RGBA(255, 255, 255, 0.08);
+}
+.theme-dark .c-pricingCard.active .cardHead .iconContainer .icon {
+  color: var(--white);
+}
+.theme-dark .c-pricingCard.active .cardHead .price {
+  color: var(--white);
+}
+.theme-dark .c-pricingCard.active .cardBody ul li {
+  color: var(--white);
+}
+.theme-dark .c-pricingCard.active .cardBody ul li .icon {
+  color: var(--white);
+}
+.theme-dark .c-pricingCard.active .cardFooter .c-btn {
+  color: var(--primary-color);
+  background-color: var(--white);
 }
 
 /* -------------------------------------

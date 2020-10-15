@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>Custom Filing</title>
+    <title>Subscription</title>
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/dropzone.min.css" />
     <link rel="stylesheet" href="../css/css-style.css" />
   </head>
 
@@ -31,7 +30,7 @@
               </a>
             </li>
             <li>
-              <a href="./03-customFiling.html" class="navLink active">
+              <a href="./03-customFiling.html" class="navLink">
                 <i class="icon ocrd-copy"></i>
                 <span class="linkText">Custom Filling</span>
               </a>
@@ -316,74 +315,260 @@
           <!-- *** First Row *** -->
           <div class="row align-items-center">
             <div class="col">
-              <div class="c-pageHeading">Filling History</div>
+              <div class="c-pageHeading">Subscription Plan</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
 
           <!-- *** Profile Tabs *** -->
           <div class="row">
-            <div class="col-12">
-              <!-- ***** Section 8 ***** -->
-              <div class="c-dataContainer">
-                <!-- Graph Head -->
-                <div class="c-chartBlockhead">
-                  <span class="heading">Upload FIle</span>
-                  <div class="settings">
-                    <button class="btnSetting">
-                      <i class="icon ocrd-pencil-square-o"></i>
-                    </button>
-                    <button class="btnSetting">
-                      <i class="icon ocrd-send"></i>
-                    </button>
+            <div class="col-md-3 col-sm-6 col-12">
+              <div class="c-pricingCard">
+                <div class="cardHead">
+                  <span class="title">STARTER</span>
+                  <div class="iconContainer">
+                    <i class="icon ocrd-starter"></i>
                   </div>
+                  <span class="price"><sup>$</sup>0</span>
                 </div>
-                <!-- Graph Head End -->
-                <div class="c-uploadFileSection">
-                  <form
-                    action="/file-upload"
-                    class="dropzone"
-                    id="upload-file-zone"
-                  ></form>
+                <div class="cardBody">
+                  <ul>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      30 Day Free Trail
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      10 Free Transactions Daily
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Online Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Cancel Anytime
+                    </li>
+                  </ul>
                 </div>
-                <div class="c-divider"></div>
-                <div class="c-tableWrapper">
-                  <!-- ***** Table Body ***** -->
-                  <!-- Graph Head -->
-                  <div class="c-chartBlockhead">
-                    <span class="heading">Custom Results</span>
-                    <div class="settings">
-                      <button class="btnSetting">
-                        <i class="icon ocrd-refresh"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <!-- Graph Head End -->
-                  <div class="c-textContainer">
-                    <span class="c-staticText"
-                      >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed vars, tortor sed semper ultricies, ante turpis
-                      dignissim lectu a venenatis ipsum leo sit amet ex. Morbi
-                      scelerisque rutrum aliquet. Donec nec nibh id mauris porta
-                      hendrerit vitae a lect. Integer metus ssa, viverra id arcu
-                      at. Morbi scelerisque rutrum aliquet. Donec nec nibh id
-                      mauris porta hendrerit vitae a lect. Integer metus ssa,
-                      viverra id arcu at. Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit. Sed vars, tortor sed semper
-                      ultricies, ante turpis dignissim lectu a venenatis ipsum
-                      leo sit amet ex. Morbi scelerisque rutrum aliquet. Donec
-                      nec nibh id mauris porta hendrerit vitae a lect. Integer
-                      metus ssa, viverra id arcu at. Morbi scelerisque rutrum
-                      aliquet.</span
-                    >
-                  </div>
-                  <!-- ***** Table Body ***** -->
+                <div class="cardFooter text-center">
+                  <button class="c-btn bordered">Select Plan</button>
                 </div>
               </div>
-              <!-- ***** Section 8 End ***** -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+              <div class="c-pricingCard active">
+                <div class="cardHead">
+                  <span class="title">Basic</span>
+                  <div class="iconContainer">
+                    <i class="icon ocrd-basic"></i>
+                  </div>
+                  <span class="price"><sup>$</sup>2</span>
+                </div>
+                <div class="cardBody">
+                  <ul>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Per Transactions
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Unlimited Time Periods
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Online Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Cancel Anytime
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Tech Support
+                    </li>
+                  </ul>
+                </div>
+                <div class="cardFooter text-center">
+                  <button class="c-btn bordered">End 10 Mar, 2021</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+              <div class="c-pricingCard">
+                <div class="cardHead">
+                  <span class="title">PREMIMUM</span>
+                  <div class="iconContainer">
+                    <i class="icon ocrd-premimum"></i>
+                  </div>
+                  <span class="price"><sup>$</sup>49</span>
+                </div>
+                <div class="cardBody">
+                  <ul>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Works for 30 Days
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Unlimited Transactions
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Online Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Cancel Anytime
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      On Call Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Tech Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Electronic Submission
+                    </li>
+                  </ul>
+                </div>
+                <div class="cardFooter text-center">
+                  <button class="c-btn bordered">Select Plan</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+              <div class="c-pricingCard">
+                <div class="cardHead">
+                  <span class="title">Gold</span>
+                  <div class="iconContainer">
+                    <i class="icon ocrd-gold"></i>
+                  </div>
+                  <span class="price"><sup>$</sup>499</span>
+                </div>
+                <div class="cardBody">
+                  <ul>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Works for 30 Days
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Unlimited Transactions
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Online Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Cancel Anytime
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      On Call Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Tech Support
+                    </li>
+                    <li>
+                      <i class="icon ocrd-android-done"></i>
+                      Electronic Submission
+                    </li>
+                  </ul>
+                </div>
+                <div class="cardFooter text-center">
+                  <button class="c-btn bordered">Select Plan</button>
+                </div>
+              </div>
             </div>
           </div>
           <!-- *** Profile Tabs End *** -->
+
+          <!-- *****  Info Section ***** -->
+          <div class="row">
+            <div class="col">
+              <div class="c-dataContainer type-02 auto-height">
+                <span class="c-staticText text-center"
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  vars, tortor sed semper ultricies, ante turpis dignissim lectu
+                  a venenatis ipsum leo sit amet ex. Morbi scelerisque rutrum
+                  aliquet. Donec nec nibh id mauris porta hendrerit vitae a
+                  lect. Integer metus ssa, viverra id arcu at. Morbi scelerisque
+                  rutrum aliquet. Donec nec nibh id mauris porta hendrerit vitae
+                  a lect. Integer metus ssa, viverra id arcu at. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Sed vars, tortor
+                  sed semper ultricies, ante turpis dignissim lectu a venenatis
+                  ipsum leo sit amet ex. Morbi scelerisque rutrum aliquet. Donec
+                  nec nibh id mauris porta hendrerit vitae a lect. Integer metus
+                  ssa, viverra id arcu at. Morbi scelerisque rutrum
+                  aliquet.</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- *****  Info Section End ***** -->
+
+          <!-- *****  Updated Chart row 3 ***** -->
+          <div class="row">
+            <div class="col">
+              <div class="c-dataContainer c-chartContainer">
+                <!-- Head -->
+                <div class="c-chartBlockhead">
+                  <span class="heading">Payment History</span>
+                </div>
+                <!-- Head End -->
+
+                <!-- body -->
+                <div class="c_body">
+                  <div class="c-tableWrapper">
+                    <div class="c-table">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th style="width: 15%">Amount</th>
+                            <th style="width: 15%">Status</th>
+                            <th style="width: 15%">Plan</th>
+                            <th style="width: 20%">Date</th>
+                            <th style="width: 20%">Expiry Date</th>
+                            <th style="width: 15%">Payment Method</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>$2</td>
+                            <td>
+                              <span class="notifyTag rejected">Expired</span>
+                            </td>
+                            <td>Basic</td>
+                            <td>10 Mar, 2020</td>
+                            <td>10 Mar, 2021</td>
+                            <td>Visa</td>
+                          </tr>
+                          <tr>
+                            <td>$2</td>
+                            <td>
+                              <span class="notifyTag approved">Approved</span>
+                            </td>
+                            <td>Basic</td>
+                            <td>10 Mar, 2020</td>
+                            <td>10 Mar, 2021</td>
+                            <td>Visa</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- body End -->
+              </div>
+            </div>
+          </div>
+          <!-- *****  Updated Chart row 3 End ***** -->
         </div>
       </div>
       <!-- ********** Component :: Wrapper End **********  -->
@@ -395,7 +580,6 @@
     <script src="../js/jquery-migrate-3.0.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/dropzone.min.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
 </html>

@@ -228,8 +228,9 @@
       border-bottom: 10px solid RGBA(var(--primary-rgb), 0.1);
     }
     &.flagListDD {
+      min-width: 230px;
       padding: 12px 0 !important;
-      transform: translate3d(-260px, 35px, 0px) !important;
+      transform: translate3d(-130px, 35px, 0px) !important;
     }
     &.userDD {
       min-width: 188px;
@@ -246,7 +247,7 @@
         .icon {
           color: var(--primary-color);
           position: absolute;
-          top: 18px;
+          top: 17px;
           left: 20px;
           height: 16px;
           width: 16px;
@@ -359,7 +360,7 @@
   padding: 0 0 20px 0 !important;
 
   .notifyHeading {
-    background-color: RGBA(var(--primary-rgb), 0.1);
+    background-color: RGBA(var(--primary-rgb), 0.07);
     border-bottom: 1px solid var(--border-color);
     display: block;
     padding: 20px;
@@ -386,9 +387,6 @@
   .c-notify {
     padding: 0 !important;
     @include transition(all ease 0.3s);
-    &:hover {
-      background: lighten(var(--theme-color-1), opacity(37));
-    }
     .dropdown-notification-item {
       padding: 14px 24px 14px 72px;
       text-decoration: none;
@@ -402,7 +400,7 @@
         position: absolute;
         top: 14px;
         left: 24px;
-        background-color: RGBA(var(--primary-rgb), 0.2);
+        background-color: RGBA(var(--primary-rgb), 0.07);
         width: 34px;
         height: 34px;
         text-align: center;
@@ -572,7 +570,7 @@
       list-style: none;
       li {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         .navLink {
           background-color: transparent;
           box-sizing: border-box;
@@ -730,12 +728,17 @@
   &.type-02 {
     padding: 64px;
   }
+  &.auto-height {
+    min-height: 100px;
+    height: auto;
+  }
 }
 
 .c-chartBlockhead {
   display: block;
   position: relative;
   padding-right: 70px;
+  margin-bottom: 16px;
   height: 32px;
   .heading {
     color: var(--fontColor);
@@ -768,6 +771,7 @@
       margin-left: 3px;
       outline: none;
       @include rounded-corners(30px);
+      @include transition(all ease 0.2s);
       .icon {
         color: #d3d3d3;
         display: inline-block;
@@ -777,6 +781,12 @@
         font-size: 14px;
         position: relative;
         top: -1px;
+      }
+      &:hover {
+        background-color: #e8e8e8;
+        .icon {
+          color: #b7b7b7;
+        }
       }
     }
   }
@@ -790,6 +800,12 @@
         background-color: #2f3655;
         .icon {
           color: #585e77;
+        }
+        &:hover {
+          background-color: #3f4663;
+          .icon {
+            color: #70737d;
+          }
         }
       }
     }
@@ -871,7 +887,6 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    margin-top: 18px;
     .graphBlock {
       height: 242px;
       display: block;
@@ -1576,7 +1591,7 @@
       background-color: transparent;
     }
     &:hover {
-      background-color: RGBA(var(--primary-rgb), 0.1);
+      background-color: RGBA(var(--primary-rgb), 0.07);
     }
   }
   .btn-dd {
@@ -1622,9 +1637,6 @@
         padding: 4px 20px;
         position: relative;
         @include transition(all ease 0.2s);
-        &:hover {
-          background-color: RGBA(var(--primary-rgb), 0.1);
-        }
       }
     }
   }
@@ -2043,9 +2055,9 @@
   background-color: var(--primary-color);
   color: var(--white);
   display: inline-block;
-  padding: 11px 25px;
+  padding: 12px 25px 11px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 16px;
   text-align: center;
   position: relative;
@@ -2348,6 +2360,196 @@
       width: 150px;
       position: relative;
       z-index: 2;
+    }
+  }
+}
+
+.c-pricingCard {
+  background-color: var(--white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 556px;
+  padding: 30px;
+  margin-bottom: 24px;
+  @include box-shadow(-2px 4px 10px rgba(0, 0, 0, 0.03));
+  @include rounded-corners(10px);
+  @include transition(all ease 0.3);
+  .cardHead {
+    display: block;
+    .title {
+      border-bottom: 2px dotted var(--border-color);
+      color: var(--font-color);
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+    .iconContainer {
+      background-color: RGBA(var(--primary-rgb), 0.04);
+      position: relative;
+      margin: 0 auto 24px;
+      height: 83px;
+      width: 83px;
+      @include rounded-corners(50%);
+      .icon {
+        position: absolute;
+        top: 12px;
+        left: -8px;
+        color: var(--fontColor);
+        font-size: 64px;
+        &.ocrd-basic {
+          font-size: 78px;
+          top: 5px;
+          @include transform(rotate(-30deg));
+        }
+      }
+    }
+    .price {
+      color: var(--primary-color);
+      display: block;
+      position: relative;
+      text-align: center;
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 46px;
+      margin-bottom: 24px;
+      sup {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+  .cardBody {
+    display: block;
+    padding: 0 40px;
+    min-height: 250px;
+    ul {
+      display: block;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        display: block;
+        position: relative;
+        padding: 3px 10px 3px 30px;
+        color: #707070;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        margin-bottom: 10px;
+        .icon {
+          color: var(--primary);
+          position: absolute;
+          top: 6px;
+          left: 5px;
+          font-size: 14px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: var(--primary-color);
+    .cardHead {
+      .title {
+        border-color: RGBA(255, 255, 255, 0.2);
+        color: var(--white);
+      }
+      .iconContainer {
+        background-color: RGBA(255, 255, 255, 0.08);
+        .icon {
+          color: var(--white);
+        }
+      }
+      .price {
+        color: var(--white);
+      }
+    }
+    .cardBody {
+      ul {
+        li {
+          color: var(--white);
+          .icon {
+            color: var(--white);
+          }
+        }
+      }
+    }
+    .cardFooter {
+      .c-btn {
+        color: var(--primary-color);
+        background-color: var(--white);
+      }
+    }
+  }
+}
+
+#{$darkTheme} {
+  .c-pricingCard {
+    background-color: var(--widget-bg-color);
+    .cardHead {
+      .title {
+        color: var(--fontColor);
+      }
+      .iconContainer {
+        background-color: var(--page-bg-color);
+        .icon {
+          color: var(--fontColor);
+        }
+      }
+    }
+    .cardBody {
+      ul {
+        li {
+          color: var(--fontColor);
+          .icon {
+            color: var(--primary);
+          }
+        }
+      }
+    }
+
+    &.active {
+      background-color: var(--primary-color);
+      .cardHead {
+        .title {
+          border-color: RGBA(255, 255, 255, 0.2);
+          color: var(--white);
+        }
+        .iconContainer {
+          background-color: RGBA(255, 255, 255, 0.08);
+          .icon {
+            color: var(--white);
+          }
+        }
+        .price {
+          color: var(--white);
+        }
+      }
+      .cardBody {
+        ul {
+          li {
+            color: var(--white);
+            .icon {
+              color: var(--white);
+            }
+          }
+        }
+      }
+      .cardFooter {
+        .c-btn {
+          color: var(--primary-color);
+          background-color: var(--white);
+        }
+      }
     }
   }
 }

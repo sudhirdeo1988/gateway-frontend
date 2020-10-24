@@ -1515,6 +1515,12 @@
       height: 101px;
       resize: none;
     }
+    &.w-half {
+      display: inline-block;
+      float: left;
+      margin: 0 5px;
+      width: calc(50% - 10px);
+    }
   }
 
   &.c-dateRangePicker,
@@ -2365,6 +2371,7 @@
 }
 
 .c-pricingCard {
+  border: 1px solid transparent;
   background-color: var(--white);
   position: relative;
   display: flex;
@@ -2456,39 +2463,36 @@
     }
   }
 
-  &.active {
-    background-color: var(--primary-color);
-    .cardHead {
-      .title {
-        border-color: RGBA(255, 255, 255, 0.2);
-        color: var(--white);
-      }
-      .iconContainer {
-        background-color: RGBA(255, 255, 255, 0.08);
-        .icon {
-          color: var(--white);
-        }
-      }
-      .price {
-        color: var(--white);
-      }
-    }
-    .cardBody {
-      ul {
-        li {
-          color: var(--white);
-          .icon {
-            color: var(--white);
-          }
-        }
-      }
-    }
-    .cardFooter {
-      .c-btn {
-        color: var(--primary-color);
-        background-color: var(--white);
-      }
-    }
+  &.active,
+  &:hover {
+    border-color: var(--primary-color);
+    @include box-shadow(-2px 4px 13px rgba(0, 0, 0, 0.2));
+  }
+
+  &.st-static {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    margin: 0 auto;
+    max-width: 350px;
+    position: relative;
+    z-index: 2;
+    @include rounded-corners(0);
+  }
+}
+.priceCardContainer {
+  display: block;
+  position: relative;
+  &::before {
+    background-color: RGBA(var(--primary-rgb), 0.03);
+    content: "";
+    position: absolute;
+    height: 520px;
+    width: 520px;
+    top: 50%;
+    left: 50%;
+    margin: -260px 0 0 -260px;
+    z-index: 1;
+    @include rounded-corners(50%);
   }
 }
 
@@ -2548,6 +2552,373 @@
         .c-btn {
           color: var(--primary-color);
           background-color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.c-billingSection {
+  display: block;
+
+  .cb_head {
+    border-bottom: 2px dotted var(--gray-02);
+    display: block;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    .hd {
+      color: var(--fontColor);
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 26px;
+      margin: 0 0 5px;
+    }
+    .hs {
+      color: var(--gray-01);
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      font-style: italic;
+    }
+    .price {
+      color: var(--primary-color);
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 46px;
+    }
+    .price-sub {
+      color: var(--gray-01);
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      font-style: italic;
+    }
+  }
+}
+
+/* -------------------------------------
+	Component :: XML tree view
+------------------------------------- */
+
+.c-treeView {
+  display: block;
+  position: relative;
+  .accordion {
+    .card {
+      border: 0;
+      margin-bottom: 10px;
+      @include rounded-corners(0);
+      .card-header {
+        border: 0;
+        padding: 0;
+        @include rounded-corners(0);
+
+        .btn {
+          background-color: #f7f7f7;
+          border: 0;
+          box-sizing: border-box;
+          color: var(--primary-color);
+          display: block;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 600;
+          position: relative;
+          padding: 10px 0 10px 30px;
+          outline: none;
+          text-align: left;
+          text-decoration: none;
+          width: 100%;
+          @include box-shadow(none);
+          &::after {
+            background-color: var(--primary-color);
+            color: var(--white);
+            content: "\74";
+            font-family: var(--icon-font);
+            position: absolute;
+            top: 11px;
+            left: 5px;
+            height: 15px;
+            width: 15px;
+            line-height: 14px;
+            padding: 1px 0;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+          }
+          &[aria-expanded="true"] {
+            &::after {
+              content: "\75";
+            }
+          }
+        }
+      }
+      .card-body {
+        padding: 0 0 0 15px;
+        position: relative;
+      }
+    }
+
+    &.parent-01 {
+      .card-header {
+        &.parent-btn {
+          background-color: #eee;
+          .btn {
+            &::before {
+              top: 25px;
+            }
+          }
+        }
+      }
+      .card-body {
+        .accordion {
+          .card {
+            .card-header {
+              position: relative;
+              padding-left: 10px;
+              &::before {
+                color: var(--gray-01);
+                content: "\50";
+                font-family: var(--icon-font);
+                top: 12px;
+                position: absolute;
+                left: -7px;
+                font-size: 19px;
+                line-height: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.child-01 {
+      .card {
+        .card-header {
+          .btn {
+            &::before {
+              background-color: transparent;
+              left: 14px;
+            }
+            &[aria-expanded="true"] {
+              &::before {
+                background-color: var(--gray-01);
+              }
+            }
+          }
+        }
+        .card-body {
+          padding: 10px 0 0 15px;
+          &::before {
+            left: 24px;
+          }
+        }
+      }
+      &:first-child {
+        .card-header {
+          .btn {
+            &::before {
+              top: 50%;
+              height: 50%;
+            }
+          }
+        }
+      }
+      &:last-child {
+        .card-header {
+          .btn {
+            &::before {
+              top: 0;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    &.child-02 {
+      .card {
+        .card-body {
+          padding: 0 0 0 15px;
+          &::before {
+            background-color: transparent;
+            left: 24px;
+          }
+        }
+      }
+      &:first-child {
+        .card-header {
+          .btn {
+            &::before {
+              top: 50%;
+              height: 50%;
+            }
+          }
+        }
+      }
+    }
+    &.child-03 {
+      .card {
+        .card-body {
+          &::before {
+            background-color: transparent;
+            left: 24px;
+          }
+        }
+      }
+      &:first-child {
+        .card-header {
+          .btn {
+            &::before {
+              top: 50%;
+              height: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .treeViewListing {
+    display: block;
+    position: relative;
+    margin-left: -1px;
+    ul {
+      display: block;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li {
+        display: block;
+        padding: 5px 0;
+        margin: 10px 0;
+        .listItem {
+          position: relative;
+          display: block;
+          padding-left: 15px;
+
+          .li_info {
+            color: #898989;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          input,
+          .li_txt {
+            border: 1px solid #eaeaea;
+            box-sizing: border-box;
+            color: var(--fontColor);
+            display: inline-block;
+            outline: none;
+            margin-left: 10px;
+            padding: 8px 14px;
+            height: 34px;
+            font-size: 14px;
+            line-height: 17px;
+            min-width: 50px;
+            vertical-align: middle;
+            @include rounded-corners(6px);
+            @include box-shadow(-2px 4px 10px rgba(0, 0, 0, 0.03));
+          }
+          &::after {
+            color: var(--gray-01);
+            content: "\50";
+            font-family: var(--icon-font);
+            top: 8px;
+            position: absolute;
+            left: -7px;
+            font-size: 19px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#{$darkTheme} {
+  .c-treeView {
+    .accordion {
+      .card {
+        background-color: transparent;
+        .card-header {
+          background-color: var(--widget-bg-color);
+          .btn {
+            background-color: var(--widget-bg-color);
+            &::after {
+              background-color: var(--primary-color);
+              color: var(--white);
+            }
+          }
+        }
+        .card-body {
+        }
+      }
+
+      &.parent-01 {
+        .card-header {
+          &.parent-btn {
+            background-color: var(--widget-bg-color);
+            .btn {
+            }
+          }
+        }
+        .card-body {
+          .accordion {
+            .card {
+              .card-header {
+                &::before {
+                  color: var(--gray-01);
+                }
+              }
+            }
+          }
+        }
+      }
+      &.child-01 {
+        .card {
+          .card-header {
+            .btn {
+              &::before {
+                background-color: transparent;
+              }
+              &[aria-expanded="true"] {
+                &::before {
+                  background-color: var(--gray-01);
+                }
+              }
+            }
+          }
+          .card-body {
+          }
+        }
+      }
+    }
+
+    .treeViewListing {
+      ul {
+        li {
+          .listItem {
+            .li_info {
+              color: #898989;
+            }
+
+            .li_txt {
+              background-color: var(--component-bg-color);
+              border: 1px solid var(--border-color);
+            }
+            &::after {
+              color: var(--gray-01);
+            }
+          }
         }
       }
     }

@@ -228,4 +228,12 @@ $(function () {
       autoplaySpeed: 1500,
     });
   }
+
+  // creadit card formatting
+  // credit card
+  if ($(".type-card").length) {
+    var cleaveCreditCard = new Cleave(".form-control.type-card", {
+      creditCard: true,
+    });
+  }
 });

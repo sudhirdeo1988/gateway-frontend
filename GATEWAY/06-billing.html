@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Billing</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select2.min.css" />
+    <link rel="stylesheet" href="../css/css-style.css" />
+  </head>
+
+  <body class="no-settingHeader">
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody">
+      <!-- ********** Component :: Sidebar **********  -->
+      <div class="c-sidebar">
+        <div class="c-pageNav">
+          <ul>
+            <li>
+              <a href="./01-dashboard.html" class="navLink">
+                <i class="icon ocrd-dashboard"></i>
+                <span class="linkText">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="./02-filingHistory.html" class="navLink">
+                <i class="icon ocrd-edit"></i>
+                <span class="linkText">Filling History</span>
+              </a>
+            </li>
+            <li>
+              <a href="./03-customFiling.html" class="navLink">
+                <i class="icon ocrd-copy"></i>
+                <span class="linkText">Custom Filling</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** Component :: Sidebar End **********  -->
+
+      <!-- ********** Component :: Header **********  -->
+      <div class="c-header">
+        <div class="row no-gutters">
+          <div class="col-7">
+            <div class="hs_left">
+              <div class="headerSect_logo">
+                <a href="javascript:void(0);" class="headerLogo">
+                  <img src="../images/logo.png" alt="alt" />
+                </a>
+              </div>
+              <div class="headerSect_l">
+                <div class="c-pageTitle">Global custom filling gateway</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 text-right">
+            <div class="headerSettings">
+              <ul>
+                <li class="themeSwitch">
+                  <div class="c-switch">
+                    <input
+                      type="checkbox"
+                      class="switchChk"
+                      id="themeSwitch"
+                      value="dark"
+                    />
+                    <label class="switchLbl" for="themeSwitch">
+                      <div class="switchTrack"></div>
+                    </label>
+                  </div>
+                </li>
+                <li class="countryFlag">
+                  <div class="c-dropdown dropdown">
+                    <button
+                      class="flagBtn dropdown-toggle"
+                      type="button"
+                      id="countrySelection"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="../images/flags/india.svg" class="flag" />
+                      <span class="country">IND</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown flagListDD"
+                      aria-labelledby="countrySelection"
+                    >
+                      <div class="flagSearchHeader">
+                        <div class="searchTxt">
+                          <i class="icon ocrd-search"></i>
+                          <input
+                            type="text"
+                            class="txtBox"
+                            placeholder="Search"
+                          />
+                        </div>
+                      </div>
+                      <div class="flagSearchBody">
+                        <ul>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/india.svg"
+                                  class="flag"
+                                />
+                                <span class="country">India</span>
+                              </div>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/japan.svg"
+                                  class="flag"
+                                />
+                                <span class="country">Japan</span>
+                              </div>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="c-dropdown dropdown notifySetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocrd-alarm"></i>
+                      <span class="count">2</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div class="notifyHeading">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col">
+                            <span class="hd">Notifications</span>
+                          </div>
+                          <div class="col">
+                            <span class="hf text-right"
+                              >3 unread notifications</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="notifyFooter">
+                        <button class="link">READ ALL NOTIFICATIONS</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="c-dropdown dropdown notifySetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocrd-mail"></i>
+                      <span class="count">2</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div class="notifyHeading">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col">
+                            <span class="hd">Notifications</span>
+                          </div>
+                          <div class="col">
+                            <span class="hf text-right"
+                              >3 unread notifications</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="notifyFooter">
+                        <button class="link">READ ALL NOTIFICATIONS</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="userProf">
+                  <div class="c-dropdown dropdown profileSetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocrd-user"></i>
+                    </button>
+                    <div
+                      class="dropdown-menu userDD st-clean with-icon"
+                      aria-labelledby="dropdownMenuButton2"
+                    >
+                      <a class="dropdown-item" href="./04-userProfile.html">
+                        <i class="icon ocrd-user-1"></i>
+                        User Profile</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocrd-copy"></i>
+                        Subscription</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocrd-setting-wheel"></i>
+                        Settings</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocrd-logout"></i>
+                        Logout</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Header End **********  -->
+
+      <!-- ********** Component :: Wrapper **********  -->
+      <div class="c-wrapper">
+        <div class="container-fluid">
+          <!-- *** First Row *** -->
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="c-pageHeading">Billing</div>
+            </div>
+          </div>
+          <!-- *** First Row End *** -->
+
+          <!-- *****  Info Section ***** -->
+          <div class="row">
+            <div class="col">
+              <div class="c-dataContainer type-02">
+                <div class="row">
+                  <!-- Left Sect -->
+                  <div class="col-md-6 col-sm-8 col-12">
+                    <div class="c-billingSection">
+                      <div class="cb_head">
+                        <div class="row">
+                          <div class="col-7">
+                            <h4 class="hd">Billed Basic</h4>
+                            <span class="hs">Saving $120 a year</span>
+                          </div>
+                          <div class="col-5 text-right">
+                            <span class="price"><sup>$</sup>0</span>
+                            <span class="price-sub">/ Annually</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cb_body row">
+                        <div class="col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">Name on Card</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">Card Number</label>
+                            <input
+                              type="text"
+                              placeholder="XXXX XXXX XXXX XXXX"
+                              class="form-control type-card"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">Expiry Date (MM YYYY)</label>
+                            <input
+                              type="text"
+                              class="form-control w-half"
+                              placeholder="MM"
+                            />
+                            <input
+                              type="text"
+                              class="form-control w-half"
+                              placeholder="YYYY"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">Name on Card</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">Country</label>
+                            <div class="c-customDropdown selectOne">
+                              <select class="c-select">
+                                <option value="one">First</option>
+                                <option value="three">Third</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">Address (Optional)</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">City (Optional)</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">State (Optional)</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                          <div class="form-group c-form">
+                            <label class="formLbl">Zip Code (Optional)</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-12 text-center">
+                          <button class="c-btn">Update My plan</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Left Sect End -->
+
+                  <!-- Right Sect -->
+                  <div class="col-md-6 col-sm-4 col-12">
+                    <div class="priceCardContainer">
+                      <div class="c-pricingCard st-static">
+                        <div class="cardHead">
+                          <span class="title">STARTER</span>
+                          <div class="iconContainer">
+                            <i class="icon ocrd-starter"></i>
+                          </div>
+                          <span class="price"><sup>$</sup>0</span>
+                        </div>
+                        <div class="cardBody">
+                          <ul>
+                            <li>
+                              <i class="icon ocrd-android-done"></i>
+                              30 Day Free Trail
+                            </li>
+                            <li>
+                              <i class="icon ocrd-android-done"></i>
+                              10 Free Transactions Daily
+                            </li>
+                            <li>
+                              <i class="icon ocrd-android-done"></i>
+                              Online Support
+                            </li>
+                            <li>
+                              <i class="icon ocrd-android-done"></i>
+                              Cancel Anytime
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="cardFooter text-center">
+                          <button class="c-btn bordered">Select Plan</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Right Sect End -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- *****  Info Section End ***** -->
+        </div>
+      </div>
+      <!-- ********** Component :: Wrapper End **********  -->
+    </div>
+    <!-- ********** Page Body End **********  -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/select2.min.js"></script>
+    <script src="../js/cleave-phone.i18n.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

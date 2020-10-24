@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* -------------------------------------
 
 Author :: Sudhir Deolalikar
@@ -281,6 +280,10 @@ SCSS functions
 
 .ocrd-sign-out:before {
   content: "O";
+}
+
+.ocrd-dot:before {
+  content: "P";
 }
 
 .ocrd-caret-up-down:before {
@@ -2523,6 +2526,12 @@ a:hover {
   height: 101px;
   resize: none;
 }
+.c-form .form-control.w-half {
+  display: inline-block;
+  float: left;
+  margin: 0 5px;
+  width: calc(50% - 10px);
+}
 .c-form.c-dateRangePicker .dtPickWrapper, .c-form.c-dtPicker .dtPickWrapper, .c-form.c-timePicker .dtPickWrapper {
   position: relative;
   box-sizing: border-box;
@@ -3370,6 +3379,7 @@ a:hover {
 }
 
 .c-pricingCard {
+  border: 1px solid transparent;
   background-color: var(--white);
   position: relative;
   display: flex;
@@ -3477,31 +3487,43 @@ a:hover {
   font-size: 14px;
   line-height: 14px;
 }
-.c-pricingCard.active {
-  background-color: var(--primary-color);
+.c-pricingCard.active, .c-pricingCard:hover {
+  border-color: var(--primary-color);
+  box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.2);
 }
-.c-pricingCard.active .cardHead .title {
-  border-color: RGBA(255, 255, 255, 0.2);
-  color: var(--white);
+.c-pricingCard.st-static {
+  background-color: transparent;
+  border-color: var(--primary-color);
+  margin: 0 auto;
+  max-width: 350px;
+  position: relative;
+  z-index: 2;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
-.c-pricingCard.active .cardHead .iconContainer {
-  background-color: RGBA(255, 255, 255, 0.08);
+
+.priceCardContainer {
+  display: block;
+  position: relative;
 }
-.c-pricingCard.active .cardHead .iconContainer .icon {
-  color: var(--white);
-}
-.c-pricingCard.active .cardHead .price {
-  color: var(--white);
-}
-.c-pricingCard.active .cardBody ul li {
-  color: var(--white);
-}
-.c-pricingCard.active .cardBody ul li .icon {
-  color: var(--white);
-}
-.c-pricingCard.active .cardFooter .c-btn {
-  color: var(--primary-color);
-  background-color: var(--white);
+.priceCardContainer::before {
+  background-color: RGBA(var(--primary-rgb), 0.03);
+  content: "";
+  position: absolute;
+  height: 520px;
+  width: 520px;
+  top: 50%;
+  left: 50%;
+  margin: -260px 0 0 -260px;
+  z-index: 1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .theme-dark .c-pricingCard {
@@ -3547,6 +3569,275 @@ a:hover {
 .theme-dark .c-pricingCard.active .cardFooter .c-btn {
   color: var(--primary-color);
   background-color: var(--white);
+}
+
+.c-billingSection {
+  display: block;
+}
+.c-billingSection .cb_head {
+  border-bottom: 2px dotted var(--gray-02);
+  display: block;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.c-billingSection .cb_head .hd {
+  color: var(--fontColor);
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0 0 5px;
+}
+.c-billingSection .cb_head .hs {
+  color: var(--gray-01);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  font-style: italic;
+}
+.c-billingSection .cb_head .price {
+  color: var(--primary-color);
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 46px;
+}
+.c-billingSection .cb_head .price-sub {
+  color: var(--gray-01);
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  font-style: italic;
+}
+
+/* -------------------------------------
+	Component :: XML tree view
+------------------------------------- */
+.c-treeView {
+  display: block;
+  position: relative;
+}
+.c-treeView .accordion .card {
+  border: 0;
+  margin-bottom: 10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.c-treeView .accordion .card .card-header {
+  border: 0;
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.c-treeView .accordion .card .card-header .btn {
+  background-color: #f7f7f7;
+  border: 0;
+  box-sizing: border-box;
+  color: var(--primary-color);
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  position: relative;
+  padding: 10px 0 10px 30px;
+  outline: none;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+}
+.c-treeView .accordion .card .card-header .btn::after {
+  background-color: var(--primary-color);
+  color: var(--white);
+  content: "t";
+  font-family: var(--icon-font);
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
+  line-height: 14px;
+  padding: 1px 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+.c-treeView .accordion .card .card-header .btn[aria-expanded=true]::after {
+  content: "u";
+}
+.c-treeView .accordion .card .card-body {
+  padding: 0 0 0 15px;
+  position: relative;
+}
+.c-treeView .accordion.parent-01 .card-header.parent-btn {
+  background-color: #eee;
+}
+.c-treeView .accordion.parent-01 .card-header.parent-btn .btn::before {
+  top: 25px;
+}
+.c-treeView .accordion.parent-01 .card-body .accordion .card .card-header {
+  position: relative;
+  padding-left: 10px;
+}
+.c-treeView .accordion.parent-01 .card-body .accordion .card .card-header::before {
+  color: var(--gray-01);
+  content: "P";
+  font-family: var(--icon-font);
+  top: 12px;
+  position: absolute;
+  left: -7px;
+  font-size: 19px;
+  line-height: 15px;
+}
+.c-treeView .accordion.child-01 .card .card-header .btn::before {
+  background-color: transparent;
+  left: 14px;
+}
+.c-treeView .accordion.child-01 .card .card-header .btn[aria-expanded=true]::before {
+  background-color: var(--gray-01);
+}
+.c-treeView .accordion.child-01 .card .card-body {
+  padding: 10px 0 0 15px;
+}
+.c-treeView .accordion.child-01 .card .card-body::before {
+  left: 24px;
+}
+.c-treeView .accordion.child-01:first-child .card-header .btn::before {
+  top: 50%;
+  height: 50%;
+}
+.c-treeView .accordion.child-01:last-child .card-header .btn::before {
+  top: 0;
+  height: 100%;
+}
+.c-treeView .accordion.child-02 .card .card-body {
+  padding: 0 0 0 15px;
+}
+.c-treeView .accordion.child-02 .card .card-body::before {
+  background-color: transparent;
+  left: 24px;
+}
+.c-treeView .accordion.child-02:first-child .card-header .btn::before {
+  top: 50%;
+  height: 50%;
+}
+.c-treeView .accordion.child-03 .card .card-body::before {
+  background-color: transparent;
+  left: 24px;
+}
+.c-treeView .accordion.child-03:first-child .card-header .btn::before {
+  top: 50%;
+  height: 50%;
+}
+.c-treeView .treeViewListing {
+  display: block;
+  position: relative;
+  margin-left: -1px;
+}
+.c-treeView .treeViewListing ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.c-treeView .treeViewListing ul li {
+  display: block;
+  padding: 5px 0;
+  margin: 10px 0;
+}
+.c-treeView .treeViewListing ul li .listItem {
+  position: relative;
+  display: block;
+  padding-left: 15px;
+}
+.c-treeView .treeViewListing ul li .listItem .li_info {
+  color: #898989;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+}
+.c-treeView .treeViewListing ul li .listItem input,
+.c-treeView .treeViewListing ul li .listItem .li_txt {
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  color: var(--fontColor);
+  display: inline-block;
+  outline: none;
+  margin-left: 10px;
+  padding: 8px 14px;
+  height: 34px;
+  font-size: 14px;
+  line-height: 17px;
+  min-width: 50px;
+  vertical-align: middle;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -ms-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -o-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+}
+.c-treeView .treeViewListing ul li .listItem::after {
+  color: var(--gray-01);
+  content: "P";
+  font-family: var(--icon-font);
+  top: 8px;
+  position: absolute;
+  left: -7px;
+  font-size: 19px;
+  line-height: 15px;
+}
+
+.theme-dark .c-treeView .accordion .card {
+  background-color: transparent;
+}
+.theme-dark .c-treeView .accordion .card .card-header {
+  background-color: var(--widget-bg-color);
+}
+.theme-dark .c-treeView .accordion .card .card-header .btn {
+  background-color: var(--widget-bg-color);
+}
+.theme-dark .c-treeView .accordion .card .card-header .btn::after {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.theme-dark .c-treeView .accordion.parent-01 .card-header.parent-btn {
+  background-color: var(--widget-bg-color);
+}
+.theme-dark .c-treeView .accordion.parent-01 .card-body .accordion .card .card-header::before {
+  color: var(--gray-01);
+}
+.theme-dark .c-treeView .accordion.child-01 .card .card-header .btn::before {
+  background-color: transparent;
+}
+.theme-dark .c-treeView .accordion.child-01 .card .card-header .btn[aria-expanded=true]::before {
+  background-color: var(--gray-01);
+}
+.theme-dark .c-treeView .treeViewListing ul li .listItem .li_info {
+  color: #898989;
+}
+.theme-dark .c-treeView .treeViewListing ul li .listItem .li_txt {
+  background-color: var(--component-bg-color);
+  border: 1px solid var(--border-color);
+}
+.theme-dark .c-treeView .treeViewListing ul li .listItem::after {
+  color: var(--gray-01);
 }
 
 /* -------------------------------------
@@ -5538,229 +5829,16 @@ a:hover {
   width: 25px;
   outline: none;
 }
+.c-downloadList ul li .dl_btn.edi img {
+  height: 30px;
+  width: 30px;
+}
 .c-downloadList ul li .dl_btn img {
   height: 25px;
   width: 25px;
 }
 
 /* ---------- Tree View -------- */
-.c-treeView {
-  border-left: 1px solid var(--gray-01);
-  display: block;
-  position: relative;
-  padding: 20px 0;
-}
-.c-treeView::before, .c-treeView::after {
-  color: var(--primary-color);
-  content: "";
-  font-family: var(--icon-font);
-  top: -4px;
-  left: -6px;
-  position: absolute;
-  font-size: 12px;
-  line-height: 12px;
-}
-.c-treeView::after {
-  top: auto;
-  bottom: -4px;
-}
-.c-treeView .accordion .card {
-  border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.c-treeView .accordion .card .card-header {
-  border: 0;
-  padding: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.c-treeView .accordion .card .card-header .btn {
-  background-color: transparent;
-  border: 0;
-  box-sizing: border-box;
-  color: var(--primary-color);
-  display: block;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 600;
-  position: relative;
-  padding: 10px 0 10px 30px;
-  outline: none;
-  text-align: left;
-  text-decoration: none;
-  width: 100%;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
-}
-.c-treeView .accordion .card .card-header .btn::after {
-  background-color: var(--primary-color);
-  color: var(--white);
-  content: "q";
-  font-family: var(--icon-font);
-  position: absolute;
-  top: 11px;
-  left: 7px;
-  height: 15px;
-  width: 15px;
-  line-height: 14px;
-  padding: 1px 0;
-  font-size: 13px;
-  font-weight: 700;
-  text-align: center;
-}
-.c-treeView .accordion .card .card-header .btn::before {
-  background-color: transparent;
-  content: "";
-  top: 18px;
-  left: 27px;
-  position: absolute;
-  height: 50%;
-  width: 1px;
-}
-.c-treeView .accordion .card .card-header .btn[aria-expanded=true]::after {
-  content: "v";
-}
-.c-treeView .accordion .card .card-header .btn[aria-expanded=true]::before {
-  background-color: var(--gray-01);
-}
-.c-treeView .accordion .card .card-body {
-  padding: 0 0 0 28px;
-  position: relative;
-}
-.c-treeView .accordion .card .card-body::before {
-  background-color: var(--gray-01);
-  content: "";
-  top: 0;
-  left: 27px;
-  position: absolute;
-  height: 100%;
-  width: 1px;
-}
-.c-treeView .accordion.parent-01 .card-header.parent-btn {
-  background-color: #eee;
-  margin-bottom: 5px;
-}
-.c-treeView .accordion.parent-01 .card-header.parent-btn .btn {
-  padding-left: 50px;
-}
-.c-treeView .accordion.parent-01 .card-header.parent-btn .btn::after {
-  left: 20px;
-}
-.c-treeView .accordion.parent-01 .card-header.parent-btn .btn::before {
-  top: 25px;
-  height: calc(50% - 0);
-}
-.c-treeView .accordion.parent-01 .card-header.parent-btn::before {
-  background-color: var(--gray-01);
-  content: "";
-  top: 18px;
-  left: 0;
-  position: absolute;
-  height: 1px;
-  width: 30px;
-}
-.c-treeView .accordion.parent-01 .card-body .accordion .card .card-header {
-  position: relative;
-  padding-left: 10px;
-}
-.c-treeView .accordion.parent-01 .card-body .accordion .card .card-header::before {
-  background-color: var(--gray-01);
-  content: "";
-  top: 18px;
-  left: 0;
-  position: absolute;
-  height: 1px;
-  width: 30px;
-}
-.c-treeView .accordion.child-01 .card .card-header .btn::before {
-  background-color: transparent;
-  left: 14px;
-}
-.c-treeView .accordion.child-01 .card .card-header .btn[aria-expanded=true]::before {
-  background-color: var(--gray-01);
-}
-.c-treeView .accordion.child-01 .card .card-body {
-  padding: 10px 0 10px 25px;
-}
-.c-treeView .accordion.child-01 .card .card-body::before {
-  left: 24px;
-}
-.c-treeView .accordion.child-01:first-child .card-header .btn::before {
-  top: 50%;
-  height: 50%;
-}
-.c-treeView .accordion.child-01:last-child .card-header .btn::before {
-  top: 0;
-  height: 100%;
-}
-.c-treeView .accordion.child-02 .card .card-body {
-  padding: 0 0 0 25px;
-}
-.c-treeView .accordion.child-02 .card .card-body::before {
-  background-color: transparent;
-  left: 24px;
-}
-.c-treeView .accordion.child-02:first-child .card-header .btn::before {
-  top: 50%;
-  height: 50%;
-}
-.c-treeView .accordion.child-03 .card .card-body::before {
-  background-color: transparent;
-  left: 24px;
-}
-.c-treeView .accordion.child-03:first-child .card-header .btn::before {
-  top: 50%;
-  height: 50%;
-}
-.c-treeView .treeViewListing {
-  display: block;
-  position: relative;
-  margin-left: -1px;
-}
-.c-treeView .treeViewListing ul {
-  display: block;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.c-treeView .treeViewListing ul li {
-  display: block;
-  border-left: 1px solid var(--gray-01);
-}
-.c-treeView .treeViewListing ul li .listItem {
-  position: relative;
-  border: 0;
-  display: block;
-  background-color: transparent;
-  padding: 14px 10px 10px 40px;
-  outline: none;
-}
-.c-treeView .treeViewListing ul li .listItem::before {
-  background-color: #ccc;
-  content: "";
-  top: 24px;
-  left: 0;
-  position: absolute;
-  height: 1px;
-  width: 20px;
-}
-.c-treeView .treeViewListing ul li .listItem::after {
-  color: var(--primary-color);
-  content: "";
-  font-family: var(--icon-font);
-  top: 20px;
-  left: 19px;
-  position: absolute;
-  font-size: 9px;
-  line-height: 9px;
-}
-
 .c-floatingDiv {
   display: block;
   position: fixed;

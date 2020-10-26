@@ -1314,7 +1314,7 @@ a:hover {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid RGBA(var(--primary-rgb), 0.1);
+  border-bottom: 10px solid var(--white);
 }
 .c-header .dropdown-menu.flagListDD {
   min-width: 230px;
@@ -2121,6 +2121,31 @@ a:hover {
   font-size: 20px;
   line-height: 20px;
 }
+.c-tableWrapper .c-table.type-message tr td {
+  vertical-align: top;
+}
+.c-tableWrapper .c-table.type-message .msg_title {
+  color: var(--gray-01);
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.c-tableWrapper .c-table.type-message .msg_info {
+  color: var(--gray-01);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.c-tableWrapper .c-table.type-message .msg_duration {
+  color: #bbbbbb;
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: right;
+}
 .c-tableWrapper .c-tableFooter {
   border-top: 1px solid var(--gray-02);
   padding: 30px 26px 6px;
@@ -2912,8 +2937,8 @@ a:hover {
   line-height: 16px;
   height: 16px;
   width: 16px;
-  font-family: "ocr-inc";
-  content: "N";
+  font-family: var(--icon-font) !important;
+  content: "y";
   z-index: 2;
   transition: all ease 0.2s;
   -moz-transition: all ease 0.2s;
@@ -2935,7 +2960,7 @@ a:hover {
 .c-chkBox .chkBox:checked ~ .chkLbl::before,
 .c-radioBox .chkBox:checked ~ .chkLbl::before {
   color: var(--primary-color) !important;
-  content: "M";
+  content: "x";
 }
 .c-chkBox.c-radioBox .chkLbl,
 .c-radioBox.c-radioBox .chkLbl {
@@ -2943,11 +2968,11 @@ a:hover {
 }
 .c-chkBox.c-radioBox .chkLbl::before,
 .c-radioBox.c-radioBox .chkLbl::before {
-  content: "!";
+  content: "v";
 }
 .c-chkBox.c-radioBox .chkBox:checked ~ .chkLbl::before,
 .c-radioBox.c-radioBox .chkBox:checked ~ .chkLbl::before {
-  content: "9";
+  content: "w";
 }
 .c-chkBox.no-label,
 .c-radioBox.no-label {
@@ -2982,7 +3007,7 @@ a:hover {
 .c-chkBox.no-label .chkBox:checked ~ .chkLbl::before,
 .c-radioBox.no-label .chkBox:checked ~ .chkLbl::before {
   color: var(--primary-color) !important;
-  content: "M";
+  content: "x";
 }
 .c-chkBox.inline,
 .c-radioBox.inline {
@@ -3505,6 +3530,43 @@ a:hover {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+.c-pricingCard .infoStrip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.c-pricingCard .infoStrip .infoTriangle {
+  border-left: 65px solid transparent;
+  border-right: 65px solid transparent;
+  border-bottom: 65px solid var(--primary-color);
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -42px;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+}
+.c-pricingCard .infoStrip .infoTitle {
+  color: var(--white);
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  height: 30px;
+  width: 40px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
 }
 
 .priceCardContainer {

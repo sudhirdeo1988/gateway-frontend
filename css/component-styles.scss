@@ -225,7 +225,7 @@
       height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: 10px solid RGBA(var(--primary-rgb), 0.1);
+      border-bottom: 10px solid var(--white);
     }
     &.flagListDD {
       min-width: 230px;
@@ -1084,6 +1084,36 @@
         line-height: 20px;
       }
     }
+
+    &.type-message {
+      tr {
+        td {
+          vertical-align: top;
+        }
+      }
+      .msg_title {
+        color: var(--gray-01);
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+      }
+      .msg_info {
+        color: var(--gray-01);
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+      }
+      .msg_duration {
+        color: #bbbbbb;
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: right;
+      }
+    }
   }
 
   .c-tableFooter {
@@ -1911,8 +1941,8 @@
       line-height: 16px;
       height: 16px;
       width: 16px;
-      font-family: "ocr-inc";
-      content: "\4e";
+      font-family: var(--icon-font) !important;
+      content: "\79";
       z-index: 2;
       @include transition(all ease 0.2s);
     }
@@ -1929,7 +1959,7 @@
           color: var(--fontColor);
           &::before {
             color: var(--primary-color) !important;
-            content: "\4d";
+            content: "\78";
           }
         }
       }
@@ -1939,7 +1969,7 @@
     .chkLbl {
       margin-bottom: 0;
       &::before {
-        content: "\21";
+        content: "\76";
       }
     }
     .chkBox {
@@ -1947,7 +1977,7 @@
         ~ {
           .chkLbl {
             &::before {
-              content: "\39";
+              content: "\77";
             }
           }
         }
@@ -1981,7 +2011,7 @@
             color: var(--fontColor);
             &::before {
               color: var(--primary-color) !important;
-              content: "\4d";
+              content: "\78";
             }
           }
         }
@@ -2477,6 +2507,35 @@
     position: relative;
     z-index: 2;
     @include rounded-corners(0);
+  }
+  .infoStrip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .infoTriangle {
+      border-left: 65px solid transparent;
+      border-right: 65px solid transparent;
+      border-bottom: 65px solid var(--primary-color);
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: -42px;
+      @include transform(rotate(-45deg));
+    }
+    .infoTitle {
+      color: var(--white);
+      position: absolute;
+      top: 15px;
+      left: 8px;
+      height: 30px;
+      width: 40px;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      @include transform(rotate(-45deg));
+    }
   }
 }
 .priceCardContainer {

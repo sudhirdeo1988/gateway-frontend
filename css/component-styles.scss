@@ -732,6 +732,9 @@
     min-height: 100px;
     height: auto;
   }
+  &.no-mb {
+    margin-bottom: 0;
+  }
 }
 
 .c-chartBlockhead {
@@ -820,7 +823,6 @@
   box-sizing: border-box;
   padding: 12px 24px 24px;
   min-height: 160px;
-  margin-bottom: 24px;
   @include rounded-corners(10px);
   @include box-shadow(-2px 4px 13px rgba(0, 0, 0, 0.03));
   .c_body {
@@ -861,11 +863,33 @@
       display: block;
       font-size: 40px;
       line-height: 40px;
-      font-weight: 700;
+      font-weight: 900;
       padding: 15px 0 8px;
       letter-spacing: -2px;
       text-transform: uppercase;
       text-align: right;
+    }
+    .c_footer {
+      color: var(--fontColor-light);
+      display: block;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 500;
+      text-align: right;
+    }
+  }
+  &.md {
+    height: 213px;
+    margin: 0 0 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .c_body {
+      margin: 20px 0;
+      .c_count {
+        font-size: 50px;
+        padding: 20px 0;
+      }
     }
     .c_footer {
       color: var(--fontColor-light);
@@ -883,6 +907,7 @@
   flex-direction: column;
   position: relative;
   padding: 18px 24px 24px;
+  margin-bottom: 0;
   .c_body {
     display: flex;
     flex-direction: column;
@@ -891,8 +916,10 @@
       height: 242px;
       display: block;
       flex: 1 0 auto;
+      text-align: center;
       .graphImg {
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
       }
     }
     .graphFooter {
@@ -905,6 +932,9 @@
       font-weight: 600;
       line-height: 18px;
     }
+  }
+  &.md {
+    height: 450px;
   }
 }
 
@@ -2984,6 +3014,58 @@
   }
 }
 
+/* new grid system */
+.c-grid_1r2c {
+  display: grid;
+  grid-template-columns: 3.15fr 1fr;
+  grid-auto-flow: row;
+  gap: 24px;
+  .grid-col {
+    box-sizing: border-box;
+    &.r1c1 {
+      grid-column: 1;
+      grid-row: 1 / 1;
+    }
+    &.r1c2 {
+      grid-column: 2;
+      grid-row: 1 / 2;
+    }
+  }
+}
+
+.c-grid_equal {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 24px;
+  margin-bottom: 24px;
+  .grid-col {
+    box-sizing: border-box;
+    grid-row: 1;
+  }
+  &.r1c2 {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+  &.r1c3 {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+  &.r1c4 {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+  &.r2c2 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-flow: row;
+    gap: 24px;
+    .grid-col {
+      box-sizing: border-box;
+      grid-row: auto;
+      .c-chartCard {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 /* -------------------------------------
 	Component :: demo utils
 ------------------------------------- */
@@ -2996,7 +3078,7 @@
   width: 100%;
 }
 .forLight {
-  display: block;
+  display: inline-block;
 }
 .forDark {
   display: none;
@@ -3007,6 +3089,6 @@
     display: none;
   }
   .forDark {
-    display: block;
+    display: inline-block;
   }
 }

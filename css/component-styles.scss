@@ -3017,9 +3017,10 @@
 /* new grid system */
 .c-grid_1r2c {
   display: grid;
-  grid-template-columns: 3.15fr 1fr;
+  grid-template-columns: 3.13fr 1fr;
   grid-auto-flow: row;
   gap: 24px;
+  margin-bottom: 24px;
   .grid-col {
     box-sizing: border-box;
     &.r1c1 {

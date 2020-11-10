@@ -19,7 +19,7 @@
         <div class="c-pageNav">
           <ul>
             <li>
-              <a href="./01-dashboard.html" class="navLink">
+              <a href="./01-dashboardDemo-01.html" class="navLink">
                 <i class="icon ocrd-dashboard"></i>
                 <span class="linkText">Dashboard</span>
               </a>
@@ -59,19 +59,6 @@
           <div class="col-5 text-right">
             <div class="headerSettings">
               <ul>
-                <li class="themeSwitch">
-                  <div class="c-switch">
-                    <input
-                      type="checkbox"
-                      class="switchChk"
-                      id="themeSwitch"
-                      value="dark"
-                    />
-                    <label class="switchLbl" for="themeSwitch">
-                      <div class="switchTrack"></div>
-                    </label>
-                  </div>
-                </li>
                 <li class="countryFlag">
                   <div class="c-dropdown dropdown">
                     <button
@@ -537,7 +524,69 @@
                     aria-labelledby="dashboard-tab"
                   >
                     <!-- ***** User Details ***** -->
-                    <div class="c-dataContainer type-01">theme Config</div>
+                    <div class="c-dataContainer type-01">
+                      <div class="row">
+                        <div class="col-md-3 col-sm-6 col-12">
+                          <!-- ***** Theme card ***** -->
+                          <div class="c-themeConfig" role="button">
+                            <div class="title">Theme 1 (Light)</div>
+                            <div class="colorPallet">
+                              <img
+                                src="../images/themePallets/light-1.jpg"
+                                alt="theme-1"
+                              />
+                            </div>
+                            <div class="themeSelect">
+                              <!-- *** Check Box Switch *** -->
+                              <div class="c-switch radio">
+                                <input
+                                  type="radio"
+                                  class="switchChk themeSwitcher"
+                                  id="theme1"
+                                  value="theme-light-1"
+                                  name="themeSelection"
+                                  checked
+                                />
+                                <label class="switchLbl" for="theme1">
+                                  <div class="switchTrack"></div>
+                                </label>
+                              </div>
+                              <!-- *** Check Box Switch End *** -->
+                            </div>
+                          </div>
+                          <!-- ***** Theme card End ***** -->
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-12">
+                          <!-- ***** Theme card ***** -->
+                          <div class="c-themeConfig" role="button">
+                            <div class="title">Theme 2 (dark)</div>
+                            <div class="colorPallet">
+                              <img
+                                src="../images/themePallets/dark-1.jpg"
+                                alt="theme-1"
+                              />
+                            </div>
+                            <div class="themeSelect">
+                              <!-- *** Check Box Switch *** -->
+                              <div class="c-switch radio">
+                                <input
+                                  type="radio"
+                                  class="switchChk themeSwitcher"
+                                  id="theme2"
+                                  value="theme-dark-1"
+                                  name="themeSelection"
+                                />
+                                <label class="switchLbl" for="theme2">
+                                  <div class="switchTrack"></div>
+                                </label>
+                              </div>
+                              <!-- *** Check Box Switch End *** -->
+                            </div>
+                          </div>
+                          <!-- ***** Theme card End ***** -->
+                        </div>
+                      </div>
+                    </div>
                     <!-- ***** User Details End ***** -->
                   </div>
                   <!-- ***** Tab :: Details End ***** -->

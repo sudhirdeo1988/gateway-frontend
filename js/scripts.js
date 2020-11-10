@@ -1,15 +1,6 @@
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 
-  $("#themeSwitch").change(function () {
-    const theme = $(this).val();
-    if ($(this).is(":checked")) {
-      $("body").addClass("theme-dark").removeClass("theme-light");
-    } else {
-      $("body").removeClass("theme-dark").addClass("theme-light");
-    }
-  });
-
   // popover
   $(".selector")
     .popover({ trigger: "manual", html: true, animation: false })
@@ -45,16 +36,6 @@ $(function () {
   $(document).on("click", ".js-preventClick .dropdown-menu", function (e) {
     e.stopPropagation();
   });
-  $(document).on(
-    "click",
-    ".js-selectable .dropdown-menu .dropdown-item",
-    function () {
-      $(this)
-        .parents(".js-selectable")
-        .find(".dropdown-toggle .value")
-        .text($(this).val());
-    }
-  );
 
   // ---- Form Datepicker
   if ($(".c-dtPicker").length) {
@@ -237,3 +218,44 @@ $(function () {
     });
   }
 });
+
+// theme switch function
+
+const themeSwitcher = document.getElementsByClassName("themeSwitcher");
+const body = document.body;
+let currentTheme = "";
+if (typeof Storage !== "undefined") {
+  if (localStorage) {
+    currentTheme = localStorage.getItem("ocr-currentTheme");
+  } else {
+    currentTheme = window.sessionStorage.getItem("ocr-currentTheme");
+  }
+}
+body.classList.forEach((className) => {
+  if (className.startsWith("theme-")) {
+    body.classList.remove(className);
+  }
+});
+body.className += ` ${currentTheme}`;
+
+for (var i = 0; i < themeSwitcher.length; i++) {
+  if (themeSwitcher[i].value === currentTheme) {
+    themeSwitcher[i].checked = true;
+  }
+
+  themeSwitcher[i].addEventListener("change", function () {
+    body.classList.forEach((className) => {
+      if (className.startsWith("theme-")) {
+        body.classList.remove(className);
+      }
+    });
+    body.className += ` ${this.value}`;
+    if (typeof Storage !== "undefined") {
+      if (localStorage) {
+        localStorage.setItem("ocr-currentTheme", this.value);
+      } else {
+        window.sessionStorage.setItem("ocr-currentTheme", this.value);
+      }
+    }
+  });
+}

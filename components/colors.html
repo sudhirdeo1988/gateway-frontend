@@ -82,19 +82,6 @@
           <div class="col-5 text-right">
             <div class="headerSettings">
               <ul>
-                <li class="themeSwitch">
-                  <div class="c-switch">
-                    <input
-                      type="checkbox"
-                      class="switchChk"
-                      id="themeSwitch"
-                      value="dark"
-                    />
-                    <label class="switchLbl" for="themeSwitch">
-                      <div class="switchTrack"></div>
-                    </label>
-                  </div>
-                </li>
                 <li class="countryFlag">
                   <div class="c-dropdown dropdown">
                     <button
@@ -324,81 +311,58 @@
 
           <!-- ***** Graph Row 2 ***** -->
           <div class="row">
-            <div class="col">
-              <!-- ***** Primary Button Block ***** -->
-              <div class="c-dataContainer type-01">
-                <div class="c-compHeading">Primary Colours</div>
-                <div class="row mb-20">
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Primary Color</label>
-                      <div class="colorDemo primary"></div>
-                      <span class="colorCode">#057bfe</span>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Secondary Color</label>
-                      <div class="colorDemo secondary"></div>
-                      <span class="colorCode">#ffb233</span>
-                    </div>
-                  </div>
+            <div class="col-md-3 col-sm-6 col-12">
+              <!-- ***** Theme card ***** -->
+              <div class="c-themeConfig" role="button">
+                <div class="title">Theme 1 (Light)</div>
+                <div class="colorPallet">
+                  <img src="../images/themePallets/light-1.jpg" alt="theme-1" />
                 </div>
-                <div class="row mb-20">
-                  <div class="col-12 mb-10">
-                    <div class="graphHeading m0">Theme Colours</div>
+                <div class="themeSelect">
+                  <!-- *** Check Box Switch *** -->
+                  <div class="c-switch radio">
+                    <input
+                      type="radio"
+                      class="switchChk themeSwitcher"
+                      id="theme1"
+                      value="theme-light-1"
+                      name="themeSelection"
+                      checked
+                    />
+                    <label class="switchLbl" for="theme1">
+                      <div class="switchTrack"></div>
+                    </label>
                   </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Theme Color - 1</label>
-                      <div class="colorDemo theme-color-1"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Theme Color - 2</label>
-                      <div class="colorDemo theme-color-2"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Theme Color - 3</label>
-                      <div class="colorDemo theme-color-3"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row mb-20">
-                  <div class="col-12 mb-10">
-                    <div class="graphHeading m0">Utility Colours</div>
-                  </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Font Color</label>
-                      <div class="colorDemo font"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Alert</label>
-                      <div class="colorDemo red"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Success</label>
-                      <div class="colorDemo green"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-4">
-                    <div class="form-group c-form">
-                      <label class="formLbl">Warning</label>
-                      <div class="colorDemo orange"></div>
-                    </div>
-                  </div>
+                  <!-- *** Check Box Switch End *** -->
                 </div>
               </div>
-              <!-- ***** Primary Button Block End***** -->
+              <!-- ***** Theme card End ***** -->
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+              <!-- ***** Theme card ***** -->
+              <div class="c-themeConfig" role="button">
+                <div class="title">Theme 2 (dark)</div>
+                <div class="colorPallet">
+                  <img src="../images/themePallets/dark-1.jpg" alt="theme-1" />
+                </div>
+                <div class="themeSelect">
+                  <!-- *** Check Box Switch *** -->
+                  <div class="c-switch radio">
+                    <input
+                      type="radio"
+                      class="switchChk themeSwitcher"
+                      id="theme2"
+                      value="theme-dark-1"
+                      name="themeSelection"
+                    />
+                    <label class="switchLbl" for="theme2">
+                      <div class="switchTrack"></div>
+                    </label>
+                  </div>
+                  <!-- *** Check Box Switch End *** -->
+                </div>
+              </div>
+              <!-- ***** Theme card End ***** -->
             </div>
           </div>
           <!-- ***** Graph Row 2 End ***** -->
@@ -414,34 +378,5 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>
-    <script>
-      $(function () {
-        if (localStorage) {
-          var theme = localStorage.getItem("theme");
-          document.querySelector("body").classList.add("theme-" + theme);
-        }
-        // ----- Dropdown Settings
-        $(document).on(
-          "click",
-          ".js-themeChanger .dropdown-menu .dropdown-item",
-          function () {
-            $(this)
-              .parents(".js-themeChanger")
-              .find(".dropdown-toggle .value")
-              .text($(this).val());
-
-            var selectedValue = $(this).val();
-            var className = "theme-" + selectedValue;
-            $("body").removeClass(function (index, className) {
-              return (className.match(/(^|\s)theme-\S+/g) || []).join(" ");
-            });
-            document.querySelector("body").classList.add(className);
-            if (localStorage) {
-              localStorage.setItem("theme", selectedValue);
-            }
-          }
-        );
-      });
-    </script>
   </body>
 </html>

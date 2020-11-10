@@ -1,4 +1,228 @@
 /* -------------------------------------
+Author :: Sudhir Deolalikar
+Email  :: sudhir.deo1988@gmail.com
+Skype  :: sudhir.deo1988
+
+File Type :: SCSS file (For styling)
+------------------------------------- */
+
+/* -------------------------------------
+	Component :: Icon font Dashboard
+------------------------------------- */
+@font-face {
+  font-family: "ocr-dashboard";
+  src: url("../fonts/ocr-dashboard.eot");
+  src: url("../fonts/ocr-dashboard.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ocr-dashboard.woff") format("woff"),
+    url("../fonts/ocr-dashboard.ttf") format("truetype"),
+    url("../fonts/ocr-dashboard.svg#ocr-dashboard") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: var(--icon-font) !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ocrd-"]:before,
+[class*=" ocrd-"]:before {
+  font-family: var(--icon-font) !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ocrd-down-arrow:before {
+  content: "\61";
+}
+.ocrd-warning:before {
+  content: "\62";
+}
+.ocrd-send:before {
+  content: "\63";
+}
+.ocrd-refresh:before {
+  content: "\64";
+}
+.ocrd-alarm:before {
+  content: "\65";
+}
+.ocrd-dashboard:before {
+  content: "\66";
+}
+.ocrd-copy:before {
+  content: "\67";
+}
+.ocrd-edit:before {
+  content: "\68";
+}
+.ocrd-visibility:before {
+  content: "\69";
+}
+.ocrd-no-visibility:before {
+  content: "\6a";
+}
+.ocrd-settings:before {
+  content: "\6b";
+}
+.ocrd-mail:before {
+  content: "\6c";
+}
+.ocrd-angle-down:before {
+  content: "\6d";
+}
+.ocrd-angle-left:before {
+  content: "\6e";
+}
+.ocrd-angle-right:before {
+  content: "\6f";
+}
+.ocrd-angle-up:before {
+  content: "\70";
+}
+.ocrd-pencil-square-o:before {
+  content: "\71";
+}
+.ocrd-android-close:before {
+  content: "\72";
+}
+.ocrd-android-done:before {
+  content: "\73";
+}
+.ocrd-android-add:before {
+  content: "\74";
+}
+.ocrd-android-remove:before {
+  content: "\75";
+}
+.ocrd-android-radio-button-off:before {
+  content: "\76";
+}
+.ocrd-android-radio-button-on:before {
+  content: "\77";
+}
+.ocrd-check-square:before {
+  content: "\78";
+}
+.ocrd-square-line:before {
+  content: "\79";
+}
+.ocrd-sort:before {
+  content: "\7a";
+}
+.ocrd-sort-asc:before {
+  content: "\41";
+}
+.ocrd-sort-desc:before {
+  content: "\42";
+}
+.ocrd-search:before {
+  content: "\43";
+}
+.ocrd-basic:before {
+  content: "\44";
+}
+.ocrd-premimum:before {
+  content: "\45";
+}
+.ocrd-calendar:before {
+  content: "\46";
+}
+.ocrd-starter:before {
+  content: "\47";
+}
+.ocrd-user:before {
+  content: "\48";
+}
+.ocrd-clock:before {
+  content: "\49";
+}
+.ocrd-setting-wheel:before {
+  content: "\4a";
+}
+.ocrd-paper-plane:before {
+  content: "\4b";
+}
+.ocrd-certificate:before {
+  content: "\4c";
+}
+.ocrd-travelling:before {
+  content: "\4d";
+}
+.ocrd-sign-in:before {
+  content: "\4e";
+}
+.ocrd-sign-out:before {
+  content: "\4f";
+}
+.ocrd-dot:before {
+  content: "\50";
+}
+.ocrd-caret-up-down:before {
+  content: "\51";
+}
+.ocrd-filter:before {
+  content: "\52";
+}
+.ocrd-chart-alt:before {
+  content: "\53";
+}
+.ocrd-gold:before {
+  content: "\54";
+}
+.ocrd-user-1:before {
+  content: "\55";
+}
+.ocrd-logout:before {
+  content: "\56";
+}
+
+/* -------------------------------------
+	Theme default CSS Containers
+------------------------------------- */
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: var(--page-bg-color);
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: 300;
+  font-display: swap;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+a,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+.c-pageBody {
+  padding-top: 98px;
+  display: block;
+  position: relative;
+}
+
+/* -------------------------------------
 	Component :: Header
 ------------------------------------- */
 .c-header {
@@ -552,7 +776,7 @@
   position: fixed;
   height: 100%;
   width: 64px;
-  z-index: 2;
+  z-index: 90;
   @include transition(all ease 0.25s);
   @include box-shadow(-2px 4px 5px rgba(0, 0, 0, 0.1));
 
@@ -813,6 +1037,17 @@
       }
     }
   }
+}
+
+.c-wrapper {
+  background-color: transparent;
+  box-sizing: border-box;
+  display: block;
+  padding: 24px 9px;
+  position: relative;
+  min-height: 100%;
+  margin: 0 0 0 64px;
+  @include transition(all ease 0.2s);
 }
 
 /* -------------------------------------
@@ -3014,7 +3249,55 @@
   }
 }
 
-/* new grid system */
+/* -------------------------------------
+	Component :: Theme config in my profile
+------------------------------------- */
+.c-themeConfig {
+  border: 1px solid transparent;
+  background-color: var(--white);
+  display: block;
+  padding: 30px;
+  @include rounded-corners(10px);
+  @include transition(all ease 0.3s);
+  &:hover {
+    border-color: var(--border-color);
+    @include box-shadow(-2px 4px 13px rgba(0, 0, 0, 0.06));
+  }
+  .title {
+    color: var(--fontColor);
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 17px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .colorPallet {
+    background-color: transparent;
+    display: block;
+    height: 35px;
+    margin: 0 auto 20px;
+    text-align: center;
+    img {
+      display: inline-block;
+      height: 35px;
+      max-width: 100%;
+    }
+  }
+  .themeSelect {
+    display: block;
+    text-align: center;
+  }
+}
+#{$darkTheme} {
+  .c-themeConfig {
+    background-color: var(--page-bg-color);
+  }
+}
+
+/* -------------------------------------
+	Component :: New grid system - css grid
+------------------------------------- */
 .c-grid_1r2c {
   display: grid;
   grid-template-columns: 3.13fr 1fr;

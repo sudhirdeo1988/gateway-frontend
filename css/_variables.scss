@@ -32,22 +32,14 @@ SCSS functions
       "),rgba(255, 255, 255," + $opacity + ")) " + $variable
   );
 }
+
+/* -------------------------------------
+	Theme Variables
+------------------------------------- */
+$darkTheme: ".theme-dark-1";
+$lightTheme: ".theme-light-1";
+
 :root {
-  --primary-color: #057bfe;
-  --primary-rgb: #{hexToRGB(#057bfe)};
-
-  --theme-color-1: #ffd200;
-  --theme-color-2: #f28f8f;
-  --theme-color-3: #afaaf7;
-  --theme-color-4: #83dde1;
-
-  --page-bg-color: #f0f3f6;
-  --widget-bg-color: #ffffff;
-  --border-color: #f0f3f6;
-
-  --fontColor: #252d36;
-  --fontColor-light: #898888;
-
   --white: #fff;
   --black: #000;
 
@@ -62,14 +54,41 @@ SCSS functions
   --icon-font: "ocr-dashboard";
   --primary-font: "Overpass", sans-serif;
 
-  .theme-dark {
+  --primary-color: #057bfe;
+  --primary-rgb: #{hexToRGB(#057bfe)};
+
+  --page-bg-color: #f0f3f6;
+  --widget-bg-color: #ffffff;
+  --border-color: #f0f3f6;
+
+  --fontColor: #252d36;
+  --fontColor-light: #898888;
+
+  --theme-color-1: #ffd200;
+  --theme-color-2: #f28f8f;
+  --theme-color-3: #afaaf7;
+  --theme-color-4: #83dde1;
+
+  #{$lightTheme} {
     --primary-color: #057bfe;
     --primary-rgb: #{hexToRGB(#057bfe)};
+
+    --page-bg-color: #f0f3f6;
+    --widget-bg-color: #ffffff;
+    --border-color: #f0f3f6;
+
+    --fontColor: #252d36;
+    --fontColor-light: #898888;
 
     --theme-color-1: #ffd200;
     --theme-color-2: #f28f8f;
     --theme-color-3: #afaaf7;
     --theme-color-4: #83dde1;
+  }
+
+  #{$darkTheme} {
+    --primary-color: #057bfe;
+    --primary-rgb: #{hexToRGB(#057bfe)};
 
     --page-bg-color: #1a1c33;
     --widget-bg-color: #272d47;
@@ -85,12 +104,6 @@ SCSS functions
     --theme-color-4: #83dde1;
   }
 }
-
-/* -------------------------------------
-	Theme Variables
-------------------------------------- */
-$darkTheme: ".theme-dark";
-$lightTheme: ".theme-light";
 
 /* -------------------------------------
 	Mixins

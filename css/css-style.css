@@ -36,7 +36,7 @@ SCSS functions
   --theme-color-3: #afaaf7;
   --theme-color-4: #83dde1;
 }
-:root .theme-light-1 {
+:root .theme-light-2 {
   --primary-color: #057bfe;
   --primary-rgb: 5, 123, 254;
   --page-bg-color: #f0f3f6;
@@ -1004,6 +1004,18 @@ File Type :: SCSS file (For styling)
   content: "V";
 }
 
+.ocrd-flag:before {
+  content: "W";
+}
+
+.ocrd-list:before {
+  content: "X";
+}
+
+.ocrd-attach:before {
+  content: "Y";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -1798,7 +1810,7 @@ a:hover {
   min-width: 32px;
 }
 .c-chartBlockhead .settings .btnSetting {
-  background-color: #f8f8f8;
+  background-color: #f3f3f3;
   box-sizing: border-box;
   border: 0;
   display: block;
@@ -1806,7 +1818,7 @@ a:hover {
   width: 32px;
   float: left;
   padding: 9px;
-  margin-left: 3px;
+  margin-left: 4px;
   outline: none;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -1818,7 +1830,7 @@ a:hover {
   -ms-transition: all ease 0.2s;
 }
 .c-chartBlockhead .settings .btnSetting .icon {
-  color: #d3d3d3;
+  color: #a9a9a9;
   display: inline-block;
   height: 14px;
   width: 14px;
@@ -1831,21 +1843,21 @@ a:hover {
   background-color: #e8e8e8;
 }
 .c-chartBlockhead .settings .btnSetting:hover .icon {
-  color: #b7b7b7;
+  color: #777777;
 }
 
 /* --- For Dark theme --- */
 .theme-dark-1 .c-chartBlockhead .settings .btnSetting {
-  background-color: #2f3655;
+  background-color: #353c5d;
 }
 .theme-dark-1 .c-chartBlockhead .settings .btnSetting .icon {
-  color: #585e77;
+  color: #828baf;
 }
 .theme-dark-1 .c-chartBlockhead .settings .btnSetting:hover {
   background-color: #3f4663;
 }
 .theme-dark-1 .c-chartBlockhead .settings .btnSetting:hover .icon {
-  color: #70737d;
+  color: #8e96b7;
 }
 
 .c-wrapper {
@@ -2941,6 +2953,63 @@ a:hover {
   color: var(--primary-color) !important;
 }
 
+.c-formBlock {
+  border: 1px solid var(--border-color);
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -ms-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -o-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+}
+.c-formBlock .lbl-fblock {
+  color: var(--fontColor-light);
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 7px;
+}
+.c-formBlock .sect-fblock {
+  display: block;
+  height: 30px;
+  background: transparent;
+}
+.c-formBlock .sect-fblock .form-control {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  padding: 0;
+  height: 100%;
+  color: var(--fontColor);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.c-formBlock .sect-fblock .c-chkBox .chkLbl {
+  color: var(--fontColor);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  margin: 7px 0 0;
+  line-height: 25px;
+}
+.c-formBlock .sect-fblock .c-chkBox .chkLbl::before {
+  top: 4px;
+}
+
 /* ----- Check Box / Radio Btn ----- */
 .c-chkBox,
 .c-radioBox {
@@ -3112,6 +3181,81 @@ a:hover {
 }
 
 /* -------------------------------------
+	Component :: Accordian
+------------------------------------- */
+.c-accordion {
+  display: block;
+  position: relative;
+}
+.c-accordion .card {
+  border: 1px solid var(--border-color);
+  margin-bottom: 10px;
+  box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.03);
+  -ms-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.03);
+  -o-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.03);
+}
+.c-accordion .card .card-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 0;
+}
+.c-accordion .card .card-header .btn {
+  box-sizing: border-box;
+  color: var(--fontColor);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  display: block;
+  position: relative;
+  padding: 18px 40px 18px 18px;
+  text-align: left;
+  width: 100%;
+}
+.c-accordion .card .card-header .btn::after {
+  font-family: var(--icon-font);
+  content: "m";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: var(--fontColor);
+  font-size: 20px;
+  line-height: 20px;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+.c-accordion .card .card-header .btn[aria-expanded=true]::after {
+  content: "p";
+}
+
+.theme-dark-1 .c-accordion .card {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+}
+.theme-dark-1 .c-accordion .card .card-header .btn {
+  background-color: var(--page-bg-color);
+  color: var(--fontColor);
+}
+
+.c-plainList {
+  display: block;
+}
+.c-plainList ul {
+  padding: 0;
+  margin: 0;
+  display: block;
+  position: relative;
+}
+.c-plainList ul li {
+  display: block;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+/* -------------------------------------
 	Component :: Buttons
 ------------------------------------- */
 .c-btn {
@@ -3184,7 +3328,8 @@ a:hover {
   color: var(--white);
   font-size: 19px;
   line-height: 17px;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
 }
 .c-btnIcon.col-gray {
   background-color: #676c7a;
@@ -3344,6 +3489,7 @@ a:hover {
   line-height: 16px;
   top: 5px;
   position: relative;
+  text-shadow: none;
 }
 .c-modal .modal-content .modal-body {
   min-height: 400px;

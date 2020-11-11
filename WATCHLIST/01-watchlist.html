@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Watch List Screening</title>
+
+    <!-- ***** CSS Import ***** -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/datatables.min.css" />
+    <link rel="stylesheet" href="../css/css-style.css" />
+  </head>
+
+  <body class="no-settingHeader">
+    <!-- ********** Page Body **********  -->
+    <div class="c-pageBody">
+      <!-- ********** Component :: Sidebar **********  -->
+      <div class="c-sidebar">
+        <div class="c-pageNav">
+          <ul>
+            <li>
+              <a href="./01-dashboardDemo-01.html" class="navLink">
+                <i class="icon ocrd-dashboard"></i>
+                <span class="linkText">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="./02-filingHistory.html" class="navLink">
+                <i class="icon ocrd-edit"></i>
+                <span class="linkText">Filling History</span>
+              </a>
+            </li>
+            <li>
+              <a href="./03-customFiling.html" class="navLink">
+                <i class="icon ocrd-copy"></i>
+                <span class="linkText">Custom Filling</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** Component :: Sidebar End **********  -->
+
+      <!-- ********** Component :: Header **********  -->
+      <div class="c-header">
+        <div class="row no-gutters">
+          <div class="col-7">
+            <div class="hs_left">
+              <div class="headerSect_logo">
+                <a href="javascript:void(0);" class="headerLogo">
+                  <img src="../images/logo.png" alt="alt" />
+                </a>
+              </div>
+              <div class="headerSect_l">
+                <div class="c-pageTitle">Global custom filling gateway</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 text-right">
+            <div class="headerSettings">
+              <ul>
+                <li class="countryFlag">
+                  <div class="c-dropdown dropdown">
+                    <button
+                      class="flagBtn dropdown-toggle"
+                      type="button"
+                      id="countrySelection"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="../images/flags/india.svg" class="flag" />
+                      <span class="country">IND</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown flagListDD"
+                      aria-labelledby="countrySelection"
+                    >
+                      <div class="flagSearchHeader">
+                        <div class="searchTxt">
+                          <i class="icon ocrd-search"></i>
+                          <input
+                            type="text"
+                            class="txtBox"
+                            placeholder="Search"
+                          />
+                        </div>
+                      </div>
+                      <div class="flagSearchBody">
+                        <ul>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/india.svg"
+                                  class="flag"
+                                />
+                                <span class="country">India</span>
+                              </div>
+                            </button>
+                          </li>
+                          <li>
+                            <button class="selectBtn">
+                              <div class="flagInfo">
+                                <img
+                                  src="../images/flags/japan.svg"
+                                  class="flag"
+                                />
+                                <span class="country">Japan</span>
+                              </div>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="c-dropdown dropdown notifySetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocrd-alarm"></i>
+                      <span class="count">2</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div class="notifyHeading">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col">
+                            <span class="hd">Notifications</span>
+                          </div>
+                          <div class="col">
+                            <span class="hf text-right"
+                              >3 unread notifications</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="notifyFooter">
+                        <button class="link">READ ALL NOTIFICATIONS</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="c-dropdown dropdown notifySetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocrd-mail"></i>
+                      <span class="count">2</span>
+                    </button>
+                    <div
+                      class="dropdown-menu c-notifyDropdown"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div class="notifyHeading">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col">
+                            <span class="hd">Notifications</span>
+                          </div>
+                          <div class="col">
+                            <span class="hf text-right"
+                              >3 unread notifications</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="notifyBody">
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          class="dropdown-item c-notify"
+                          href="javascript:void(0)"
+                        >
+                          <div class="dropdown-notification-item">
+                            <div class="dropdown-notification-icon">
+                              <i class="icon ocrd-alarm"></i>
+                            </div>
+                            <div class="dropdown-notification-info">
+                              <div class="title">
+                                3 new customer account is created
+                              </div>
+                              <div class="time">2 minutes ago</div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="notifyFooter">
+                        <a href="../GATEWAY/07-messages.html" class="link"
+                          >READ ALL NOTIFICATIONS</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="userProf">
+                  <div class="c-dropdown dropdown profileSetting">
+                    <button
+                      class="profileBtn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i class="icon ocrd-user"></i>
+                    </button>
+                    <div
+                      class="dropdown-menu userDD st-clean with-icon"
+                      aria-labelledby="dropdownMenuButton2"
+                    >
+                      <a
+                        class="dropdown-item"
+                        href="../GATEWAY/04-userProfile.html"
+                      >
+                        <i class="icon ocrd-user-1"></i>
+                        User Profile</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocrd-copy"></i>
+                        Subscription</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocrd-setting-wheel"></i>
+                        Settings</a
+                      >
+                      <a class="dropdown-item" href="#">
+                        <i class="icon ocrd-logout"></i>
+                        Logout</a
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ********** Component :: Header End **********  -->
+
+      <!-- ********** Component :: Wrapper **********  -->
+      <div class="c-wrapper">
+        <div class="container-fluid">
+          <!-- *** First Row *** -->
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="c-pageHeading">Watch List Screening</div>
+            </div>
+          </div>
+          <!-- *** First Row End *** -->
+
+          <!-- *** Profile Tabs *** -->
+          <div class="row">
+            <div class="col">
+              <!-- ***** Section 8 ***** -->
+              <div class="c-dataContainer type-01">
+                <div class="row">
+                  <!-- *** Section 1 *** -->
+                  <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                      <div class="col-md-4 col-12">
+                        <!-- *** Text Box *** -->
+                        <div class="c-formBlock">
+                          <label class="lbl-fblock">Name</label>
+                          <div class="sect-fblock">
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="Robert Almori"
+                            />
+                          </div>
+                        </div>
+                        <!-- *** Text Box End *** -->
+                      </div>
+
+                      <div class="col-md-4 col-12">
+                        <!-- *** Text Box *** -->
+                        <div class="c-formBlock">
+                          <label class="lbl-fblock">Country</label>
+                          <div class="sect-fblock">
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="United Kingdom"
+                            />
+                          </div>
+                        </div>
+                        <!-- *** Text Box End *** -->
+                      </div>
+
+                      <div class="col-md-4 col-12">
+                        <!-- *** Text Box *** -->
+                        <div class="c-formBlock">
+                          <label class="lbl-fblock">City, State, Zip</label>
+                          <div class="sect-fblock">
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="11025463"
+                            />
+                          </div>
+                        </div>
+                        <!-- *** Text Box End *** -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- *** Section 1 End *** -->
+
+                  <!-- *** Section 2 *** -->
+                  <div class="col-md-6 col-sm-12">
+                    <div class="row">
+                      <div class="col-md-4 col-12">
+                        <!-- *** Text Box *** -->
+                        <div class="c-formBlock">
+                          <label class="lbl-fblock">Method</label>
+                          <div class="sect-fblock">
+                            <div class="c-chkBox">
+                              <input
+                                type="checkbox"
+                                class="chkBox"
+                                id="chk001"
+                                checked
+                              />
+                              <label class="chkLbl" for="chk001">
+                                <i class="icon"></i>
+                                Fuzzy
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- *** Text Box End *** -->
+                      </div>
+                      <div class="col-md-4 col-12">
+                        <!-- *** Text Box *** -->
+                        <div class="c-formBlock">
+                          <label class="lbl-fblock">Score</label>
+                          <div class="sect-fblock">
+                            <input
+                              type="text"
+                              class="form-control"
+                              value="100"
+                            />
+                          </div>
+                        </div>
+                        <!-- *** Text Box End *** -->
+                      </div>
+
+                      <div class="col-md-4 col-12">
+                        <div class="mt-20">
+                          <button class="c-btn">Search</button>
+                          <button class="c-btnIcon col-gray">
+                            <i class="icon ocrd-setting-wheel"></i>
+                          </button>
+                          <button class="c-btnIcon col-gray">
+                            <i class="icon ocrd-calendar"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- *** Section 2 End *** -->
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <!-- Head -->
+                    <div class="c-chartBlockhead">
+                      <span class="heading">Robert Almori</span>
+                      <div class="settings">
+                        <button
+                          class="btnSetting"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          data-original-title="Add to File"
+                        >
+                          <i class="icon ocrd-android-add"></i>
+                        </button>
+                        <button
+                          class="btnSetting"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          data-original-title="Copy"
+                        >
+                          <i class="icon ocrd-copy"></i>
+                        </button>
+                        <button
+                          class="btnSetting"
+                          data-toggle="tooltip"
+                          data-placement="top"
+                          data-original-title="Attach"
+                        >
+                          <i class="icon ocrd-attach"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Head End -->
+
+                    <!-- body -->
+                    <div class="c_body">
+                      <div class="c-tableWrapper">
+                        <div class="c-table">
+                          <table class="table js-dataTable02">
+                            <thead>
+                              <tr>
+                                <th style="width: 5%" class="no-sort">S. No</th>
+                                <th style="width: 5%" class="no-sort"></th>
+                                <th style="width: 6%">score</th>
+                                <th style="width: 20%">Name/Address</th>
+                                <th style="width: 12%">Country</th>
+                                <th style="width: 10%">Eff. Date</th>
+                                <th style="width: 10%">Exp. Date</th>
+                                <th style="width: 10%">Fr. Date</th>
+                                <th style="width: 10%">DPL category</th>
+                                <th style="width: 12%">Citation</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <button
+                                    class="tableBtn"
+                                    data-toggle="modal"
+                                    data-target="#errorInfo"
+                                  >
+                                    <i class="icon ocrd-flag"></i>
+                                  </button>
+                                </td>
+                                <td>100</td>
+                                <td>AKA ALMORI, ROBERT</td>
+                                <td>FRANCE</td>
+                                <td>10-08-1987</td>
+                                <td>10-08-1987</td>
+                                <td>10-16-1987</td>
+                                <td>DOC</td>
+                                <td>52 FR 38502</td>
+                              </tr>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  <button
+                                    class="tableBtn"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    data-original-title="View"
+                                  >
+                                    <i class="icon ocrd-flag"></i>
+                                  </button>
+                                </td>
+                                <td>100</td>
+                                <td>AKA ALMORI, ROBERT</td>
+                                <td>FRANCE</td>
+                                <td>10-08-1987</td>
+                                <td>10-08-1987</td>
+                                <td>10-16-1987</td>
+                                <td>DOC</td>
+                                <td>52 FR 38502</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- body End -->
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Section 8 End ***** -->
+            </div>
+          </div>
+          <!-- *** Profile Tabs End *** -->
+        </div>
+      </div>
+      <!-- ********** Component :: Wrapper End **********  -->
+    </div>
+    <!-- ********** Page Body End **********  -->
+
+    <!-- **** Modal ::  Error Info **** -->
+    <div
+      class="modal fade c-modal w-950"
+      id="errorInfo"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="errorInfoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="errorInfoLabel">Agency Lists</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocrd-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <!-- *** Badge Card *** -->
+                <div class="accordion c-accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <button
+                        class="btn"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        International Trade Watch List (ITW)
+                      </button>
+                    </div>
+
+                    <div
+                      id="collapseOne"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        <div class="c-plainList">
+                          <ul>
+                            <li>
+                              <div class="c-chkBox">
+                                <input
+                                  type="checkbox"
+                                  class="chkBox"
+                                  id="chk1"
+                                />
+                                <label class="chkLbl" for="chk1">
+                                  <i class="icon"></i>
+                                  ATK' - ATK Customized List
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="c-chkBox">
+                                <input
+                                  type="checkbox"
+                                  class="chkBox"
+                                  id="chk2"
+                                />
+                                <label class="chkLbl" for="chk2">
+                                  <i class="icon"></i>
+                                  ATK' - ATK Customized List
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <button
+                        class="btn"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="true"
+                        aria-controls="collapseTwo"
+                      >
+                        International Trade Watch List (ITW)
+                      </button>
+                    </div>
+
+                    <div
+                      id="collapseTwo"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionExample"
+                    >
+                      <div class="card-body">
+                        <div class="c-plainList">
+                          <ul>
+                            <li>
+                              <div class="c-chkBox">
+                                <input
+                                  type="checkbox"
+                                  class="chkBox"
+                                  id="chk1"
+                                />
+                                <label class="chkLbl" for="chk1">
+                                  <i class="icon"></i>
+                                  ATK' - ATK Customized List
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="c-chkBox">
+                                <input
+                                  type="checkbox"
+                                  class="chkBox"
+                                  id="chk2"
+                                />
+                                <label class="chkLbl" for="chk2">
+                                  <i class="icon"></i>
+                                  ATK' - ATK Customized List
+                                </label>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Error Info  End **** -->
+
+    <!-- ********** Scripts **********  -->
+    <script src="../js/jquery-3.4.0.min.js"></script>
+    <script src="../js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/datatables.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

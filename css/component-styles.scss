@@ -190,6 +190,15 @@ File Type :: SCSS file (For styling)
 .ocrd-logout:before {
   content: "\56";
 }
+.ocrd-flag:before {
+  content: "\57";
+}
+.ocrd-list:before {
+  content: "\58";
+}
+.ocrd-attach:before {
+  content: "\59";
+}
 
 /* -------------------------------------
 	Theme default CSS Containers
@@ -987,7 +996,7 @@ a:hover {
     height: 32px;
     min-width: 32px;
     .btnSetting {
-      background-color: #f8f8f8;
+      background-color: #f3f3f3;
       box-sizing: border-box;
       border: 0;
       display: block;
@@ -995,12 +1004,12 @@ a:hover {
       width: 32px;
       float: left;
       padding: 9px;
-      margin-left: 3px;
+      margin-left: 4px;
       outline: none;
       @include rounded-corners(30px);
       @include transition(all ease 0.2s);
       .icon {
-        color: #d3d3d3;
+        color: #a9a9a9;
         display: inline-block;
         height: 14px;
         width: 14px;
@@ -1012,7 +1021,7 @@ a:hover {
       &:hover {
         background-color: #e8e8e8;
         .icon {
-          color: #b7b7b7;
+          color: #777777;
         }
       }
     }
@@ -1024,14 +1033,14 @@ a:hover {
   .c-chartBlockhead {
     .settings {
       .btnSetting {
-        background-color: #2f3655;
+        background-color: #353c5d;
         .icon {
-          color: #585e77;
+          color: #828baf;
         }
         &:hover {
           background-color: #3f4663;
           .icon {
-            color: #70737d;
+            color: #8e96b7;
           }
         }
       }
@@ -2214,6 +2223,54 @@ a:hover {
   }
 }
 
+.c-formBlock {
+  border: 1px solid var(--border-color);
+  display: block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  @include rounded-corners(4px);
+  @include box-shadow(-2px 4px 10px rgba(0, 0, 0, 0.03));
+
+  .lbl-fblock {
+    color: var(--fontColor-light);
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 7px;
+  }
+  .sect-fblock {
+    display: block;
+    height: 30px;
+    background: transparent;
+    .form-control {
+      background-color: transparent;
+      border: 0;
+      display: block;
+      padding: 0;
+      height: 100%;
+      color: var(--fontColor);
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0px;
+      @include box-shadow(none);
+      @include rounded-corners(0);
+    }
+    .c-chkBox {
+      .chkLbl {
+        color: var(--fontColor);
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        margin: 7px 0 0;
+        line-height: 25px;
+        &::before {
+          top: 4px;
+        }
+      }
+    }
+  }
+}
+
 /* ----- Check Box / Radio Btn ----- */
 .c-chkBox,
 .c-radioBox {
@@ -2383,6 +2440,81 @@ a:hover {
 }
 
 /* -------------------------------------
+	Component :: Accordian
+------------------------------------- */
+.c-accordion {
+  display: block;
+  position: relative;
+  .card {
+    border: 1px solid var(--border-color);
+    margin-bottom: 10px;
+    @include box-shadow(-2px 4px 13px rgba(0, 0, 0, 0.03));
+    .card-header {
+      border-bottom: 1px solid var(--border-color);
+      padding: 0;
+      .btn {
+        box-sizing: border-box;
+        color: var(--fontColor);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+        display: block;
+        position: relative;
+        padding: 18px 40px 18px 18px;
+        text-align: left;
+        width: 100%;
+        &::after {
+          font-family: var(--icon-font);
+          content: "\6d";
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          color: var(--fontColor);
+          font-size: 20px;
+          line-height: 20px;
+          @include transition(all ease 0.3s);
+        }
+        &[aria-expanded="true"] {
+          &::after {
+            content: "\70";
+          }
+        }
+      }
+    }
+  }
+}
+
+#{$darkTheme} {
+  .c-accordion {
+    .card {
+      background-color: transparent;
+      border: 1px solid var(--border-color);
+      .card-header {
+        .btn {
+          background-color: var(--page-bg-color);
+          color: var(--fontColor);
+        }
+      }
+    }
+  }
+}
+
+.c-plainList {
+  display: block;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    li {
+      display: block;
+      list-style: none;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* -------------------------------------
 	Component :: Buttons
 ------------------------------------- */
 .c-btn {
@@ -2446,7 +2578,8 @@ a:hover {
     color: var(--white);
     font-size: 19px;
     line-height: 17px;
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
   }
   &.col-gray {
     background-color: #676c7a;
@@ -2592,6 +2725,7 @@ a:hover {
         line-height: 16px;
         top: 5px;
         position: relative;
+        text-shadow: none;
       }
     }
     .modal-body {

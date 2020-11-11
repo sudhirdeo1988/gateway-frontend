@@ -2128,8 +2128,32 @@ a:hover {
   font-size: 20px;
   line-height: 20px;
 }
+.c-tableWrapper .c-table.type-message .table {
+  table-layout: fixed;
+}
 .c-tableWrapper .c-table.type-message tr td {
   vertical-align: top;
+}
+.c-tableWrapper .c-table.type-message tr.open td .msg_info {
+  white-space: normal;
+  overflow: auto;
+}
+.c-tableWrapper .c-table.type-message tr.newMessage .msg_title {
+  color: var(--black);
+}
+.c-tableWrapper .c-table.type-message tr.newMessage .msg_title::after {
+  background-color: var(--primary-color);
+  content: "NEW";
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 12px;
+  line-height: 13px;
+  font-weight: 600;
+  color: var(--white);
+  margin-left: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 .c-tableWrapper .c-table.type-message .msg_title {
   color: var(--gray-01);
@@ -2138,12 +2162,18 @@ a:hover {
   font-weight: 600;
   line-height: 18px;
 }
+.c-tableWrapper .c-table.type-message .msg_title:hover {
+  color: var(--primary-color);
+}
 .c-tableWrapper .c-table.type-message .msg_info {
   color: var(--gray-01);
   display: block;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .c-tableWrapper .c-table.type-message .msg_duration {
   color: #bbbbbb;

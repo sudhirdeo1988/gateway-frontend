@@ -37,7 +37,6 @@ SCSS functions
 	Theme Variables
 ------------------------------------- */
 $darkTheme: ".theme-dark-1";
-$lightTheme: ".theme-light-1";
 
 :root {
   --white: #fff;
@@ -69,7 +68,7 @@ $lightTheme: ".theme-light-1";
   --theme-color-3: #afaaf7;
   --theme-color-4: #83dde1;
 
-  #{$lightTheme} {
+  .theme-light-2 {
     --primary-color: #057bfe;
     --primary-rgb: #{hexToRGB(#057bfe)};
 

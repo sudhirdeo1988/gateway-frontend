@@ -352,7 +352,38 @@
                             </div>
                           </td>
                           <td>
-                            <span class="msg_title"
+                            <span class="msg_title" role="button"
+                              >3 new customer account is created</span
+                            >
+                          </td>
+                          <td>
+                            <div class="msg_info">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Donec dapibus hendrerit velit vitae
+                              dignissim. Cras nunc est, Lorem ipsum dolor sit
+                              amet, consectetur adipiscing elit. Donec dapibus
+                              hendrerit velit vitae dignissim. Cras nunc est,
+                            </div>
+                          </td>
+                          <td>
+                            <span class="msg_duration">2 min ago</span>
+                          </td>
+                        </tr>
+                        <tr class="newMessage">
+                          <td>
+                            <div class="c-chkBox no-label">
+                              <input
+                                type="checkbox"
+                                class="chkBox"
+                                id="chk002"
+                              />
+                              <label class="chkLbl" for="chk002">
+                                <i class="icon"></i>
+                              </label>
+                            </div>
+                          </td>
+                          <td>
+                            <span class="msg_title" role="button"
                               >3 new customer account is created</span
                             >
                           </td>
@@ -392,5 +423,12 @@
     <script src="../js/select2.min.js"></script>
     <script src="../js/cleave-phone.i18n.js"></script>
     <script src="../js/scripts.js"></script>
+    <script>
+      $(function () {
+        $(".msg_title").on("click", function () {
+          $(this).parents("tr").toggleClass("open");
+        });
+      });
+    </script>
   </body>
 </html>

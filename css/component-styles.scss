@@ -1351,9 +1351,37 @@ a:hover {
     }
 
     &.type-message {
+      .table {
+        table-layout: fixed;
+      }
       tr {
         td {
           vertical-align: top;
+        }
+        &.open {
+          td {
+            .msg_info {
+              white-space: normal;
+              overflow: auto;
+            }
+          }
+        }
+        &.newMessage {
+          .msg_title {
+            color: var(--black);
+            &::after {
+              background-color: var(--primary-color);
+              content: "NEW";
+              display: inline-block;
+              padding: 3px 8px;
+              font-size: 12px;
+              line-height: 13px;
+              font-weight: 600;
+              color: var(--white);
+              margin-left: 5px;
+              @include rounded-corners(3px);
+            }
+          }
         }
       }
       .msg_title {
@@ -1362,6 +1390,9 @@ a:hover {
         font-size: 14px;
         font-weight: 600;
         line-height: 18px;
+        &:hover {
+          color: var(--primary-color);
+        }
       }
       .msg_info {
         color: var(--gray-01);
@@ -1369,6 +1400,9 @@ a:hover {
         font-size: 14px;
         font-weight: 500;
         line-height: 22px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .msg_duration {
         color: #bbbbbb;

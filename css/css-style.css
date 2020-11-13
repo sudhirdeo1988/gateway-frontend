@@ -1016,6 +1016,10 @@ File Type :: SCSS file (For styling)
   content: "Y";
 }
 
+.ocrd-file:before {
+  content: "Z";
+}
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -2998,6 +3002,12 @@ a:hover {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.c-formBlock .sect-fblock .form-control.sm {
+  width: 60px;
+}
+.c-formBlock .sect-fblock .form-control[readonly] {
+  color: var(--gray-01);
+}
 .c-formBlock .sect-fblock .c-chkBox .chkLbl {
   color: var(--fontColor);
   font-size: 20px;
@@ -3316,7 +3326,7 @@ a:hover {
   display: inline-block;
   height: 38px;
   width: 38px;
-  padding: 8px;
+  padding: 9px 9px 7px;
   text-align: center;
   outline: none !important;
   margin: 0;
@@ -3334,6 +3344,12 @@ a:hover {
 .c-btnIcon.col-gray {
   background-color: #676c7a;
   color: var(--fontColor);
+}
+.c-btnIcon.col-gray-light {
+  background-color: #f3f3f3;
+}
+.c-btnIcon.col-gray-light .icon {
+  color: #a9a9a9;
 }
 
 .c-switch {
@@ -4168,6 +4184,9 @@ a:hover {
   gap: 24px;
   margin-bottom: 24px;
 }
+.c-grid_equal.gap-16 {
+  gap: 16px;
+}
 .c-grid_equal .grid-col {
   box-sizing: border-box;
   grid-row: 1;
@@ -4193,6 +4212,53 @@ a:hover {
 }
 .c-grid_equal.r2c2 .grid-col .c-chartCard {
   margin-bottom: 0;
+}
+
+.watchlistDataContainer {
+  min-height: 400px;
+  display: block;
+  position: relative;
+}
+.watchlistDataContainer .noData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 186px;
+  width: 200px;
+  text-align: center;
+  margin: -93px 0 0 -100px;
+}
+.watchlistDataContainer .noData .icon {
+  display: block;
+  color: var(--gray-02);
+  position: relative;
+  font-size: 130px;
+  line-height: 110px;
+  margin-bottom: 10px;
+}
+.watchlistDataContainer .noData .noDataText {
+  display: block;
+  color: var(--fontColor);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.c-watchlistSearch .searchGrid {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 21px;
+  padding-bottom: 21px;
+}
+.c-watchlistSearch .searchGrid:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.c-watchlistSearch .searchGrid .c-formBlock {
+  margin-bottom: 0;
+}
+.c-watchlistSearch:last-child.searchGrid {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* -------------------------------------

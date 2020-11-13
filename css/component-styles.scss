@@ -199,6 +199,9 @@ File Type :: SCSS file (For styling)
 .ocrd-attach:before {
   content: "\59";
 }
+.ocrd-file:before {
+  content: "\5a";
+}
 
 /* -------------------------------------
 	Theme default CSS Containers
@@ -2254,6 +2257,12 @@ a:hover {
       letter-spacing: 0px;
       @include box-shadow(none);
       @include rounded-corners(0);
+      &.sm {
+        width: 60px;
+      }
+      &[readonly] {
+        color: var(--gray-01);
+      }
     }
     .c-chkBox {
       .chkLbl {
@@ -2569,7 +2578,7 @@ a:hover {
   display: inline-block;
   height: 38px;
   width: 38px;
-  padding: 8px;
+  padding: 9px 9px 7px;
   text-align: center;
   outline: none !important;
   margin: 0;
@@ -2584,6 +2593,12 @@ a:hover {
   &.col-gray {
     background-color: #676c7a;
     color: var(--fontColor);
+  }
+  &.col-gray-light {
+    background-color: #f3f3f3;
+    .icon {
+      color: #a9a9a9;
+    }
   }
 }
 
@@ -3490,6 +3505,9 @@ a:hover {
   grid-auto-flow: row;
   gap: 24px;
   margin-bottom: 24px;
+  &.gap-16 {
+    gap: 16px;
+  }
   .grid-col {
     box-sizing: border-box;
     grid-row: 1;
@@ -3514,6 +3532,57 @@ a:hover {
       .c-chartCard {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+.watchlistDataContainer {
+  min-height: 400px;
+  display: block;
+  position: relative;
+  .noData {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 186px;
+    width: 200px;
+    text-align: center;
+    margin: -93px 0 0 -100px;
+    .icon {
+      display: block;
+      color: var(--gray-02);
+      position: relative;
+      font-size: 130px;
+      line-height: 110px;
+      margin-bottom: 10px;
+    }
+    .noDataText {
+      display: block;
+      color: var(--fontColor);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 27px;
+    }
+  }
+}
+
+.c-watchlistSearch {
+  .searchGrid {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 21px;
+    padding-bottom: 21px;
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    .c-formBlock {
+      margin-bottom: 0;
+    }
+  }
+  &:last-child {
+    &.searchGrid {
+      border-bottom: 0;
+      padding-bottom: 0;
     }
   }
 }

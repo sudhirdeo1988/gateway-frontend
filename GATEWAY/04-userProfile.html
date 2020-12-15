@@ -478,7 +478,7 @@
                                       <button
                                         class="tableBtn"
                                         data-toggle="modal"
-                                        data-target="#editConfig"
+                                        data-target="#userConfig"
                                       >
                                         <i
                                           class="icon ocrd-pencil-square-o"
@@ -497,7 +497,7 @@
                                       <button
                                         class="tableBtn"
                                         data-toggle="modal"
-                                        data-target="#editConfig"
+                                        data-target="#userConfig"
                                       >
                                         <i
                                           class="icon ocrd-pencil-square-o"
@@ -600,6 +600,101 @@
       <!-- ********** Component :: Wrapper End **********  -->
     </div>
     <!-- ********** Page Body End **********  -->
+
+    <!-- **** Modal ::  Error Info **** -->
+    <div
+      class="modal fade c-modal w-950"
+      id="userConfig"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userConfigLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userConfigLabel">User Configuration</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocrd-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Config ID</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Client Queue In</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Processing Code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-6">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Filer Code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Client Queue Out</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Environment Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Description</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <div class="c-btnContainer text-center">
+                  <button class="c-btn">Update</button>
+                  <button
+                    class="c-btn col-gray"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Error Info  End **** -->
 
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>

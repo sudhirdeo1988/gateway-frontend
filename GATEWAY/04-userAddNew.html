@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>Subscription</title>
+    <title>Add new user</title>
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select2.min.css" />
     <link rel="stylesheet" href="../css/css-style.css" />
   </head>
 
@@ -302,271 +303,298 @@
           <!-- *** First Row *** -->
           <div class="row align-items-center">
             <div class="col">
-              <div class="c-pageHeading">Subscription Plan</div>
+              <div class="c-pageHeading">Add New User</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
 
           <!-- *** Profile Tabs *** -->
           <div class="row">
-            <div class="col-md-3 col-sm-6 col-12">
-              <div class="c-pricingCard">
-                <div class="cardHead">
-                  <span class="title">STARTER</span>
-                  <div class="iconContainer">
-                    <i class="icon ocrd-starter"></i>
+            <div class="col">
+              <div class="c-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="Details-tab"
+                      data-toggle="tab"
+                      href="#Details"
+                      role="tab"
+                      aria-controls="Details"
+                      aria-selected="true"
+                      >User Account Details</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="configuration-tab"
+                      data-toggle="tab"
+                      href="#configuration"
+                      role="tab"
+                      aria-controls="configuration"
+                      aria-selected="true"
+                      >User Configuration</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <!-- ***** Tab :: Details ***** -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="Details"
+                    role="tabpanel"
+                    aria-labelledby="Details-tab"
+                  >
+                    <!-- ***** User Details ***** -->
+                    <div class="c-dataContainer type-01">
+                      <div class="row">
+                        <div class="col-sm-6 col-12">
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">User ID</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Email ID</label>
+                            <input type="email" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Address</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+                        </div>
+                        <div class="col-sm-6 col-12">
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Name</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Contact</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Dropdown *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl"> Status</label>
+                            <div class="c-customDropdown selectOne">
+                              <select class="c-select">
+                                <option value="one">First</option>
+                                <option value="three">Third</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- *** Dropdown End *** -->
+                        </div>
+                        <div class="col-12">
+                          <button class="c-btn">Update</button>
+                          <button class="c-btn col-gray">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ***** User Details End ***** -->
                   </div>
-                  <span class="price"><sup>$</sup>0</span>
-                </div>
-                <div class="cardBody">
-                  <ul>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      30 Day Free Trail
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      10 Free Transactions Daily
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Online Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Cancel Anytime
-                    </li>
-                  </ul>
-                </div>
-                <div class="cardFooter text-center">
-                  <button class="c-btn bordered">Select Plan</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-              <div class="c-pricingCard active">
-                <div class="cardHead">
-                  <span class="title">Basic</span>
-                  <div class="iconContainer">
-                    <i class="icon ocrd-basic"></i>
+                  <!-- ***** Tab :: Details End ***** -->
+
+                  <!-- ***** Tab :: Details ***** -->
+                  <div
+                    class="tab-pane fade"
+                    id="configuration"
+                    role="tabpanel"
+                    aria-labelledby="configuration-tab"
+                  >
+                    <!-- ***** User Details ***** -->
+                    <div class="c-dataContainer type-01">
+                      <div class="row">
+                        <div class="col-sm-6 col-12">
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">ID</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Queue In</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Processing Code</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Description</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+                        </div>
+                        <div class="col-sm-6 col-12">
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Filter Code</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Text Box *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Queue Out</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <!-- *** Text Box End *** -->
+
+                          <!-- *** Dropdown *** -->
+                          <div class="form-group c-form">
+                            <label class="formLbl">Processing Code</label>
+                            <div class="c-customDropdown selectOne">
+                              <select class="c-select">
+                                <option value="one">First</option>
+                                <option value="three">Third</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- *** Dropdown End *** -->
+                        </div>
+                        <div class="col-12">
+                          <button class="c-btn">Update</button>
+                          <button class="c-btn col-gray">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ***** User Details End ***** -->
                   </div>
-                  <span class="price"><sup>$</sup>2</span>
-                </div>
-                <div class="cardBody">
-                  <ul>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Per Transactions
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Unlimited Time Periods
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Online Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Cancel Anytime
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Tech Support
-                    </li>
-                  </ul>
-                </div>
-                <div class="cardFooter text-center">
-                  <button class="c-btn bordered">End 10 Mar, 2021</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-              <div class="c-pricingCard">
-                <div class="cardHead">
-                  <span class="title">PREMIMUM</span>
-                  <div class="iconContainer">
-                    <i class="icon ocrd-premimum"></i>
-                  </div>
-                  <span class="price"><sup>$</sup>49</span>
-                </div>
-                <div class="cardBody">
-                  <ul>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Works for 30 Days
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Unlimited Transactions
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Online Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Cancel Anytime
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      On Call Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Tech Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Electronic Submission
-                    </li>
-                  </ul>
-                </div>
-                <div class="cardFooter text-center">
-                  <button class="c-btn bordered">Select Plan</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-              <div class="c-pricingCard">
-                <div class="cardHead">
-                  <span class="title">Gold</span>
-                  <div class="iconContainer">
-                    <i class="icon ocrd-gold"></i>
-                  </div>
-                  <span class="price"><sup>$</sup>499</span>
-                </div>
-                <div class="cardBody">
-                  <ul>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Works for 30 Days
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Unlimited Transactions
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Online Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Cancel Anytime
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      On Call Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Tech Support
-                    </li>
-                    <li>
-                      <i class="icon ocrd-android-done"></i>
-                      Electronic Submission
-                    </li>
-                  </ul>
-                </div>
-                <div class="cardFooter text-center">
-                  <button class="c-btn bordered">Select Plan</button>
+                  <!-- ***** Tab :: Details End ***** -->
                 </div>
               </div>
             </div>
           </div>
           <!-- *** Profile Tabs End *** -->
-
-          <!-- *****  Info Section ***** -->
-          <div class="row">
-            <div class="col">
-              <div class="c-dataContainer type-02 auto-height">
-                <span class="c-staticText text-center"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  vars, tortor sed semper ultricies, ante turpis dignissim lectu
-                  a venenatis ipsum leo sit amet ex. Morbi scelerisque rutrum
-                  aliquet. Donec nec nibh id mauris porta hendrerit vitae a
-                  lect. Integer metus ssa, viverra id arcu at. Morbi scelerisque
-                  rutrum aliquet. Donec nec nibh id mauris porta hendrerit vitae
-                  a lect. Integer metus ssa, viverra id arcu at. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit. Sed vars, tortor
-                  sed semper ultricies, ante turpis dignissim lectu a venenatis
-                  ipsum leo sit amet ex. Morbi scelerisque rutrum aliquet. Donec
-                  nec nibh id mauris porta hendrerit vitae a lect. Integer metus
-                  ssa, viverra id arcu at. Morbi scelerisque rutrum
-                  aliquet.</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- *****  Info Section End ***** -->
-
-          <!-- *****  Updated Chart row 3 ***** -->
-          <div class="row">
-            <div class="col">
-              <div class="c-dataContainer c-chartContainer">
-                <!-- Head -->
-                <div class="c-chartBlockhead">
-                  <span class="heading">Payment History</span>
-                </div>
-                <!-- Head End -->
-
-                <!-- body -->
-                <div class="c_body">
-                  <div class="c-tableWrapper">
-                    <div class="c-table">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th style="width: 15%">Amount</th>
-                            <th style="width: 15%">Status</th>
-                            <th style="width: 15%">Plan</th>
-                            <th style="width: 20%">Date</th>
-                            <th style="width: 20%">Expiry Date</th>
-                            <th style="width: 15%">Payment Method</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>$2</td>
-                            <td>
-                              <span class="notifyTag rejected">Expired</span>
-                            </td>
-                            <td>Basic</td>
-                            <td>10 Mar, 2020</td>
-                            <td>10 Mar, 2021</td>
-                            <td>Visa</td>
-                          </tr>
-                          <tr>
-                            <td>$2</td>
-                            <td>
-                              <span class="notifyTag approved">Approved</span>
-                            </td>
-                            <td>Basic</td>
-                            <td>10 Mar, 2020</td>
-                            <td>10 Mar, 2021</td>
-                            <td>Visa</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <!-- body End -->
-              </div>
-            </div>
-          </div>
-          <!-- *****  Updated Chart row 3 End ***** -->
         </div>
       </div>
       <!-- ********** Component :: Wrapper End **********  -->
     </div>
     <!-- ********** Page Body End **********  -->
 
+    <!-- **** Modal ::  Error Info **** -->
+    <div
+      class="modal fade c-modal w-950"
+      id="userConfig"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userConfigLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userConfigLabel">User Configuration</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocrd-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Config ID</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Client Queue In</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Processing Code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-6">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Filer Code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Client Queue Out</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Environment Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Description</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <div class="c-btnContainer text-center">
+                  <button class="c-btn">Update</button>
+                  <button
+                    class="c-btn col-gray"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Error Info  End **** -->
+
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>
     <script src="../js/jquery-migrate-3.0.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/select2.min.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
 </html>

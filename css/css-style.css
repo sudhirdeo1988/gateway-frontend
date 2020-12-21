@@ -870,6 +870,9 @@ File Type :: SCSS file (For styling)
 .ocrd-file:before {
   content: "\5a"; }
 
+.ocrd-trash-bin:before {
+  content: "\31"; }
+
 /* -------------------------------------
 	Theme default CSS Containers
 ------------------------------------- */
@@ -1226,7 +1229,7 @@ a:hover {
 .c-notifyDropdown {
   padding: 0 0 20px 0 !important; }
   .c-notifyDropdown .notifyHeading {
-    background-color: RGBA(var(--primary-rgb), 0.07);
+    background-color: var(--white);
     border-bottom: 1px solid var(--border-color);
     display: block;
     padding: 20px;
@@ -1342,6 +1345,8 @@ a:hover {
       background-color: #22243d; }
       .theme-dark-1 .c-header .dropdown-menu .flagSearchBody ul li .selectBtn:hover .flagInfo .country {
         color: var(--primary-color); }
+.theme-dark-1 .c-notifyDropdown .notifyHeading {
+  background-color: RGBA(var(--primary-rgb), 0.07); }
 .theme-dark-1 .c-notifyDropdown .c-notify:hover {
   background: var(--page-bg-color); }
 .theme-dark-1 .c-notifyDropdown .c-notify .dropdown-notification-item {

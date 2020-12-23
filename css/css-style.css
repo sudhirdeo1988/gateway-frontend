@@ -1807,9 +1807,7 @@ a:hover {
         content: "\41"; }
       .c-tableWrapper .c-table th.sorting_asc::before {
         content: "\42"; }
-    .c-tableWrapper .c-table tbody tr .childTableTd td {
-      background-color: var(--gray-01); }
-    .c-tableWrapper .c-table tbody tr:nth-child(even) td {
+    .c-tableWrapper .c-table tbody tr.even td {
       background-color: RGBA(var(--primary-rgb), 0.03); }
     .c-tableWrapper .c-table tr td {
       border-bottom: 1px solid var(--gray-02);
@@ -1881,9 +1879,9 @@ a:hover {
         background-color: var(--primary-color);
         content: "NEW";
         display: inline-block;
-        padding: 3px 8px;
-        font-size: 12px;
-        line-height: 13px;
+        padding: 3px 4px 1px;
+        font-size: 10px;
+        line-height: 11px;
         font-weight: 600;
         color: var(--white);
         margin-left: 5px;
@@ -2311,7 +2309,7 @@ a:hover {
       border: 0;
       outline: none;
       background-color: transparent; }
-    .c-dropdown .dropdown-item:hover {
+    .c-dropdown .dropdown-item:hover, .c-dropdown .dropdown-item.active {
       background-color: RGBA(var(--primary-rgb), 0.07); }
   .c-dropdown .btn-dd {
     background-color: var(--white);
@@ -3213,15 +3211,16 @@ a:hover {
     -ms-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.2);
     -o-box-shadow: -2px 4px 13px rgba(0, 0, 0, 0.2); }
   .c-pricingCard.st-static {
-    background-color: transparent;
+    background-color: var(--white);
     border-color: var(--primary-color);
     margin: 0 auto;
     max-width: 350px;
     position: relative;
     z-index: 2;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0; }
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
   .c-pricingCard .infoStrip {
     position: absolute;
     top: 0;
@@ -3242,10 +3241,10 @@ a:hover {
     .c-pricingCard .infoStrip .infoTitle {
       color: var(--white);
       position: absolute;
-      top: 15px;
-      left: 8px;
+      top: 18px;
+      left: 0px;
       height: 30px;
-      width: 40px;
+      width: 65px;
       font-size: 11px;
       font-weight: 700;
       line-height: 14px;

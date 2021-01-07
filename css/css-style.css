@@ -401,7 +401,8 @@ SCSS functions
   align-items: center; }
   .c-loginBody.type-02 {
     background: url("../images/ship.jpg") no-repeat center center;
-    background-size: cover; }
+    background-size: cover;
+    height: calc(100vh - 72px); }
     .c-loginBody.type-02::after {
       background-color: rgba(0, 0, 0, 0.8);
       content: "";
@@ -425,6 +426,9 @@ SCSS functions
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px; }
+  .c-loginBlock .c-form .form-control {
+    background-color: #fff;
+    border: 1px solid #eaeaea; }
   .c-loginBlock .lb_heading {
     background-color: mixw(var(--primary), 40%);
     display: block;
@@ -2288,9 +2292,30 @@ a:hover {
     line-height: 16px;
     margin-top: 3px; }
 
+.c-select2.form-control {
+  padding: 0;
+  border: 0; }
+  .c-select2.form-control .select2-container {
+    background-color: transparent;
+    border: 1px solid #eaeaea; }
+    .c-select2.form-control .select2-container .select2-selection--single {
+      border: 0;
+      background-color: transparent;
+      height: 42px; }
+      .c-select2.form-control .select2-container .select2-selection--single .select2-selection__rendered {
+        color: var(--fontColor);
+        line-height: 40px; }
+      .c-select2.form-control .select2-container .select2-selection--single .select2-selection__arrow {
+        top: 8px; }
+
 .theme-dark-1 .c-form .form-control {
   background-color: var(--component-bg-color);
   border: 1px solid var(--border-color); }
+.theme-dark-1 .c-select2.form-control .select2-container {
+  background-color: var(--component-bg-color);
+  border: 1px solid var(--border-color); }
+  .theme-dark-1 .c-select2.form-control .select2-container .select2-selection--single {
+    background-color: var(--component-bg-color); }
 
 /* ----- Dropdown - Bootstrap ----- */
 .c-dropdown {

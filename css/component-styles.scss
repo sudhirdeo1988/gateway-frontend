@@ -1970,11 +1970,45 @@ a:hover {
   }
 }
 
+.c-select2 {
+  &.form-control {
+    padding: 0;
+    border: 0;
+    .select2-container {
+      background-color: transparent;
+      border: 1px solid #eaeaea;
+      .select2-selection--single {
+        border: 0;
+        background-color: transparent;
+        height: 42px;
+        .select2-selection__rendered {
+          color: var(--fontColor);
+          line-height: 40px;
+        }
+        .select2-selection__arrow {
+          top: 8px;
+        }
+      }
+    }
+  }
+}
+
 #{$darkTheme} {
   .c-form {
     .form-control {
       background-color: var(--component-bg-color);
       border: 1px solid var(--border-color);
+    }
+  }
+  .c-select2 {
+    &.form-control {
+      .select2-container {
+        background-color: var(--component-bg-color);
+        border: 1px solid var(--border-color);
+        .select2-selection--single {
+          background-color: var(--component-bg-color);
+        }
+      }
     }
   }
 }

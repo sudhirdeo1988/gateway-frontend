@@ -2850,7 +2850,7 @@ a:hover {
   background-color: var(--primary-color);
   color: var(--white);
   display: inline-block;
-  padding: 12px 25px 11px;
+  padding: 13px 25px 11px;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -2868,6 +2868,8 @@ a:hover {
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s; }
+  .c-btn:hover {
+    color: var(--white); }
   .c-btn:last-child {
     margin-right: 0; }
   .c-btn.bordered {

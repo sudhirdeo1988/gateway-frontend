@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>Billing</title>
+    <title>Buy Now</title>
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
@@ -283,7 +283,10 @@
                         <i class="icon ocrd-copy"></i>
                         Subscription</a
                       >
-                      <a class="dropdown-item" href="./04-userSettings.html">
+                      <a
+                        class="dropdown-item active"
+                        href="./04-userSettings.html"
+                      >
                         <i class="icon ocrd-setting-wheel"></i>
                         Settings</a
                       >
@@ -307,170 +310,180 @@
           <!-- *** First Row *** -->
           <div class="row align-items-center">
             <div class="col">
-              <div class="c-pageHeading">Billing</div>
+              <div class="c-pageHeading">Buy Now</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
 
-          <!-- *****  Info Section ***** -->
+          <!-- *** Profile Tabs *** -->
           <div class="row">
             <div class="col">
-              <div class="c-dataContainer type-02">
+              <!-- ***** User Details ***** -->
+              <div class="c-dataContainer type-01">
                 <div class="row">
-                  <!-- Left Sect -->
-                  <div class="col-md-6 col-sm-8 col-12">
-                    <div class="c-billingSection">
-                      <div class="cb_head">
-                        <div class="row">
-                          <div class="col-7">
-                            <h4 class="hd">Billed Basic</h4>
-                            <span class="hs">Saving $120 a year</span>
-                          </div>
-                          <div class="col-5 text-right">
-                            <span class="price"><sup>$</sup>0</span>
-                            <span class="price-sub">/ Annually</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cb_body row">
-                        <div class="col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">Name on Card</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">Card Number</label>
-                            <input
-                              type="text"
-                              placeholder="XXXX XXXX XXXX XXXX"
-                              class="form-control type-card"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">Expiry Date (MM YYYY)</label>
-                            <input
-                              type="text"
-                              class="form-control w-half"
-                              placeholder="MM"
-                            />
-                            <input
-                              type="text"
-                              class="form-control w-half"
-                              placeholder="YYYY"
-                            />
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">CVC / CVV</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">Country</label>
-                            <div class="c-customDropdown selectOne">
-                              <select class="c-select">
-                                <option value="one">First</option>
-                                <option value="three">Third</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">Address (Optional)</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">City (Optional)</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">State (Optional)</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                          <div class="form-group c-form">
-                            <label class="formLbl">Zip Code (Optional)</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                        <div class="col-12 text-center">
-                          <button class="c-btn">Update My plan</button>
-                        </div>
+                  <div class="col-sm-6 col-12">
+                    <!-- *** Dropdown *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Country</label>
+                      <div class="c-customDropdown selectOne">
+                        <select class="c-select">
+                          <option value="one">India</option>
+                          <option value="three">USA</option>
+                        </select>
                       </div>
                     </div>
-                  </div>
-                  <!-- Left Sect End -->
+                    <!-- *** Dropdown End *** -->
+                    <!-- *** Text Box *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Feature</label>
+                      <div class="c-customDropdown selectOne">
+                        <select class="c-select">
+                          <option value="one">Feature 1</option>
+                          <option value="three">Feature 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- *** Text Box End *** -->
 
-                  <!-- Right Sect -->
-                  <div class="col-md-6 col-sm-4 col-12">
-                    <div class="priceCardContainer">
-                      <div class="c-pricingCard st-static">
-                        <div class="infoStrip">
-                          <div class="infoTriangle"></div>
-                          <span class="infoTitle">Selected offer</span>
-                        </div>
-                        <div class="cardHead">
-                          <span class="title">Basic</span>
-                          <div class="iconContainer">
-                            <i class="icon ocrd-basic"></i>
-                          </div>
-                          <span class="price"><sup>$</sup>2</span>
-                        </div>
-                        <div class="cardBody">
-                          <ul>
-                            <li>
-                              <i class="icon ocrd-android-done"></i>
-                              Per Transactions
-                            </li>
-                            <li>
-                              <i class="icon ocrd-android-done"></i>
-                              Unlimited Time Periods
-                            </li>
-                            <li>
-                              <i class="icon ocrd-android-done"></i>
-                              Online Support
-                            </li>
-                            <li>
-                              <i class="icon ocrd-android-done"></i>
-                              Cancel Anytime
-                            </li>
-                            <li>
-                              <i class="icon ocrd-android-done"></i>
-                              Tech Support
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="cardFooter text-center">
-                          <button class="c-btn bordered">
-                            End 10 Mar, 2021
-                          </button>
-                        </div>
-                      </div>
+                    <!-- *** Text Box *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Price</label>
+                      <input type="text" class="form-control" />
                     </div>
+                    <!-- *** Text Box End *** -->
                   </div>
-                  <!-- Right Sect End -->
+                  <div class="col-sm-6 col-12">
+                    <!-- *** Text Box *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Type</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <!-- *** Text Box End *** -->
+
+                    <!-- *** Text Box *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Name</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <!-- *** Text Box End *** -->
+
+                    <!-- *** Text Box *** -->
+                    <div class="form-group c-form">
+                      <label class="formLbl">Duration</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <!-- *** Text Box End *** -->
+                  </div>
+                  <div class="col-12">
+                    <button class="c-btn">Subscribe Now</button>
+                    <button class="c-btn col-gray">Cancel</button>
+                  </div>
                 </div>
               </div>
+              <!-- ***** User Details End ***** -->
             </div>
           </div>
-          <!-- *****  Info Section End ***** -->
+          <!-- *** Profile Tabs End *** -->
         </div>
       </div>
       <!-- ********** Component :: Wrapper End **********  -->
     </div>
     <!-- ********** Page Body End **********  -->
+
+    <!-- **** Modal ::  Error Info **** -->
+    <div
+      class="modal fade c-modal w-950"
+      id="userConfig"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userConfigLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userConfigLabel">User Configuration</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocrd-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Config ID</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Client Queue In</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Processing Code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-6">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Filer Code</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Client Queue Out</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Environment Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Description</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <div class="c-btnContainer text-center">
+                  <button class="c-btn">Update</button>
+                  <button
+                    class="c-btn col-gray"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Error Info  End **** -->
 
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>
@@ -478,7 +491,6 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/select2.min.js"></script>
-    <script src="../js/cleave-phone.i18n.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
 </html>

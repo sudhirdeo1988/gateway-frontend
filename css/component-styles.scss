@@ -2624,7 +2624,7 @@ a:hover {
   background-color: var(--primary-color);
   color: var(--white);
   display: inline-block;
-  padding: 12px 25px 11px;
+  padding: 13px 25px 11px;
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
@@ -2636,6 +2636,10 @@ a:hover {
   outline: none !important;
   @include rounded-corners(50px);
   @include transition(all ease 0.3s);
+
+  &:hover {
+    color: var(--white);
+  }
 
   &:last-child {
     margin-right: 0;

@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <title>Subscription</title>
+    <title>User Settings</title>
 
     <!-- ***** CSS Import ***** -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/select2.min.css" />
     <link rel="stylesheet" href="../css/css-style.css" />
   </head>
 
@@ -283,7 +283,10 @@
                         <i class="icon ocrd-copy"></i>
                         Subscription</a
                       >
-                      <a class="dropdown-item" href="./04-userSettings.html">
+                      <a
+                        class="dropdown-item active"
+                        href="./04-userSettings.html"
+                      >
                         <i class="icon ocrd-setting-wheel"></i>
                         Settings</a
                       >
@@ -307,180 +310,212 @@
           <!-- *** First Row *** -->
           <div class="row align-items-center mb-20">
             <div class="col">
-              <div class="c-pageHeading mb-0">Subscription Plan</div>
+              <div class="c-pageHeading mb-0">Feature</div>
             </div>
             <div class="col text-right">
-              <a href="./05-buyNow.html" class="c-btn">Buy Now</a>
+              <button
+                class="c-btn"
+                data-toggle="modal"
+                data-target="#userConfig"
+              >
+                Add new Feature
+              </button>
             </div>
           </div>
           <!-- *** First Row End *** -->
 
           <!-- *** Profile Tabs *** -->
-          <div class="owl-carousel">
-            <div class="c-pricingCard">
-              <div class="cardHead">
-                <span class="title">STARTER</span>
-                <div class="iconContainer">
-                  <i class="icon ocrd-starter"></i>
-                </div>
-                <span class="price"><sup>$</sup>0</span>
-              </div>
-              <div class="cardBody">
-                <ul>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    30 Day Free Trail
-                  </li>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    10 Free Transactions Daily
-                  </li>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    Online Support
-                  </li>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    Cancel Anytime
-                  </li>
-                </ul>
-              </div>
-              <div class="cardFooter text-center">
-                <button class="c-btn bordered">Select Plan</button>
-              </div>
-            </div>
+          <div class="row">
+            <div class="col">
+              <!-- ***** User Details ***** -->
+              <div class="c-dataContainer type-01">
+                <div class="c-tableWrapper">
+                  <!-- ***** Table Body ***** -->
 
-            <div class="c-pricingCard active">
-              <div class="cardHead">
-                <span class="title">Basic</span>
-                <div class="iconContainer">
-                  <i class="icon ocrd-basic"></i>
+                  <div class="c-table type-01">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th style="width: 8%">ID</th>
+                          <th style="width: 20%">Name</th>
+                          <th style="width: 12%">country</th>
+                          <th style="width: 12%">price per transaction</th>
+                          <th style="width: 12%">price monthly</th>
+                          <th style="width: 21%">description</th>
+                          <th style="width: 15%" class="text-center">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>OCR1</td>
+                          <td>Nancy</td>
+                          <td>INDIA</td>
+                          <td>$599</td>
+                          <td>$599</td>
+                          <td>Lorem ipsum dolor sit amet, consectetur</td>
+                          <td class="text-center">
+                            <button class="tableBtn">
+                              <i class="icon ocrd-pencil-square-o"></i>
+                            </button>
+                            <button class="tableBtn">
+                              <i class="icon ocrd-trash-bin"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>OCR2</td>
+                          <td>Nancy</td>
+                          <td>INDIA</td>
+                          <td>$599</td>
+                          <td>$599</td>
+                          <td>Lorem ipsum dolor sit amet, consectetur</td>
+                          <td class="text-center">
+                            <button class="tableBtn">
+                              <i class="icon ocrd-pencil-square-o"></i>
+                            </button>
+                            <button class="tableBtn">
+                              <i class="icon ocrd-trash-bin"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- ***** Table Body ***** -->
                 </div>
-                <span class="price"><sup>$</sup>2</span>
               </div>
-              <div class="cardBody">
-                <ul>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    Per Transactions
-                  </li>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    Unlimited Time Periods
-                  </li>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    Online Support
-                  </li>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    Cancel Anytime
-                  </li>
-                  <li>
-                    <i class="icon ocrd-android-done"></i>
-                    Tech Support
-                  </li>
-                </ul>
-              </div>
-              <div class="cardFooter text-center">
-                <button class="c-btn bordered">End 10 Mar, 2021</button>
-              </div>
+              <!-- ***** User Details End ***** -->
             </div>
           </div>
           <!-- *** Profile Tabs End *** -->
-
-          <!-- *****  Info Section ***** -->
-          <div class="row">
-            <div class="col">
-              <div class="c-dataContainer type-02 auto-height">
-                <span class="c-staticText text-center"
-                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  vars, tortor sed semper ultricies, ante turpis dignissim lectu
-                  a venenatis ipsum leo sit amet ex. Morbi scelerisque rutrum
-                  aliquet. Donec nec nibh id mauris porta hendrerit vitae a
-                  lect. Integer metus ssa, viverra id arcu at. Morbi scelerisque
-                  rutrum aliquet. Donec nec nibh id mauris porta hendrerit vitae
-                  a lect. Integer metus ssa, viverra id arcu at. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing elit. Sed vars, tortor
-                  sed semper ultricies, ante turpis dignissim lectu a venenatis
-                  ipsum leo sit amet ex. Morbi scelerisque rutrum aliquet. Donec
-                  nec nibh id mauris porta hendrerit vitae a lect. Integer metus
-                  ssa, viverra id arcu at. Morbi scelerisque rutrum
-                  aliquet.</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- *****  Info Section End ***** -->
-
-          <!-- *****  Updated Chart row 3 ***** -->
-          <div class="row">
-            <div class="col">
-              <div class="c-dataContainer c-chartContainer">
-                <!-- Head -->
-                <div class="c-chartBlockhead">
-                  <span class="heading">Payment History</span>
-                </div>
-                <!-- Head End -->
-
-                <!-- body -->
-                <div class="c_body">
-                  <div class="c-tableWrapper">
-                    <div class="c-table">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th style="width: 15%">Amount</th>
-                            <th style="width: 15%">Status</th>
-                            <th style="width: 15%">Plan</th>
-                            <th style="width: 20%">Date</th>
-                            <th style="width: 20%">Expiry Date</th>
-                            <th style="width: 15%">Payment Method</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>$2</td>
-                            <td>
-                              <span class="notifyTag rejected">Expired</span>
-                            </td>
-                            <td>Basic</td>
-                            <td>10 Mar, 2020</td>
-                            <td>10 Mar, 2021</td>
-                            <td>Visa</td>
-                          </tr>
-                          <tr>
-                            <td>$2</td>
-                            <td>
-                              <span class="notifyTag approved">Approved</span>
-                            </td>
-                            <td>Basic</td>
-                            <td>10 Mar, 2020</td>
-                            <td>10 Mar, 2021</td>
-                            <td>Visa</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <!-- body End -->
-              </div>
-            </div>
-          </div>
-          <!-- *****  Updated Chart row 3 End ***** -->
         </div>
       </div>
       <!-- ********** Component :: Wrapper End **********  -->
     </div>
     <!-- ********** Page Body End **********  -->
 
+    <!-- **** Modal ::  Add New Feature **** -->
+    <div
+      class="modal fade c-modal w-950"
+      id="userConfig"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userConfigLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userConfigLabel">Add New Feature</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="icon ocrd-android-close"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">ID</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Price Monthly</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-6">
+                <!-- *** Dropdown *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Country</label>
+                  <div class="c-customDropdown selectOne forCountriesWithFlag">
+                    <select class="c-select">
+                      <option value="AF" data-capital="Kabul">
+                        Afghanistan
+                      </option>
+                      <option value="AX" data-capital="Mariehamn">
+                        Aland Islands
+                      </option>
+                      <option value="AL" data-capital="Tirana">Albania</option>
+                      <option value="DZ" data-capital="Algiers">Algeria</option>
+                      <option value="AS" data-capital="Pago Pago">
+                        American Samoa
+                      </option>
+                      <option value="AD" data-capital="Andorra la Vella">
+                        Andorra
+                      </option>
+                      <option value="AO" data-capital="Luanda">Angola</option>
+                      <option value="AI" data-capital="The Valley">
+                        Anguilla
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <!-- *** Dropdown End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Price per transaction</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Price Yearly</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <!-- *** Badge Card *** -->
+                <div class="form-group c-form">
+                  <label class="formLbl">Description</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <!-- *** Badge Card End *** -->
+              </div>
+              <div class="col-md-12">
+                <div class="c-btnContainer text-center">
+                  <button class="c-btn">Save</button>
+                  <button
+                    class="c-btn col-gray"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- **** Modal :: Add New Feature  End **** -->
+
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>
     <script src="../js/jquery-migrate-3.0.1.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/select2.min.js"></script>
     <script src="../js/scripts.js"></script>
   </body>
 </html>

@@ -198,6 +198,37 @@ $(function () {
     $(".js-multiSelect").select2();
   }
 
+  // ----  Select 2 dropdown - Country Flag
+  if ($(".forCountriesWithFlag").length) {
+    function format(item, state) {
+      if (!item.id) {
+        return item.text;
+      }
+      var countryUrl = "https://lipis.github.io/flag-icon-css/flags/4x3/";
+      var stateUrl = "https://oxguy3.github.io/flags/svg/us/";
+      var url = state ? stateUrl : countryUrl;
+      var img = $("<img>", {
+        class: "img-flag",
+        width: 26,
+        src: url + item.element.value.toLowerCase() + ".svg",
+      });
+      var span = $("<span>", {
+        text: " " + item.text,
+      });
+      span.prepend(img);
+      return span;
+    }
+    var $disabledResults = $(
+      ".c-customDropdown.selectOne.forCountriesWithFlag .c-select"
+    );
+    $disabledResults.select2({
+      templateResult: function (item) {
+        return format(item, false);
+      },
+      dropdownCssClass: "customeDropdown",
+    });
+  }
+
   if ($(".js-dataSlider").length) {
     $(".js-dataSlider").owlCarousel({
       loop: true,
@@ -207,6 +238,14 @@ $(function () {
       items: 1,
       autoplay: true,
       autoplaySpeed: 1500,
+    });
+  }
+
+  if ($(".owl-carousel").length) {
+    $(".owl-carousel").owlCarousel({
+      items: 4,
+      dots: true,
+      nav: true,
     });
   }
 

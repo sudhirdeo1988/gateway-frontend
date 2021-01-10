@@ -2167,9 +2167,9 @@ a:hover {
       background-color: #f8f9fa;
       box-sizing: border-box;
       color: var(--fontColor);
-      display: block;
+      //display: block;
       position: relative;
-      height: 40px;
+      //height: 40px;
       padding: 11px 20px;
       font-size: 14px;
       line-height: 18px;
@@ -2177,6 +2177,13 @@ a:hover {
       outline: none;
       width: 100%;
       @include rounded-corners(50px);
+    }
+  }
+  .select2-selection--multiple {
+    .select2-search__field {
+      background-color: transparent;
+      border: 0;
+      padding: 0;
     }
   }
   .select2-results {
@@ -2202,7 +2209,17 @@ a:hover {
     box-sizing: border-box;
     letter-spacing: normal;
     height: 44px;
-    padding: 6px 10px;
+    padding: 6px 30px 6px 10px;
+    position: relative;
+    &::before {
+      content: "";
+      border-color: #000 transparent transparent transparent;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      position: absolute;
+      top: 18px;
+      right: 15px;
+    }
     .select2-selection__choice {
       border: 0;
       background-color: rgba(40, 79, 152, 0.1);
@@ -2954,7 +2971,7 @@ a:hover {
   flex-direction: column;
   min-height: 556px;
   padding: 30px;
-  margin-bottom: 24px;
+  margin: 0 8px 24px;
   @include box-shadow(-2px 4px 10px rgba(0, 0, 0, 0.03));
   @include rounded-corners(10px);
   @include transition(all ease 0.3);
@@ -3693,6 +3710,23 @@ a:hover {
     &.searchGrid {
       border-bottom: 0;
       padding-bottom: 0;
+    }
+  }
+}
+
+.owl-nav {
+  display: block;
+  text-align: center;
+  button {
+    background-color: var(--white) !important;
+    padding: 6px;
+    height: 30px;
+    width: 30px;
+    margin: 0 4px;
+    @include rounded-corners(30px);
+    span {
+      display: block;
+      font-size: 20px;
     }
   }
 }

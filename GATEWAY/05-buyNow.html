@@ -310,7 +310,7 @@
           <!-- *** First Row *** -->
           <div class="row align-items-center">
             <div class="col">
-              <div class="c-pageHeading">Buy Now</div>
+              <div class="c-pageHeading">Buy Plan</div>
             </div>
           </div>
           <!-- *** First Row End *** -->
@@ -325,19 +325,47 @@
                     <!-- *** Dropdown *** -->
                     <div class="form-group c-form">
                       <label class="formLbl">Country</label>
-                      <div class="c-customDropdown selectOne">
+                      <div
+                        class="c-customDropdown selectOne forCountriesWithFlag"
+                      >
                         <select class="c-select">
-                          <option value="one">India</option>
-                          <option value="three">USA</option>
+                          <option value="AF" data-capital="Kabul">
+                            Afghanistan
+                          </option>
+                          <option value="AX" data-capital="Mariehamn">
+                            Aland Islands
+                          </option>
+                          <option value="AL" data-capital="Tirana">
+                            Albania
+                          </option>
+                          <option value="DZ" data-capital="Algiers">
+                            Algeria
+                          </option>
+                          <option value="AS" data-capital="Pago Pago">
+                            American Samoa
+                          </option>
+                          <option value="AD" data-capital="Andorra la Vella">
+                            Andorra
+                          </option>
+                          <option value="AO" data-capital="Luanda">
+                            Angola
+                          </option>
+                          <option value="AI" data-capital="The Valley">
+                            Anguilla
+                          </option>
                         </select>
                       </div>
                     </div>
                     <!-- *** Dropdown End *** -->
                     <!-- *** Text Box *** -->
-                    <div class="form-group c-form">
+                    <div class="form-group c-form c-multiSelect">
                       <label class="formLbl">Feature</label>
-                      <div class="c-customDropdown selectOne">
-                        <select class="c-select">
+                      <div class="c-customDropdown">
+                        <select
+                          class="c-select js-multiSelect"
+                          name="visitors[]"
+                          multiple="multiple"
+                        >
                           <option value="one">Feature 1</option>
                           <option value="three">Feature 2</option>
                         </select>
@@ -356,7 +384,12 @@
                     <!-- *** Text Box *** -->
                     <div class="form-group c-form">
                       <label class="formLbl">Type</label>
-                      <input type="text" class="form-control" />
+                      <div class="c-customDropdown selectOne">
+                        <select class="c-select">
+                          <option value="one">Feature 1</option>
+                          <option value="three">Feature 2</option>
+                        </select>
+                      </div>
                     </div>
                     <!-- *** Text Box End *** -->
 
@@ -389,101 +422,6 @@
       <!-- ********** Component :: Wrapper End **********  -->
     </div>
     <!-- ********** Page Body End **********  -->
-
-    <!-- **** Modal ::  Error Info **** -->
-    <div
-      class="modal fade c-modal w-950"
-      id="userConfig"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="userConfigLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="userConfigLabel">User Configuration</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="icon ocrd-android-close"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <!-- *** Badge Card *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Config ID</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Badge Card End *** -->
-
-                <!-- *** Badge Card *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Client Queue In</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Badge Card End *** -->
-
-                <!-- *** Badge Card *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Processing Code</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Badge Card End *** -->
-              </div>
-              <div class="col-md-6">
-                <!-- *** Badge Card *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Filer Code</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Badge Card End *** -->
-
-                <!-- *** Badge Card *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Client Queue Out</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Badge Card End *** -->
-
-                <!-- *** Badge Card *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Environment Name</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <!-- *** Badge Card End *** -->
-              </div>
-              <div class="col-md-12">
-                <!-- *** Badge Card *** -->
-                <div class="form-group c-form">
-                  <label class="formLbl">Description</label>
-                  <textarea class="form-control"></textarea>
-                </div>
-                <!-- *** Badge Card End *** -->
-              </div>
-              <div class="col-md-12">
-                <div class="c-btnContainer text-center">
-                  <button class="c-btn">Update</button>
-                  <button
-                    class="c-btn col-gray"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- **** Modal :: Error Info  End **** -->
 
     <!-- ********** Scripts **********  -->
     <script src="../js/jquery-3.4.0.min.js"></script>

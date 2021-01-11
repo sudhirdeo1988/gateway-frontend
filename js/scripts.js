@@ -198,6 +198,14 @@ $(function () {
     $(".js-multiSelect").select2();
   }
 
+  // ----  Select 2 dropdown - Multi select with checkbox
+  if ($(".multiselectWithCheckbox").length) {
+    $(".multiselectWithCheckbox .js-multiSelect").select2({
+      dropdownCssClass: "optionWithCheckbox",
+      closeOnSelect: false,
+    });
+  }
+
   // ----  Select 2 dropdown - Country Flag
   if ($(".forCountriesWithFlag").length) {
     function format(item, state) {
@@ -205,12 +213,10 @@ $(function () {
         return item.text;
       }
       var countryUrl = "https://lipis.github.io/flag-icon-css/flags/4x3/";
-      var stateUrl = "https://oxguy3.github.io/flags/svg/us/";
-      var url = state ? stateUrl : countryUrl;
       var img = $("<img>", {
         class: "img-flag",
         width: 26,
-        src: url + item.element.value.toLowerCase() + ".svg",
+        src: countryUrl + item.element.value.toLowerCase() + ".svg",
       });
       var span = $("<span>", {
         text: " " + item.text,
@@ -221,11 +227,28 @@ $(function () {
     var $disabledResults = $(
       ".c-customDropdown.selectOne.forCountriesWithFlag .c-select"
     );
-    $disabledResults.select2({
+    var $disabledResultsParent = $(
+      ".c-customDropdown.selectOne.forCountriesWithFlag"
+    );
+    var $exampleMulti = $disabledResults.select2({
       templateResult: function (item) {
         return format(item, false);
       },
       dropdownCssClass: "customeDropdown",
+    });
+    // Bind an event
+    $disabledResultsParent.on("select2:select", function (e) {
+      const flagval = $exampleMulti.val();
+      var countryUrl = "https://lipis.github.io/flag-icon-css/flags/4x3/";
+      var img = $("<img>", {
+        class: "selected-img-flag",
+        src: countryUrl + flagval.toLowerCase() + ".svg",
+      });
+      var option = $(this).children().find(".select2-selection__rendered");
+      var span = $(option, {
+        text: " " + option.text(),
+      });
+      span.prepend(img);
     });
   }
 

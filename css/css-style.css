@@ -2386,6 +2386,11 @@ a:hover {
   background-color: var(--page-bg-color); }
 
 /* ------ Dropdown - select 2 ----- */
+.c-customDropdown .selected-img-flag {
+  width: 26px;
+  position: relative;
+  top: -1px;
+  margin-right: 5px; }
 .c-customDropdown .select2-container.select2-container--open .select2-selection {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -2425,7 +2430,7 @@ a:hover {
     color: var(--fontColor);
     font-size: 14px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 22px;
     padding: 0; }
 
 .theme-dark-1 .c-customDropdown .select2-selection {
@@ -2433,6 +2438,46 @@ a:hover {
   border: 1px solid var(--border-color); }
   .theme-dark-1 .c-customDropdown .select2-selection .select2-selection__rendered {
     color: var(--fontColor); }
+
+.optionWithCheckbox {
+  border: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -ms-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03);
+  -o-box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.03); }
+  .optionWithCheckbox .select2-results .select2-results__option {
+    background-color: transparent !important;
+    position: relative;
+    padding-left: 40px !important;
+    width: 50%;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 10px 4px 40px !important;
+    margin-bottom: 2px !important; }
+    .optionWithCheckbox .select2-results .select2-results__option .select2-results__option--highlighted,
+    .optionWithCheckbox .select2-results .select2-results__option .select2-results__option--selectable {
+      background-color: transparent !important; }
+    .optionWithCheckbox .select2-results .select2-results__option::before {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      top: 5px;
+      left: 12px;
+      color: #e4e4e4;
+      content: "y";
+      font-family: "ocr-dashboard";
+      font-size: 20px;
+      line-height: 20px;
+      display: block; }
+    .optionWithCheckbox .select2-results .select2-results__option.select2-results__option--selected::before {
+      color: var(--primary-color) !important;
+      content: "x"; }
 
 /* --- Multi Select --- */
 .select2-container {
@@ -2480,7 +2525,8 @@ a:hover {
     border: 1px solid #e1e2e7;
     box-sizing: border-box;
     letter-spacing: normal;
-    height: 44px;
+    min-height: 44px;
+    height: auto;
     padding: 6px 30px 6px 10px;
     position: relative; }
     .select2-container .select2-selection--multiple::before {
@@ -2495,9 +2541,9 @@ a:hover {
       border: 0;
       background-color: rgba(40, 79, 152, 0.1);
       display: inline-block;
-      margin: 0 10px 0 0;
+      margin: 0 10px 2px 0;
       height: 26px;
-      padding: 4px 10px;
+      padding: 5px 10px 4px;
       position: relative;
       top: 1px;
       box-sizing: border-box;
